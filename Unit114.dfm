@@ -1,0 +1,9475 @@
+object FrmConsultaFacturas: TFrmConsultaFacturas
+  Left = 0
+  Top = 0
+  BorderIcons = [biSystemMenu]
+  Caption = 'Consultar Facturas'
+  ClientHeight = 710
+  ClientWidth = 1156
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  KeyPreview = True
+  OldCreateOrder = False
+  Position = poDesktopCenter
+  OnClose = FormClose
+  OnKeyDown = FormKeyDown
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 13
+  object cxGrid1: TcxGrid
+    Left = 0
+    Top = 145
+    Width = 1156
+    Height = 325
+    Align = alClient
+    TabOrder = 0
+    LookAndFeel.NativeStyle = True
+    LookAndFeel.SkinName = 'Caramel'
+    object cxGridDBTableView1: TcxGridDBTableView
+      OnDblClick = cxGridDBTableView1DblClick
+      OnKeyDown = cxGridDBTableView1KeyDown
+      OnKeyUp = cxGridDBTableView1KeyUp
+      Navigator.Buttons.CustomButtons = <>
+      OnCellClick = cxGridDBTableView1CellClick
+      DataController.DataSource = DsFacturasImpresas
+      DataController.Summary.DefaultGroupSummaryItems = <>
+      DataController.Summary.FooterSummaryItems = <
+        item
+          Kind = skSum
+          FieldName = 'MONTOPAGO'
+          Column = cxGridDBColumn5
+        end
+        item
+          Kind = skSum
+          FieldName = 'POGXITBS'
+          Column = cxGridDBTableView1Column5
+        end
+        item
+          Kind = skSum
+          FieldName = 'DESCUENTO'
+          Column = cxGridDBTableView1Column4
+        end
+        item
+          Kind = skSum
+          FieldName = 'MONTO'
+          Column = cxGridDBTableView1Column3
+        end>
+      DataController.Summary.SummaryGroups = <>
+      OptionsView.NoDataToDisplayInfoText = 'No Data'
+      OptionsView.Footer = True
+      OptionsView.GroupByBox = False
+      object cxGridDBColumn1: TcxGridDBColumn
+        Caption = '# Factura'
+        DataBinding.FieldName = 'NUMERO_FACTURA'
+        HeaderAlignmentHorz = taCenter
+        Options.Editing = False
+        Options.Filtering = False
+        Options.Focusing = False
+        Options.FilteringFilteredItemsList = False
+        Options.FilteringMRUItemsList = False
+        Options.FilteringPopup = False
+        Options.FilteringPopupMultiSelect = False
+        Options.GroupFooters = False
+        Options.Grouping = False
+        Width = 60
+      end
+      object cxGridDBTableView1Column1: TcxGridDBColumn
+        Caption = 'Tipo NCF'
+        DataBinding.FieldName = 'NCF_NOMBRE'
+        GroupSummaryAlignment = taCenter
+        HeaderAlignmentHorz = taCenter
+        Options.Editing = False
+        Options.Filtering = False
+        Options.FilteringAddValueItems = False
+        Options.FilteringFilteredItemsList = False
+        Options.FilteringMRUItemsList = False
+        Options.FilteringPopup = False
+        Width = 181
+      end
+      object cxGridDBTableView1Column2: TcxGridDBColumn
+        DataBinding.FieldName = 'NCF'
+        GroupSummaryAlignment = taCenter
+        HeaderAlignmentHorz = taCenter
+        Options.Editing = False
+        Options.Filtering = False
+        Options.FilteringAddValueItems = False
+        Options.FilteringFilteredItemsList = False
+        Options.FilteringMRUItemsList = False
+        Options.FilteringPopup = False
+        Width = 144
+      end
+      object cxGridDBColumn2: TcxGridDBColumn
+        Caption = 'Fecha'
+        DataBinding.FieldName = 'FECHA_FAC'
+        HeaderAlignmentHorz = taCenter
+        Options.Editing = False
+        Options.Filtering = False
+        Options.Focusing = False
+        Options.FilteringFilteredItemsList = False
+        Options.FilteringMRUItemsList = False
+        Options.FilteringPopup = False
+        Options.FilteringPopupMultiSelect = False
+        Options.GroupFooters = False
+        Options.Grouping = False
+        Width = 71
+      end
+      object cxGridDBTableView1Column6: TcxGridDBColumn
+        Caption = 'Hora'
+        DataBinding.FieldName = 'HORA'
+        HeaderAlignmentHorz = taCenter
+        Options.Editing = False
+        Options.Filtering = False
+        Options.FilteringAddValueItems = False
+        Options.FilteringFilteredItemsList = False
+        Options.FilteringMRUItemsList = False
+        Options.FilteringPopup = False
+      end
+      object cxGridDBColumn3: TcxGridDBColumn
+        Caption = 'Cliente'
+        DataBinding.FieldName = 'NOMBRECLIENTE_PRN'
+        HeaderAlignmentHorz = taCenter
+        Options.Editing = False
+        Options.Filtering = False
+        Options.Focusing = False
+        Options.FilteringFilteredItemsList = False
+        Options.FilteringMRUItemsList = False
+        Options.FilteringPopup = False
+        Options.FilteringPopupMultiSelect = False
+        Options.GroupFooters = False
+        Options.Grouping = False
+        Width = 165
+      end
+      object cxGridDBColumn4: TcxGridDBColumn
+        Caption = 'Vendedor'
+        DataBinding.FieldName = 'NOMBRES_EMP'
+        HeaderAlignmentHorz = taCenter
+        Options.Editing = False
+        Options.Filtering = False
+        Options.Focusing = False
+        Options.FilteringFilteredItemsList = False
+        Options.FilteringMRUItemsList = False
+        Options.FilteringPopup = False
+        Options.FilteringPopupMultiSelect = False
+        Options.GroupFooters = False
+        Options.Grouping = False
+        Width = 75
+      end
+      object cxGridDBTableView2Column1: TcxGridDBColumn
+        Caption = 'Condici'#243'n'
+        DataBinding.FieldName = 'TIPO'
+        GroupSummaryAlignment = taCenter
+        HeaderAlignmentHorz = taCenter
+        HeaderGlyphAlignmentHorz = taCenter
+        MinWidth = 64
+        Options.Editing = False
+        Options.Filtering = False
+        Options.Focusing = False
+        Options.IgnoreTimeForFiltering = False
+        Options.FilteringAddValueItems = False
+        Options.FilteringFilteredItemsList = False
+        Options.FilteringMRUItemsList = False
+        Options.FilteringPopup = False
+        Options.FilteringPopupMultiSelect = False
+        Options.GroupFooters = False
+        Options.Grouping = False
+        Options.HorzSizing = False
+      end
+      object cxGridDBTableView1Column3: TcxGridDBColumn
+        Caption = 'Importe'
+        DataBinding.FieldName = 'MONTO'
+        GroupSummaryAlignment = taCenter
+        HeaderGlyphAlignmentHorz = taCenter
+        Options.Editing = False
+        Options.Filtering = False
+        Options.FilteringAddValueItems = False
+        Options.FilteringFilteredItemsList = False
+        Options.FilteringMRUItemsList = False
+        Options.FilteringPopup = False
+        Width = 93
+      end
+      object cxGridDBTableView1Column4: TcxGridDBColumn
+        Caption = 'Descuento'
+        DataBinding.FieldName = 'DESCUENTO'
+        GroupSummaryAlignment = taCenter
+        HeaderGlyphAlignmentHorz = taCenter
+        Options.Editing = False
+        Options.Filtering = False
+        Options.FilteringAddValueItems = False
+        Options.FilteringFilteredItemsList = False
+        Options.FilteringMRUItemsList = False
+        Options.FilteringPopup = False
+        Width = 104
+      end
+      object cxGridDBTableView1Column5: TcxGridDBColumn
+        Caption = 'Impuesto'
+        DataBinding.FieldName = 'POGXITBS'
+        GroupSummaryAlignment = taCenter
+        HeaderGlyphAlignmentHorz = taCenter
+        Options.Editing = False
+        Options.Filtering = False
+        Options.FilteringAddValueItems = False
+        Options.FilteringFilteredItemsList = False
+        Options.FilteringMRUItemsList = False
+        Options.FilteringPopup = False
+        Width = 87
+      end
+      object cxGridDBColumn5: TcxGridDBColumn
+        Caption = 'Total Pagado'
+        DataBinding.FieldName = 'MONTOPAGO'
+        HeaderAlignmentHorz = taCenter
+        Options.Editing = False
+        Options.Filtering = False
+        Options.Focusing = False
+        Options.FilteringFilteredItemsList = False
+        Options.FilteringMRUItemsList = False
+        Options.FilteringPopup = False
+        Options.FilteringPopupMultiSelect = False
+        Options.GroupFooters = False
+        Options.Grouping = False
+        Width = 102
+      end
+    end
+    object cxGridLevel1: TcxGridLevel
+      GridView = cxGridDBTableView1
+    end
+  end
+  object cxGroupBox1: TcxGroupBox
+    Left = 0
+    Top = 0
+    Align = alTop
+    TabOrder = 1
+    Height = 145
+    Width = 1156
+    object Label1: TLabel
+      Left = 413
+      Top = 24
+      Width = 153
+      Height = 13
+      Caption = 'Entre el Numero de Factura'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object Label2: TLabel
+      Left = 12
+      Top = 29
+      Width = 59
+      Height = 13
+      Caption = 'Fecha Inicial'
+    end
+    object Label3: TLabel
+      Left = 12
+      Top = 61
+      Width = 54
+      Height = 13
+      Caption = 'Fecha Final'
+    end
+    object Label4: TLabel
+      Left = 12
+      Top = 87
+      Width = 60
+      Height = 13
+      Caption = 'Tipo de Doc.'
+    end
+    object OpCriterios: TcxRadioGroup
+      Left = 413
+      Top = 71
+      Caption = 'Criterios de Busqueda'
+      ParentFont = False
+      Properties.Columns = 2
+      Properties.Items = <
+        item
+          Caption = 'N'#250'mero'
+        end
+        item
+          Caption = 'Nombre'
+        end>
+      ItemIndex = 0
+      Style.Font.Charset = DEFAULT_CHARSET
+      Style.Font.Color = clWindowText
+      Style.Font.Height = -11
+      Style.Font.Name = 'Tahoma'
+      Style.Font.Style = []
+      Style.LookAndFeel.NativeStyle = True
+      Style.IsFontAssigned = True
+      StyleDisabled.LookAndFeel.NativeStyle = True
+      TabOrder = 0
+      OnClick = OpCriteriosClick
+      Height = 43
+      Width = 249
+    end
+    object cxTextEdit1: TcxTextEdit
+      Left = 413
+      Top = 38
+      ParentFont = False
+      Properties.CharCase = ecUpperCase
+      Properties.OnChange = cxTextEdit1PropertiesChange
+      Style.Font.Charset = DEFAULT_CHARSET
+      Style.Font.Color = clWindowText
+      Style.Font.Height = -16
+      Style.Font.Name = 'Tahoma'
+      Style.Font.Style = [fsBold]
+      Style.IsFontAssigned = True
+      TabOrder = 1
+      Width = 249
+    end
+    object fechafinal: TcxDateEdit
+      Left = 77
+      Top = 54
+      TabOrder = 2
+      Width = 124
+    end
+    object inicio: TcxDateEdit
+      Left = 77
+      Top = 26
+      TabOrder = 3
+      Width = 124
+    end
+    object CBTipoDoc: TcxComboBox
+      Left = 78
+      Top = 82
+      Properties.Items.Strings = (
+        'FACTURAS'
+        'CONDUCE'
+        'FACTURAS ANULADAS'
+        'CANCELAR')
+      TabOrder = 4
+      Width = 123
+    end
+    object cxButton17: TcxButton
+      Left = 676
+      Top = 74
+      Width = 174
+      Height = 39
+      Caption = 'Imprimir Copia'
+      LookAndFeel.NativeStyle = True
+      LookAndFeel.SkinName = 'VisualStudio2013Light'
+      OptionsImage.Glyph.SourceDPI = 96
+      OptionsImage.Glyph.Data = {
+        89504E470D0A1A0A0000000D4948445200000018000000180806000000E0773D
+        F80000000467414D410000B18F0BFC6105000000017352474200AECE1CE90000
+        00206348524D00007A26000080840000FA00000080E8000075300000EA600000
+        3A98000017709CBA513C00000006624B4744000000000000F943BB7F00000009
+        7048597300000048000000480046C96B3E000000804944415448C7ED94510A80
+        2010449F121DA2A34407B483DA35EAA328B3506B33307AB05FC2ACB3EB083F11
+        54E06C7C424BE776507E8357A9811E1898177CA72C6016AD034620EC97396B60
+        85A22DD0394E80FD921BE188355B16562D371C57831543F90EB250A5DE2440D0
+        79F9497647E48FA28CDF3465C9A2E7FBADDFB44C26FDEF3B6031133A13000000
+        2574455874646174653A63726561746500323032302D30322D30345430303A34
+        373A30372B30303A30303BBB7AF10000002574455874646174653A6D6F646966
+        7900323032302D30322D30345430303A34373A30372B30303A30304AE6C24D00
+        000028744558747376673A626173652D7572690066696C653A2F2F2F746D702F
+        6D616769636B2D44774A65307644517A72F32A0000000049454E44AE426082}
+      TabOrder = 5
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Century Gothic'
+      Font.Style = []
+      ParentFont = False
+      WordWrap = True
+      OnClick = cxButton17Click
+    end
+    object BtFind: TcxButton
+      Left = 102
+      Top = 109
+      Width = 195
+      Height = 25
+      Caption = 'Filtro'
+      LookAndFeel.NativeStyle = False
+      LookAndFeel.SkinName = 'Office2016Colorful'
+      OptionsImage.Glyph.SourceDPI = 96
+      OptionsImage.Glyph.Data = {
+        89504E470D0A1A0A0000000D4948445200000018000000180806000000E0773D
+        F80000000467414D410000B18F0BFC6105000000017352474200AECE1CE90000
+        00206348524D00007A26000080840000FA00000080E8000075300000EA600000
+        3A98000017709CBA513C00000006624B4744000000000000F943BB7F00000009
+        7048597300000048000000480046C96B3E000000EE4944415448C7ED93410A82
+        4014863F24EA1212918770A1055DA3CEE231A21B94788C3A474965BBB62D6C53
+        8B79C224E8349A8BA21F8687F2BFFF93F13DF8AB8526400C5C801CC8800D10B6
+        0DEE012BE0517396E26BA422FC0644C018E84B8DE47D01B1D6540BF72B3CBE06
+        096C01B13446065F24BEB52DE0228D6383CF135F660BC8A5B16FF00DC4979B02
+        9DD2F355AA6BE8734BFEB7015BA90B43DF5CEACEF68A42ECA668620B0035DFFA
+        1E78A87FE2F1BA07499370501B5A40AA4E223505464D41016ACECFC01D35C2B1
+        762DE92720751A027B811C31EFCE97429C2689259D801970E8E2EB758DE8E867
+        FFB89E844A5091B57A83EA0000002574455874646174653A6372656174650032
+        3032302D30322D30325431343A30343A30392B30303A30303E4D2B2900000025
+        74455874646174653A6D6F6469667900323032302D30322D30325431343A3034
+        3A30392B30303A30304F10939500000028744558747376673A626173652D7572
+        690066696C653A2F2F2F746D702F6D616769636B2D70554F313152524EA8E14F
+        DB0000000049454E44AE426082}
+      TabOrder = 6
+      OnClick = BtFindClick
+    end
+    object RGTipoDoc: TcxRadioGroup
+      Left = 207
+      Top = 20
+      Caption = 'Condici'#243'n Doc'
+      Properties.Items = <
+        item
+          Caption = 'Credito'
+        end
+        item
+          Caption = 'Al Contado'
+        end
+        item
+          Caption = 'Todas'
+        end>
+      ItemIndex = 2
+      Style.LookAndFeel.NativeStyle = True
+      StyleDisabled.LookAndFeel.NativeStyle = True
+      TabOrder = 7
+      Height = 83
+      Width = 185
+    end
+    object cxButton1: TcxButton
+      Left = 676
+      Top = 24
+      Width = 174
+      Height = 44
+      Caption = 'Anular Facturas'
+      LookAndFeel.NativeStyle = True
+      LookAndFeel.SkinName = 'VisualStudio2013Light'
+      OptionsImage.Glyph.SourceDPI = 96
+      OptionsImage.Glyph.Data = {
+        89504E470D0A1A0A0000000D4948445200000018000000180806000000E0773D
+        F80000000467414D410000B18F0BFC6105000000206348524D00007A26000080
+        840000FA00000080E8000075300000EA6000003A98000017709CBA513C000000
+        06624B4744000000000000F943BB7F000000097048597300000EC400000EC401
+        952B0E1B000001B64944415448C7ADD6BF4E54411406F01F962EB15BA3B282CA
+        46282C4DE86DD5D5167D03FF6061E27B5812A5B161158AD568EC7C0831510B89
+        891624564005EB068B7B6EEEA8ECEEE5724F32B99933DF7CE7CC7767CECC84D1
+        368D5BB88E0B6885FF27BEE32D5EE38723DA1496F11B0763DA00AF228152761B
+        BB31790F5D2C620E0D9CC42CEE6015FB81DD41671CF9A3C8E800EBB85422A119
+        F492D52C8DCA7C10B23C3EA2A44D6C2541FE5B492B91A50AF946CCCD83ECE05C
+        0A5A4964A94ABE81D3895CCF72D074C8B25752F361E4CDF0CFA01F9C2D7818A0
+        6E0DE4B97563EC3EBC8FCE624DE47037C6DFC1D7E85CAE891CDA81F942B17B26
+        4B907F0CEC679C19816D046E370DD0A8891C4E05763B9568F698B2A436974B74
+        029BE15C1842FE0157F009D7F0AB4480ABF1FD060F22DA6A0D99E7B616F3EEC1
+        79D9A1D8971D92E392B783ABAFB83F3C0FB29EECB85725A72815CBA9734A56A0
+        D2825585FC8962F79CFD77B0A3B80BB62A920FA2DD1C065A4A82F414FF649CE6
+        B92C03596D1B699D44AE3E5ECA6A4B5B761827311FBE35C595B98D1B6597DBC4
+        D30850E6D27F7198E6303126504BF16CB9E8EF67CBA6AC5ABE89FEA1F607F6CB
+        AC79556886500000002574455874646174653A63726561746500323032302D30
+        392D31355432333A33393A30322B30303A303081EC19FB000000257445587464
+        6174653A6D6F6469667900323032302D30392D31355432333A33393A30322B30
+        303A3030F0B1A1470000001974455874536F667477617265007777772E696E6B
+        73636170652E6F72679BEE3C1A0000000049454E44AE426082}
+      TabOrder = 8
+      OnClick = cxButton1Click
+    end
+    object cxButton47: TcxButton
+      Left = 856
+      Top = 74
+      Width = 173
+      Height = 39
+      Caption = 'Retornar Factura a Hold'
+      LookAndFeel.NativeStyle = True
+      LookAndFeel.SkinName = 'Blueprint'
+      OptionsImage.Glyph.SourceDPI = 96
+      OptionsImage.Glyph.Data = {
+        89504E470D0A1A0A0000000D4948445200000018000000180806000000E0773D
+        F80000000467414D410000B18F0BFC6105000000017352474200AECE1CE90000
+        00206348524D00007A26000080840000FA00000080E8000075300000EA600000
+        3A98000017709CBA513C00000006624B4744000000000000F943BB7F00000009
+        7048597300000048000000480046C96B3E000001244944415448C7CD93C14A02
+        5114863FD370A1418FE03A1A6C55D87BB4EA017A04B7B36C65A90B57BD8881B4
+        E90DD25D10E11B2491644D8BF907E47A47EFC119E887E1C03DE7FCFF7FEE9C0B
+        FF10B7650B24658B24458B44401F7801166B020910EF6AAE6DC9D5813BE00638
+        28FA1AEAC0442EBF34C105D0B0B8DF869148E640DBC9E5911F859247C08F9CB7
+        3D791F790B78054E4304EEE5B26F98B8A79E4148F154C5E706814BF54C438A3F
+        54DC34081CABE7D34DF8D6AFEAC410FC2A7E8708BC299E1804B2DAF7108189E2
+        9541E05AF131A438225DB99627177BCECE8025B0B24CED7B3431E98F74C9E7D8
+        D73A973CDBAE0E3094F34457735804B9FBADE43C97BCB69B7F030BD24D1B030F
+        C06C9FABC9D05D735D1A3211132CAFF519A8004F654E61C61F08E04C32ABF044
+        810000002574455874646174653A63726561746500323032302D30322D303554
+        30333A31323A30332B30303A30304B28C4BB0000002574455874646174653A6D
+        6F6469667900323032302D30322D30355430333A31323A30332B30303A30303A
+        757C0700000028744558747376673A626173652D7572690066696C653A2F2F2F
+        746D702F6D616769636B2D75616F683876344B8F03F16A0000000049454E44AE
+        426082}
+      OptionsImage.ImageIndex = 166
+      TabOrder = 9
+      Visible = False
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Century Gothic'
+      Font.Style = [fsBold]
+      ParentFont = False
+      WordWrap = True
+      OnClick = cxButton47Click
+    end
+  end
+  object Panel11: TPanel
+    Left = 135
+    Top = 199
+    Width = 376
+    Height = 130
+    TabOrder = 2
+    Visible = False
+    object op10: TcxRadioGroup
+      Left = 18
+      Top = 16
+      Caption = 'Tipo de Impres'#243'n'
+      Properties.Items = <
+        item
+          Caption = 'Impres'#243'n de Ticket'
+        end
+        item
+          Caption = 'Impresi'#243'n Hoja Continua'
+        end>
+      ItemIndex = 0
+      Style.LookAndFeel.NativeStyle = True
+      StyleDisabled.LookAndFeel.NativeStyle = True
+      TabOrder = 0
+      Height = 81
+      Width = 335
+    end
+    object cxButton18: TcxButton
+      Left = 143
+      Top = 103
+      Width = 112
+      Height = 25
+      Caption = 'Imprimir Copia'
+      LookAndFeel.NativeStyle = False
+      LookAndFeel.SkinName = 'Whiteprint'
+      OptionsImage.Glyph.SourceDPI = 96
+      OptionsImage.Glyph.Data = {
+        89504E470D0A1A0A0000000D4948445200000018000000180806000000E0773D
+        F80000000467414D410000B18F0BFC6105000000017352474200AECE1CE90000
+        00206348524D00007A26000080840000FA00000080E8000075300000EA600000
+        3A98000017709CBA513C00000006624B4744000000000000F943BB7F00000009
+        7048597300000048000000480046C96B3E000000804944415448C7ED94510A80
+        2010449F121DA2A34407B483DA35EAA328B3506B33307AB05FC2ACB3EB083F11
+        54E06C7C424BE776507E8357A9811E1898177CA72C6016AD034620EC97396B60
+        85A22DD0394E80FD921BE188355B16562D371C57831543F90EB250A5DE2440D0
+        79F9497647E48FA28CDF3465C9A2E7FBADDFB44C26FDEF3B6031133A13000000
+        2574455874646174653A63726561746500323032302D30322D30345430303A34
+        373A30372B30303A30303BBB7AF10000002574455874646174653A6D6F646966
+        7900323032302D30322D30345430303A34373A30372B30303A30304AE6C24D00
+        000028744558747376673A626173652D7572690066696C653A2F2F2F746D702F
+        6D616769636B2D44774A65307644517A72F32A0000000049454E44AE426082}
+      OptionsImage.ImageIndex = 1007
+      OptionsImage.Images = FrmHome.RibbonImages16
+      TabOrder = 1
+      OnClick = cxButton18Click
+    end
+    object Chkorinal: TcxCheckBox
+      Left = 16
+      Top = 103
+      Caption = 'Copia Orinal'
+      TabOrder = 2
+    end
+  end
+  object cxGroupBox2: TcxGroupBox
+    Left = 0
+    Top = 470
+    Align = alBottom
+    TabOrder = 3
+    Height = 22
+    Width = 1156
+  end
+  object cxGroupBox3: TcxGroupBox
+    Left = 0
+    Top = 492
+    Align = alBottom
+    TabOrder = 4
+    Height = 218
+    Width = 1156
+    object cxGrid2: TcxGrid
+      Left = 3
+      Top = 21
+      Width = 1150
+      Height = 194
+      Align = alClient
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 0
+      LookAndFeel.NativeStyle = True
+      LookAndFeel.SkinName = 'Caramel'
+      object cxGrid3DBTableView1: TcxGridDBTableView
+        Navigator.Buttons.CustomButtons = <>
+        Navigator.Buttons.First.Visible = True
+        Navigator.Buttons.PriorPage.Visible = True
+        Navigator.Buttons.Prior.Visible = True
+        Navigator.Buttons.Next.Visible = True
+        Navigator.Buttons.NextPage.Visible = True
+        Navigator.Buttons.Last.Visible = True
+        Navigator.Buttons.Insert.Visible = True
+        Navigator.Buttons.Append.Visible = False
+        Navigator.Buttons.Delete.Visible = True
+        Navigator.Buttons.Edit.Visible = True
+        Navigator.Buttons.Post.Visible = True
+        Navigator.Buttons.Cancel.Visible = True
+        Navigator.Buttons.Refresh.Visible = True
+        Navigator.Buttons.SaveBookmark.Visible = True
+        Navigator.Buttons.GotoBookmark.Visible = True
+        Navigator.Buttons.Filter.Visible = True
+        DataController.DataSource = DsDetalleFacturas
+        DataController.Summary.DefaultGroupSummaryItems = <>
+        DataController.Summary.FooterSummaryItems = <
+          item
+            Format = 'Total ITEMS =,0'
+            Kind = skCount
+            FieldName = 'COD_ART'
+            Column = cxGrid3DBTableView1ARTICULO
+          end
+          item
+            Kind = skSum
+            FieldName = 'TOTAL'
+            Column = cxGrid3DBTableView1TOTAL
+          end
+          item
+            Kind = skSum
+            FieldName = 'ITBS'
+            Column = cxGrid3DBTableView1ITBS
+          end>
+        DataController.Summary.SummaryGroups = <>
+        OptionsView.NoDataToDisplayInfoText = 'No Data'
+        OptionsView.CellTextMaxLineCount = 5
+        OptionsView.Footer = True
+        OptionsView.GroupByBox = False
+        OptionsView.GroupRowStyle = grsOffice11
+        Preview.AutoHeight = False
+        object cxGrid3DBTableView1COD_ART: TcxGridDBColumn
+          Caption = 'Codigo'
+          DataBinding.FieldName = 'COD_ART'
+          Width = 88
+        end
+        object cxGrid3DBTableView1ARTICULO: TcxGridDBColumn
+          Caption = 'Productos'
+          DataBinding.FieldName = 'TITULOPRN'
+          Width = 304
+        end
+        object cxGrid3DBTableView1CANTIDAD: TcxGridDBColumn
+          Caption = 'Cant'
+          DataBinding.FieldName = 'CANTIDAD'
+          Width = 97
+        end
+        object cxGrid3DBTableView1UNIDAD: TcxGridDBColumn
+          Caption = 'Und'
+          DataBinding.FieldName = 'UNIDAD'
+          Width = 102
+        end
+        object cxGrid3DBTableView1PRECIO: TcxGridDBColumn
+          Caption = 'Precio'
+          DataBinding.FieldName = 'PRECIO'
+          Width = 169
+        end
+        object cxGrid3DBTableView1ITBS: TcxGridDBColumn
+          Caption = 'Itbis'
+          DataBinding.FieldName = 'ITBS'
+          HeaderAlignmentHorz = taCenter
+          Options.Editing = False
+          Options.Filtering = False
+          Options.FilteringWithFindPanel = False
+          Options.FilteringAddValueItems = False
+          Options.FilteringFilteredItemsList = False
+          Options.FilteringMRUItemsList = False
+          Options.FilteringPopup = False
+          Options.FilteringPopupMultiSelect = False
+          Width = 214
+        end
+        object cxGrid3DBTableView1TOTAL: TcxGridDBColumn
+          Caption = 'Total'
+          DataBinding.FieldName = 'TOTAL'
+          Width = 167
+        end
+        object cxGrid3DBTableView1NO_FACT: TcxGridDBColumn
+          DataBinding.FieldName = 'NO_FACT'
+          Visible = False
+        end
+        object cxGrid3DBTableView1NO_FACT1: TcxGridDBColumn
+          DataBinding.FieldName = 'NO_FACT1'
+          Visible = False
+        end
+        object cxGrid3DBTableView1MASTERID: TcxGridDBColumn
+          DataBinding.FieldName = 'MASTERID'
+          Visible = False
+        end
+        object cxGrid3DBTableView1IMPUESTO: TcxGridDBColumn
+          DataBinding.FieldName = 'IMPUESTO'
+          Visible = False
+        end
+        object cxGrid3DBTableView1ITBIS2: TcxGridDBColumn
+          DataBinding.FieldName = 'ITBIS2'
+          Visible = False
+        end
+        object cxGrid3DBTableView1UNID: TcxGridDBColumn
+          DataBinding.FieldName = 'UNID'
+          Visible = False
+        end
+        object cxGrid3DBTableView1COMBO: TcxGridDBColumn
+          DataBinding.FieldName = 'COMBO'
+          Visible = False
+        end
+        object cxGrid3DBTableView1LINEA: TcxGridDBColumn
+          DataBinding.FieldName = 'LINEA'
+          Visible = False
+        end
+        object cxGrid3DBTableView1ARTICULOID: TcxGridDBColumn
+          DataBinding.FieldName = 'ARTICULOID'
+          Visible = False
+        end
+      end
+      object cxGrid3Level1: TcxGridLevel
+        GridView = cxGrid3DBTableView1
+      end
+    end
+  end
+  object pnRotornarHold: TPanel
+    Left = 499
+    Top = 260
+    Width = 378
+    Height = 210
+    BorderStyle = bsSingle
+    TabOrder = 5
+    Visible = False
+    object Label52: TLabel
+      Left = 55
+      Top = 23
+      Width = 83
+      Height = 15
+      Caption = '!! Precauci'#243'n !!'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clRed
+      Font.Height = -12
+      Font.Name = 'Segoe UI'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object Image2: TImage
+      Left = 16
+      Top = 17
+      Width = 33
+      Height = 29
+      Picture.Data = {
+        0B546478504E47496D61676589504E470D0A1A0A0000000D4948445200000481
+        00000400080600000076DA49BC0000000467414D410000B18F0BFC6105000000
+        206348524D00007A26000080840000FA00000080E8000075300000EA6000003A
+        98000017709CBA513C00000006624B474400FF00FF00FFA0BDA7930000800049
+        44415478DAECBD77B85DD57DE6FFAE5D4E3FB7A9200904A823892E3A02842424
+        248A69D7F46E639B1897B825B19D917BA31830B6E3CC6432E3E43725994CCA24
+        93E2649CEA38768A9390D8C6068350171D83DABDEBF7C7D5455757A7EC55F7DA
+        E7BE9FE7B90F9CBDCA5E679FBDD75EEBD5B70084104208218410420821841042
+        0821841042082184104208218410420821841042082184104208218410420821
+        8410420821841042082184104208218410420821841042082184104208218410
+        4208218410420821841042082184104208218410420821841042082184104208
+        2184104208218410420821841042082184104208218410424858085E02420821
+        84F41252CA68FB2FBC6B1A9E79E2F8D103724E7460FF5C118BA68C922AF61FA8
+        C8382A4718AD4988D73122F78838DA0F8CBE2A47E42BA349BA394AC4D6FAA2E5
+        4F35FFC3FDCF0B2146794509218410D22B50042284104248219152A6BB3E78CF
+        72F1C28B67C9D1D1E5528E2C81C47C40CE8594950E0D33AE92C41E009B21C493
+        328A7F28041E1743D3BE3DE3F35FFB5721C401FE0284104208291A1481082184
+        105208A494F5E73F7CDFCAD1175E5823317A96DCBFFF44ECDF37CDE209B2D54B
+        4BCF8934FD1701F177A3FDFD7F36F3B35FF94B21C46BFC8508218410123A1481
+        08218410122452CA08C0F4577EF991F3F73DF3E36B4677EFBC58EE79FDE82E8D
+        6C0FA2FB62AA5CDE1935FAFE1AD367FCF6B4777DE40FD168ECA61B1921841042
+        428422102184104282414A2900CC7CF5EB5FBB70FF934F5C35B2FDD955A37B5E
+        9F63A973B8EE4794CABB92E933FF46CC3CEA7706DEFAB3BF8F4663971042F297
+        25841042480850042284104248EE4829EB3FFD8D5F3B6FEF3F7DFB6D23BB775D
+        24F7ED9D7EB0C4C7C99DB417A5F2AE6870FA37CBE79CFB95C635B77D9B2E6384
+        104208C91B8A4084104208C90D29E5512FFFB7FF7CC9FEEF7DE7EE919DDB2F80
+        94B1664FB60766AFAD1023C9B419DF8A969DFC1F07EE7ED71F082176F1972784
+        1042481E50042284104288570EBA7C1DF5F27FFDF275FBFFE51F6F1FD9BD7B85
+        DB35897B37B0ACED44B3FFDF93854BBF3EF89E5FF83A802D741523841042884F
+        280211420821C41BF2B5D78E79F93F3FFA967D3FF8B71B475F797971EB4ABE74
+        11376E6059DA8846F387E9E2655F1F78F787FFA310623BEF0C42082184F88022
+        10218410429C23A59CF1D33FFAED4BF7FEC9EFFFEC81E79F3BD552A7AE46EB6D
+        3CA2AFFF5FCBE7AFF942DFF5B7FF1F21C4F3BC5308218410E2128A4084104208
+        718694B2B4E75FBE73CE6BBFFBBFDE33F2D41357C85199783CB9AD8EDC9E5F88
+        9178EEF1FFB77EC35D0F55969DFC2D21C4EBBC7308218410E2028A4084104208
+        71827CFDF5E35FFE8F0FBF6BDFBFFEE39DA3FBF70FB4AFE8392C8E95F349FBE7
+        8D9357D2454BFFDBE0BD1FFC02FAFA7ECC784184104208B10D45204208218458
+        454AD9F8E9FFFCAFD7BEFE37FFEFC3A3AFBCBCC8C1095C0DDCA4B1B57345CDFE
+        EF57575FFA99FAD537FD9610E255DE5184104208B10545204208218458434AB9
+        E8C5AF3EF8CE7DFFF0ADB76164B49CD32002E8CB501412D1BE74E949BF3AF8AE
+        5FF8ACA8569FE29D45082184101B500422841042883152CA74EFBFFFE3453FFD
+        FA7FFAF8819DDBCF6D5329EF41E6D887D43A473C7DC6B71B37BFE523E5D3CEF9
+        7321C47EDE698410420831812210218410428C90520EBEF2EBFFE9AD7BFEFACF
+        3E28F7ED9DE6E8242EBF80E7F68A8250A9BCBB72DEC59FEABBE31DBF22847899
+        771C2184104274A10844082184106DE48B2F2E78E1CB9FFFF4FE277F781DA48C
+        F21B880CA33F57829010A3E9FCC5FF6DF05D1FDE24FAFB7FC43B8F104208213A
+        5004228410428832524A811D5BCE7EFE91CFDE7F60C7B6F3031F6C7EFD28B5E9
+        5E379E7ED4B7FADEF1BE77A7F3177F97D9C308218410A20A4520420821842821
+        A54CF67EF7AF37BEFAFFFDCA03A3AFBCBCD0D1397C7C11FFED2D884251A3EF87
+        CD9BEE7A77F9DC557F228418E11D4908218490AC5004228410424866A49495D7
+        FEE0B76EF9E91FFCEF4F63EF9E19018CC77687FEDA66AE7F643D51AAECA85D7E
+        ED07EA570CFF4F21C45EDE9984104208C942C24B40082184902C4829FB5EF9FA
+        2FFFCC9EBFFEB30F63E4403D843109213A8D57A7C3561DE9B5EDD66E62FD8E75
+        27F63B564FEEDB73D46BBFF33FBE3CFADCEE1952CAAF0A215EE31D4A08218490
+        6E5004228410424857A494CD57FEF3977E6ECFDFFEE50721650C216C9FC0FA98
+        DB0944CAE290AAB8D3AA9D0341488E1C68ECF98B3FF9ACDCB7B72EA57C5008F1
+        53DEA984104208E90445204208218474444AD97CF5EBBFF4FEBD7FFB57EF8794
+        B19393A8884A868291B138A4632DA4222429084252CA74EFB7FFE2175F1C1D8D
+        A494F75308228410424827280211420821A42D072D807EFE0D0BA010E8261869
+        8A44ADC421E9C2EA47A57E867A725426FBBFF3571F79191052CACFD3358C1042
+        0821EDA00844082184909648299BAFFCEA977E61CFB7FFEA0300ECBA80B9CCFE
+        D5699C8AE79D2C0C49558127CB392D08427254267BBFF3571F7E7174541E1482
+        5EE71D4C08218490C9500422841042C81148292B2FFF97AFBC7FEFDFFED5079C
+        5800E9084A36842393C0CFB0200AD9168426D491A332D9FFF77FF391977EF9E1
+        3D076304EDE79D4C0821849089500422841042C8614829E3577FEBD7EFDA1B92
+        0B18E0CC0DCC44185216856C0B4293EAC85199ECFDBBBFFC0F3FEDEBDB29A5FC
+        2F428851DED1841042081987221021841042DE404A295EFFC3DFBD66CF9FFDDF
+        4F6374A4D2B5816A2C1C97587403D3CD08365114922E824567A97360A4FADA9F
+        FDE103A2DEB71BC0EFF1AE26841042C81BCB055E02420821848CF3FADFFDC59A
+        577FFD57BE2EF7BC3E3B8801B914964CFB566CAF949A3E4BDD2E75A25AEDD9FA
+        0DB75D57BB60FDB77967134208210400225E024208218400C0DE271E5FF6EAFF
+        FCFA578311808031EB966E7F36FBD66D9FA9BA78E32F73DF06E71F7DEDB5635E
+        FBCDFFFE2BAF3FF96FC7F1EE26841042084011881042082100A49403AFFCD75F
+        7E4CBEF2F2C2C20DDEA640A4DB87629BCC8250D63EDBD41979F9C565AFFEC72F
+        7F454AD9E45D4E082184108A40841042C814474A597AE9A14F7C6674D7F65599
+        2C6F5CFED9C68530A4DAA66B558B82508B3AA3DBB66C78E1731FF9451952906F
+        42082184E4024520420821640A23A514AFFEDAD7EEDEFFC4F7EF0E62403EC422
+        D33E55DB29D457168432D6D9FFC4F7DFFDE2571FB889773C21841032B5A10844
+        0821844C615EF9E3DF3977CF77FEE693528EA6851AB80B91280F51A863B50C82
+        5056EB2029D3FDDFFBFBFB5FF9DDFF6F39EF7A42082164EA42118810420899A2
+        4829FBF6FFE59FDE2FF7ED1D7AE360D1DDBFBA7D0FD33E54DB59AAAB2408B5FB
+        BDF7ED9DB9F72FFEFC4B52CA1AEF7E420821646A42118810420899824829A397
+        BEF8A90F8F3CB7FB5C2FA24C3B7C8B46B6852195FA96EA9A58078D3CBF6BD58B
+        9FFDF0FBF8041042082153138A40841042C81464CF1FFEF6C5FB7FFC837B0B37
+        F0D052C53B8A0D94A59EAE75D0819FFCF8FD2FFDB75F399B4F0121841032F5A0
+        08440821844C31E40B2F0CBCF617DFB85F8E1C68646E14A2CB97CA184DFB72D1
+        C630FDFBE155B28B41A3FBF7F7EDFFCE5F3F22A5ACF26920841042A616148108
+        21849029849452BCF8952F7C7CE4A5174EF526E4841037C8B71BD8E43659EB1A
+        F697550C1A79F185B39EFFC5F7FC1C9F08420821646A21780908218490A9C32B
+        FFE9E18B5FFFC7EFFE0146472A3DF3A5A4CCBF2F957659EB66A997A18E6C5347
+        24F16BD1A225ABA6BFFF13DFE193410821844C0D6809440821844C11E4134F94
+        F7FEEB3F3FD6530210E0D60D2CC78C6099D3BF6B5A07C90323B5D11FFDF8AB52
+        CA984F072184103235A008440821844C1176FFF2033F37BAF7F5A507A58180FF
+        2C92477C20CB01A033D7D31083E4FEBDA73F77DF2DF7F2E920841042A6067407
+        23841042A600BB7EE9A1D9F8B7EF3D2EF7EF1FEC9D6F5530373095FA365CC1BA
+        948FBB898928DE559A366DC9C067BFF2029F14420821A4B7A125102184103215
+        78FC1F3FD75B021060D59AC8861B5868AE605DCAC72D83E4E8C88C7D3BB67D9C
+        0F09218410D2FBD01288104208E97176BCE5DA93A372F5BB52CAB4ED8240E4B7
+        249036033B773F9BC940DDD5B714045AD73A4842EEDDF7C2AE93E6FEAFBF7882
+        4F0C218410D2BBD01288104208E9F597BDC4C300D271CB8F567F79D2695CF6C7
+        69603594776C200B7181DA950B88729A541EE4D342082184F4F8BA9097801042
+        08E95D76DCB47E2D2AD555BDF27DDC884439884259EA99D4D12817F5C665CF5C
+        7AE6997C6A08218490DE25E125208410427A987ADF0346ED6D5B093976FD6A27
+        04A9B99CB5EA43AA5DAB6EE7CB52D7469DACE552424491280D4D7B0CC0597C70
+        08218490DE849640841042488FB2E38E37DD1B95CA271FB6E157FDB38DCE182C
+        8CC3DC6A48D15A48C742C8B43F93F2836551AD71E68EAB57DDCCA787104208E9
+        4D18189A104208E94176DE3BDC804C7F2CE278E694F8C2962C8CF482544BFBE3
+        F49022BE6DF9FE7D5B7FFA93EF2D98F7CD9FECE19344082184F416B404228410
+        427A10B977E47353460002AC5910E9590B295809B908146DBB3C2DCDA94E5FF0
+        8B7C8A082184901E5C32F11210420821BDC5CE3B2E5F84FAC0BF0821CA1D0580
+        D071153FC8A05F754B218F963FDDEA285806C99191D79367372F99F6C7DFD9CC
+        278A104208E91D680944082184F41A69ED31114565AFB17E5CE02A4E90415FEA
+        9642162D844CAD83BAB59F5026E2B87A6070E8213E4C841042486F414B204208
+        21A487D879DB151B44FFE0EF4FF977BC0D2B22C53ED4AC843C58FE1896CBD151
+        B96FF7F6D5737FFBAFBEC9278B104208E90D680944082184F40872D3A608D5FA
+        17A12300E966EDB2F967131BE7506CAB662594C14228CFB84000441489B439F0
+        A8E43F1A124208213D034520420821A447D8B5F97B1F10A5D2E2969B7CDFA9E0
+        75F0315693FE14DB38118474C7A6290645D5DA89DBAE59750F9F2E420821A437
+        E0BFEC104208213DC0D3375D36581B1AFC31A278704A5F881CDCC054DB64731B
+        73EC0AA652B67FFF2E3CF5C3F933BFF9F8AB7CD20821849062434B20420821A4
+        07A8D66B0F5A15808AE6FED56DDC267DA8B6E95AD5B3759069599ACE383073CE
+        A7F89411420821C587964084104248C1D97EF3C693E2A1E97F0F21D28E824091
+        71912E5EB74F957619EB5AB10E726819244747F7EDDBBEF9C4B9FFE7DB4FF089
+        238410428A0B2D8108218490A2BFCC1B7D5F861069E153C277C28555916E3F2A
+        F533D6CD163FA88B7590495CA02E65228E4B49FFB447F8B411420821055F37F2
+        1210420821C565E7AD570E8B4A65A557A1276F972F9531B55AFC348168FAD87F
+        BBF6A37ADEAC753B56537117EB722E8B6571BDB17EEBB517AFE7534708218414
+        978497801042082926F29E7BD2E7D29F7E5ED9A9C9B73863F425A5F9F905505A
+        0A94CF044A4B00513BD4A77C1DD8F77D60EFB7C7FE7B84C7D5E4F1771BCFC4FA
+        9DEA66A83751086AEF2E365E47763E4FABF6AA654288B8D9F7B004960960944F
+        20218410523C18138810420829283BDE72DDC7A37AE3A36D37F053812EA24C32
+        0F685C0B24C774ED08079E055EFD4DE0C05376CEAD55B74BBDEEB183DC670C1B
+        796EF7FB67FFE69F3EC02790104208291E14810821849002B2F38E8DB344DF8C
+        1F226AE9D44484446D1D505BAFB8DA91C0EB7F01BCF63B127244A59D65412843
+        9DCE8290033168FCF8FEFD2FEEDDB26DC1DC3FFAD6F3BCD10821849062417730
+        420821A488549A8F58138042B21CB290054C5481BEBB04D2852D4FD0A53150BD
+        0848E608BCFC2B63EE6299C6A5E23696C5654CC15DACB518E4C04D6CFC789A0E
+        A4437D9F03F0563E8884104248B1A02510218410523076DF76F9597270FADF40
+        88B8FB9BBE475FF56D8491A809F4DF0BC4B33277D4B6E4C056E0E52F03A3AF66
+        3FBFCA586DD7317215EB66FD33F9B61A95FBE35D3B4E1FFADFDFFC573E918410
+        424871607630420821A460C846FF970F13807A39357C3B5A7CD7A829140520E0
+        F0B4EB8767DC4AE6007DF70251BDCBF955C66AA34EDBE22C29E63BF4AD704E19
+        89747FADFE189F46420821A4585004228410420AC4CEBBAEB91BE5F20AA7428F
+        4A0A781B7F36869C027D7703F1AC56A28EEA390EB54BE608F4DD038852C6EB95
+        F5DA9AD4E972BECE625087EBA1983A5E349B176EBBFAA2613E958410424871A0
+        3B18218410521036BF77B85A3950FD319264B6FA1BBF075EF91DDC9DFAEE024A
+        272A7798B9E6DE7F005EF93A72C90896A94E8772ED00D2198247CBBD7B7FB2F9
+        9F9F597CC6DFFFFD7E3EA184104248F8D01288104208290895D7A24F7614807A
+        DD2DACCD77AB5D2234042040C55AA87CFA58C068A5EB6AB39E41B933CB2000A2
+        5C3E7EEEC2A19FE7D349082184146439C54B4008218484CFD6BBAF392E6DF6FF
+        1B84A8E521EA080BE79416327F4D26391AE87F37D03E44B6C9390F6F2B478097
+        1E020E6C69FB05B35E08F33A215906EDDFFF2AB63EBD68E61F7C673B9F544208
+        21246C6809440821841480A4547E0C516445001AB70C51F9B381EDF38A0468DE
+        D4490002CCE2031DDE4EC440F396B1F3B6F9824158FE742B37B20C6A459A3646
+        FBA73DC8A794104208091F8A4084104248E06C7FDB756B44B5B6316B7D1F828E
+        2F3A7D8FDA46A19809EC8D5EA1270C09C4B304AA9758CA0836B19E6E3F59CB3B
+        5CDBCED7285B7F51FFC09BB75D73D1997C5A09218490B0A10844082184044E9C
+        D61E6EB523EF059147FB9ACC042A2B81D6828ECE35C8DEBEBA0688670A37963F
+        AEAC838CC4A036FD1DFE398E9AFD5FE1D34A082184840D45204208212460B6BF
+        75F8DD28A5CBDD893D22D0BFCED42ED771031306D76542490CD4D64FAE6EC9F2
+        274B1D876250E76BD1B92F51ABAFD876ED9ADBF9D412420821E1C2C0D0841042
+        48A03C77DFCD7DA349F9C7228AA6F3557F88E458A0FF3E69E9AB49BD36A3C00B
+        5F00467674AB9A6F10E8AEE56DCAB482474B09ECDFBFF5A707762F98F7ABDFDC
+        C32798104208090F5A02114208218172E0C0C817B20940FA163545A476390E5A
+        A0D8F8CE7AB1811009D4AF52880D6452C720EE4FD772DB2E62693AA7F27AE9E3
+        7C7A0921849030A1251021841012205BEFB9F684B431F84F42A0ECF5D59D574C
+        A18CE9D54BA78E65E8D23881EEC03A96BEF22BC0DEC7D5BE8373EB200765ED2D
+        835A1C1F1979FDC0E6CD4BE7FCC1DF3CCD2799104208090B5A02114208210192
+        A4952F0B21CAD62C7B84C8F6971759C65612A86FD43E01B4AD7E3AB4A95F3921
+        36512829E21D94295905C571359A36F8309F62420821243C28021142082181B1
+        EBEE375F11556AAB941B8628EE58A4BA0A88866CBABE998A4240341DA85ED0E5
+        B7C8F29BB928B75CD6DE45ECC8EB1735FAAE7CF6EA0B57F36926841042C28222
+        10218410121072783846B3FE20BAA912BE849EAC1644AA7FAA0B96FE3111A8CB
+        60E1373ED058BDEA3A81A82FE335D4AD631217C8A4ACE5E10C564142887460E8
+        51C9D00384104248505004228410420262D790F87911270BDB0A0036041F8762
+        8DAB31D42E034449EB44B09326BE43AD3250BB547409A63CE97B9BD4F1290619
+        5805896A6DD9CEEBD6BC834F35218410120EFCD7194208212410B6DE73E3F452
+        A3F604A278C0FC0DDF3BAFF8E438A0FFDE4EAB1669780669DE46022F3D021CD8
+        3CE970DE29E275CAACA5949790FBF63D976CD93C7FDAFFFDF6CB7CC209218490
+        FCA1251021841012086922BEA82C00851203C8D579C558F0E5CEFF6C95539AF8
+        89F505507F53ABCB92C14228B4B840D65CC40444A93CEDC0C0E067F874134208
+        2161404B20420821240076BE75F8D4A87FF03B00928E9B7DEB2B8180970252A2
+        7C26D018B6D6A1F376AFFC9AC4BE7FEAF6B50CAD835C5806596AD3EABB89D1D1
+        7DFBB63E73F2D1BFFBD73FE0934E082184E40B2D810821849010A854BF82C902
+        900DEB9E5053C267197A45A0B6DE6536304DAB9F0ED4AF1040B9735D63EB20D3
+        20D136DBB4F96E139151548A07A67D890F39218410923F1481082184909CD9F5
+        D6EB6F88CA95738C049A1E4C0D5F5D8DCE59B7AC88437A19C1DAD58DFA81EA45
+        93EB76FAD91CBA8AE9BA7BA9B4E91038FAB0EBD268AEDD7EDDAACBF9B4134208
+        21F9421188104208C91179CF3DA968343EA724D8B8127B5CA583D7C844164D03
+        2A2BB5BF085C6704EB54B77A31100DAAF5E95C0CB2D926E3F1C9DF49F40F7D51
+        72ED49082184E40A5FC4841042488EEC142F7F0249726CD7CDBD6BB7B010AC86
+        268CA57EB980486CB880BDD139CCDCC044E6BA22056A1BBBD56B7709BAB88A65
+        118354DB59B2FEE9661524CAD505DBDF7CC907F8D413420821392EB778090821
+        84907CD8F59E5B668BA4F64308D1E8BA89CFFC662FFEAB3D5D00F4BD55A7A549
+        AA7869BDFECB5F06F63F298DFB92B653C0772A737C5CEEDFF7D2BE1FFF64C131
+        7FFA77CF710620841042FC434B204208212427E4013C06211A56E300D9C4B30B
+        D8F8CAA47685F68061C70DCC3C361000D4AE021067F96D0C5CC57CA587D739DE
+        EAB469A93F9D35FD7E3EFD841042483E5004228410427260C7DBDF7C7E5C6B5C
+        9959B8B129F8E80A342E9874CECA3902C92C976E606E5DC12692CC01CA67B4F8
+        AE5DFB6977A91C8941AE8EB7396FD43F70CB8EAB579EC25980104208F10F4520
+        420821248F1770B9FEA804E20E3B7E3341A68069E14515A8AE695B0A77A9E255
+        DB64AF57DB30F6BDDAFE361AE7B22E06F9B60A125182FE698F71162084104272
+        5883F212104208217ED975CFF56F13E5F2696D8581D0DCC2B29CCF8255516D2D
+        10D5B5068490D2C44FAC173504AAAB335CCBAEE76AD5D4400C5269A3E8F295A5
+        6E546F9EBFE5DAD537723620841042FC421188104208F1C8D64DF7D4D06C6E3A
+        6C739D677A7847828EEA79E29902E5B36DB9800179A7899F48E582B1EF079314
+        F0B6C5205B2E622A02D1A4BAE9E0B4CF3DBE7C7989B302218410E20F8A408410
+        428847929DAF7E4E24E92CED5840AA849E16FE20F5CB017184739C4071DCC0D0
+        B69E8827A48C17398A412AE7B36115D4A5AE2897E70E9D72EC47382B10420821
+        FEA008440821847862FB5B86E7458DBEBB3BEB08C29E855041D2C5979602E922
+        9D96A6E2903B37B0C9F54ACB8174719BDFABD3EFD9F51CAD9AE614205A552002
+        1035FB7FF6992BCF9FC3D981104208F1034520420821C4D74BB75AFD0AC4A430
+        C1B6441F0B8C5B9278FD4B046A1B6CBA8101796604EB54AF7E652B6B27381183
+        ACBA88398809347E2C4AD37A6960E821CE0E84104288A7F5282F01218410E29E
+        1DEF78F3DAA8565F77D8A6DA637AF82C824C1E54CE07E2E9478C1676DDC0009F
+        19C1DA11CF14289FABE90A96490C6AFFBBB7EDD3F4B805F7B0A8D97FDD8EAB2F
+        3A97B304218410E21E8A408410428863E4A64D515CED7BE4E08E3C5B234DC127
+        2481A7EB58EB40F522AD9608392358A77AB54B80A861101728536AF9F6F745E6
+        FE3CC4049A30B608834C194F082184F8802210218410E298DDDBBEFFB3289596
+        76D60ED42D7D9C8A3D3A59C314FF6AEB0544C5A640154E46B0C3EB4D385205AA
+        6B5B5CE34EBF816A996EBC20D3E31A3181DE5890D6EAA76DBF61DDDD9C2D0821
+        8410B7085E02420821C41DCFDD77739FAC369F44144DCBBCC16EF7D2B625F204
+        601914CF06FAEF555D89480B67960EDBC86C754681971E060E6C6F55DCA10FDD
+        B236E392EDDAA81C37AD3BE198DCBF77FB81AD3F5E30E7F7FEFE35CE1C841042
+        881B68094408218438448E460F1D26002958FB1859F9049E16BE761934FE292A
+        0F3730C0C4F2A7659D48A0764597DFCD66994D1731DB75271C13697956D43CEA
+        939C350821841077D0128810420871C4EE77DE7882680C7C4F8AA894F9C5AC23
+        D2F812762C9DA7749244E3CDAE072B3DB49346755EF9AFC0BEC7BBF461DD3228
+        6CAB20393ABA6774F3E665B37EEF2F9EE20C42082184D8879640841042882364
+        52FDA56E029096B58F4DCB1E95383E364880DABA6ED9BF6CA48BB79126DE46DD
+        F6E5F5CB01913A0A12AD182FA8A35550D6FE2DA48C175154C1D0C0A39C3D0821
+        8410375004228410421CB0E39E1BAF8AAAD50B5AEF893D8B3E01B986552F04A2
+        01A5C1C39E40649211CCD415ECC87EA221A0B2B2C56FD4E9375429D3741153EA
+        DFB46E8B6371A36FE3961BD75DC25984104208B10F4520420821C4327278384E
+        9ACD07E4849DB692F0A32BD4041C030800A23EA072BECD1E4DC5215D51286B9F
+        DDFBA95E3C765D5AFE8E9D7EE376654A6D2C580559107D8EBC51229136FA1F96
+        0C5B40082184D85F8FF1121042082176D93923FDA82CA5F33B6EA8DB6DA64D44
+        1F137CA484BF5440945CBA804D16375CA589B7671D24CA02B5755D7E1395326D
+        17B156D51D893E1D8243BF71A8525DBAE3A6F5EFE26C42082184D885FFC24208
+        21845864EB3D374E2F0F0DFE0851D4DFFD2DAC28F818BFF5F37BED277381BEB7
+        D85A7948CFED6DA588976D0FBFF415E0C0339A41A27502442B048E9639A58C1F
+        DDBFFFF9F4B95DF3877EE31B2F716621841042EC404B20420821C42269A5F468
+        470148C57247D7CA2734B73001D436C2E23F3DE5E506663F2ED0F8E1FAE500A2
+        0C41A23BFDDEAA6DDA8E7172D57CDCC3A2341DDA5F2E7F8EB30A218410620F8A
+        40841042882576DD73FDE951BD795DDB8D7137214647B47126F6086B7FE5D305
+        92A35DBB8001763282D98CF9933D6B58722C503E65D26FDAE9F7562953761D6B
+        1F2B48A96F0BC7A2FEC1BBB60DAF59C6D985104208B1034520420821C49604D1
+        A87F1502C9619B6315E127D3496C083E3EE2F21C3C5319A8AECE734C2ED3C49B
+        A5889F5C5EDB0088528BDFBAD37DD0AE4CA58D4BAB20D3635194468D3EA68C27
+        8410422C411188104208B1C0AE7B6FB959546A675A177E8C441FB7024F16AAAB
+        80A869AB371BDF276F57B0F6E5519F40F5C20EF70014CA5445A28E5641ADAAFB
+        1382A24673F5D637AFBB8AB30C218410620E4520420821C49027EEBBAF1C351B
+        9FCD2CFE74D51D74441F87628F6636B0689A40F91CF7D646F6E203D9A8DBAD4E
+        E7F2CA8502F19027EB9FCC56418AEE6159CEA5720C403230F8805CB52AE16C43
+        08218498411188104208316460F4C54F21498FE9B809B7ED16664B50C922E868
+        52BB1410B1CA7708C90DCCD4F2274B9D23CB453A76DDBCA58737B40A6AE91E66
+        3B4E901010E5F2FC1D47573FC4D986104208318329E2092184100376BDF38639
+        A239FD872212F5AE1BEEAC1B73DBAFEC1C3283A5F381E6EDAECF223DB69516EA
+        642F7FF99781FD4F4D2CF2901E5E25E57BD654F2368F8D1C78F9C0CE6716CEFE
+        8DBFDCC59987104208D183964084104288D19BB4F2D5370420AB163F9AD630BE
+        53C3B73A5F2C50BBD4470CA23CD2C49BD4C95E3E9632BEC5756E77FDDBFD36A6
+        C71583466BF799E5589CF489EAE0839C740821841083A52B2F01218410A2C7CE
+        7B6F5C299ACDCBBA8A2D5AC24F066C0A3E9A717F5A51390B888F6AF7BD5CBA80
+        0176D2C49BD6CB1A17A87DFB78B64065459BDFA9D3EF67E378D6BA39084171FF
+        C08D5B6F5AB782B30F218410A20745204208214493B8D6F7252144FB77A96BE1
+        471507717F8E384515A85E64A527D813885C6704D3B5FEE9DCBE7A894054CDC9
+        FA472968F4E46A0E852021E2B8DAF812671F420821440F8A408410428806BBEF
+        BBE59DA8944F69BB81162696226DFA1301BB851DA4B67A4C08728BA938A41300
+        DA872BD8A4455A03A8AC6A23AA4CFC8D5D1ECF72AC5580EBAC01A335CE1BD59B
+        E76CBDF1D25B380B11420821EA50042284104214D9BAE99E1A1AFD1FC9B49156
+        120226F52572700B6BD75F86BF78A64069858EEB97ADD841AED3C49B5AFE742B
+        3FB2AC721E104D6F23AA4CFCBD5C1DF7E11EA6210EA5FD839F797CF9F2126723
+        420821440D8A408410428822E9EED71F10F1C1A837B6AC7E54041C53C1C7554A
+        F8F580305A59D816897CC406D2ED275B998881DA86893F9D682FACF88E09E4DA
+        3DAC539D52E99869A71EB789B311218410A206452042082144811DEFB869BEE8
+        EFBF23BBF8D3A98AA6F0A38227B7B0D20940BAC0F5D5F7E90606D80902DDED5E
+        E85E563A0148174FFE59355CC4DAD537E923472128EA1F7AF7EEE1D547735622
+        841042B24311881042085120AED57E494471456FC38FEC628C8E70E348F019B7
+        3E69FB970854D7E6E50206B8CF0806B88F0BD4B9ACB6510071EBDFA5EDBDD0EE
+        FE5039AE7BCC83102492B83652EF7B84B312218410921D8A4084104248469E7B
+        E74DEB45ADBE464B4C50157EB26041F0E92AF064E8B7720E104FD3BDAAAE8422
+        13AB1F97963FDDCA5B97C53380CA39A2E36F98F99EB3111328539FEE85A0A8AF
+        FFAAADC36B57727622841042B2411188104208C980DCB42992B5BE870FDFD95A
+        B0FAF1140B4857E0E9DA6F03A838DF82DB10877445A1AC7D9A94672BAB5E0C88
+        7AFBDF5EF874F96A17CCF988BAAD3387699DB7759D28E91FFC8AB46756460821
+        84F4341481082184900CECDAF5E30F89727949268140C5EAA7AB16A12EFAB810
+        7BDA8DA9B64640947DBB7F4D1618F2CE0896E19E3012830EFE5F15A8ADED7CFF
+        58B10AF21027C8A61024EAF51377DEB0EEAD9CA5082184906C2B204208218474
+        E085F7DC31305A6BFC187132D4F9AD9A41F8C9F47656B7F2315F11A8F711CF02
+        FADEE272352173E8475AAA67522EDB1F1F055EFA3230B27DE2E1D6F5659BE32D
+        EB9BD6CDDCA7EC3ECE2C7D4DFA2CF7EDDB2DB63C3D7FC6EFFEF52B9CB1082184
+        90F6D01288104208E9C27E291EEE28006575F9EA8482C58F91958FADB4F002A8
+        5D0AC7FF9CE42255BCADBAAEE302B5391E09D43666BBBF3A5A0565BD47F38813
+        A46111244AA5E92303439FE26C4508218474862210218410D281E7EEBB7959D2
+        D77F43EB3DB9A1F8935184D1167D1CA6872F2D0792B979FD2A26E2904A1B1B81
+        A275C5A0F6EDD2F902E9B236BF779BFB27F3BD59602128EE1F78DBB357AF5CCC
+        598B104208690F4520420821A403B254FB650994326DA02796195A06298B3E36
+        059F76D642E37FA94075B56E4A789731835CA68937CD0A96A56DF676F50D63BF
+        43D67B4BD92A28EB311DF1A6CDF7351682A2B8541A9CF130672D420821A43D14
+        810821849036ECFE999BAF16B5FAB9DD36D85DCB269677A8A324FC18BB73096D
+        D7B0CAF940D4EFEAAADB14894CD2C467A9A7536EA72C1A1CFB1D54D3C00BEBD9
+        BF90AD9E27214834FAD66FBB61ED659CBD08218490D65004228410425A20376D
+        4AD0EC7F1080B022FE74920C74849FACD88A0134BE70E8032AE7E4F9CBF8C808
+        96B56E5E62D018D50B81A839E177CE78EFE5E61EE64308124244CDA12F4AAE71
+        09218490D66B395E02420821E4489E7BFEA94DA2543EDE95F893D9EA4755B8B1
+        1D0368527FD54B04441A920B1834FBD4890D94A52FD5F63A6563C74509A8AECB
+        70CFF9740FEB76CC831014D56A0BB7DFBCE1BD9CC50821849023A10844082184
+        4C62FBDB6F9D29FA07EE6BBD2FB723FE74D61C14441C976E6193FA4B8E014A27
+        B8B8E22E842217B1815CC605D2CB16563E65EC7739E237CD785F165E086A73AE
+        B87FF0A39BD79F3BC4D98C104208391C8A40841042C824926AFA1844D4976983
+        DB65933DBE99ED2AFEE80A3F5931750B1307AD4E445EBF8A2D3730152B21933A
+        6EAC7F5AFDAEB58DD96302154D08D2EA470888B4D49FCE9EF179CE66841042C8
+        E150042284104226B0EB9DB79E211A7D571FB1D1D4700B53B2FAC9522747B7B0
+        F2A940327BA21891B70B1860274DBC693D976250B6E3C95CA07CAA599C1F6112
+        1CDAA11024B4FB01E2BE81DB775CBBE664CE6A841042C82128021142082113A9
+        567F0942C41D37D15DCAAC58FDF8167D3AB884898A40E5429BE2CDF866DF8550
+        146246B06EE58AD63F2D8E57D703A26216DCD9284E5068429010808812D1DFFF
+        082735420821E41014810821849083EC7ED79DB747D5FAE9ED37A7B023FE74D4
+        1A1CC702D2700BABAE04A2461EBF880D81482700B48D20D06EAD7F261F8F1A63
+        BF53DB7BD7479C205D2B2187429068F65DB4EDDAB56FE6EC460821841C5C33F0
+        1210420821C013F7DD57168DFAA73ABAD0B8127FB28A39A6D6411A1642F12050
+        3A43A5856D8BA16EE7719526DE872B984A9BEEC7CB2B817868C26F9FF53E741D
+        27286721289A31FD0BDF5DB122E52C47082184500422841042000083F12B9F43
+        5A3ABAF5BEDCB1F8D3518BF09829AC453FD54B0444AC13EBC777BC20D334F159
+        EA9994ABB6531783440C542FC9707FF59A10D4A5DFA8523D76EEB2593FCF598E
+        104208A1084408218460EB3DC3C7A239704FCBCD640701A8E326B49B3B599E99
+        C226B76B231EA5C703E9C23C7E115B02916D41C8D4D5CBB58B984069B940BAA0
+        C56F0DBD6385108232DCFB51FFD007765D73C16CCE76841042A63A1481082184
+        4C79D2BE81AF8828AA1EB6A9D4B1FED10C24AD55C7B55B5834C9AA24186C6404
+        33B5FCE956C7537AF836FDD4368823577806D9BF5ADEF3DE85A0239F43A53E92
+        A431DA9CF600673B420821531D8A40841042A634DBDF7EE3EAB8DEBCB4DB06D4
+        99F81362A630009515403C7DA200E1FACF045769E24DE302F9B1FE997C3C9E09
+        945798C504CA6415E45508D218CF64B7B08181373F7BCDAA7338EB11420899CA
+        500422841032A549FAFB1F9540A4E5FA6543FCE9A853788805D42A257C55A072
+        BEAF00CF1337F92EDCC0545CC14CEAF8B4FEE96E15545B0B886A9BBA3D240429
+        F521445C1A9AF618673D42082153198A40841042A62CBBEEBBF53DA2525BA66C
+        FDE352FC7195296C729B0E6DAB1701A21ADAAF652B4DBC693D9771814C8F1FEA
+        5F5481EAAA0E75431582BAF66396314C34FA4EDF71D386DB38FB11420899AA50
+        042284103225D979EF7023EA1BF848BB4D6E47EB9F76C743CA1436B97EC636F1
+        74A0740A3A080FA1B880017E328215C7FA67F2F1F2D963AE616DEB86280465EA
+        472363D8C4C56FFFE067370F9F5BE52C480821642A4211881042C89444949B0F
+        222D4DEBBAB99DB811551586B2B47395294CE8B95055D70888C89568D3FA9C76
+        85A2D052C4FBB3FE997C5C44406D4397F6790841DDEAD810823A7D2E976797CA
+        D33EC659901042C85484221021849029C7AE770C2F899BFDB74DDE445A75FD0A
+        3553D861C2C1E12248690990CE0BEDD7321187743282E98A3DDDCA6D5AFF64B5
+        0A1A4B179F2EEED2BE5D96B056F7DB11872C65FFD27115331082C4E0D07D5BAF
+        597D1C6743420821530D8A40841042A61CA23EF4551945E5B69BC76E1B5157E2
+        8F8B4C61190514910095555A5713FEDCBF3A9D57B54D967A2ECA7544A2ACFDB4
+        3E56DB2820920C75859E38E44D08B2983A5EC47125EEEF7F98B321218490A906
+        4520420821538A5D6FBBF18AA8D9B8A8EDA6B1DDE6B7DB4634944C619AC24BF9
+        2C201E6CD787ABAC5DAEDCC06CB98299048106ECB988A959FF1C91327E08289F
+        9DB1BDA680939F10A471AF1CEC23EAEBBFF2D9E1D5AB392B124208994A500422
+        84103265909B36456268E82129213ABA7FB5DB38869A294C533C19BF065153A0
+        72B6CBD83F3A988A433E5DC17C0688D6AB5B5D05447D05118294DB08F5711CAC
+        980E4E7F548673D313420821CEA10844082164CAB0EBB9A77E41942B0B94DCBF
+        5C5905995A06290A23E382CFC4BF8902812817E557B4111F284B3D9D721F01A2
+        5505A283FF5706AA17B7BB670313825CA48E6FF339AAD5976DBFF1D277707624
+        84103255E0BF7C10420899126CBE7B78A83A7BCE93519AF667DAF0EA1CD76D93
+        75E3ABF0DACE9A363B9E05346F6BD7B5EF6582CCA11FE9B05CA74C3AA82BDFF8
+        CFCB5F030E6C052033B695198EB5A82333D4E9DA8FEAE716DF4166E843EEDBF7
+        9C78F627F366FCEE5FBFC29992104248AF434B204208215382EA40FF23C60290
+        4940E87674B5FAC96EF1D2CACAA77303A0BA667C7C3E52C2671890F5D84359EB
+        EAF615A2F58F687D4C1C4C192FDADD779E2D8254FBD5CA2096E1B4A5D2B4D1C1
+        699FE12C490821642A401188104248CFB3E36DD79F229AFDD767DEE0DA881564
+        5296499C405BF7AEAE1BED837FA5130592638A6214ECCB0DCCA72B98BF9840E3
+        C7926381D2B24EF7B54721C886AB982DB7B0FE81B76E19BE7809674B420821BD
+        0E45204208213D4F3C30F455212624C956117A7C670A53107F32313106D18436
+        A204542E54B98AC2D19F092E328265F90D7C58FFB43BAE171368E2B1DAA58048
+        3BDDC7390B41AAE7B12104457129690E3DC2D992104248AF4311881042484FB3
+        EBED37DD10D5EAE774DDCCE69A29ACBB3891D9E2A78DE83399F2D940D4E8340E
+        5FAE612E53D067ADDBAD8E4EB94BEB1FC044088AFA042AE775BBD75B8CC757B6
+        2FA19FF6BDDDF7CEE29E16359B976CBF71DD159C35092184F4321481082184F4
+        2CF29E7BD26868E8F34A9B5817C7858ED588A6F093E5E53F0094CF0C210650A6
+        DD3DECA48937A9671A17C8F4B8B9F5CF642A170A44FD59EE61732148B870FB12
+        96EFD7B1E74788E6E04392EB634208213D0C5F728410427A965DD57D9F10E5CA
+        DCCC9BD7439B4177C7BB8A06B02FFC4CB20EAAAE1298E01CA7BB6B463E2E60D0
+        EC334F5730D73181D48F8904A8AECD2A8A9A5BFB081F81A12DB88545B5DA829D
+        B76C7C1F674F420821BD0A45204208213DC9ABF70ECF4A06067F4639FE4F96CD
+        A9EEF1B61BF4439B5491259398AAF03381E458205DDCB531FCC6F2B1D1BF6D41
+        C8540C526963C3E54B281F2B9F04A4C709C5FBB74D9D0CCF533E19C33484A0FE
+        A10F6F5E7FEE106751420821BD0845204208213DC99EDAC09711278D969B4ADF
+        56415D4483CCE24FB7CD7237912802AA17B71A53886E612663D3890D6452AEDA
+        CE6F46B0B6C7C653C647599E07CD7840422F5B57AEA4697F3A67E6FD9C450921
+        84F4221481082184F41C3BEEBDE1BCA8AFFFCAEE1B5BE805855639EE4BFCC940
+        E964817866E83180BAE12A4DBC69DC1F9B2E62A675B31F8B6703E55390F119B0
+        13185AD876FB72600D94F40DDCFAECD5179FC2D994104248AF411188104248CF
+        91F44FFF3220E2AE9B53154147D9FA4753FCC9E2F295D52D6C423D5111A89CAF
+        7A25450E7FA663CC5A5FB78E8F00D1EE63024D3C565D0B8832DC094179C40332
+        1482A48892D2D0B42F7136258410D26B5004228410D253EC7AD71D6F17D5EA29
+        5D37A12EAD824CC49F4E9B6455B7B00954CE03A21ABA881721B885998EC5578A
+        F8BCD2C3DB3F163580EA4A9567C55C08CA2750B4CA6D24209ACD95DB6F58773D
+        6755420821BD0445204208213DC3D64DF7D4A2FE814D5D3782AE6202B5D9CC5B
+        117FBA6D963BD48B8680D2A9ADC65924B7B0A2650403EC5905B93F563E0F88A7
+        A93C1FE6228EF01E0F482348F4E0B42F7C77C58A94B32B2184905E8122102184
+        909E217979E473224D8FEAB8A9749529AC83F54FDB7E4CC41F854C61B58B0544
+        6C2AFA84E402D66E4C59EBEAD6C9D3FA47181CEB7E0E110B542F517D26D40343
+        1B078A76ED1636B976B93277EEB2591FE1EC4A0821A457A008440821A427D8FE
+        CE5BE7C57D036F51DBC4C2DC2A48D7FAA7EDAED38265D0847AE90281645ED6AB
+        E82A25BCAFF386E20A667ADCB67B583671A8748240BA40F5D9308FFFE35F08CA
+        3E360801D13FF4BE5DD75C309BB32C2184905E8022102184909E20ADD7BF22A2
+        A8927DF30A73AB209BD63F0EDCC244045457A1C3D88BE01666234D7C967A3AE5
+        36AD7FF270053BB24EED5271F8EA506475BBEBD0468800EFA90ECFEB64912A4D
+        EB23FDD3BEC859961042482F401188104248E179EEDD775C221A7D97B4DD70B6
+        DAE41909408AD63FBAE28F61A6B0D2E94034D86ADCA69BF23C5DC00037B1814C
+        C520953621C5043AFC733C03A89CA123EA9859E784EE1616F70D5CB76378CDB9
+        9C6D092184141D8A408410420A8F6C341F8194914E4C92378E290940ADAA2ABA
+        7ED9B00AEA5027AA0195736C64D872653164F31C3AB1816C97AB8A44F96604EB
+        F4B97A3110D5FDA77D1779BA81751B7B1445E81F7C8CB32D218490A243118810
+        4248A1D9F59E3BDF1F952B2764B2F6B112FF07476C5C8595CC62B0EA12565929
+        20CA9976BB08D32DCC441C721D041AB0EB2296F5983068DBEDD8A1CFA20A542E
+        44F767258F8C6136851D45B7B0A8D13C6DE78D1BEFE4AC4B0821A4C850042284
+        1052589EFFD03DFD71DFC0CF695925A81CEBE0FE95F95CDD8E5BCC1416CF004A
+        27A28B48615BF0F11554DAB72B988F00D126A2914D71E8D0E7F29940324BC7B2
+        CE733C20CB6E615DCF3538F8E9CDC3E75639FB124208292A1481082184149603
+        FB0E3C84349DA6BE51851BF72F5DEB9F4E9B4E8DF2EAC593876D22C8D888F1E3
+        3256908E20A4536E3B40B469DD6EC75462111D594744406D3DF4DCBE428F0FD4
+        F1AB74195BA934AB549DF149CEBE8410428A0A452042082185E4E5F7DD714232
+        38EDE6AE1B52CB025047F7AF4C1BE409C71D048B2E2D069263268A0A3A2E5479
+        BA86B97603CB52CF97F58FFFEC5F2A759279406909344515CF4290D22D66660D
+        24FA07EEDD76D5AAE3390B134208292214810821841492FD69ED9720444979A3
+        682800B56CEB2326508678402215A85CA8E326250AF08BBB700303FC5AFF8491
+        065EA54E6D1D2062B80DC26CE5F6B0671DD4D51A28492AF1B4A147380B134208
+        29221481082184148EDDEFBCE32AD1685CA0BCC973210065D99066396E215358
+        790510F5A18B68E1DA2DCC57CA785D77B46E7574CA4C8F872A0401D11050393B
+        E33316BA5B58D77BA4CBF33EB1BCD177F9F61B2E59C3D998104248D1A0084408
+        21A450C8E1E1580CF63F0839319D512002902FABA016E55103A89CD94EBCB091
+        1EDE35A6E7F59122DEB5F58F9FA0CFD9EB8C7DAE5C0844CD8CCF9A6F2148E916
+        33E8EBC894F122EA1B7C5416C38C8E10420839F40AE3252084105224761FDDFC
+        A82895E7296DEC340520A5F83F39670AAB5E00209D281CE8B88485B89FD519A3
+        EB14F179C704D21587F484205106AAAB547E32BB4290D2B98CFA56B406AAD597
+        EEB869E37D9C9509218414098A408410420AC3B6FBEE9C110D0EBE5769B39849
+        B011D936809D2C7A54EA5ACE1496CC06D2136CC7CAC9DA874F17B076E737FDBE
+        BEAC7FC28EFFD3E973F9342039BACD7DEA381E90101E452488EC7585403430F8
+        8BCF6D38BB8FB333218490A2401188104248612855D3474414F7B5DDE8695905
+        3972FFCAB4E1ECD24F96B248A0BACA8610D2A98D2B6B215BE7F0E50AA6D226AF
+        9840FAF17F3AD611E260CAF88CCF5A486E613653C64F2E2F95A61D9879D4E738
+        3B134208290A1481082184148217DF73E7E9A239705DDB4D5C1E0250960DE7F8
+        314799C24A4B8178562771A2A86E612ED3C4EB96AB8A4445CA08D6FDFA267305
+        4ACB159E39532148E976C9CF1A281E18BC6BEBF56B9772962684105204280211
+        4208290423D5DA570124DA1B40D702500E56412205AAE7B5121D542C836C083E
+        3E5CC074C66D430C52699797E8D3EA9886B54F863E6A9700A2E4E9A137CD16A6
+        5BB7DBBC30E9B31451296EF43FCA599A10424811A008440821247876BFFBCE5B
+        44AD7EA6F6662E431D630128EB792D5A0555CE0244A393F8D04AA03071B5B2ED
+        BAE53B23986E10689769E07D6604336F13F50954CEED708FFB760B5379EE5544
+        22A89D276AF6ADD97ED3C63771B6268410123A1481082184048DDCB4A924FAFA
+        3F9B79539769E3973108B4C931C75641513F503EDD340356A7FA79BA85B9CA08
+        06D817834CD3C003F65CBCB2B433B710AAAC148807149E39976E619EDA668949
+        14F50F3C28878763CEDA84104242862210218490A0D9FDF2E64F8952E9682D8B
+        9FBC04A056C72C660A1342A07AA10062280A16EDEA859A1E5E77ACAE328201F9
+        C604520940ADD28F5A1F2201AA6B1C66ECEAF22C084F6E60AAD640A25C9EBFAB
+        F2FA07396B13420809198A408410428265D707EF9A13F50FBE436B7317920094
+        65FC138FB7291342400881782E902E682738E4E916E6335DBCAF8C6053270D7C
+        F73E0E513A11488F3379BA3DA67DB7241265714513FD833FB7F58A55D3397B13
+        420809158A40841042822546E92B228AEA7636888108401A5641E3E2CFF8D7A8
+        5E98457868552764B730137148C5F2C7B5F54FBBE3BD20041DFEB976A938FC90
+        6DB7B04EBFA6D56C60D9E78DAEDF2F49FAE2A1FE07387B13420809158A408410
+        4282E4F9F7DC7EBEE8EBBB4C4B00EAB2D9D416805A09352AF17F14AD820E137F
+        0E523A0988A777132D269617DD2DCC456CA0A259FFB43A965786B0439FE35940
+        F9B4402C7A4CDA5AB6068A07066EDA7ACBFAD3398B13420809118A4084104282
+        44D6FABE2C21D483ACEA64F9D10D306D1A14BA4DDD56E20F0088325039C734ED
+        F9C43A365CB1F2740373ED0AA6D22684EC5F59EAE85EF3D69FABAB81A862F2A4
+        EB8B46A15A0349112571A5F925CEE284104242842210218490E0D8F9AEDB7F46
+        54AB2767D97075DED809BD8DA38900D4EA988255507B4B0381F2B902A20A4571
+        6272B96E0A765796423ED2C4EB96AB8A44A6D9BFC274FBEAB890AC03950B84F5
+        E7B4FD4FA590323E476BA0A8D13C77C74D1B6EE66C4E08212434280211420809
+        8AAD9BEEA9C503431F55DE486609DA9A87009465C389F6D63FE39BE46808289F
+        D44E7430B50C9ADC57086E612669E2B3F4D9AE5CA55F1F3181F277FBEAF6B97C
+        36104F0FD40DCC565D156BA0F145F6E0D0679FD8B0A1CC599D10424848500422
+        84101214E98B23F78B52E928FDCD5AEB4D5B10025007F7AF6EE243F5C2C96F6D
+        1B563F36041F1F2E602EBE5708D63F598FB972FBB223048918A8AD55FD290D82
+        44876E0D345E96968E694E4B7E91B33A21849090A0084408212418B6BFF3D679
+        D1D0D09DCA1B489D40D05D37A519EB185A0509D15D5848E603C97159450A1F99
+        C24C051D1B7DDA8C0BA4D2AE4881A06DC403CA46BA044817162FEDBB6B6BA078
+        70F0DDBB6EB8640E6777420821A14011881042483024F5FA2F896852985917F1
+        4502B00A6AEFFE35E9580C542FE8243E742B9B585E944C61A1640403F24B03DF
+        EA58BE6E5FDD3ED7D6032231107A6CA68C5779FE5D9C73BC2C8EEBA3D5C6C39C
+        DD0921848402452042082141F0DC7DB7AF8B9A7D6B3B6EC834DCC2848D14F30E
+        04A0AC4244F9348168C054FC41863AB6451FDB7DD97205B39D1E3E4B5D9719C1
+        7C0486CEF6399E0E9457747D20F59F6957163E8EFB89FAFAAFD97AE3A52B39CB
+        13420809018A4084104272476EDA14A1AFFF11659547D50D2C6801A8C5D1BA40
+        F90C15B1626299AF4C619D5CBA5CC50AB2E10A66D3FAC7A58B1734FBF1D1C791
+        54570151DDC40DCC913590350149431412224AFAFA1FE54C4F08212404280211
+        4208C99DE75EF8C90744B5BA4469D3662A00E96E14B30A472D82D76616800EB6
+        AF9C0B88B28A40611A1FA7555D9F6E612619C16CBB82F98A09146A3C20CD20D1
+        15A07A91A97B560EF17E34FBC9FA3D45B576EAF61BD7BF85B33D218490BCA108
+        44082124579EFFD03DFDD1C0D007BD9FD8864894B11F15F7AFF1F6F10CA0B4CC
+        4494985C9E975B98F10F05BB41A07B290DBC08ECF318E515403CD3C2F3A65137
+        776BA00EEDA2A1E99FDC7EEBBA3A677D42082179421188104248AE8C1E905F44
+        9A0E296DD66CBB81D9720B3374FF9AD8BE72E178351DB7A56EED26D7D1B112B1
+        F9A77B6EDD3ABD92061E1A6D5C6610136FAC2E6BEB15ADF17AD51A684299484B
+        4701E54F72D627841092271481082184E4C6B6F7DDB92C1A18BC496983E7220E
+        90CE26D3A60034C97D2C5D0C24470376831B4F2ED7C914E6CA4AC8659A781F81
+        A06D1DB31518DAF66FA3FE39993796365EE939B35457F8108534AD81E2C1A1B7
+        EFB876ED7CCEFE841042F2822210218490DC48D2CAD7204429D74138B2125212
+        800EBB2840E5FC4E8240113385E98A0F3A82954EB9A95590CD8C604570FBCA76
+        6FD4D601220DDC1A48084BD348C6734451450EF4314834218490DCA008440821
+        241776DF77C73571A3799ED2C6CEB51B98252B216D010840798540D4548D4DE3
+        3B5358ABB62E5DC0A0D05EB7DC574CA050DDBE4C2C8C5AB78D0681CAD98ACF93
+        A5BAC285286449308AEBCD0D5B6FDEB08E6F014208217940118810428877E4F0
+        701C0DF4DFAFB8ABEBB8F11439093ED9369FD904A0A82950393DABE0D0EDB84D
+        E1C7855B98A94064430CCA7A3C848C602E8421D5DF4BBDEFCA4A20EAF3640DA4
+        347F5828D31D5B1489B4D1FFB00C2B023B21849029024520420821DED97D74F3
+        3FA05C99D771D3243CEF8F2CB8859908401062CC0D2CCD2A3E98640ACBB2E1CF
+        D32D4C272398CDF849A10682B61D0FC8BD75902803D58B3DC5E9C9591452FA8E
+        95CA093B6EDEF06EBE0D082184F8862210218410AF6CBBEFCE19D1E0E0BB9536
+        68BEDDC0721080E2D96301A1BB8B04A1650A6BD7874DCB211B29E26DC604B275
+        2C44B72F7337B0C9944F01E2A3333C07199FF7ACFD082FE292BE28150F0C7DF4
+        F9E1B5FD7C2B104208F10945204208215E492BE963224EFA54364B9DF76E1E04
+        9F2E9B3B6D01683C2B9800AA17E8880AE3C7F3760B33CD3656C48C603A963D80
+        9E0813BED0D3B1AD3898323E0AD9B5CB334200493AB4BF56FB3CDF0A8410427C
+        421188104288375E7CD7ED2BA2BE81AB953678C2774A6CB5F118094007292D03
+        E2A36C08112A6521BA8599884AB0748D4C0422974290EBEBAE3B9E6C75936380
+        D2895D9E09DDE7DE968B968532D5F345FD83773E77F386657C3B104208F10545
+        20420821DE3850ABFF128448326FB6BA6C38BDBB81091DF79DCEFD88D2780625
+        5B19AB74AD8226D6092145BCEA786CBA8299C40452F9BD54FA299E1BD8E4B2EA
+        5A409403B606F2ED12366609988E546A8FF1ED400821C41714810821847861F7
+        CFBEE5B6A8DE58A1B4B13371DFF020F8882CD60A5DFA2D9F0988BA696AF26EC7
+        6DA7881796FF74CE0B8DEFEB2B10745E81A10373039BBCE86C0295F390FD39B3
+        240A859C2E1E0044A3B96AC78D1BAEE25B821042880F280211420871CE13F7DD
+        5716F5C6A7CD36528A5640B6E9EA06A62E0045FD40F9141B2E493E3385B9B8CE
+        26F18574CA7D0482CE2B3034B49F29176E6093CB2AE701F1A0038B9B80D0119D
+        44FFC00372D5AA846F0B420821AEA108440821C43903C96B9F11A5D2D14AFFB2
+        6E6205E0F8B30D0108002A170820D6151D748E8F97F9C81466BC9586DB14F145
+        4903AF73DD5C9DCFBCAE4880EA1A647FD68B520633AB21512ECFDF715CE3E7F8
+        B6208410E21A8A408410429CB2FBBDB71D1D0D0CDEA3B3316AB7C11279BA89D9
+        380780E45881749E89D8603358F4C4729F6E613AE7C9524F6593AE92FDABA86E
+        5FEEE3FDA8D42D2D07D2E3149E9FACE728A24BD8843EE2C6C007B6DFBA6E26DF
+        1A8410425C4211881042885BD2DA574514D5AD057DED56D7B19B58572BA02CE7
+        8B052A2BB38A115937C1BE3385D9B8AEA669E6A1F89D85856B1A8ADB5758F17E
+        54EBD63688ECABD0A02C7E74E7890CFD27491FA2EA837C691042087109452042
+        0821CE78FEBD775C1035FB3676DD0429FCCBBFC8D14D4C4B006AD167F944209E
+        A62A24743A66DB2A68621DDF6E61B6328201616504F39D06DE7FBC1F95BAF151
+        40E5D4AC7300F49F79EB97D59D4B1800C4FD03376CBD69DD0ABE3D082184B882
+        221021841067C85AF33100516E5640269B3B9D384019FA1465A07C968E80E0DA
+        2A6862B9CE75B4ED02A632A6A26604EB15373068D5ADAC16882A3AF380D07CC4
+        C377098310715C6B7E896F0F420821AEA008440821C4093BDF7DFBBB44A57A92
+        D206C86413D7AD5FD7D9C4329EAF720E202A9D36DE5937E379640A9B58D7467C
+        1FDBAE60216604536D534437303D0129AA03950B333E9353C5250C40546B9CB3
+        F5C64B6FE15B841042880B2802114208B1CED64DF7D4E281691F36DF7885914D
+        4CD90DACCD58A2A1B1A0B8FA82C1F8311B56419DFA6A55C7875B982D57B09032
+        82F94E039F971B18B4EA96CF12935C23B33ED30E0244EBCE1F16C635B95EDA3F
+        F89927366C28F36D420821C436148108218458277D71E441912433BB6E7CF2B2
+        0252DAEF5908047DB04EF582F137AF2DF7A2F16321640A73814B57B02C755D09
+        41BED3C0ABF4A55B57D3452B066AEB323E4F3EDDB2F23E77A9744C737ABC896F
+        13420821B6A108440821C42A3BEEBB7D41343474BBF966A9A0D9C4DAF497CE07
+        92B9BA2282CAB16EC76D640A9B5CDF47AA785331286B7D57A9E17B3BEDBB4959
+        BA1848173A9C94427509EBB648EF1F78F796375D38976F1542082136A1084408
+        21C42A71ADF6352144C5E6464DA8083516DDC48CDDC00E7E163150394F573C50
+        3DE62353986D0B211D37B0100341ABB6E9ADB4EF2665B5F563CF89CABC504897
+        3085794C447135191CFA22DF2A8410426C4211881042883576BEEB8E4BA366F3
+        E2AC9B1C2B9BD240B3894DA4742A100DE86EDCF3B00A9A589E874B58565128B4
+        40D0BD9AF61D9A75B397C5D381F29986F3469E2E612EE62B0051B3EFEA6D6F5E
+        7331DF2E8410426C41118810428815E4A64D51DC683E0CD966E7676B73158A15
+        50C6FE440D28AFD0DDC0FBB60ACA52DEAEBE2B37309331BB08040DC5DF312437
+        30DDBA7E44A1EA454054339C1F6CCC1B96FB17C2C032480811F70D3D22F30FD0
+        450821A447A008440821C40ACFBDF8F48744B5BAD876BFC2957864129F4821AE
+        50E55C40946CB812991ECBB241F7ED16A6DA5F1631C8F5B5CC231E90CA7D9277
+        BC1F83BBA102542FD6B987D4E7072361466B0ED1EF43D46A27EEBCF1D27BF896
+        21841062038A408410428C79E13D770C44FD83EFB7B379F26031D4A5AEB0E426
+        16CF004A27D8DAC8670958DCA96D51DCC28A90112CB4B4EFD07B9E94EAFA292B
+        9F0E24B310AE4B9893EBDE7D1CA27FF093BBAE3CBFC9B70D2184105328021142
+        083166244E1F41920CD9DEB48910DCC4A0994D4C00950B5A95DB700B33757DEA
+        547F62992BB7309D3E75BE83EE35CA231E505EF17EF2177E0E2B8B80DA7AC5E7
+        DBC51C91571FED9A944AD365FFE027F9B6218410620A4520420821466C7BEFED
+        CBA3FE81EBBD9FD8919B98B0E462962E02923936840393D8412E32854DACA76B
+        25A4D3DE7746B010D2C09BDE1736FAF55F961C0F9496C2CE9803B10CB2E27ED6
+        37F0B667AF5E69DDE5961042C8D4822210218410234AE5FAD70094326F645CB8
+        82B97213839E059148C66201696C153536FABE3385B9720BB39511AC68F17F4C
+        EE07E83D4BD67E43772E82B5758048DD8A3B2227AB1EDD3E441C974B83331EE6
+        5B8710428809148108218468F3DCBB6FBF56D4EBE76A6F70745DC11CB9890913
+        97B2099FCB2B80A8E9432C082D53D8E476C2521FAA63732D04D92484B4EF2E04
+        23B3F345032D84D4020573B676EF4C9EA36A8DF5DB6E587B19DF3E84104274A1
+        08440821440BB9695382BE81FB2121EC0452B5B5A7B6B501D4FB4E5103289FE6
+        4200F26D15A493292C6B9C215FAE60B68E4DB5B4EF6194555602519FDBE7557F
+        7E30EC43F75C4288A839F845C9353C2184104DF802218410A2C5AE177EF23191
+        968E57DADCF8760553D868D98A0554590920B17DB56D0A40AA1634ADDA0A07DF
+        CF862B5896FAB6328231DE8FDDB1B5685D02AA6BDCBA6C098F6E5FB6CE1555AA
+        0BB7DFBCE1BD7C0B114208D181221021841065B6BFFDD699F1E0D03B5DF52F44
+        DEB18184D639E3D940BA300FAB111B564136338519DF01D013836C07828685DF
+        46B72F95B6BEFB719D427D826BE5C940728CD6246263220AF65C71DFC04737AF
+        3F77886F23420821AA5004228410A24CD2A83C26A2B8BBA386EBD81C96365956
+        52D10BA07A81A968E03A2E50AB632E3285D94A159FC5C5CCE635E995B4EF36BF
+        83E977361C8B00EA974D682A2CF45FB4B840AD7A4DD2FEF2ACE99FE3DB881042
+        882A148108218428B1EB9DB79E11F50D5C657543E5DB15CC4160E9D232209E99
+        7710E176756C59054D2CB7611DA4D2970BEB9F2CD794F17EDC9565AB17CF1628
+        9F6C7AAB856BD5A35B4F34FBEFD871ED9A934108218428401188104288DAFEA6
+        56FF25B48B7A93A7E58FF090F6BADD66AC0454CE0E415CC82A40F8CC14A67AED
+        B38C43E53B29FCBE567F0BDDBE6DD5CDB3CCC2B33689EA258028BB79EE7DC605
+        B2FBB84489E8EF7F846F254208212A500422841092999DEFB9EB8EA8D13CDDC2
+        AE4B6F43A69F51C7E9F9CA6702A266530870993D4CC72AC8855B58D6FE60F83D
+        F248036FD30D0C9A75C38FF7A3D247D400AA2B15E78100AD7A6C0B4EA2DEB868
+        DBB56BDFCCB713218490AC5004228410928927EEBBAF1C351A9FB2BE7972B139
+        7391A1AC4D3FD1005AB8AAB8161974CEA72A0AA9A688D719B3CF8C60AAD72C14
+        37B090AC4FF2B50C2A9F07C4D3CCFAF0363FB91CD3A47AD1D0E017BEBB6245CA
+        B7142184902C50042284109289C1E4D5CF4569698EFD8D5440C1A3353668D595
+        00E23CAD806C068FCEB2D177E516962508B48975930F21C8E4772F629985675C
+        A10F1103D5B5F69F61E7F55C2FE6CB9563E79E30F3E7F99622841092E9BDC14B
+        400821A41BBBDF7BDBD1A27FF0ADCE375FBA7D689699A6A24FE602C9F13637C0
+        3EDDC25A1D33CD1436B9BEAEB5902B5730D719C2F2B0060A3398B3AB3E4A4B81
+        748183F9C5F65CE6B99EE81BF8C0CE8D67CEE2DB8A104248372802114208E9BE
+        FF48AA5F1322AA59D9CC74EC2247B148D52229022A2B4D37B5BE63D1A81C1B3F
+        AE9229CC557D187C8F90D3BE43B36EF1AD7A4CA8AD4776EB3BDBB17A429DA3E3
+        A421A7CF79806F2B420821DDA008440821A4232FBCFBF60BD1685EAAB2A1B2B1
+        2973DE8721E593C6E393B8DAF4FB081EDDE998CF4C6126AE603AC78A18EFC777
+        5C299D73BBEE638C7826503E1DFEE691C08343BF119FACD9BCFED96B569DC3B7
+        162184904E5004228410D291D146F34B42F57D5100B1C8C4154C54C63282F9DB
+        D4FB8C0B64235398D18F86620482B65557F79EC8F37C79F571A85E6D0D20AA2E
+        C7544084884B03835FE25B8B10424827280211420869CBCE77DDF66E51AA9CD4
+        66C3E16FF3275C078F56EBBF720E202AAA9B4D9F6E623EAD8226D6B19926DE45
+        20689B624151E3FDB8F87E2EFB68D37315A85EA4310FE4161CDACF7945ADB162
+        DBF5EB6FE3DB8B1042483B280211420869C9AE0FDED58CFB063E62BE5B0B2468
+        ABA5714443406999CB8D7FB7BAAE82470B8DEF606A1994352E50D6E3A61653A1
+        5B03B916662C0B1A56FA685FAF7CF6986B18993447F5F77D6EF3F0B9555E0942
+        08212DDF13BC048410425AB21F0F88B4343DDB3ECD635068D7A2521721A97A41
+        BBB7671EB15F5C660FB395294CE5BB985AFFE85C1391D36FA5DB4F88FDE7732E
+        1109D42EB5376788D0AD8932D68B4A9559A5D2E026BEC4082184B47C4FF01210
+        420899CCAE770C2F899BFDF65D0A02B10AD2CD04942E184B0B6F77D35D0437B1
+        F1E336DDC274AE89D0BCD62158F8D8FACD6C8FA56802D191CF64BA9873F6110B
+        FCBEFEFBB65EB1F2585E0942082147BC2378090821841CB1556B0C7D45465139
+        BF01F8B40ACAE842160395F3F2DCD477ABEB327B589660D142E33AB8CA08E643
+        2C0BB1CCC63D18FAB98EAC57DB008844B3BF1ECB107668851F57E3A1690FF36D
+        460821643214810821841CC6AEB7DD7845D468AC72BE594220B18232523E5D20
+        EACF73B36F5320CA3A165F2E613A19C154BF730869DF7B335357DEC44340F92C
+        CEDD47FC42F5C69B9E1D5EBD9A57821042C84428021142087903B96953248686
+        1E9232A01D9E4FABA0B6197780F2E956BE8CAD8B62D8AF0BABA056F55C660473
+        2104E95E530673CEBB5E751510F54DB10C615DBB1122E91B7C5486A4D8114208
+        C91D8A40841042DE60D7734FFD82285716F8DF1CF943271E50E57C40945C6FFA
+        437113533936B14C55E8B1E10A262C5E7F57BF6B9EE72B9E558FF6372D03D58B
+        A7D8849D612E8B2BD565DB6FBCF41D7CBB1142081987221021841000C0E6BB87
+        87A2FE81F7E7B3970950543A78AE7826505AE27B93EFCB4D2C6B1D976E61A6AE
+        603ED3BEE759A6FB9BFB3A57FEF5CAA703C9D16673476E19C21C1237FB3FB6EB
+        CAF39B7CCB1142080128021142083948A5BFEF619124FD3DF1656CB96708A072
+        61B76A215951D816483A1D130EC6EE2BFE8FEEEF39558239BBBE2FDD9DA6B601
+        C5346C72282A89349D3EDA3FF819BEE508218400148108218400D8F1B6EB4F89
+        1B7DD707B17909E85FD84B4B8064B68F4DBC0F71C1B55B98809D14F1AE84205B
+        7575AF7F087DE455CFDFF7488E054ACB15FB133D183267D2778AEACDB76EB9F2
+        FC2520841032E5A1084408210471FFE057A510E9E17B881ED918E98A4A29503E
+        27B40DBD4F37B156FDD9B40A12300F04EDEAB7E9A560CEB6BF73F8F3426DFDE4
+        185E39CF250120A3A8940C4E7F846F3B42082114810821648AB3EBED37DD20AA
+        B57378250EA772061035F310087C6CF06DB989B9CA7696751CBEB27FB9EE53A7
+        8FD0459BFCAC93A27EA0725EF8738CEF586851BD71C9F6EBD75CCED99D1042A6
+        3614810821640A23EFB9278D86063F1FF02EC96ABDAC9BAEA809944F0D61135C
+        2437B189653AAE60BA19C18A12EFA7C8563DC5B30AAC5C084403FEE69622CC97
+        1210A231F090E4FA9F1042A6347C091042C814E6B9CADE8F212DCFF5B50929CA
+        A6B272A10092227D0F576E622AE752B10C52CD08E6EAFBD2AAC7DF7DE8F7FB8A
+        04A8ADF5F9D58BF11B8A7265E1CE1B2F7D1FDF7E84103275A108440821539457
+        EF1D9E25FAFAEFB3BBC1293EC91C205D10E2E6D8C56F60C3BDCAC42D4CD7FAC7
+        E4DA14CD9D8F563DBADFA974D258A0E842CE630EC71A35FB7EE1D935674DE35B
+        901042A62614810821648AB2A7DCF718E2A43175AF8068F956ACAC2AC2E6DA87
+        5B932BB7B0ACE32A6ABC1F5AF504F37D0550BF4CFDD4A2C7C52299A403C9D133
+        BFC0B72021844C4D28021142C81464FB3BAE3F276A36DFD4935FCE6003575A0E
+        C4D38BB6B9D6EDC3855B58D614F0B6D2C0BB2ECBEB37A5558F2DE2D936E27BD9
+        9F6BFC4F8B878F35AE376F7D76F8925341082164CA4111881042A62049A3FF31
+        0911176B6FE876C325CA40A59039D2427013D319878D34F0BD14CC39847B44F4
+        E47D5FBD64ECF9EED5B94B07294492D66A4C194F082153108A40841032C5D8F1
+        CE5BEF11D5FAE9C16CE502D92095CF064435DC8DACDB7399BA89750B166DD30D
+        8D563D013CB505FA4E025103A85E5084CBEAF77A897AFD82EDD7AFBB816F4542
+        08995A500422849029C4D64DF7D4E266FFC7782526BD0C8780F2C9216F7E4371
+        2153E9A39D58642310745EDF2B08A5A007BFAFFBB196CF07E24EA190A768D068
+        D1D7FFB9C7972F2FF12D4008215368DDCB4B4008215387D20B7B3F23D27456D1
+        362AAEA95E28A6D81BD156E06415ABA06EE7CF33DE0FAD7A7A7DAC2206AAEBA6
+        D6BC96E9EBA4E9B1D34F99FB0B7C3B1242C8D481221021844C11B6BFF3D679A2
+        39F0565E89C349E601C971BC0EEA9B6E97F17C54CFDD8BD79763B53DD6D25220
+        5DE06B08015CAFAC6368F4BF7FD73517CCE67C4708215364EDCB4B4008215383
+        382D3D06E13FEA4DD81725A45821BD66B5D2AE5F39A94EA7CFD979ED35E0F5D7
+        813D7B04F6EE95D8BB1787FD49091C3830F607007BF71E3A57B93C563E4EB90C
+        240990A6409A0A944A12E53250AB01D5EAA1FFFABD37A4C57A218C351F6A1B81
+        971E0330CAE9EF8D5F2C8EEAB2DEFF20801B79350821640ACCFBBC048410D2FB
+        EC7EEF6D6B4573DA1F41CAE8B07F1D9EFC2FC5133E8B8CF532FDFF119FDB9C47
+        B73F9DEF0481D2E9E3225027AB16D1E1B569B35E0863B0512FCBF242B6F9FFF6
+        653FFD29F0D24B122FBF0CBCF412F0CA2B123FFD290EFE498C4ED8D4CB098A4E
+        BBFF37AD174540A522D1D707F4F7037D7D405F9F447F3F303000349BD2E8FBBA
+        AD37B5C7F0D3DF03F6FEDD1B3FE8C41FBAF53D30E97E68D726733DB4BFBF8CFB
+        EE504F761803A41C95BB77AE3CEA37FEF45B7C631242486F434B204208990A94
+        EA8F404ABA004F94296A40E52C5E07075756A3FEA10DE99E3DC0F3CF03CF3D07
+        3CFFBCC073CF8D093F070E74DAEBFAB73E191DC51B22D4B66D478EA954028686
+        80E9D30FFD77D62CA05CA6B54EDE63A8AD05F6FD0B205FE7D33A81088DE66300
+        4EE7A5208410AED408218414985D3F73CBCF4643D31F3834F37BB204EA5896BF
+        2550758D40E9C476AFC3A96A09E4D22AE8484B8D911160F76E60E74E891D3BC6
+        FEFFA73FB567ADA35BCF65DF4343C0514749CC9E3D260A1D75944414A1C535A2
+        C590CBBEF77C0B78ED0F90CD1208C86679E3D212C8C218BA580201004676EFBE
+        73F66FFCC9AFF2CD490821BD0B45204208E9619EBBEFE63E34079F449C4C3311
+        4C7A4D048AA603CD9BC484615004F23186919131B167EB5660C70E89DDBBC72C
+        6A7C0930B6EBD9E83B4D258E3E1A38F658E0D863258E3A6AE22D4BD72E576390
+        A3C0CB5F0646B653043AACDE81FDDBF6BEB865C1DCDFF816EDA40821A447A13B
+        182184F430A32279208AE369BC1287535D8500FF1944063028DB639078FE7981
+        AD5B81AD5BC704A09191D67BD5A9CABE7DC0534F8DFD49391694FAB8E380850B
+        81050B7C07A09E3A8808A86D005EF9CFBC1687EF0CD2D949DCFF71001FE0C520
+        84901E7D07F2121042486FB2FB9D379E2006667E0F02A5C3A6FB8C1635BE2C81
+        3A9ECB812550BA682C4310AD75DCD4935260C70EE09967C6FE5E7DB5F5FD19B2
+        854FD67AAEC7008C59092D58002C5E2C313474E8F8C43A93DB74FF7FDBF58A3B
+        86577E4D62FFF7DFF801DAFF165603363BB404EA5096C912080046475E1FD9B1
+        73D9ECDFFEE64FF826258490DE8396408410D2AB94EB5F191380C81BC44065A5
+        4907BD68AD63614412D8BE1D78F249E09967E4C1F4EB9DEAD30C28EB757DF6D9
+        B1BF6F7E732C86D0B265C0D2A540B3C9EB73387A81A6EB1B81179F0030C22B78
+        E85246D5A8AFF1308037F1621042486FBE31092184F418BBDF76D39BC4CC19FF
+        FBD03C6F6809D4A19E374B200B63A89C2D5039B7DD2B90E9DE55EBBDF822F0A3
+        1F013FFE31F0DA6B1D7ED3C3840D99F9B38DB2102D7C4CEB011273E702279E08
+        2C5B2691A687B5CAF0FFB6EB856009A43FD6D7FE10D8F357A025D0C4FF97528E
+        BEF4FC25B3FEFB9FFC29DFA88410D25BD0128810427A0C393C1C3FD7DFF700A6
+        AAD02FE591421080A80E54CEF036888C975F06FE331D39BE0307C6849F1FFC40
+        E2B9E7268A8668B9B11D17835C5AFF64EDBB572C90A43CE46EF78D6F8C8941A7
+        9D06CC9CC9F94F87EAC5C0DEEF01F2655E8B090FB410B5C623123851E8985811
+        4208099698978010427A8B77AE3AFD2351A3716D5BCB1B97964099EB39B4046A
+        53565B03C447D1AA47B7DE4B2F01FFF44F027FFEE7C04F7E02BCF6DA91F7483B
+        EB9FF6624667ABA0AC65BD48D6EF7BE000B06D1BF00FFF30165C3A4980E9D35B
+        EAA0A49DDE9100510587620391B1EB1227335E99376BF703FFF6E4DFF16A1042
+        480FCDEFBC048410D23B6CBDE7C6E9A569433F1271DC1FB60874F8985C8B40C9
+        2CA07143ABD7DE540AECACD7C7B3CF0AFCCBBF005BB6B4BE2F5A093F59C42015
+        B7B0C99F7DBA89D9E8C3B70B597F3F70F6D9C0A9A74E7415A33B58C7361278F9
+        AB12079E6D7D5DA79C3BD838070EEC8EB76C5E30EDFF7E9B76528410D223D01D
+        8C10427A88B45A7E58C4717F97DD7771CC042C8DB5BA2AA82F05BBAE62365CCA
+        0EEF43CA316B9F7FFA2760F76E7998A82365E7CF13379BADC4A0A259F414D1D5
+        ECA597803FFE63E02FFE0238E30CE0CC33815A4DF7BE28CC2F65D65C8C650D7C
+        F96B7C8F1C461C4F3F3034ED33007E86178310427A035A021142488FB0EB676E
+        393D1A18FA36C44181BF83FB55568B1AA7019BE1271D7D69B9406D5DBB57DFD4
+        B2EAE956363A0A3CF104F0BDEF012FBDD4DE2A4CD7FAA7EDF63D67ABA04E65BD
+        50AF5C06CE3E5BE29C738052A99568D2C3163E8AF55EFD1FC0BE7FA625D0C4FF
+        97A372DFC8F33B4F99F3BFBE4987394208E90168094408213D8228571E7B4300
+        0A911C2C90440A54CF73FAA510BA554F56B66C91F8D6B7049E7FFEE0B513876F
+        52B358FF98C604EA266AB46BA37B2ED53E43B7626A37BEBD7B813FFF73E0EFFE
+        0E38EF3CE0ACB32412AE005B52DB00ECFB3E80BD9A735C2FBE5B22518A6BCD47
+        00ACE31D420821C58781A10921A407D8F58E9B6F8AFAFADE9DD5F226174BA023
+        3EBB8F3F543D0F48E64DFAEE3D69D5A37FAE6DDB803FFD53E01FFF11D8B3A7B3
+        C54FD640D0DDC4A0766285A9C86243A4F1D9876FF1E9C081B1E0D1DFFB1ED068
+        14259B985F614594018C00FB9FE27BE5B0EB92A60BDEB7E0A87FB8FFF1A77EC8
+        AB410821059FD379090821A4D8C84D9B4ACFBFB6FD4748D3B9C622D0A4CFC2B6
+        0B98471128EA07FA6EC7C17FEE286AA62E777DBCF20AF0D77F0D3CFD747B6127
+        8BDB97B064DD65C32A284437311B7DB8AA77DC71C0860DC0CC99C575DF72514F
+        EE075E7A4862E4C5C32EA6DAFF772C2B963BD81BECDFFFA3194F3EBF547CF39B
+        07F8E6258490E212F112104248B1D9BDFBC79F409ACE0D7270B62D1D142C22AA
+        1722077B5769B99E6E1FEDCB464624FEFEEF81FFF13FC6823FABFE2EAD840617
+        163C260290BDDB373CAB209B3CFD34F0B5AF017FF887632E63E1DCDBF92252A0
+        B65E6FDE29CA9CAB459A2EDC3E337D1FDFBA841052F0F71C2F01218414975DEF
+        B96576541BF82184688CCDEAD92C6FB4D2C4DBB6D6813BD7B3E458A071DDD4B1
+        EAC95AF6CC33C05FFD15F0F2CBE66E5FBAAE6059840F535168AAA49BB759AFD9
+        04AEBC1258B8B017824467ADD7B9CDCB5F03F6FF04D62D729C5A027568636C09
+        0400070EBC7460E7730BE7FCDE3777F30D4C0821C584964084105260844C1F7B
+        4300728D756B1D47FF622D80EA4536CE1B8A558F39FBF68D0506FEFDDF1F4B1F
+        6EC3CAA6938093F5AF5DFB6EC74CAC8074034487126FC815AFBC02FCFAAF03BF
+        F11BC0EBAF177D66B4739DEB97239C7F2E0DE5DE89E3FEB8AFF605BE7D0921A4
+        B8500422849082B2E3DE1BCE13F5FA953DFF4515C5A7F2C9403C23944D667E6E
+        5FE365CF3C03FCF7FF0E3CFEB81B972D5BC246BBBE54051F1F6E62AAD7C9551F
+        2EBEDBE38F035FFD2AF0E493414E065ECF16CF01CA2BF8AE998CA8D56F797678
+        D5A9BC128410524C28021142485127F06AE3314C8E7A63D95AC77AAC1EC7F544
+        19A89C67B279F469D5239D96EDDF3F66FDF37FFE0FF0EAABDD7F5B1BD63F5A57
+        4BD12A48FB1E859A40D44B5641AAA2D24B2F015FFF3AF0677F068C8EFA789EC2
+        B590AAAD034425FFDF26288448D26AF34B7C0B13424841F710BC048410523C76
+        BCFDA67744E5CAA9BC128753390F105567DB35C77DD82B7BE105E0377F13F8D7
+        7F3573FB52B5FEC9EAEE95B54EB70D73E86E6245B60A92724C44FC2FFF65CC55
+        6CCA2E941B407595E605EC35267C2751A99EBFE5DAD537F2AD430821C523E625
+        20849062B175D33DB534AAFC9688A243B180B20655CE234D7CC7327BC1A1E321
+        A0B65E4CEA32F460CEBA7DB4AFFB831F007FF007023FFD69EBEBAA9BF65D2538
+        B40BD1C3D4CD2B6F37319DEF9CE7B9C6EBBDF822F02FFF02CC9E0D0C0EF6F2CC
+        DAFEBA2473817DFF0CC8D7D0F3E28E0A51929C79E7FEF8CB5FDEB56B846F6642
+        08290EB4042284908251DAFDFA674592CCE295389CEAC52A6FB55082394B4BFD
+        4B8C8C007FF997C09FFCC9982B98890890D515AC9B458FDA3E5466B63CB2113B
+        48B7ED540C2CFDCA2B6316417FF77726F769E8F5DA2362A0B6B18093A2E3FB45
+        A4E9B143271DF311BE7D0821A458500422849002B1EDED371C8F46F32D458BD5
+        63BC41EBD25FBA00488EB7B3E12B8EDBD7A1CF7BF600BFF33BC0F7BED75A2CB0
+        15FFA79BC8A12208D9CA1466EBFB761A67286536C6AC7BAED1D1B1F8527FF007
+        BD690CD38DD252A0B43890C104F403C4F5C67B9FB9F2FC397C3B13424871A008
+        44082105222E57BE0AE12EEA4D5064DDE844B24B4AF8373AD42CB3D1877436AE
+        975E1A4BEBBD658B9BF83FAD8E65C9D0A5931EBEDB396C5B00A9B60F29D3585E
+        2E647FFBB763D9E65A5B9BF5B63A54BB6CCC2AC8D95C5644752D8A1AA566FF43
+        7C3B13424881A66E5E0242082906BBEFBB696D54ABAFF3BDE1C8CDEA2823E5D3
+        81A86DAC92905CB6EC9F6FCB1689FFF93FC7E2B6D810197C6504EB341E53AB20
+        9DEF687CEF235CCB1F175641FFF66FC0AFFEEA98059AFD7B3CDC7AF14CA07CB6
+        BBB9ACB09B895AFDBA1DD7AD3E8F578210420A326FF312104248F8482905D2DA
+        2338323A70AF7DCFAC150100A20654CE71B1110D2BDE4F2B9E7802F8EDDF3E7C
+        236EC3DAC7242398EE6F6E235398CEF7CFC34DCC779FAEFA78E6993121E8F5D7
+        A7D65C5CBB0488EA3D3D09EBD48B50AB33653C218414048A408410520076BFE3
+        A69F45A9B4D478E18ED06304A9F551BD00106595EF58BC783FADEAFEF087C01F
+        FD113032E2C6ED4B254873AB72953F1DD1C2855B98497FAEAC8B6C8CDB651F5B
+        B600BFF22B382C139DFAB3E62FC0B30D4415A8AE0DE8E5E0C0D24BEBBA94CAA7
+        6D1F5E7337DFD68410123E1481082124709EBBEFE63ED1D7FFF345DB745817A6
+        2611CF044A27DADC208617EFA755DDC71F07FEF00F254647B36FF06C078276E1
+        0A36B96F1511CA86C55391DCC442B20ADAB6AD931094CB04E5BC5EE56C2099ED
+        78BE2BA0AB99A8373EB9F58A1535BEB50921246C2802114248E08CCAE84144D1
+        34ED4D5C8841492D8CA9BA5A66748E93052D3BB2EE3FFF33F08D6F74BF7CB684
+        92F163AE5CC1B29EA7D3FD6E232E50E86E62799E2F4B1F3B768CA590DFBB57E7
+        BED7A997FFEAB97639DF4D9311493A2BAE4DFF04AF04218404FF1A238410122A
+        BBDF79E309A2D1BCC5D909F20A0E6D78AE7429901CA3BB99F4BDD1B43396EF7F
+        5FE2FFFDBFF6D74947B8B069FDA3E2EAA55357E5B8D6BDAB797FFA70132B820B
+        D9962D12BFF66BC08103793F537E9EF57401505ACE77D411F37EA371EFF62B2E
+        9CC78B420821E14211881042425E5B47E5AF0228B75C6C675D94FBDC00B81E93
+        944002542F74B5E1F3EBDAD5BD6CECF3534F017FFCC76E2C5A74AD7FB28A0BAA
+        7180B28E214B7D17C1A3BB8DD946DDA2BA903DF924F0BFFE57B7473D44AB20BD
+        31D52F0744A23FD7E567CDE96ECE164254D0AC3FC2B7372184840B4520420809
+        94DD6FB9FE4D51B5B5DC11EA06C0C99826F551390B88FA6C6EF2F20FF4DCE9F3
+        B66DC0EFFF3E0E8B01A4B2B134C9FE95D59AC7DA56DC61A6309D6B536437B1BC
+        C6F2CFFF3C16B3CAE3B7C96F113D04542EE0BBEA88EB52A95EB6FDBA8BD7F04A
+        104248A0F3342F01218484871C1E8E657FF30109889EB6EA517D693581F25959
+        3780C508F4DC89E79F077EFBB7E5612E3636DCBE54C5942C81A77544215F99C2
+        74AF9BDAED1C969B589E2E647FF997C0F7BE67EF39B0346227F5AA17EB88D23D
+        FEFE1242A0DA78246BD4364208217EA10844082101B27330FE8848D205261BB1
+        49159D6EFA329FCBD04DA2B20A106951E3FDA8D5DDB70FF8BDDF03F6EC71EBF6
+        95F5DADB700353158B6C640ACB7AEFD24DCC6CDC93F9ADDF02B66EB5F54C861B
+        585A9481DA7A0B736F8FD41BBF6744A9B46CDBF09A77F16D4E0821E141118810
+        420263EB3D374E8FFBFBDE63BE6F0ADBAA477503171F0D944E70D5BF5F0B9FD6
+        750FFFFC477F24F1FCF3D9C502DB42908F8C609DBE9BAD4C6179B88515D54DCC
+        E638F7EF077EFDD781D75E73F1ECB89D6B54EB955700C9B17C771DB1C9A8373F
+        FAD455AB067825082124B0F99997801042C2222DC58F4044031D765CFE3641AE
+        0522859841D53568E35C50DC783FEDF8D6B780279E5017046C078256CDF26522
+        30F8C81496F51A59951B0AE426663B78F40B2F00BFF99B1AF38E8DB9CBA7A824
+        24EA572083F35338A29E97CB12C7D36AA5F4337CAB13424858500422849080D8
+        75CFF5A78B5A63B8C5CE2AEB0ECCC6AED5BC9EE5CD64E9242099957533558C78
+        3FADEB4A3CF924F0B77F9B4D40D01539542C69C68FABBA6FA9FC65ED5775CC36
+        AE0DDDC4CCC6FDEFFF0E7CF7BBAE9E379FA2526792E380D2A9965E048E5CB47C
+        9F175202F5C65D5BAFBE7029DFEE8410120E1481082124242A95AF004874C512
+        2B0B774B9B56BD711C59264AE319785CFC2B7A08D640873EBFFEFA981BD8C44B
+        E452080AD1152CEBB94CAD82E826062FBF213016DBEAB9E75C3CA361F551BF0C
+        403AB5AC7DBA224429AAD51FE58520849070A00844082181B0EBED37DD2C2AD5
+        B326ECA06CECC2CCEBE56C19543E0F881A261B345B563CF6E2FDB4E31BDFC816
+        434557D0B019083A8F14F1DDC695F5B86EF0689BF48A9B5896B1EDDB37E616D6
+        BE6A71849E8E8BEABEB16C61A6BF93F5F9376744B9BA66FB7517BF896F794208
+        09038A40841012008F0F0F9744ADFA19BF0BFE40024277E8231A90289FA133FE
+        3C44213391E8F1C7811FFE30BB40E03B1074B70D6D16772F13B7305B5641A104
+        8FB62210A0386E624F3D25F1AD6F05306739EEA37A11100DD99CA76D938FF824
+        AAB507E4AA5509082184E40E45204208098099D3924F204EE6FA5C94EBF6E13E
+        55FCA1B2EA6A40C4593730A1057ACEEE06F6F2CBC09FFD99B98860230D7CA7BE
+        752D7F4C2C867C670ACB72ED7D0A44AE2C86F2E08FFF1878F5559367D5B2D0E1
+        A00F9102B58DF6E65BEB737B5E24A505DBA68B0FF06D4F0821F9431188104272
+        66D73B6F98231ACD7B8DB62B810473D6EEBF45597A1C902E32D9308697F6BDDD
+        E73FFB3360EF5E3BE281EB8C6013EBB8121D5CB885859A3D4CFB5946F12C86F6
+        EC01FEE88FAC5DA960FB289F02A40B5C9CCBC23CECB25E179246DF87B60D5F30
+        836F7D4208C9178A408410923BC96310A2E16CF11D4C9A77B5B75375ADF59D91
+        42992B37B02379FA69E0473FCABE79779106BEDD79755DC15484095F6E61BAC7
+        4C7F8F5E7213D39F3E0EF5F9DDEF02CF3EABFBACD97EEEDDF551BB5273955D60
+        6B9FAECFAE88FA1155EFE73B9F1042F28522102184E4C88EB7BFF97C546A576A
+        6D025CC705CA513CAA9C2611CFD0D990F9B2F051A9DBFEF3C808F08D6F98BB7D
+        B58B7D6323265096F276F54D53C3B7EA4F757C79BA85B9EC2F0F37311BE79012
+        F8DDDFD5995E8A2516257380CA990E7F0FDBE9E17D6D3C6AB59BB75C7BE1697C
+        FB1342488E73312F012184E4380997EB8F0A95B93810B72F69D1ED6B72992803
+        9595B63680F9C7FBE9F4F9EFFF1E78FE79F76E5F597FBF3C3282999CCBA75590
+        6E2C245BCF582FB9893DFD34F0EFFFAEFA2C5BB9ABBCF651DD0088AAD143E0EF
+        65E4CD854CC471A9F625BEFD092124C7FD072F012184E4C38EB75D7FAF48D3D3
+        6C2DF6659E69DE2D96552F1CDF38153DDE4F675E7F1D87654BCA4308B29D11CC
+        F4FEF59D292CEBF50A3D7B5811DDC4BEF18D6ED3928FE7DF6D1F5103A859776B
+        3598DF118655902857CEDB7EEDEA1BB90A2084907CA00844082139B075D33DB5
+        A85EFFA8F102BF082E610AC4D380D269AE3785BEE2FD74EEEB3BDF91D8B7CF7C
+        B3EF3210B4AAC093D50D4C5740B299292CEBB5B3210065F95EB6FA2B8A9BD896
+        2DC00F7E90A7E58F1FB1A8BC1288676ACEEF79CDC51EC61455AB5F78EA8E5515
+        AE060821C43F148108212407926D2F7F5E887896D3057F015DC2AA6B2444E637
+        932B6B20F76E60AFBF0EFCC33FD8111C548E753B1E8A2B98EA79756202B91280
+        B28C816E62637CE31B369E67D7628E59FF2206EA570428E0F87D888F3C94A447
+        577F9A7C84AB014208F10F45204208F1CCF6B70CCF8B1ACDBB5C2CF2656069DE
+        55CAD245403ADF6403E6CAC2475AFFFC9DEFE00D2B20D742900F5730BBFBC57C
+        3285E95E63D5DF8A6E628778E619E08927ACDE3D9A656EFB4F9702E9098673AF
+        4EBD50CED50651ABBDF7B97567CEE5AA801042FC42118810427C4FBC95CA5700
+        54758412778B7EBD73DBB2061211505DADB3D1CAC31AC88C3D7BC6AC805437EF
+        59EBD80A04AD22F298B881A90A4AA1640ACBF29BB810C874FB0FD54DEC6FFE46
+        F5D92D66F0E8FA950062856BEBDA5AD3F655D3F95E22AAEDEB1F7890AB024208
+        F1BC17E1252084107FEC7EC79BD78A72659DCD85BE13EB1C37BB84B645E5B324
+        E2211B9BB2F0AD81BEF73D60EF5E7BAE483E0241E7E50AA6727E9F99C2B2FE5E
+        AA6D42B40252A9AB53F6EFFF0EBCF4920B57B0B08247C73381CA790EE6E0825B
+        05895AF5DA9D579E772157078410E20F8A408410E26B23BB695324E3CA230252
+        182FB88BE812D6EE45546FB1392A70BC9F6E9FBFF73D3361C1554CA0F1B23C5D
+        C174CE118255501ED9C37C5901B976131B1D05BEF39D5C67664B734DF73E6AEB
+        C6E63BABF3B195EF69FD01CE3C26218418ADF73D2A01014208215EA008440821
+        9ED8B9F5F1F7897269A9F6E2B9475DC2AAAB005136D98CF9B4F031DB783DF9A4
+        C40B2FA86D947D6704CB52DEAAAE49B62FDF99C25C886B9DEAF8760BCBC30AC8
+        64FCDFFEF69818A4FEACDB28D39D2BD4FB1755A076695EF3BBE53E2CDED3A25C
+        3E79DBD517BD85AB044208F10345204208F1C073F7DDDC276A8D0FE5B2700FB8
+        2C9E05944EB6B1E90A23ED7BB7BEFFF11FF536F036449F769B71576E60B6D2C2
+        AB8E47D5FAC7C635CF720E9536532D9BD88B2F023FFCA1E91CE0BACC06129573
+        80648EA3B9DE671F96CF1555EB9FDAB96A7983AB054208710F45204208F1C0E8
+        BE9107A3389E667501EDC23AC7B33550ED1215278062BB81BDFC32F0A31F65DF
+        A89B64ABD28D09945510F2151BC847A6B05E730B2BAA9BD83FFF739166740321
+        2902EA6FB2239CA8FCB69A9D783B97489319A3D38FFA38570B8410E21E8A4084
+        10E298DDF75EBF14B5DAAD99370A21057376B1793858563A1148E676DB401527
+        ED7BB7CFDFFFFEA1CB622232A8048776E90A66C3B2C7B43F1799C2F214806C6F
+        FC8BE426F6F8E3C0E86848963FEE5CC8D28540E9A482B97FB97E2F0040B576EF
+        E6CBCF5EC455032184B88522102184B85EF78AE4AB10A224F38CF7E3BBAC5BDD
+        642C1690FA662BA4783F6AE7FFFEF7DD067DD67181B2ED0AE63235BCCAB86C65
+        0ACB7AADE926A6577762D96BAF014F3E99F5F994CE9F573B65ED695C0988C482
+        70627DDE74398ECE88282AA7B5BE87B86A208410B7500422841087EC7ECB756F
+        12E5CA05CE16DF4571099B44E53C89A83FEBF9438DF793FDDCAFBC026CD9E23E
+        FB978EF58F6A46B03CC82B53986D37BD4E75E82626F1AFFF6AE56E712B86583A
+        7734344108973D6415A49019AC15A25ADDB8F5CA732FE5EA811042DC41118810
+        425C6D07366D4A46ABB507DA47BD29663067EDB2839FA33EA0728EC9E62CBC78
+        3FDD3EFFE0076A9BE63CAC7F54851657C290895B98AAF8E0225358086E612ECF
+        EFD24DACBD08D46B6E626354D702F180A5F936FB8FE2AF0FBD730951EFFBA2E4
+        1E8510429CC1099610421CB1F3D97FFDB048920599374541C5FB71670D545D0B
+        885475A3156EDAF72C9F278A405937E1795AFFD84AF51EBA5B58D6E345CB1E16
+        A29B58967E5F7C11D8BD5B756E08749ECC50264A406DA3F60F65340F9BF46FFF
+        324EB2924A4B4BB65DB3EA5D5C451042881B280211428803B6DD393C236A34DF
+        6B6D31EDDD25CCCDD8926380D2521B9B3B9B428F0BD1E8509BFDFB81679FB513
+        57A693B06162FDD36D639FA72B98CE5842C814A6FB1BF7AA9B58D67E0F8F0B64
+        FA2CBB2E33A7BC42229DE7728E76FB0E908EAC82E26AED1737AF3F7788AB0942
+        08B10F452042087140528A1F8610FDCE16E881B876296D0A04505D3FD939CEA6
+        2B172CF665231ED0D8B1679F054646DC64FF52153F74449356F57C8842AA5642
+        B6338575BAC63AC76C5909D9BEC6B6C663ABEE934F862CFA38281340FD6AB475
+        1ACE78416DDC0C6EFB571D471C0FA6FDB54F7335410821F6A10844082196D97A
+        E735A7A3521DD6DA2C39287312205A636CE5538164B6EAA62EECB4EFDDC72AF1
+        F4D36E44856EE2452791C8342E50ABFAAAEE5D36DCC25C660A73F1BB74AA9387
+        9590DADEDC4FB0E8232D816C88302171E43893B94065058A1F0FC83028F46444
+        A97AF7E64BCF3E99AB0A4208B10B45204208B14C5A2E7F050289F5C5B7B53D88
+        FB94F0933776A2045456A9882759370FF9A67DCF72FEA79FCE27235896CDB78A
+        4863221ED80C261D4AA63093DFAD08D9C3F20A16FDDC73C04B2F65799E8B6A31
+        D49ADA1580A898CFE1B297328D0924691F53C61342886D28021142884576BCF5
+        FA9B51A99C65262C645C48DBFA57635BE9E23BF453B950226AE86EA042B20E52
+        3BC7FEFDC0D6ADF9068236B1946955CF777CA010338599FC8621660F73391E9D
+        BACF3EAB381729D50DB32CEA036A6B34E770BD1FD9FA7DE2621CA25C5EBDF58A
+        F3AEE5EA821042EC41118810422CF1F8F070292A973F9365711B944B98ADF3B7
+        3967340494BBCA624576036B5F67C70E6074545F0C50152174448EC9E5A6AE60
+        261BCA3CDDC2B21E37B10A2A8A9590891060C34D6CC70ED33940772EC997CAC5
+        403CC3E69CDC1B564151BDF985EFAE5891729541082176A00844082196983E20
+        3F85389A6B7DB12E73B61432B406AAAD03449C554CC93A86D0D2C0B7EE63D72E
+        7351A09BF0603B3DFCC43A3AE280EBD4F02A63D40D166D1A8CBBDD311D512434
+        B7301F6E62632290E69C54608B219100F5CB1DBDA00A1C6F48A4E9BC39C7D63F
+        C855062184D881221021845860D73B6F981355EB6FB7B630CE3B40B4A50D4332
+        4F225DEC537871D9B77A1F3B77BACF08D6EDB86910E8BCDCC04CC6E1D32AC8E6
+        B12CF74A9EF812888E14817A53F46945E914A0B4C483C5A7ED778F95DFA0C386
+        A55AFFD0CE8D67CEE26A831042CCA10844082136D82F1F83100D930D95F745BB
+        6B6BA008A8ADEFD64F31D3BE67FDBC73A7BF40D026D63F3A31775C8943BAFD17
+        2953585183479BCC6F2A6E62DBB7CB0ED353EFBB89D5AF06101B3F4996E67E8D
+        F7970B312A8A9A23D5C6E7B9D8208410732802114288213BEEBEE67C54AA5764
+        5A00BB7009CB63E19EA16EE52C209E99555CC97A4D4288FF937D8CE3EE60AED2
+        C0DB123A5AD551150074DDC04CC4A43C3285B9F83DF3700BF3DDBF4ADD7DFB80
+        175FB4315FD89A77FC96C5B380CA39A6EF132B2F8CA0FA17D5DA4D9BDFB4F26C
+        AE3A0821C40C8A408410628828571E8594B1CE42D74B80686BE7C85E575424AA
+        17EA6EB87CA77DB7319E23EBBCF61AF0DA6BF644029BD63F457305D3197BB76B
+        D0E9F9CBD32AC857F630DBD65BBAE36B57F7E597759E55DD79238C34F113A95F
+        0E887ACEEF92EC3780D3FE277CB738AD541FE5AA831042CCA008440821066CBB
+        EBEA9F11497A9ABD45B1FB85BC336BA0099F6BAB015155115242B20EB2D3E6E5
+        97DD883EAA6287AD14F113EBFA1285F2720B333DDEEBD9C34CAC7EB2B61D1381
+        54E68922B989753FBFA8B572A775FEC0D97937D87EBF4D242D9DB9F5F2F36FE6
+        EA831042F4A1084408219A6C7FFFADF5A4D6F848908B726729E1BBF71BCF044A
+        2B543770DD360B61BB7DB53AF6CA2B6A59A24C05A26E1B6CDB29E227B771F1A7
+        330EDD3AB632B0B90C0CAD23B2D80E2EED4B207AE5151321455D7471DB8F5E59
+        65A5443C5B678EEFB1784093CAA266E3F39B87CFAD72154208217A5004228410
+        DD09F4C5D73E87289A652ACA4867824DFB3297D640B5F580C8F476093DEDBB8E
+        85D0A1631337B126D9BF6CA687CF523E593009C50D4C777C3E3385F5825B585E
+        C1A12773A4255DAF883ED9113150BFC6F861B15F66E7213678F9C673E291D247
+        B90A218410CD699497801042D4D971D7B5F345B576979B05B60751C8A89FF675
+        4BCB8074818A6852BCB4EF59EBBCFAAA1D31C0E4B8CB8C603E2962A63093DFBC
+        A86E6136DDC43A5B0215D94D4CED1CA52540BA1CEE53C3BB78CF38B43A8A2AB5
+        F76CBD62E5B15C8D1042883A14810821440391245F991CF5C664412C731073A4
+        E5E0D22206AA6B553768AA9BBBF0DCBEDAD579E5157F81A04D8340DB7605D3D9
+        E899F6175AA6B0AC428E2D01C8B75B98E9F9BBF53531A8BA3D21C74C90B1DF4F
+        B6B2C6350092ACEF84402D7F6CBBA809518DCBA507B81A218410752802114288
+        223BDE72F525A25CBE24E36E4673E1EB21FB97D142FCC83154CE07E2693A9B81
+        10D3C09BD7D9B3C76D20685511234BF9C43A26163F2ED3C2B73B8F493DD75641
+        BA624F56F1240FB730D76E62070EE8CE1FB6EA6A0A1A0EAC89E21950C8B66801
+        1FFF6061E19D29D3D2B59BAF5AB98AAB124208518322102184A8AC4F376D8A44
+        5C7A1480B0BAF045B1AD81A2065059692ABC38FDE52C8C474D081ADFC4DA701F
+        B2991E5E453C995C37EFF840BA6E6126E5A6C77DA79477612594879BD8C888CE
+        5C11BAC590FE396A1B80A8CFE27B2354173215841049A9F2889CF83E268410D2
+        158A408410A2C0CE67BEF73E919696F889919083858FE6F8AAEB00510E3DED3B
+        2CF4915D089A68C99097F58F0D2B994EF55D8943AEDDC274CB7D660ACB2B2E90
+        7D2D40EFFCAD2D815C058B56A99B8FC590A800B5CBE0DF152C4721298BC02592
+        F4A46D579C7F0F57278410921D8A4084109291A76FBA6C5054AA3FEF72116DED
+        5F75BD590349C47380F2293A1BA222B87DE90B41FBF7FBCB0896B5CCB620D4AE
+        ADAFD4F0BADF4FA73C34AB2057D9C37C5AFD743AF79825904D21D9565D68D635
+        3F47E55C20093514728E29EBA35AFD13BBAE3CBFC9550A2184649C3779090821
+        241BD56AE57E11C5835AA28CF6A237006BA02E6DEB1B31C118DF87058FEBFEED
+        0841070EB8CD08E6322ED0C47A21A689D74911EF33535888025096FB2B2437B1
+        232D8142B00252A9EBC04D4C008DEB0ECDB7D2B3754FB059C8A268C6FE28FE04
+        57298410920D8A4084109281E76FBDEC4451AEDCEA6401EB2A95BB2D6BA00E6D
+        CBA700C9B12EE3FDD8E8DB5760E8C38FA9C6047265FD63228EB4ABEF4B1CD23D
+        674899C254EF816EC7F2B412B2FDDBDA1BCFD471134BE603E5D314DBC9829499
+        6C682AD5B73FBBF1ACC55CAD10424886399397801042BA73A052FB3284489D09
+        361D373F8E04241341494A201D4F096FBA412B8ADB979A101445DD37E5AA5641
+        AE5CC14C841D9B6E60B6C661522F64AB209FD9C3F20C0E0D00A592EAB3A83BFF
+        D8AA0BCDBAEA65B5AB01947AE0C56A330B9910E5B85A7F88AB154208E90E4520
+        4208E9C28E1B375E2B4AE50BAC8B303EFAD1C8CA93B56DED4220EA7725DC8410
+        185AB7CED8B12431130454AD4DBAB5CB52DE4A2809CD154C778CA1640A732D00
+        F5825B989472920864FA1C676DEBA3AEF9F3140F02B5D501B982491F6E71DDCF
+        2D4AE50D9BDF74FE46AE5A0821A43314810821A4D3FA72D5AA44F435BF606581
+        6DB4E076E306A63BDEA80F289F97771A781F1642EDEA746F9724EE0241DBCA7E
+        65E20AE6F539ECE14C61BE05209F819E757F6B60A225902F2B2038AAEBA69FEA
+        7A201ED2783FE8CEFF36FA74EF42269252E521393C1C73F5420821EDA1084408
+        211DD8795CFF471127F3F2C8DAA5BD0837A82BB3B88101A86D0444AABC73B0FC
+        D9C63974EBB46B77E8589AAA6DE0758F9B5AFEB87403F3D98FEAF7093553589E
+        0290CE1CE1CA4D2C9B25D0D47513132950BFD2E1CB2F500BC06EEF5011278BB7
+        EDD9FA2EAE5E0821A43D14810821A40DDB6F5D3753D4EAEFD55988DA58D0E665
+        0DD46D63981C0B9496E98A2EBDE7F6D5EED8447730D7D63FB62C7F6C5BFBB848
+        076F32E65ECC1496E599CD2ABE84E41636260215DD0A48A5AEFAB3503E03282D
+        B4F46EF2ED0AE6300B99A8D53FFAEC9AB3A67115430821ADA108440821ED26C8
+        B4F130846866DC896A2E9273AAABDB5600F5CBE48494F059365BDDCE15426068
+        DD3AED8FA5A9BE20D0EDB8AD20D0AA024BDEF1814CAD8D74EB849A292CEB3117
+        71815C532EC3C273AF3BE7E45117EA750550BF6EF27CECE0BDE4FEC1B65A2684
+        184C9A954F73154308216DF638BC0484107224DB6EBEF44C51A90C77DC047970
+        1173660DD4A56DBBEF5A3E0388E718AFF86DEC1A34365F7E85A06AD54EC0E0D0
+        5CC15C5AF5D8EA3F6B3B1799C2747E6397C75CA58B776D15D4DF2F1DCE0FB6E6
+        A7FC2D8692B940E56C8D39DFA32863756C592995EF7AF6F2B34EE16A8610428E
+        8422102184B49A1CAB8D2F4920565AB887600D649AF6BD03A20C5457EB8A30A1
+        B87D65D96CD911829A4DBFD63FBA4287AA70A2D287EBB4F03ADF53E59AD92ACB
+        CB2AA8C8D9C3FAFB6DCF0F2EDAFAA8DBBD9FFA9B80A8E2E6FD14942B984A9910
+        495CAE7D91AB19420869B1CFE125208490C3D976EB15778852E92CE505AAC982
+        D5963590C179BA9DB7BA5A226A9A6CCC4270FBB213F439CBB166B3FB66DCA6F5
+        8F8D60C8ED4495D0D2C4EB8847B63285E9FC2E2ABFBDAD63795A09D9E0701148
+        4540997A6E62511F505D67F0FED17C47E43C09742D134969D5B3979D3BCC550D
+        21841C0E4520420899C0131B3694E34AE5939917E52166FFB2D8767CC3174D03
+        CAE7A86E50B456F60E3678F6833E6739D66CEA6FFCB3080BB6E2029966F172BB
+        CFB3E71696A59E4EB90DAB20DBA290CBE0D1AA6D743F0F0C983CF336E78F62D4
+        ADAE9588675A789F180A2FDECA321257AA9F7F7CF9F212082184BC0145204208
+        9940DFCCD2279124475BCB5C52046BA00CDFA77E3920621B9B2C934D98499FFE
+        85A066D3DC32C4A42C4BB9AA58D2ADADED3FD3B1987E671FC1A26DBB8A85143C
+        5AF7B310E396743EE6131B7DE5EF262662A07EB5CED7EE4157B089D725898FEF
+        5F30F021AE6E0821E41014810821E4205B6FBBE25851ABBDC37851EBC81A483A
+        8CF7D3A96EBA58225D6CB2110BD5EDCBAD10D42D26908E18A42356A88A3C21BB
+        81D918ABEB4C61362C7D4210804C051D131A0D208E8DEF0E8DE75FB7AF3CEA1E
+        49F914A0B414BD11D8D92249A9F2819FAC5F319BAB1C42081983221021841C24
+        8E934700D4B32C7AF3B006EABA2990F6AD83440CD42ED3D950851A18DA871034
+        76BC54026AB5CEF78BCD00D1AA0247C86E6059C7A1D356B74E9E99C25A092E21
+        094059BEB7CAE799335DCD113EFACAB76EE3BA49AB7B1FC24E486E62ADCAE2A8
+        59AAD4BEC0550E21848C411188104200ECBAF38A8B44A57285F6A2DC6696AE0E
+        6552FA7503AB9C0BC4D3BD6DF32D6CD474EB988843EDEBCE98916DE3AFEB2266
+        1217A895B0622ACAA8B876B9740DD3710BD3292F52A6B0AC624E086E62B366E5
+        2122EBCE4BB6CE6BA7DF78B644F5021BBA4EF15DC1268E45542A376EDE78CED9
+        5CED10420845204208195B2AC6E547206564923D4B499031116F3A2DB82DBA81
+        4535392125BC8B8D980DEB1E97D63E593382B5EF6FE6CCECF78D2BEB9F505CC1
+        42EA7BAA650ACB3A5FB9107C749835CBE96C6F615EB251573AEA17A85F0988BA
+        4531A5C0AE60E308204ACAE547B9DA2184108A408410829DB75EFE33489293B3
+        2D7E73B006EABA5173631D545D07880ADDBE4C8E4D9F2EBDA487CF529E55FC68
+        573F941841BA632A4AA6B076C743B40A72652574B808E4D30AA837DCC4440DA8
+        5F066D61C799BB73CE65224DCFDCBAF1BC5BB9EA21844C7528021142A634BBEE
+        BAB229ABD55FB427C8682E96BBD575E906D6A2EF64365039C3DAB6DDC1262E64
+        2168726C13BBD63FB62C7F5CB98119DF2D8EDCC24CEBF9CA1446B730154BA0A2
+        0844FEDDC42A1702C9D116C413A5BA61BA824D44D42A9FDD3C7C6E95AB1F42C8
+        5486221021644A337A407E568868A6DA42B300D640269B712951BB7CE21BA297
+        D2BEFB10820E1D3789096452A652A795F06282EFB4F026DF238F60D1A15905E5
+        6925D48A5A0DE8EBB339B7D89C736C083730386FF67E452CD118B671997ACB4D
+        4C44D19C684FF48B5CFD1042A6321481082153969D775CBE0895EADDA68B5BE9
+        CAC2A74B5D5741A2CB2701E9FC5E76FB726BFD33F1785F1F50AD66DFEC9B94D9
+        8A0BD44A4C093155BC4BB7B0A9621514A295D09C3979CE39BA73511E5640DDEB
+        A6278CD2F76B120000800049444154A58D5779EF481F16433997C5E5CABBB66E
+        3CEF38AE82082153158A408490298B44F2252144596F81E928EDBBCB94F1193E
+        8B04A86DF4B509CB53E47123FAB43A76F4D1FEAC7F5C660473E902E6F29CA167
+        0A3349159F55A4C92ADCD81073B2D4E9F479DE3C53C1C68688E3CA92C7A4AD5E
+        DDFA75001207624DA6F9AF7B3F32074B23295043297A90AB2042C85485221021
+        644AB2F3D6CB378A52E9125B0B609953BC1FDB6E61D58B806830B4CD970D2BA2
+        76FDD8CF0836F9F8B1C7BAB3FEC9227CD81449B2F661EBCFC65854EA77ABA3FA
+        FCDBB40ACADAB74D01C8475CA0C98C89403E451C38EC3BFFC0D2F10CA0B6DA82
+        20A3F27EF46139A8199B68FC3B8AA474F5B3979D7D3157438490A908452042C8
+        94430E0FC728951F0420CC16B606D640D2515BD585F384CF511F50B928D4B4EF
+        3A9BABBC8E1D7E7CEEDC6C8240A8AE60C13FCF3D9429CCD4D2A795E0E25200B2
+        9D3D4C08E0F8E343CC4868320FF968DBB96EED3220EA571552EC882E66EF5887
+        654288B854FEA26CB50E2084901E8722102164CAB1BDFCDAFB11C74BCC17BE5D
+        36529EAC8394AD81DA7CAE6D044429AF4D962F573157C7DA1F9F3B17882233E1
+        C0549050153F3A892C79894336DDC24CEBF572A6B056C77C59094D9F2ED168D8
+        1268E060DE29A69B98A800F52BE127A68F425D3759C114889393B76D3CE76D5C
+        151142A61A14810821538ACD770F0FC595EA87B4051869B0B077281299BA8525
+        C702E553F3DE4CD96A935F20E85694CBF28D54F15905011B6290ABD840DD4499
+        505CC39829CCCE319F5642AD5DC16CCE3353D74DAC723E901C0FFB824C1EE28D
+        E6F569F51DA34AF563CF6D38BB8FAB2342C85482221021644A911ED8733F8418
+        7495CADDA93590CD05F4C4BE0450BF72B2517CAFB97DF90B04DDEAF8DCB976D3
+        C36729CF225C7413758A043385B93966A34ED636878B4079BB85F5989B98001A
+        D7E3D03C9F734068A5BA0ECB642466EE8FE38F73754408994A500422844C19B6
+        DFBCF1A4A854B9C57841DA65112C7DC5FB31B5063AF8B9BC0248E6FADA34E5E9
+        F6E54AF4E9FE3D8F3FBEFBC6DF7510685BAE6079636229D42B99C2DA1D2FBA5B
+        D8FCF92E0419ADBBCCC1DCE7BBED9175D30540F90C64BEC7AC8A2E2AE7F46C4D
+        24CB95B76FB9F48C252084902902452042C8944124E96300522D0126AFB4EF8A
+        A291AA10244A12B54B6D6E7E7CBA7D41B39D69F62F28B41F3B3ED1C2218420D0
+        26C28ECFCC5EB6DDC26CD47515E03BEBF1BCAC825CBB85359BC0AC59BE449AA9
+        EB2656BF0E40A94001A18D7E8BEECFD8C1D27294961FE22A89103255A0084408
+        99126CBBE9B26191A617D8CB86D279F1295DBA8159FC97D0EAEAB1AC607617DE
+        BEDCBE420C04DDFABBF5F501D3A6D9110CB29467ADD34E7CB1B21DF39412DEF4
+        BBD8B40C522DB39529ACA802D044162D1ACB0E169E1B586FB989C583406D9DE6
+        7BCF4740685BE3512D2B95366CBBFCEC8D5C2D1142A602148108213D8FBCE79E
+        342A973EAF25C0D812633CA67DCF6A0D144D032A17BADA04F9B2F609230DFCE1
+        C75A1F9F3F3F1F57301B6E5321C607B2E5166652CF3458B4E9711FAE62B66207
+        75EB67D122D7028C95BBCEC15CE9BBAD446DC3D8FCDFF5B70C2C9B9835ABA476
+        249507E5AA5509574D84905E87221021A4E7D9F9FA968F88383EDECA82546111
+        EA3548B4861054BF1C1089ADCD4D9E6E5FF9A781CFD2C7FCF96E5C8954EAA808
+        205945179722511E6E6179058B0ED12AC866BB6E6D162DF22136D34D0C00440A
+        34AE31146B509C6C629985AE385AB2A5FAFABBB96A2284F43A148108213DCDCE
+        3B36CE1269E53DD297850F3CBA81192C90D38540E944D71B2CDDCD4C2842905D
+        ABA0F9F3C7DD5DC2880BD44A6431DD68E59D16BED358B2B631A9139A5550AB73
+        AA1CD339AF4E9DBE3E89A38E723D1FD14D6C6259F92C205D64E9BDE82320B44A
+        5D83B2B85CFEF0B36BCE9AC6D51321A497A1084408E96D46A287A4409FD505AE
+        C9823704B7B008A8BDC9958893A7C823E12F2398FAF146039831C38E68A02A5A
+        F4921B589671EBB4CB524FA73C4FAB20DFC774EB8CB982E525C058B9031D8ED7
+        5DB0E8C60D137602D27E106A234146A9AEA5F843001045834925FA0C174F8490
+        5E86221021A467D976D3FAB3502A0F6B2D068DFE15D42048B4EA3834DCC22AE7
+        00C96C9B9B95D0DDBE5C6404D33B3E6F9E9AC5878A00E12A23986F173097E3D0
+        4911CF4C61EE83472F5E6C4BF4B025CA4C0D37B1E458A07ABEA90093BDAE0CCC
+        4DAC6D3FA5F21D9B2F3DFD64AEA20821BD0A45204248EF4E7069E55109C4DA02
+        8B893863D2D6F2E7890B6F5105AAEB7D6C806CB4C9DA4FA83181DAC705D2111D
+        6C5BFEF84AE99EA76B988B4C61A6BF93CB4C61210B409DC67AC81228C43840BD
+        ED2656BF0688AAFAB1EFD02B81A527944921D224AD3ECC551421842210218414
+        889D376EBC13717C16A4C3D4ED0A0B70E931ED7B27AAEB80A86E6303E12B30B4
+        CD76B6441F281E3F322E900D0B13BA82D919BF0F97B02CBFA9E9F1BCAC824CDB
+        0D0C8CBB494A47F350AE77A5C3F1DB691B3581DA659AA28AABBA965CD38CE20F
+        25C9AA6D979D35CCD51421A417A1084408E93936BF77B82ACBE54F682D36ADC6
+        0A722840695803C53381CA79261B88BC0243DB6CD7E9982BABA043FDD4EBC0CC
+        99F68505DB82502761256F71C8C698A642A630138146E5984EBB899F0F7705B3
+        2572D81261A6869B58F51220394A438029524068B50962EC3F49F9F38F2F5F5E
+        E2AA8A10D26B50042284F41CA51DAF7E1C91383AF362D49B7590625F963FD7AE
+        9410B1ED4D87AF784036DB8D1FF31F13089058B0C0AE90A052A79588625388B1
+        618D13925B98499DBC338515252ED09808E4C3D2B0C86E626EFB1231507F7316
+        51C57F3631DD80D04AFDB429135174FCD0B18D0F71554508E935280211427A8A
+        ADB75D712C2A957B8389F713885B587939503AC1D5C6256F21286B5FF9C70402
+        80F9F3CD338265ADA3230AD9B6F471990ADEE6F7E9F54C61E16606CBCB2A314F
+        C28B23543E15289D9883159005B146F99C2A65A5D2077EB27EC56CAEAE0821BD
+        04452042486F4D6AA3A38F42A2D66DA1277D067646BED64222066A57F8DEA0F8
+        1482DAF5E53B2650B67EE6CDEB1E17C8861B92AAB8614348F1BE9566A6B0AEC7
+        6D8B42ADDAEABA8E0D0E4A4C9B663A4F143198B4EFF9385BDBE60D80482CBCC7
+        8A1410BA1B42344B49FA05AEAE08213DB55FE2252084F40ADB6EB97495484B57
+        645D084A57B182326C3E8DCEA5F8B97A81443CC3F726CA651D5FC73AD5D50F10
+        5DAB01B36767130154CA5DBB828560D1637ABE5ECE14666AD5E3320874BBBE96
+        2C319D776CCC5574131BAF1BCF06AAAB3404175BFFE0E22320B4CA39C7CBD2F4
+        C6CDEB569CCD551621A457A0084408E909A494228AD22F424AA1BDA874EA4266
+        E816A6F9396A00D5B5B6362253410872EB0A365E367FBEBED8634BE46825B4F8
+        106E5CC6FEE936161BC28F8DDFCAB5F58F0DC1C6B500044C0E0A9D87E013DC9B
+        CCE1F833A68CBF6A2C6398F67965EF590C09882829951EE14A8B10D22B500422
+        84F4043B6E58FF4E44F129AA0B40AF19BB72D880D43602A2EA72C3547421C87D
+        20E8562C58E0362E502B11C4957012C4D6D9925B9869BD503285E511143AEBB1
+        899F172EB4394714317B58786E62A206D4AFB41400DA4480C93120744BE2E4AC
+        6DEBCFB88DAB2D42482F40118810527876DD75655354AA1F71B2482DB05B5832
+        47A27296EB4D90EB3A796604B39B1E7E22F3E60151642F2E90ABD840ED04963C
+        44225B6360A6303311C7E4D8C4CF336600434336E70FDB739BA9C8525C37B1EA
+        C54032D75C70F192163EE3B361E39CB25CFEF4D62B56D4B8EA2284141D8A4084
+        90C233FAFABECF426066E6C59E5474CD52DB6176E9CB9F5B58FD6A00512FC6FF
+        9106C754CEAB7BBCBB4854A90073E6D811115A891B3A828A0B712604F7305799
+        C2F208166DC3FA2704010868971A1E8EE6161F56992E0551CF025104346FD479
+        BFD9117242751313223A5A1C887F91AB2E420845204208C991676FDBB818E5F2
+        5DE6E28C41DBBCDDC25A9CAF7C1A902EB0B981980A81A0DD5AFF4C6EB36081BA
+        D863D375298B9853347CBA85E9D6998A5641ADEA2C5E9C97C58F8D3E8AEC2696
+        8D7429503ECD9315909290E33120742B4AA5776D5D7DDA715C7D11428A0C4520
+        4248A14946F1250095968B43131372876E60AECF2D52A07EB9ED4D8EADCD95EE
+        B95C1DB36515A42E12CD9FEFC7F2C74546B03CC9C32DCC75A6B0BCAC827C8842
+        EDEA2C5A040773501E828F6D91261C37B1C68D1D52C6876E05A45257A91F5451
+        4E1FE2EA8B105264280211420ACBCEEBD76D1071B236F382B8CB2256FAB41672
+        E816565D03444379B97D99B878C1C33157564180AA48347F3E1045D2382E904A
+        3D55F1434788E915B7309F99C2748421D3E33E5CC5DAD599350BE8EFB73DF7D8
+        9AE35C8B3A36712B10C53380EA7AF5F79F7425E4200C37319196AEDA76E919AB
+        B80A238450042284108FC8E1E118A5D28300849138A3B68BB4FBD98110140F00
+        D5D52E374DBA6DF212825C5A05E9A5871FA754028E3EDA9E98A02308B513740A
+        3F3F687EA7903285A9B409D12AA8531DF5D4F045B5122ABE9B58FD7220EA77F8
+        0F2496EA4ABF29E40592F461D96DFD4108218142118810524876C52FBF5F46D1
+        0959C41595055F9E6E619ABBDDC33ED6AE901025D34D85AFC0D036DB75136690
+        F11E716BFD33B9CC655C20D5BADD449410C521DB6E6159EB9AD4C93326503771
+        26CB584C052060A208A4EB526A43E0C8DB2D2CA4F1B56F2B2A40E33A8377A8AE
+        E0A2751F68F4AB2B1E45F1C95BD6AD783B5763849022421188105238360FAF1F
+        1A2DA51FD45EC8A9BA85198832CEAD812690CC03CAA7DBD84CE86EB28A96FD4B
+        C24F80E8F6650B16D8C93E159A1B98F1F6D7E1795CB88515255398A9A54F2BB1
+        475500120258B8D0E61C124AF6B0904425BB0251E57C209D6F416009212DBC25
+        8B212925A252F9633F5EBBA29FAB32420845204208714C9AE07E0131A4B4080E
+        293B980BB7300134AEC641E3F45E4803EFEA581EE9E1DB97CD9BD73D2E503791
+        4047106A27B458DB82E614F7C7D67764A63077C766CF06FAFA5CCE2F36DAB816
+        780AE6262680C64DDDDF8DD29940E446C831AE2BC48C4A223EC1551921A46850
+        042284148AE787D79E2492D22DC6C28EEA62D6B35B98EAF9CB674924C7D9DE50
+        F5A210D4A9AE1FEB9F8965690ACC9D9B5D54709D11AC286E60B6C7CD4C61D945
+        1CD3638B16F99C577C5809F97E3EF271134B1702E5730A660564D02F32067317
+        69E96DCFAE3965315767849022411188105228F626C99721906A2D967D0A3986
+        D6402AE71015A07E99ADC57F2F0A416159FF4C2E1B738DC92E04A888113A2287
+        8AC8E24B24B27D7E660ACBD6BF8B638B17E739E7980A2A798834E1B88935AF07
+        506EFD0E9301BA89C18B9B98284569E961AECE08214582221021A4306CBBFED2
+        E12849561A892B26FFC2189A5BD8416AEB80A8DFE606C3659DA26404B31520BA
+        7B3BD3B8402AF57445105391266FF730660A0BC32A480860D122D379048EE6AC
+        5ECC1E662738F4F8E76870FC1F1C7C8A3C0AA2691E6E6290409A5EBAED925337
+        72954608A10844082116797C78B814A5F167F5C415FDC56AE84250344DA2B2CA
+        F6C6C5651D9BED6C8A3E503CAE2A12B52F3FFE78208EA51357305311A788D872
+        0BCB5AD7A44EA899C25C59051D7D34D068F8983F7CB4C9DB2D2C9FF1D6368EBD
+        77B2DC5F3AEF5C6BE28C238BA176DF75342D3F2457AD4AB85A238414018A4084
+        904230245EFC0884986F65711C7ADA770521A8713520925E70FBF29511AC535D
+        1FE9E18F2C4F12E0B8E3F4C40557B1813A092A790B4436AD867A3D53582751C6
+        47AAF8C9C7DAA786772920F7AA5B583E6E6222051AD72B082A215A01D9B2189A
+        785DE278F1D6D2CBEFE56A8D105204280211428267E7F0AA5951A9F46E332147
+        7FC1ECDF1A28DB62395D0C944E36D930302398B9B0A31B13E8F0F2050BF4C404
+        957AED041457624C88AE6179660A73192C5A553052118B6C8A424B96842000D1
+        2DCCD44DAC7236909ED0F97E722F10F9AFDBEDBB8AB4F4F35BAF58319DAB3642
+        08452042083164342A7D51027D52E697F63D38B7B008A85F6B6373636303149A
+        10E42A26908E48944D0C5AB8D03C15B9AA20E442180A091BE9E1438807149A55
+        906EFB28428BFB3C3401081A6D42730BF333FEE62D2D76119EAC80BAB7F551B7
+        C577156210FBA2CF70D54608091D8A408490A0D936BCFA2CA4E9759D3621DA8B
+        4A532148F5FC1685A0CA85403227AF5818363761368EB9B40A72971E7E22C71D
+        07A4A9BDB840AA62461601254471C8855B98ADBAA1650AF319145AB6983B8F3E
+        5AA256B3F5DCC3D3BCD60B5643464F58DBCFC9B140F5C27CAC80A42BD72F8DE7
+        F108D2E4CE5DAB4F3E9DAB374248C850042284048D88D34700C4D68416784C03
+        6FA3CF164290A801F50D2E3736BA756CB653DD10BA8A09D4AD1F93B243E571EC
+        2E2E503BC1C4B6E8624B34F2E11AE63A457C2899C274841E5741A1C75CC15CCC
+        0179068F0E4DF0F1EB26561F06A29A7D91277C2BA08E75E37D69E951AEDE0821
+        2143118810122CDB87D7DC8D383E5BD935CBA690E3DB2D2C03B5CB2444DDF6A6
+        288FA0CFBAE24C1E69E0ED5BFF4C2E5FB8D08EF8A02B0AB9B0F4C9231DBCADEF
+        D90B99C2420A0A7D48040A4100921EDAF4BE9B58D404EA575978CF2AB4952188
+        3EE86C5D2492E4BC6D979C3ACC551C212454280211428264F37B87ABA254DA64
+        6531E7DA2DCC637CA064365059696BC39177D06717D9BF6C0682B629F8D88B0B
+        E42A365027D1A608988E9D99C2BAD7EDD447A76363F1805CCC1FAEEA980A263E
+        44189F2254FBBEAA9700C9AC40AC801CB989498D6C62324E1F7862C3C2325773
+        849010A1084408099264F3F39F9010C774DA38D9125672DAB16A8DB77E2D2062
+        9B1B955EC8FE0585BA795BFFB42F3BF658A054729F11CCA6C0E24328726541C4
+        4C61FE5CC58E3B0EA8548A2200317B98CAFB512440F36693775BF6F764F05640
+        1389E3B98D03CD0F7135470809118A408490E0D83ABCF658512EBDC37AA0668B
+        A28C74E1F6D5A54DF96489D252171B18A681EF7E5CB54D967687974711306F9E
+        BEE090B71B588829E14D451FDBBF836FAB20D7424FD6BA8B17FB168060A9CE54
+        C81E66FE7D4AA702E5532CBC7743B002CAF8FC64398F4CD20F6EB9F0C4B95CD5
+        1142428322102124BC894988472151535DAC195B03E5ED16D6E13B8918A85FED
+        6A936252A7C819C17C0488562B6F1517485788304D135FD454F13EDDC27C640A
+        F3E52E66EAFED5A9EEE141A14D9E7F9F9643AEAC84CC4517B79FF5C6DEB81910
+        710F5801A9A685EFD4AF107551297F96AB3A4248707B2D5E024248486C1BBEF8
+        2224C915DA0BC3A20B416D1695D5D5403CD3E5E6C5F7864BF5581E5641365DC4
+        B2952F5C18962B585E2E603EC7147AA630D5B2D0AC82E21858B0A06802103CB5
+        E91D37B1640E505D6B22B6E4936EBEDB336CDC6F9ADCB075ED292BB9BA238484
+        044520424830C84D9BA2284A1F8694C2488809FE8BAA09415143A2B6DE7473E1
+        B24EBB76363382A9B4D7E9D7458068F5B6C71C03542A701600DAB690E3CA05CC
+        95F0C44C61FA424F2701A853BFC71F0F94CB451380E816A6F3FD1AD702519F86
+        30038BEF784F6E6299FB958810250F4B4070954708A10844082193D8F1AF7FF1
+        33328A4E515F409A892CDEAD8114C75CBF0A10D5BCDDBE60E958E819C17C5AFF
+        B48E0B347FBE99F8602323582F60FABD7C670A73112C3A2FABA0898CB9824983
+        B920EFD8412ED2C5C3419FF9BB89891AD0B80E768343FB126EBADEDB52BFDF38
+        3E7DCBEA536FE72A8F10120A1481082141B0EBAE2B9B48D38FE82EFC0AEF16D6
+        E63B27C70095734210798A1A08DAB7F50F8CCB4DE302B512406C0828210A4445
+        720B73515E04ABA0254BF298276CB563F630D5CFD58B81E438A5274FEDDDAA22
+        F2E46105D4A66E5C4A3FB373D5F206577B849010A00844080982D1977FFA5948
+        CCB42AC4E4B02135197FAB8565E3CD938DC87DB932D8DC58D938E63B10B48BF4
+        F0D9CA55E302E9884226CF8A6D57AE3C5CC35CBB85F542A6B04E424F5601288E
+        E561966DFEE60C789A27E92676C4782389E6AD76C416E930DDBCD279612E2649
+        2166ED4FD38F72B54708A108440821009EBD7ECDE2D124B9DB7891A7BA38B36C
+        0D647B4CE5338174A1AF8D48E842908DBABAC75D8A4147D639FA68A05673EF0A
+        9687954FD1CE39953385D9080A3D6F1E502AE53D7F841C17080EFACCDF4DACB4
+        0C289F954588B128EA046C057468D795BEEB99D5272EE0AA8F10923714810821
+        B99348F19800CA36167EC1BB8565FC4E221D8B05A4BF410939E873D663BD60FD
+        D32D48F491ED27C7055215796CC5C1295A9C201BE30E3553986E16B13C62024D
+        3C7EC2093EC51E97F360AFB885F91B4FF3564094CCACF5B4C51703E146DACC5A
+        3609215049A2D2FD5CF51142F2862210212457B65D77D10688688D917053F4F8
+        402D8E55D74BC443B63714BA755CF4651A1CDAB555509E718124162D32171E74
+        850D5591C5B558E4F2BC79670A3309066D22F2B88C0934F1F85850E890052097
+        F3A86D81C5CAD3E4E11C63C4D3246A1B0CDEB32A624B5E56403AE749E2376D59
+        73E2255CFD114228021142A6247278381671E94100C2AA1B582E5FC65EC6B078
+        00A85DA2BB49E8D5EC5F50A81B8AF50F34CBF1465C20DBB181DA892A798836BE
+        45255B6E6136EAE6112FC8B755509A02F3E6B978F67DA7947731C7F6A25BD891
+        DFA97E35104F73F0FEB425D474BDDF9DB8890911971F92DC83114228021142A6
+        223B46777D0010275859D8E56D0D94654199F173FD3A40944C3613BD90FD4B45
+        C481A5E3AA6D6C894147D6993307A8D7DD08102AC24D1129825B988BF2D0AC82
+        E6CF97485393E7380401A828C1A35D5BF8E89D5F9480FAF519DEAF6A0FA7AEF8
+        124E5B21966F5D75D23BB80A2484E405452042482E6C1E5E3F24E3F40346424D
+        E06E613A0BC964BE4479858D4D866E9DA99C110C7063DDA31217E8E0E649B44E
+        15EF3B23581EEE5FA663B2D1A76A1BD37ABD9829EC84135C3CE7AEE62B9F7181
+        F21074F21391AA2B817449F6F76A4F580165701313A5D2C79E5E79D220578384
+        108A408490294332B2EF7E213064C3E2C6F196536D7C3A69EBC7EB08A0713D00
+        119AB54F91441F1BC28E8FB83FE85AA7535C201511C254EC30156542730FB391
+        1E9E99C2BA8B454B96D89A075C8BD345CB1E5630B73021D17787E68EC3658AF8
+        BCDABE715DC4B4A4127D9CAB414208452042C89460FB9B2E3C49A4C92D9A3B38
+        33112687B4EF326360E8CAF9407A5C1E1B95BC84A0106202E9884436C5A0F675
+        B2C6053211777AC90DCCC57763A6303DABA0520938FE789773073CCF6B2EE6DE
+        3C041FE74F5DCBCFC93CA0B2B245B9CE3F9A38106ABC59014D4288E46D4F9FBF
+        6C3957858410DF50042284F8DF9C25D16300D2B60BAEA2B985655818761B83A8
+        00F52B5D6C346C0A3A2AFF22EF223874D1D2C367296F5F67D62CA0D95417235A
+        0920B60494D044A2BCDDC2A662A6B02C56418B160149925750681FF3A0A97863
+        43F0B127D2D8FBDC9EE6CD80A82A0831BD680534795D209026D5F2035C151242
+        280211427A9A6DD7ACB94EC4C905D6E3EF143C5074ED7220EACFDB75C1A63864
+        E31CAE0341DB147C24F2880B94574630DF2E602EC4281B6E6136EA16395358BB
+        E34B96A85AEF155900A25B5896CF51BF3CFC1F3A5C5AFD14C00AE88DF346D1FA
+        AD6B4EBA8AAB434208452042484FF2F8F07009113E6F6511E8030781A25B0941
+        D10CA0BA3A0F91A7A8D9BF8A6EFDA31217C86F46B05EC5567A78660ACB76FCF0
+        78403ACFB7EB633AED7C068F36ED236FB7B0D6E3AF5D01C4B360FE8F3426EFF1
+        002D88464572FF7757AC48B94A2484F882221021C41B43233B3F2222312FF342
+        376F6B201B0BBD0C7D36AE971049281B92BC376645B4FE816179FB3A8B17FBCD
+        0856041730D76367A630BDE3E3FD572AC071C76579A68B641514B29590CEB3E9
+        DB2A680C9100CD1B1DBF638B6405347E5D845830BB6FFF7BB84A2484F8822210
+        21C40B3B8757CD429CBC5BBA4ECBEEDB2D4C637138710CE952A07CB2ADCD82AE
+        A842EB1F7765D9C49E767566CE040606D4C5065351435564F195C5CBC5F96C58
+        08D9127E7A2153D8A245401CABCE05210B40B6E65E575642790B3C6A9FCB674B
+        944E567827BB148C1C893C3A6D451C7F78C79A138FE26A911042118810D2338C
+        8CE08B00FAAC2FFA34377D5685A036D9BEBA0A41F1C194F0461B823C823EE72D
+        FAC0D271DF7181B2084647F6D32A2E902DF1C2A5954FDEA9E06D7FF73C52C4FB
+        167F5ACE8F8AC74F38C1E5B31EC2FC96675CA0A2BB858DD1BC0D406CE15D6C20
+        CC84620534DE560AD17F6034FA14578B84108A4084909E60DB55179C8538BE4E
+        6185657761E8C2CDCB42C6B0EA2A89E468D38D828F0D8FCD632A63D1D9348666
+        FD934DE8E9546F3C55BC4D914245B0291A79B985F9B40CD24D13DF4DCCB16115
+        642728740841A06D0933B6C499DEB11A4AE64E8C83A7FDA0DB7FEFDBE8CBA46D
+        1CDFF1F4CA135670D54808710D452042888799267E0452C61D3722A1B9856559
+        DCE9640C3B782CAA03F52B5C6E325C6F865C1D736D15A4DA264B999B14F1E32C
+        5EAC2632E88A183AA28A6FA12834B7309B29E2B38A3B21670AAB54248E3DD685
+        A8A32B30172576900BC1276CB7B0E60D1251231F5127342BA0893250522A3FC2
+        45232184221021A4D06CBFEAC2BB114567EB0931450814AD2704D5AF0644DDF5
+        66A30842906FAB20D336FEE302CD98010C0EDA152C6C8B374548096FEB5A3053
+        58FBE38B17035164F22CDB168A8A20004DCDEC61A20134AED3145AAC0A4681C5
+        118AA2F39E5975E2F55C3D1242280211420AC9D67BAEA8C938DE14D4A0AC078A
+        565F08267380CA05BE3614A109412E05221D61C744D031157B90A1CE58BD458B
+        EC091359C59B5EA057DCC274CAF3880934160FC8E61C10C2B1BC8347ABB6B1F1
+        ECFAB10AAAAE07D2B9B01B1750F51F7F2CF6DDED79CFDA364AE22F3CB5EAF80A
+        57918410575004228438436C7FE1E3008E31126110603CA02CA6E41DDA346E00
+        449C778AF710451F18F60BF80B106DB3BCBB20B46891BF34F1DD049490442217
+        630C25457C1133858519143A8F79D296C54F6FBB85891868DC9EC33B5E777D61
+        B26E50682BA4989BA0F1735C451242280211420AC5D62B561E2BD2F4ED591647
+        C1B985692DF0B2F5513E1D282D77BD995069675B1CF21D1328EF00D136CABB0B
+        424B96A80B0E2E84211501A608EE61BA7DE69129CC2458B40FABA07A1D983BD7
+        D4FD6BAA0A40F0D4263CB7B0F2C940F9744B428B4D2B208BE2934E0CC23849DE
+        BF75E5F263B99A248450042284140611455F9240DDDB090B10285A2440E3BA3C
+        634D988A43B6B37FF948036F53F0F167F933B9DED010306D9A9918E143180A15
+        DB6E61B6EABA7609EBB4F1B56D15B478B18410309C23A6AA009447BAF84C77BD
+        97CFCD3BC7DE8F76AD7CBA3D07616713931275A4D167B99A2484B880221021C4
+        3ADBAEBEE022C4D1E5764518F76E5E5A81A215C659BD14888FF2B97108F15828
+        5641AECAB28A3DEA82D078963015B1C39658520491C8E6B875FA285AA6309B6D
+        80C9F1805CCF01534900B221CEE427F064F99CCC026A97BAB5F8B52AEA38B602
+        7AA36A1C5DFFF4AAE52BB9AA24845004228484BD11DBB42992327A1880B06F8D
+        E37E11E82A6358D40FD437E4B58108E9988D0D9FEE7157656E5DC1C699181728
+        AF8C603EDCB6F2700D0B255358DEC1A255DA4C3EBE74A9CD67392F5128EFE0D1
+        A1C605724FE3CD4034E046B4B16A05243DC611928812113D2C01C1D525218422
+        10212458B6FDFD1FBF5344E214DD0553DEF181B48420D97DE1DEB84E42547D89
+        3C533D0D7C9ED63F66424FA77A932D2D8AE40696471A789571E8B6B721FC6411
+        765C8B3FA631819A4D60CE1C9BCFB5AFF6B6E6395BE7F3D1264CB730511D4B9A
+        605D68C951D4913652D747D1E99B572EBB93AB4B42084520424890ECBAF2FC66
+        14A7BFE0FDC43ECCC60D84A0E478A0729EEBCD838FA0CF2E366645B5FE816679
+        D63A13EB8DD5EDEF0766CC7023ECF452AA78976E61AA6D4CEB152553D8922512
+        42B814816DCE27AEE746BA85E97EAEAD01D2F9AE133FE414FBC7A0AFB8947C7A
+        D7F94B9A5C6512426C41118810628D7D527C560A1CE53E48B3FBB4EF7632868D
+        8DB57913261873E79DE2DDF626CB658C0F5FD63FD06CE72B2ED0A1BA8B17BBB3
+        5AD1115542B0E2C9DB2D8C99C2E404573013A1C787201D823B99CFE0D1B6051F
+        C708A0EF2E58737E923E5DCA5D58011DE2A83D71FC8B5C651242280211428262
+        EB65E72C1571F416EDC5956BB7300D1147EA04869EF4B9721E902E0A4DD0F199
+        FDCBC526D0440C3211744CC51E64A8D3B9DEE2C5B0E6CAE442B809391DBCCD6B
+        A12B1499F619AA55D0E1AE8A12C50D0A5D5401C886E003077DAA7F4E4F002AE7
+        DA5947184E12CE04229DBE441CDFB779D5F2855C6D124228021142C2214E1E16
+        42946C6FD4AC0A411AC2908910244A40FD1A1F824EE81B255702910B91C846DC
+        1F33A1E7F07AF2081168721A6E5719C17A81BCDCC274AC834CEAE8A689EF5496
+        D52AA8AF0F98354BE7B906FCBA8AB93C663376908D7315DB2DAC7907204A8EDD
+        C01C8A3A66F3679BF584106500F773B14908B10145204288315B2E3BE74A1145
+        97E493D2D5FD39A5A69854BB1C88A7F910749806DE5FBC205B628FBA2B1820D1
+        DF0F1C7594BAF061534009452872353EDD7EA66AA6B0A54B71301E90AD67D9B4
+        6EA802505E163F3E041FBBC4D380FA954E270F0F6B13FB7D4722BA72CB454B2F
+        E1AA93104211881092EF466CD5AA44A4E9FDD6165756FDEAED2DF8543386C543
+        406DBDCFCC5E45177D60E9B88B6C61BA62916A9D6C9BB7C58BEDB882F9126242
+        760F63A630736168E9529BCF6FD144A1D05CC76CB409C34DAC7E2D104FB7B46E
+        803F3731696251D43D75BD808CBE28B97F238450042284E4C9B6E6DEF70B8945
+        564517DBF1816C08438A4250FDC6317730BF29DE43147D60A1DFD0AD7F6C5AFE
+        74AFB778B1BE109145C0E9455CB885D9AC6FC332C877B0E8F1E387C703B2F92C
+        87EE2AC6EC616E3E1F543B4A40F3167521C57A30684561D8565F6DDBC6D1B2AD
+        E79F702F579F84108A4084905CD87AC58AE988920FF9DAC4755E4C7948039FB1
+        4DBA10A89CE16313D0AE9DEB8C60AEDADB3E9EA72B9899D07364BD43755BC505
+        6A2776D8144C4216898AE816663B53984EB9A955D0C0C064F7445BD63FA15B05
+        317B58F63E959FBC37FEAF7201505AEA30F8B3EA1AC0A59B98CAB54CE34D9BCF
+        5D3EC455282144178A408410FD35CC68F90B0218B0B278B221C0D80814AD63EA
+        3DF198009AB7C816296E7D0A41EDFAF295112CB49840A1C60552A977A86EB329
+        317BB65B21C3447029A26B581E6E61A602510899C2962D73F12CC3E3FC139A00
+        044B757A247B989068DE3D61B7926730E80CCFB5B573756D2BA62119F91857A1
+        84108A408410AFECDC78E6A9511CDDE254F8B19171C3B310545D0524C7DBDC14
+        142D4DB2AD0D5AB7E3A189417E05A1897181E80606E3EF6FD2DE66FD3CE30175
+        9A63DBB55BBA54F7F9753167D86E6FDBAA52770C36C49B22B885B5269D3FF65E
+        B5F0E0BBFD6C24EAA8F725A2E46DCFAC5A7A2257A384101D28021142B43810A5
+        8F02487C2FC4A4CE62CA47EA7800A22251BFDAC7223FC463BE630275EBDF5599
+        2D573064ACD7BAEE922566C2445671A48802916DABA15ECA14A6D3B6D3F1134E
+        B0F1CCBAB40ACA722E172EB4BEE6FD50B387693DB96D3F376F0544B540C1A05D
+        66131B5F6F08A4F1281EE06A9410A2034520428832DB379E7BA388A295D60416
+        53014667F167C14268F238EA570351BFCBC5FE54CF08D64BAE607A29E2C7EB77
+        8A0BD44E087129ACB8168D7C9DDB965B98ADBA21078B9E360D9831C3C6F30B47
+        F34EA8C78A9E3DCC4CD0D1F91C0D4834AE3510807CC6FA511675F42D8AA488D6
+        3D73C1E2ABB82A25845004228438E5890D1BCAA391F88CD50596C602CC4AC630
+        8B42507C14505D9B7541ACBB38B7D92E04D1C7A7F50F34DBF9B0FC511184C6EA
+        D7EB1273E698A7897765E513623A789B824FABF6B6851F57F1804CC59FF1B243
+        F1804C9E599F73CD541780E0A98D1B2BA2DA9B80788E9389C0E8B3991590F95A
+        284272FFE3CB9797B83A25845004228438A3113DFF6108719C742DFCF80814AD
+        B3206CB3086CDE0288242F41C7D44AC87670685BA28F2F91C89618643B2E50E7
+        BAE3A9B96DBB3BF5529CA0A2B885153153D8583C209D67CE95FB572F0840B054
+        272F2B21776E6122019AB7A3D8C1A02DBA89BD71EE482CE8EB3FF01EAE4E0921
+        148108214ED87DF9B947CB2879AFC51594D1E76C1B31FB81A127533E11289D12
+        A2658FABEC5F2E3675BAC76DBA88656DEB2B457CE7BA93E3029988153A224A9E
+        42916B0B221BE9E17B3D53D89225B6445A1B6251E85641BE2D877CB4F16F3554
+        395BA2749A450128A494F026E78AA30F3F79F6BCA3B84A2584500422845867EF
+        A87C1040A3ED02CCC502CA8A29B6032168FC730C346ECE63E19FF7B1D0D2C0EB
+        0A3A705CEE4A109258BC1888A22C8F905BF1A68829E16D083E2A228D4EFD9033
+        85CD9821317DBA8D67D1960B59C8A2502F048FCEC34DAC357D778FBD779D63BA
+        F670181C7AF2B985107DE5B4F469AE5209211481082156D972E539E78B24BA6E
+        F2424D06E0F625A523B7AF0C6D6AEB80E498BC360045137D60E9B8AF00D1B6C4
+        1E17821050AD4A1C738C7D37B05E252FB7309D14F12E338599B60526C7033279
+        2E4DFB095D14EA95E0D1B6051F689F23990B542FEDB160D03604A338B9FDE9B3
+        17ACE06A951042118810620D3122BE08393E677816825C048AD63DEF8463511F
+        D0B8AA17823EDBDE30D9DCE085901E3E4BB96A1D3BB181C6E302B513396C8A25
+        210B45AEC66CC32DCC565D5B99C26C084787E2010176855C789AA37C884279C7
+        0E0AC94AC8B4CFC33F376F9288FA1C0A4021A584CFE8062FA58CE352FA0857AB
+        84108A4084102B6C5D7FD65B1089332CEFDAAC0B435E52C74F38D6B80E10351F
+        1B021FE250E831817CA787B71117C89D2BD838EDE202D91686744497A2B987D9
+        4A0F3F1532858D898FB6C55B576291EB39D0E61C6DB39D0B91280CB7B0A80134
+        6EC8673D64EE062FDD9D1BE2BC67CE5B9CD395218450042284F40CDB6F5D5717
+        69FCB16E0B19E922BB575E19C3329C273956A2BACAD702DF74E3E12238B4EF98
+        403A229149998DF2AC755405A143F5172D928822B3D4E6BDEE06E6E2FB4FE54C
+        61B366490C0EBA16727D5B05E9CE9BB6CFABFB2ED0A9E3A38D3BABA1FA46203D
+        3EC33B5D06E4260687E73E58378AE3CF3FB5EAF80A57AF84904E500422847464
+        F4F9973E268139590415E943C4D13195762004356F0510B98AD16072CC57EC0B
+        1B1B329B9B4657652AE536AC83D4EA562AC071C7C18B1B58D1451E9BD746A75D
+        D6BAA6FDB9CE1476B82B98E9F3EA4AE82942707D57E24E91D2C51BF419017D77
+        07E606E623257CF7BEE7267B4B3FCFD52B2184221021448BED579C350F22BA57
+        75B3647511A6210C59491DDFE13C95B381D252D3C5732F6704D3E92304EB9FD0
+        E2024DAEDB2E55773621C4B5B8E2234DBB0FD7B090DDC24CEAD8CA1476785068
+        9BCFAE2BF72F0A40FEC51ACB824F9B73944E012A6705B260320D066D51301249
+        F4BE2D672E98CB552C2184221021449991037818525695163636164BDE3286A9
+        0B41229168DC6863E16DB35DDEA28FCD4D9D6DEB1F68B6CB232E909E28343138
+        B48EA8E27E6F947F1A7857D763AA650A1362E2FD66F399A455909B77858B73E5
+        154CBAF539FAEE064482620583565C13299F5BA22ECBF1E7B98A258450042284
+        28B165FD996B45145D9E4D94F190B25DAA0B362E84A0FAE5403C8319C1DC5905
+        B9D85CBA8CFBE3D2F227DB4668D122893876E306567442700BEBA54C6173E600
+        FDFDBEAC7F5C59FA145D0082C5BE7DB4716B2514CF06EA5786EE06964736B1E8
+        CD5BCF9EBF92AB59420845204248B635C6A64D9188C5430084EE22279740D16D
+        363356842000D12050BBC287A0C334F07E5DC46C96FB75050380520938FEF8F6
+        A2872B11252FC1C8D7986CB985D9167EF2CC14B674A96D2B3E389C6F5C084821
+        0840458A0B6457F069778EFAF563EFE740575446EB1A83792C1A8DE387E5C475
+        1C218450042284B463DBDFFEFE3B0171A2E962278440D1D985A0EEE769DC0888
+        8ACF85BDEB63AE4423DBC77D0588B625F6B810843A8B429D5CC27C8936454A07
+        6FFBFAE49922DE87F8335E76783C201391C7955550515DC5428C1DE4A38D9DEC
+        615115E8BB45738D10523068D5B54BB7CF223A7DEBB90BEFE2AA961042118810
+        D291A7AE5A358038FE88B3C58E03B72F3B4250E7F3A48B80EAF9BD12EBC7E766
+        2AF400D136E2FED8107A5463031DDE66C912A9F128CA29952EDED677D5EDA3E8
+        99C28E8C0794975550915DC56C2605E8C5E0D1FA7D56D702E9C282B98149F76E
+        6252449FDA75FE922657B784108A408490B6945E7BE553907286AD458FF4E4F6
+        65A54D3B214800CDDB70D0A8BA9785A090AC8242B4FEB129F4C0625D60D12220
+        49FC66E60A5DDC71752D5CB5F3150F4855FC1967EE5CA0D9B41DA4DD754CA03C
+        5D665DBE036CC60E722112E5E0161601FDF7A038CE4FB605A8760871D49ED1D1
+        8F72754B08A108440869C9D6B5A72F451CBFC55CA4C92150B4CEA22AA31054B9
+        40225D18DA26C0B7E86363E315727A781BE53E04A1D6F5D31498372F9B40E25B
+        7C298A7B9869FF2EAD836C5AFDE8068B6E1F0FC8E45985C3F9061EE64C956379
+        8B4979C605F2E316962E05AA176AAE21420E066DB83E1291B86FF3B90B167295
+        4B08A10844083992247E4400252B6E5E360245072004890AD0BCC1F642BC8881
+        A05DFE8BBD8948146A5CA0ACA291AA20D45E145ABAD48FD851745CB985D96E13
+        423CA089E547C603B2FDDC866E1514C231DFAE633EDAD8EDA3792720CAC57603
+        93B6DDC4242A428A07B8C82584500422841CC6964BCFB81242AC351260BA2CDC
+        64206E5F2A4250FDAA89594742FCD7DD3C441F1B1BAF10AC7F6CC605B2211AB5
+        1778B2B439E104BBE9CF8B2A1485EC1666ABAEEF4C6187C70372F50CC3E17CD3
+        0BA2502F048F76EF26164F07EAD7F4D0E2CC5660EA28BAF299B3E7ADE36A9710
+        4211881032B66658B52A11105FB09D55A3DDC6C2B84F0B6DB20841F10C89DA65
+        3EC59BA264FF9ACAD63FB054C7BE28B460C158BAF87642880F81C554480AC53D
+        CCA75B58112C838E3B0EA8D74D9F3F1B73802BF7AFD00520DDF1869662DE451F
+        47F6D91806E2997AEB85E0AC802C0A4642C40F4920E6AA971042118810826DA5
+        573E0060B1CEA2023A59B76C883AAA7D680841CD5B019186EEE2657B933155AC
+        7F4CC52017963F50AC7F789B24191382540516DF846269646B1C532153D8B265
+        B69F375A05991DF3193CBA785642A20434EF40BE6E584070E9E84524963D7BD6
+        827BB9EA258450042264AA0B401B4E9B8138FAA0D1A227948C611685A0743950
+        3ECBC7423DEF63A1A481B76D61E05A0C52ADE342103A5214CA1A1728AB1852F4
+        5841A1B885153D53985A3C2013912704ABA0D04521DF964336C6E3DF2DAC7A91
+        44E944EB138AD25AC7F1E4A635361147FFE1E9938E1DE4EA97108A40849029CC
+        E801F1798CCA016301A6DB02452763585E425004F4DDE6331E43D1441F383E6E
+        B38DC96635AB30934F46B0564C8C0B644BC4C92B5B570863B1E51666B3BEEF4C
+        6151042C59A2223AE41513C8A5A89397D8D38B7181EC0B3EEDE87B1B0EA58C2F
+        7A3068A3F96C425B8169512DF90457BF84500422844C51766E38E3341145B768
+        2D787C048ACE222E391082AA6B81E4389B820ED3C0E7EF2296B56D1E29E2ED89
+        42F3E703E57236E12414A1260481290FB7B0A2640A9B370FA8D54C9E3F5F99C2
+        4298176D0A403EFB0A3DC5BC9E88942E00AAEBF21660BAAF63A4EDF557B7F18A
+        E89E67CE5B60DB4E8A104211881052040E8CC8870124DA824B1E81A21D0B41A2
+        0E34DEEC6271EE226E509EC1A16D1FF71520DA66799EAE60B2A53014C7C0A245
+        E6624D2F62F3FBEAF651C44C6163AE60BE5CBF6CCD2B3E5DC56C5B0AF58A0004
+        4F6D3A7FEEBB7DECBDEE52C451B602723BD1751D9B1048E311F92057C1845004
+        22844C3136AF3DF526095C60BC50B11028DA9910D4757174248DEB24A2A6EF45
+        BAAFEC5F30ECB368D63F21058176EF0A662B557C37C12434B1C8F5588B9A29CC
+        9638B47CB98BE7128EE718389A036D0A45AE130AD88C1DE44224B2D1A6FB58A3
+        01A07143FB7540E1DCC02C094C328A2ED972F6F16FE26A98108A40849029C253
+        77ACAA4422FEB49D05908630044F6E5F8A6D92A30F9A8EF74CD06757A20F2C1D
+        F79D1E3E4457B0ECE24ED636138343BB166E5CBA7EE52144F552A630933AE3E5
+        AD2DCB7A39535891E7765FED42B1F8C9DE47FDAAB1F77BEE6E60EA1392E19AA7
+        73F9A888EF7F7CF9F21257C584500422844C01D2675FFA30048ED35E0859B1D4
+        514BD76E4F806A5FA7793B20121F0BED50451F1B9BAA5EB1FEB125F4D81578B2
+        B439FE78A05AD5136EA6022EDDC274DAD9A86BA34EABF2050B26DE4BAE045A38
+        9C6342B00AEA750128AFB840D9FB1009D07C8BB4317928892CDE53D22B8CFDE0
+        B917F6557EFA5EAE8A09A1084408E97136AF3EE5681189F7188B293E3286E99E
+        57A34E658544F954DD8573AF048276B9C1D2E93F643148B58EBF34F1712CB178
+        B17D81A40842D154750B33A9D3A97CF9F23C9ECF903285510032AFE3A34DF73E
+        2AE700E533140498A2B981E9A6AB4FE29F7FF2EC794771754C08452042482F3F
+        F451F400241A5D1724BE8421381887621D11038DDB42598C8722FAD8D8548560
+        FD13525C2093BA6AE2858B54F12A424BD15DC342760BF3190F68E9529D54F0B6
+        9FF1BCAC828A260A4D95E0D1FA7DF4BD0D40E2C80DDE278602D561DF5FA0BF34
+        2A3FC3D53121148108213DCA9675A79E2722319C69619075E1636531A5310E8B
+        756A9701C9EC4E0BFD903382B96C9F6780E8BCC4205F718154EBAA894213E302
+        65116FA62A79BA85E591223EABF823A54492A08D4559D13285B99A4FA78A0004
+        4B75F2770B4BE602F5CB6CCC77395B01D99D048138BAEDE9D38F5DC155322114
+        8108213D8818155F9472D273EF2250628184A0A81F685C9B47DADEBC3282D9A8
+        6BFBB8CDCD61D63E434E116F96261E008E3B0EA8D5CCC590A28B442EBE972DB7
+        305B755D59062D5C0894CBB69ED53C6302F5BA5590E9FBC0C5F9C24C170F008D
+        5B81B8DF64BD523037B00C56DF52228EE3F861AE9209A1084408E931B6AE3EF5
+        2D12381319371FE6A20E8CDBF810821A3702A2E663B15DF48C60795BFF988835
+        2EC59E3032824D6E1745128B17DB137042CCDAE5630CBEDDC242CA1436160FC8
+        A5F89347A63097A24ED104A090DCC25C59091DD967D4009AB758125882435F80
+        9291387FCB59C7DFC8D53221148108213DC2F67527D765243EE654C4719031CC
+        B510941E0FD456E7B9E80E59F471BD09736131E44A2C52AD633B58B45E9B65CB
+        3A0B28CEB72381A6815719AB693FAA6D6CD4B595296CF9F2900242FBB60A2A82
+        28D42B021034DA988946B5CB81749E0597ABE0AC80CC1885F8DCE6738FA972D5
+        4C08452042480F303A223E0E29E7182D566C0843810941CD3B658B59B0884250
+        11AD824C051F386C9BA72B58E6DD47D776ADE202A98834BD46286E6145C81496
+        A663EE60FEC49F3CDD516DD7CD3A0F669D8F5D67A02CA29590611F11D0FF76C5
+        F54DAFB981B5FE3C17FB929FE3AA99108A40849082F3937527CF93227A879345
+        8BAE10A4BAD872200455CE074ACB4D17CE45CC0866A35FDDE3BE0244676DEB2B
+        08B48F8C6047C6073AF6588946C38D68128A60E46B8C3ED3C3EB083FB6E3012D
+        5E0C944A369F455BCF7751AD824C842297E7F519181A9AE371231A954E1D5B07
+        D81058424745801211DEB7E5C43973B97A2684221021A4C0A423E2614899DDBC
+        378F8C619E852091CA4331019C2CAA4D16F22E8243FB4E031F4A7A789BE536DC
+        C5540521135108100258B2C48F6053F494F0DDBE87491FB6DBF8B00C328F07E4
+        6A1E70753C5451280401A8E87181DAB7E9BF676C3D602CF0046E05A4F45584A8
+        CB4AFA79AE9E09A10844082928DB579FBC1AC0E5CA828CAAF862CB42482708A3
+        C6B9EB5703F1CC3CFEC5D547F6AFD0620285901EDE467956014745B4B19B11AC
+        15E3718154049B5EC7B55B984E3B5B756D5906E9C703327D866DCC23BE338551
+        00B253C7479BC33FC7B381FA358A7DF6A61BD8619FA510D73F73D6BC0BB88A26
+        84221021A4681B9DE1E17854882F0210A68B186D21485518CAB0C09199DAB43F
+        573404D4DF647B619CF7B1906302E96CEE421083F2B0FCB1E70AD64904321149
+        42178A7AC92DCC77A6B0F1F252496AC40372F1CCD22A68EA0840F95909356E02
+        E2E97A028BEB40CD1E26CC769F05A4FCA2040457D3845004228414886DBB7EF0
+        4E099CE47431E3243074F785BA8910D4771B202ADD168EBD1408DAC5C6C78548
+        E4AACC465C201BA2916A5D1351E850DBA38F96E8EB0B27657B51DCC342700BB3
+        5157271ED00927004992A7F8E363DE71651514BA289477ECA0F0AC84A22AD0BC
+        134ED2C1076F05D401019CFEEC19C7DCC5D534211481082105E1A955A70E4881
+        0FDB1671A42BB7AF4C0B157321283D01A85C10423A5EDF9B0A570211D05BD63F
+        B054C795D58F7A1B210E65099BCA2E602EC51E5BA24F2899C2B2C503CAE3592E
+        825550C8A25008ED6C9CCB7E9BDA2512A5131CAF970AE00636F9B344FCC927CE
+        5ED8C75535211481082105A02C0E7C1A0233ACC4D871913A5EBB8D811014017D
+        77E1A07173E8425008EE613E5CC48AE80AE62223984EFD56A250EBB6595CC28A
+        EC0296C777B2E51666B3BE9F7840369E415B7D16315358D10420383C5F40D9C3
+        04D0F73398E0FC64390E504111C0ACCAFEBD1FE5AA9A108A408490C0D97AE189
+        4BA588EE6E2F8A980B34D25760688B4250F562897491ADC5B46D71C8F606C0C6
+        B96C1F576D93A5CC540CCA2345BCCBD840AD85A165CBEC6C487CBB6A85EC1A66
+        D2DE667DDB9641958AC4FCF92E9F39D7F3866BAB205351C75772803CFB0A4924
+        CADE476929505DAD2100659B04EC7E86472B2411DDB7F3F4631672754D084520
+        4248C0C8088F0028992C20B20834D25760680B4290A802CD9B7D2C8E8B90114C
+        A70FD7D63FAE3311F90C14ED233690DA2664F66C6070307FEB9EBCD3BFEB8ECD
+        B42FD536B6EAEA58062D5D0AC4B1EFE7D386305444AB20DB7DBA8E6757C4E0D1
+        6A7DF4BF554E8A19A82EF0F4821BD8A403E53D100F72754D0845204248A06C5F
+        7DF2151062AD4EB0E56052C73B10821AC3403468B2D80CF1584869E05D6FF04C
+        379B36CA7D084226AE609D198F0BA42ACCF40AA1B985859A29ECC413B3DEC3CC
+        14A6D687CDB93E8FE405BD183CFAC83EA2E940E3067DC144163D5B581B841057
+        3CB362EE3AAEB209A1084408096D93B36A553222E5FD26A28EB7D4F11E85A0F8
+        2889DA15B616AF4C039FBFF58F2F31280F41C8A6287478FB43C17EED8A277989
+        46798CCBA65B98EDFA61C40372F55C1725535851FF41C197B8E34ACCD1137CDA
+        F5D17833101F0537E9E08B660534D1A21AE291FF07245C6D13421188101210DB
+        4677BD1F522E365A50680A41CE441E0B4250F32E40A42198D2BB147D5C6C5474
+        8F87902DCC96D8E35210F29126FE50FB65CBFC8835454B05AFF21D7C08467966
+        0AABD5248E3F3E34F1A7C899C2A6920014725C20B536A204F4DDA3E706EA4A80
+        C95B003AF879C9C215C7DCCBD5362114810821A108401B4E9B312AC487F40419
+        4719C30210824A270395B3F35A04FB147D428A09E45BF091701F17286B1D1541
+        48B56E3B51285BDB993381E9D3B38935BD8E0B81C946A6B0BCE3012D5B064451
+        11C49F506202F99EE32900F948170F00D58BC6D60FDA6BA01E750B93527C6CEB
+        8A39D3B9EA26842210212400465EDFF77921309079B1A19331AC68425024D17C
+        8BCDC5B089E5908BE0D02E5DBE5C6EBE5C95FDFFEDBD799C5CD579E7FDBB55D5
+        AB7AD7D2AD961092D002484880D83783011B6CF00ADE00DB98CD181B8C011B63
+        9BD5FBC2924CDE99E4F564E2388967B24D9CCC24761C9BE4CDD84EC6761C2F78
+        01A46E0112129B8DD9A5EE3AEF1F25A5D5D5D5EAAA7BCF39F7DC7BBFDFCFA78D
+        5575CEB9B79EBAF79E737EF52C36DFB7E11D94A46DF28A608D68A6547C332249
+        A86291AFF3B6551E3E8D12F1FBB6AB672A1F904BF147725342DEF7EB592D159F
+        67014856FBF4BF77CF2EC94539F8EC790149922269606232BA8D553700221000
+        A4CCB6530E3D428A2E4A2CACB8281D9FA21034EF6CA9EDC0B416CF594F046D7B
+        C3953531A8D5363E2A82B5BCCB90AB52F1AD8A2E590D1173111666BB8FCD76EB
+        D727F59A0BBD52589C676611BD8242C81DE442246AAD4FDB4152F7D91E722BDA
+        1680923FF8F6FBEFA8145DFEC8114B36B2FA06400402803489A27B644CD98E3B
+        B283D2F171CF25811054EAD9B7C24768B97E7C6C126C6E7642F6FEC9625EA0B8
+        024FB232F1B54D7EB1C3C05A117AD20C0B73D176AE363D3D46CB96C5BDB6B352
+        29CC553E34DF9E9D591680B2911768EFBFFBDE2545F3F67FEFD8157CDC8B3889
+        CFC1A862A2E81E16DF008840009012DB4F5BF736239D6C6D41E252088A23E8C4
+        14827ADE6654EA73B568F5F59AAB4D84AFD7F39C17C87602689B15C16667FE7C
+        6978389E209245A1C8F5E7F11916E6BA52D8FAF55214D914775CDEEB2E05231B
+        5E415910856CFE38125AE898BDEA61A501A9F7ED4DAE735C540F0B240C6CC6BF
+        8D5EF6D0E1A3AF63150E800804009E79E0EC551DA66A3E91586C7124D8185761
+        6073F4AB2C95BACF72BD78B5F15AD230B250CAC0DBDECC2519D3E6FB590D0573
+        532ABE1561256FE161218485D96AEB3E1F904BF1C7B5486DCB2B28495B1FA290
+        8B1F2C42118064BDCFBCD74B95A519CC03649BFAB030E9CEB1539777B21A0740
+        0402008F743DD3F65163B4DC8D178E9D90AE3484A0BECBA4A8D2EA22D28738E4
+        D353282DAF209B7D7C8941590C058BB58297CF52F159C3A69864A33CBCEF4A61
+        C9F301A525FEB8CC69168A57503363262D5E60EBB5FC550F8B2A46FDEF99F366
+        B4FB6F07A28DED73328A56949E7AE95A660F00442000F0C423A76E581A95A2F7
+        CF3659DB115F62F469701C9F4250E7B1461D47D85CCCDA7CCDC5C2DFC7A6C696
+        F74F1A39459A79BFD5363605A138ED1B8942CDF7ADF704CA5B08581C91C77658
+        58DCBE36DBB7D2AEAFCF68C99224D767562A85A5F15CF5250A85F09ACFE4D17E
+        BD843A8E933A8E69724D6345E009340CACEEF8A54AE9C30F6F5CBA8455390022
+        1000F86062F7178CD4936891D07847D0FA222A102128AA48BD17E765316D7363
+        E1DA2BC857BEA066FBDAC80B94B5DC40B3094333C7181C944647ED0A28BE85A3
+        B4CE278DB0301F95C20E3B2C493EA0BC550A93FC560A2B9200248B63BB1089F6
+        DFA7FF2A49651FE1F5818581EDEFA354D51BA97A078B720044200070CC232F3B
+        F878453ACF4A3896ADD2F1010841F35E2B5546117DEC6C6AD2F6FEF195F74709
+        DBB42208B5DA56B25111CC47A9785B424D0802932DB167B6715AED67ABEDFEDA
+        F9CB07E4E2998057507604A0ECE60592A4CA32A379AF6BF921904C008AF70073
+        FAEFFA674835D23B1EDE307C2CAB730044200070B53991225575CF7FDCBB36C4
+        971C0841A57E69DEF99481B7B791F1B5E90A450CB2E11D94A4AD9F50B07D37FD
+        4508016B55E4B1591A3EB44A61FBE3B0C38CB227FE48FE9248BB128BF2200A65
+        357750AB7D6AFFEE7DA7541EB024AEC41074420903ABB34BC944A5DF3252C42A
+        1D001108001CF0E8C9075F2AA3A3132F34622D4EC21582FADE2995E6CDB6700B
+        B92298ABFE71C6F02512A52906F92A11DF6ADB24A250EBC2D0A187360AFF694D
+        28094D30F279BE79AA14363868B478B12CDC5BBEC51F1FDE3FBEBD82B2260A15
+        2979F49E4D538FD4FB2EB9A9BA6A3B0F904FA2E898AD872F7E1BAB7400442000
+        B0CC8E576C985735BAB5A9C9BF998A61B11614E109416D2BA5AED3E32CFAB250
+        112C2B65E07D6FFE6CE4FD492ADE845E116CF61C41FDFDD2D2A5E90830590A11
+        73151616A79F4DE167DF761B36B8BE8FD27E2F24AF2097DE9F79128064A98D1B
+        2FA179E718B5AD4928F8C4F1B66EFDC163F5DF668E732E55CD67776C189EC76A
+        1D001108002C32F1FCAEDB258DC69DF08D350FA18084A048EABBC234789265B5
+        22984FAF20DBAF1739142CEC8A608DC659B7AE582160AD0A3D790A0BB39F0F28
+        0BE24F9CE7956BAFA0A4A24E5A628F6F0128CDBC404D780995A4FEAB357BF093
+        038F9D40C3C0A6B78FA2D15D26FA10AB7500442000B0C48E53D6AE90CC952D2F
+        249C948E0F4008DAF35AD7CBA4F6753E16C2AE5EF39D1328AD04D1218B41ADB6
+        09BD2258734CDFFCCF2D88644D2CF2F159420E0B6BB69DDD7C403ECBC4DB1479
+        A4EC7905B9FA21C2A598E45300729B3CBAE330A9EB145B828FE372F05E7795D1
+        F5E31B8657B06A07400402000B4C4CEA1E1975C94292677B4290ACB431312B82
+        456D46BDEFC89AE8A384FDD3F2FEC99318946628985B6167F6FE33C768262F50
+        5281252FE161698685B92C11BF6081D1A245B2704FB9783FE44A61592A159FC4
+        B335CF029049DCA7FF2AA3A833E91AC84339781F5E40537455AAFA14AB760044
+        200048C82327AF395DD239B127F4593601C985207B25DEE39CCFBCF3A5F2A2BC
+        57040B2527509C4D9494EC17FEA46290AF24D06954048B25654CFBEBE9315AB6
+        ACB861602EC59ED9C672211425A914B671A3ABFB874A61C52C159F1701484DF5
+        290F4B3DE727105F94BEC0635900928C51B514BD697CE3C869CC280088400010
+        775372FEF9655575A7E62ABD194318322EAA59781282CA0BA49E37EE6F419796
+        3894D43D3F24AFA0B4134437DB37A424D0BE923FDBC90FB437242C2F21607104
+        1E1B9FD1665898EDF6FB6B7BD861B6EF152A85F97FBE67C1DBD5957064A34D32
+        2FA1DE8BA4CA709C3598851FEBC20D138B4A5573B7618F0980080400F178E891
+        7F7FAF8C36C886E74E1CE1A52901C7BF10D47BA9A6BB617BCF6FE06AA16EAB6D
+        9ECAC3FB78DFB52094569978D39408644B4471292085121E663B0F509A25E2D7
+        AFB7ED351792F8137A4EA0B4E79A90BD825C8D6D372F90545B87F45E6ABF5CBC
+        9772F00EBC80A60C136D78E8B0E14B58C503200201408B8C9D7AF840B9147DC4
+        E6C2220F4250DBA152D7C959ADFE957471EFDA2B28E4F2F036DFB79128BA95F1
+        5A6DBB3F61A7E595FEAC7F871E2A953CAC02422D011FE77C938EE5AA5FABF980
+        162F369A3F5F0EEF25232A85B91275B220F614232F9064D4FD0AA9FDB056C419
+        0B955C5B5D6F790803ABFF77247D62F3CAC17E56F300884000D002E55DCF7D52
+        460B134DEC0EC5A35484A092D4F76EED098E2B424530DF5E412E44A224EFF9C8
+        0B6443344AD2D65F45B07ABABB8D56ACC86F08585C51CAE6B82EC5A22409A3A7
+        8782C5B9275CBE2F4BCF2617CF4017428FCB39240D01C8E75801780945D2C035
+        B3ECA86CE401CA6E58D8C27277DBC758CD0320020140938C1FB7FA90C8E89258
+        C24A0C21C8185B028E5B21A8FB1552FBEA3C8B3EAEC49DBC7AFFF80A67712908
+        251585920943FB0B090BD95B27EDF34CBB3C7CD24A615322902DEFB834F305B9
+        EE13B2575048A2509E04A0D644A2B6B552F79901E4018AF7309B633D18FF9C22
+        E9EAB135F30F66550F800804004D508EF4DB51A4F666170E4E62D0031382A26E
+        A9F7A234933E87B6A0B7B5D97021126535142C948A602EC3C09A17815C8B3121
+        96836FF6F3241D2B4E3F5B6DA368DF7C40B274CFA421FE845629CCD6BC904551
+        28D4DC4136DA3477CE7DEF914AF32CAEC18C7FAF219B02D01E11A8ADD456FA1C
+        AB7A004420009883ADC7AF3E279239BDA58938CEE49F3121A8E76D5269C8C702
+        3454D1C7287BE5E14314835A6D633B0174BA15C1EAC738E410A35229FF21603E
+        849EFD8DE94A2C8AD376C912A3C14159B8C7A81416EF592EF9CDFF93470128AC
+        BC4092541E927A2E6852580A300F902BA2283AE7E1C316BE8AD53D00221000CC
+        C2F7376D6AAB44FA7C53C24A5E84A026C62E2F369AF7DA661662B617A72E9243
+        875406DEC6A6287431284DCF9F38E24E7C41278E30D4D929AD5AD59C2892959C
+        413E3F43DA616171DA6ED8E05AD8C942B2E8A27805C59DD75A792DAF02905AEE
+        D3F336A9B234803C40319F652D9D770BFFAE1ADD79AF5461950F800804000D58
+        D4F6F40DC698B54D2F401C2579F62A04353176DF1552D496464530170BEE56FA
+        C719376FDE3F493796CD6C5E7D084269E607B2572A3EAED892F5F0B034C3C26C
+        7B07E52B1F5091BC82F2522A3E2B0250EB22515431B5E2152DACD99CE4014A39
+        0C6C465898D1DA55EB175EC52A1F00110800EA78F4E4550B2399EBE79EEC1D55
+        080B5408EA3842EA3C2ECB8B5D5B8B7CD75E41B6BD7F6C6FF86CBE9F862014A7
+        BDE42A0C6CDFBFC695A28A876D61C9565898DDF62607F980A4FC540ACB73A9F8
+        100420591AA7F9365DA74A1DC734772E61E60172F57CD52D8F1E31B290990600
+        110800F66172B7F99CA441D3D422C04FA9F8D485A072FDAF6A5959E0865C063E
+        ED4A3B3EC5A0B404A1EC948997A4830F36AA54B21BFE9544DCB1F5F97C8785C5
+        AD1476E081525F9FEBFB26AD7BBF6895C21080ECF4B32F120D5C2DA9ACD6C497
+        60C2C49C95A41FDCBD6BE23656FB00884000B0876DC7AF3AC244BAD0E9E220E6
+        82C1C439B62521A8E75CA96D7951459F2C79FFB82E011F77B369B34D2B8250AB
+        6D6D083B26F618EDEDD29A35F6C4141B824BA8E161368E11B7BF8D90B0FDE703
+        727D1FA5F19CC872A53097F350960520393C9E1D91A8B2C268DE6B5A10806C08
+        3ECD3D44E6380F6702D05E2EDBB26ED14656FD0088400020A95AADDE2D33FD77
+        A3B985203BDE3EB1842013D3B3A70521A8D4BB6FA58D344BC3DBCE1D64AB6DD6
+        BC7F6C6CF26CE405B2E11D94A46D9250B058B245530291CD52F149C49410BC8E
+        5C8785B9EAD74CDB2911C8E73D9396F893F59C40592C15EF43000A3B2FD0DE36
+        7D974B519FDC78F85818C398389F2DE9C3559592AAF7B0EA07400402283CDB8F
+        5B7981A453E2892F6E2A84852004F5BEC3A8D4D7CC82CC754530DF63BAF60A0A
+        3941B48FF75B6D13524530BB6160D3F302E52B042CAEC8936658986BEFA02832
+        5AB7CEB7D74F68E24F562B85259D8710807CB729F5497DEFB49008DA86681442
+        09FA3DFF2E19BD6CFC90F9AF67F50F8008045058C64E5DDE59953E9E68F297A7
+        50318F4250E540A9FBD549178659A908E6DB2BC8854814B218946689F8B4CAC4
+        B7BEE05FBB56EAE8685D304953384A333CCC4558589C7EADB45DB952EAE9717D
+        BF5029CCEF33DE57FF3C0B407276AC79E7496D2B5B5C4379107CBC8781D5570B
+        2B455F183B757927BB000044208042D2F65CF4115335CBF737599A38A28AAD84
+        CE290941FD574A5139CD856A08A28F11E5E16D8B3D36841E1F09A06D78FC3417
+        06B6974AA52604A529CE842836E5292C6C663E205B25E2D3147F6C3FAFB2E015
+        E44214B22D14B90EE1F69D3B28DEF94465A9EF9A046BA710F300D9A06A56E8B1
+        67AE65170080080450381E3E7ECD1295A2F73733E9E65B089AFE5AE749461D9B
+        F224FAB8D804D87E3D04EF1F9B797F6C0A3DB2D8364E7B9BC2D0FE05A2F5EBF3
+        1B02D6AAC89354680A312CAC2602D9BC07A814968E575092B6B6E7B934F2F585
+        183A367B9FCEA3A5CE132C796C27148DAC3CDF2D95A42F1BDDF4F09AF94BD80D
+        00200201148A6872F79DC6989E6627DAE626EF2C0A4153E71DB5497D97E44DF4
+        09A90C7CDEBC7F5C6F607D0A42E9978ADFEB291262E8972D51C7F6F9A71516D6
+        6A89F852C9E8D0435BB9865DB7A15298BD3927CD2209BEE7E42CE60E321A787F
+        6D7D135B48B120BEC45A335AFEF7BECF2A23F598B23EC16E00001108A0303C72
+        CC81C71B63CE6B75D26F2E9E3C652128AE3824A379E74B95A5212C3AB3941328
+        EEEB2179FFB812835A6D93766EA024FDF6270C3537D6EAD55257975BD125AB21
+        62B68E67CB43A8D5B6AB5649DDDD49AE6B2A85F97B3D2BA2100250B35E42E5A5
+        B5FC40B1C59A10F300D979AE5E3476C8D071EC0A00108100728F9122634AF748
+        2A5999C8431382628E5D1A947ADEECC3FDDC452E842CE6048AB3010A5D0CF2E9
+        F9E3233790E4230C6CEF98E5B274F0C1057E367B080B73D9777F6D376E4C7A9D
+        CBE1FD49A530B795C210809AB369D236FB3F56DFA55279289D72F1264EFA00CB
+        E739CBDAB55496EE3652C4EE0000110820D73C72DC8A4B25737492093F8F4250
+        DF6552695ED2C59EAFEA5F72D4D6B557906DEF1FC57C2FCDBC402E04A156DB26
+        11856C0B43D3C79CAD547C964BC6FBF0220A212C6C7F642F1F906FF1C7E6B333
+        E44A61084076FAB52E1295BA8DFA2E772FF858C903E4300CACFE7D6374ECD6B5
+        836F637700800804905B1E3B755D8F26ABB7249E70732604B5AD96BACFC8DA22
+        358B3981E26C7492F4496B831867C36B53E4F15D267E3661A8F5710E3BCC8EA0
+        92D710B1B4C3C2E2780795CB46871C625B18554AF7365E41FEE62D04207B6D6A
+        FF9E77AED47E883BC127953C401688A4CF3EB66E610FBB04004420805CF2E233
+        CFDE2AA3255626FBA68520052F04F55D651A3C8D28036F678361CBFBC775D52F
+        97628FCD70B156DBC6692FD9F3F6316A254FD0AA55D2BC79C57E4E87141666C3
+        3B68ED5AA9B3D386A8137AA5B056DF2BBA5750E8A250528FA75004A0E9BBAE81
+        6B9B10622C89315ECAC127F002DAE7DFA3CF57276E649700800804903BB61EBD
+        6C6514E93DCE8517D3C48224042168CF6BDD67481DEBB32EFAB858B4DB128E7C
+        6D827C6CF27C7829241184E2B44F2A0C25FD5576FA58A552CD6B24EB21607104
+        9E10C2C25C7807EDADFAD6FAF5ED231F505ACF142A85852D0AF91ECB5F9BF60D
+        46DDA72713569AE963250F90C330B07AA2AAAE1B5FDBBF82DD0200221040BE6E
+        B6AAEE91315D2E8497B9459E008520496A37EABD240481A70865E0434910DD6C
+        5F1B79817C97888FD33E8E90645358D29CA24168D5BA420E0D4B3A469C7E737F
+        9F46E1E603A25298BBF02F1773A50B81260B02902CB5A9FDBBFF6A29EA8C29B4
+        C4115FE45EF089F910DDF75F9D914A9F61B700800804901BC68F39F0E5925E1D
+        6BE28D35E12710822C8945CD9C53EF05527951DC04CF495EF3BD384EAB0CBC8D
+        0D4D5A62908DF75B6D93A78A60F14BC5CFF41C4947B0092139B5CDF3F0E921B4
+        B75D5B9BD12187C8F2F5AF14EFE922E404F23DEFA4F5034A28DE44BEC4A5A97F
+        97876BEB9FD412411BF76161268EA864CC7963070F9CCAAE0100110820F318A9
+        549ED45DDA5B02D391B78F3521689F502D97425079A1D473BEAFC560A8A24F51
+        BC7F4248024D45B0E60422A3152B8C7A7B0BF06C762838855229EC9043A4F676
+        D7F70395C2C2F70AF219EAE5DBDBC7A6C0E4AF7A58EF3B8C2A2309D7592E1241
+        5B108D4C7CAFA2A85CD5DD86FD2900221040D679E8C86557CB54372416559AE8
+        63D52328AE10D4E439F5BD478A3AF222FAC8C1B8B65F0FC1FBC7A7D86343BCC9
+        6245B0E4449174E8A1E17AE72411755C9C735A6161CDF499EED5651CDD1FB270
+        4F8724FEE4D12B28A98094A5D7B2913B28EA90FADE93407899E599D092006441
+        F0B152927EFA196F7C684DFFA5EC1E0010810032CBC3C72F1D2A45E6A37127F4
+        4C0A414D9C53DB7AA9EB943C893E59C80914472472FD9E8DBC3FBE841E1F024F
+        BA6160B38B07F60598AC8589851816D60C1B37C6113293DE07540AF3EF151442
+        A8180250AB6DBA5F29751C2E473F02069207A8E5318D22E9E363CB0706D84500
+        2002016492E8C5E8E3329A9F6882CD9B10549206DEA73DC17145107D7C9481B7
+        B14149E33D1FEFBB16845C268CB6250C35231099442250D6C94B58D8BE6DDBDB
+        8DD6AC91E56B5E16EE552A85D97D3D4BA16259158064A94DDDBF2369E00375C1
+        4FB6D20124166394FC3C6208407BFE7761D45EFD18BB0800442080CCF1D05107
+        AC3791B9CCCA449C2321A8FB55466D6B8A2AFAC8C2182178FFF8DEC0D9DA60BA
+        681747E0492AECB80903DB77BC030F34EAEF0F3BFCCB86B863F3F3841016B62F
+        EBD6496D6DAEEF813C560AB3D9270B5E41791085B2E23934B34FDBC152F7ABE3
+        AFBF1A3F2702CC03D42291A2F78EADE93D98DD0400221040A68826AB77CBA8E2
+        2AEC2B8B4250699ED477F16C8BA5D02B82D96A9B35EF1F9F9B325B628F4DEF86
+        248250DA65E2E30B445124AD5F9F5C5CC9638858DA6161CDF6D9B831CEB545A5
+        30BB7D5CBDEE3281B4EDFE084073B5E97FAF54EA89B9366C5500B220F838090B
+        9B79DEED25137D8EDD040022104066D87EE4D2D74BD1E9AE459EAC0941BDEF90
+        4A43595854C61192F2E0FDE353D0F19D04DA85C8E352DCF11506363B450B099B
+        4BE449222CF92C0FBFB7CF860DB6AF692A85B97936BBAE149667AFA07CE40E2A
+        0FD5AA85B5BADE8A9508DA81E0632B0CACC1FBE78CAFE97B15BB0A00442080E0
+        B96FDDBAF689AAF99CF114F6951521A8B2C468DEEB8B28FA84163E60BB8FAD4D
+        5BD64BC4A755263EA9B7CBEC02D1860DD90BFF4A2AF0D8F8AC699487AFEFD7D5
+        25AD5E2D8FF70395C2E20B464AF87A1142C56C97990F4700DAFB5ACF85526559
+        02E1459EF20225CD03D4FA1475E7F7A53676170088400041D3DFF6EBEB241D14
+        6B02CEB21034C739F5BF4F8ADA28039FCEEB21540BF3F17EAB6D6C27800EAD22
+        58320E38409A3FBF79F1C4A5C012627898ABB0301BFD0E3B4CAA54E25EF736EF
+        A3342B85E11564B76DB3E795646EB52DF6F8147794A84D5491FAAF4EB09EF320
+        F8582907DFA2F75264CCDA85ABFBDEC3EE020011082058B6AC5F345C8DA21B5B
+        125EE2B68921D6381582F673DE9D474B9DC7655DF4C94219F82C9487B7F97E9A
+        9E3F71C41939EED7AC38D4FC98871D66F7191962F9F7B8E76B6B3C176251E37C
+        40B6AE6F1F95C26C248BB6F99EED9C4079F10AB22914851C4EE6475CEA3A55EA
+        3C3E8E00E43F11B49D319A6B6FAAE6D60756F52C6497018008041024954ADB67
+        64AA7D2D0B2FAE9247872004958CFAAFF2B1D873911CDAA74064FBF590CAC387
+        921728ABA1607EC3C0F61D3FCF79815C8B4F698485ED6DBB716311F301B9788E
+        F90C174B3A3EA5E2DD08407EC3C2063E20A9D2C2DA50E9083EC64732E93D4491
+        063AA2D26DEC320010810082E3A1A30F383A8ACC858D26656323395F4685A09E
+        374A951552F8D5BFF29613288E48E4EABDA462912DC1C8952014A77D1251C8A5
+        38347DFC7DF30265D563C7F5B98614162649F3E649071D64E39AA35298FB3E21
+        79051549140A530092A4CA4A69DE1B945E22E82644233B79805A2C415FAD5EBE
+        65C5BC8DEC36001081008222DA3D79B7312ACF36C199144BC5271382E21FAFD4
+        57AB0816EEA2306F398142F2FE71BDD94B4B10F259263EAE50614F1C1A1D9516
+        2D722BC6845A0ABED9CF656B3C5B62D1C68D52A914E73AB77DEF50292C2CAF20
+        97731E0290CD36FDEF318AFA5B1480E2AE295BECE3230FD02CFF2E974AD1DDEC
+        36001081008261FCF0C51718634E986B62372926868E2F04353161CFF25ADFE5
+        46A5DEBC883E59C809146793925531A8D53659CC0D645318DA9F38B4FFB16DE7
+        050A913C8585D5F201A525FCB4726F5329CCEF1C9354D441006A598489D9A6D4
+        2BF55FD1A200E4C2BB3C8D3C40FB21924E1D5FD9F306761D00884000A9F3F0F1
+        4BBB4A557DAAD9C9AC2842506585D4FDEAA2883E69B8FA27D99864510CB2E9F9
+        6353E4F15D265E721B063673DC8D1BC30AFDB225ECD8FE2C36C68EDB7FDFF6B5
+        7C402EAE7159BA4FE31ECBA85895C25C0B3D790E15B399783A1DCFA19EF3A5B6
+        D516BDC82D08405EF200CD2D227DFE8155EA60F701800804902A93CF4D7E4491
+        0ED8CF84956F21689673E8BF5A8ACA45147D6C2CC243F0FE9183315DE705B22D
+        1AB5DAD69628947E18D8BE6CDC985C64C9538898CBB0B0A4FDFAFAA4152B7C5E
+        F73E2B85D97E26F97C7686EE159427512827A1636569E03A4B95C0D24804DDCC
+        75DAE2987BCE6145DB64F775EC3E001081005263FBA6D16525996BE71650722C
+        043568D775AA51E751B617663E9243DB6A6B6B516F5324B22920D9D878F94C02
+        6D4BE449BB22586CD94249CAC52F5A248D8C14E7B9EE4A5CF2511E7EE346298A
+        E25E7B79AC1416F7F965EB99675B3072251625691B922894AFDC411DC7D4CAC6
+        372DA2347E7824EE636C781AC99ED75014E9C30F1DD03DCA2E04001108201576
+        EFAA7E5E52B76256DBCAA31014B54BFDEFD9DFC227CDEA5F4917AABEABB8C41D
+        DF97C7902F31288D44D12EBC8492884292BB30B0B973056DD8107EF8575271C7
+        9607918BB0B066992A0D6FBBAA1D95C2DCF7C9935790EB316D867B852900ED65
+        E003B57595B34A60361241B79A07A8B987E0ACE76114F5988A3EC92E04001108
+        C03B0F6D587C7214E9BCD68497FC0B413D6F95CA8B5D0B37A1893E26B0D76DF7
+        495B0C72D12684DC40494521D7E2D0BEE242F8E15FBEC3C3420C0B3BFC709BD7
+        1B95C2C2CC096463CE4A53C0D99F88E35BECF12D00A9E5369503A4DEB7595A03
+        FAE8E3608C46EB64235D34B6BCEB38762300884000DE30522499BB654CD4BAF0
+        920D21A839F7DFE9AF95164A3D1752063E9DD743A816D66C5F1B79817C96886F
+        B5AD4D51C85518586B1C7144419FF5190A0B1B1890962DF3759D8752292CA464
+        D179F50A4A2A2065E9B5A47671713CA3DE4BA5F28284628E8F44D0CDD8C15E32
+        E952144577D7D6E300800804E081870E1BBE4CC61C195F78095F086AFA9CF6F9
+        2CFD574AA5AE2C8B3E5928031F8AF74FDAF93E5A6D93D5DC40921B4F1FD3E45F
+        8DA12169E9D2E2083CAE4AC3BB0C0B3BE288BDF9805C8635FAAA149656B2E850
+        C2C592BE9E86D76B910520B76161A57952FF550944131789A09B398E9C27A43E
+        F6A1659D17B02B0140040270CE2FD62EE88DA4DB920B2F7126D44084A0069FA5
+        7DBDD4FD8A3C8B3E699681F7B52109590CF2E9F9936413EDB32298FB30B0FABC
+        402154E76A55C8717D7EA184854DE5036AF5DAB1D1D6B667908BF743AA14E6FA
+        878256C4A2246DF3220A852B00ED65DE6BA4F643FD8485D9F951D2C379182313
+        459FD931AC79EC4E001081009CD25929DD2A6346AC4CBC8A998F27EE041D531C
+        6AE6BCFAAF365294858A6079F20A0A49F0B1F5CBBD8F12F12E36C14945215BC2
+        D0FEC4A164C2C7DCF966EC093421094D737D169B6326118BE60ED94BBB447CC8
+        E24FDE2B8515B1547C9605A0463B36A3C10F6A2AF8C9D18F84DE1241C7C803D4
+        9048A3BBBABB6F647702800804E08C870F59B83A8AA2AB9A167962E4D5712A04
+        25E8B7BFF3EA3E5B6A5FB7BF054F9A15C1F296132884702F97393C6C0946A108
+        424944219BC2503302D1FEC79F5E7E3C5FA451312C49FF7AE6CF97962C497ADD
+        652D1F908FE7944D61C8C633DD774EA0A47330025073F75D7363B76F94BACF4A
+        B0DECC4822E8261F8AFFF17FABC65C377E60E70A7629008840004EA896746724
+        D3617FD2CDAE1014751AF55D11D2022FEF3981926C420805B32BF2A45511CC75
+        1858E3F107068C962D4BCF1BC7A6A8137268589CFE352F2097618C2E2A85C9D1
+        B3230B25E4B352292CCF5E41D92C29DFFFFEDABACBBA10A3941241CFF20C6C51
+        44EA52A4CFB04B01400402B0CEF6F58B5E1149E7C4FA4523C74250EFDBA5F2C2
+        22883E3E7202B94E101D77F391B618E4A28D0B91279F6160FBD22824AC08E5E0
+        9BFDBC36C68BD3F78823D2CA0514A79D2B0129A464D179AD14961751289B0290
+        2455868DFADE6963CDD9A2F0D28CB0E4290FD02C97F7F9E307769EC66E050011
+        08C0DEA25F2A4F44BAB3E98930CB42500BBF1695174B3D6F2DA2E8636381ED2B
+        41B4CDF17C894169248A0E2937904D61A81981A8F9B15BCD0B94C9E7BDE78A61
+        36FAEEFF7BA1521895C2424820DDCC79D9168A4CAE04A0BDAFF55E2C5516DB5B
+        0F3A49041D63AD6C12868549D15D462AB36B01400402B0C223EB17BE5755B3CE
+        BA1013A210D4E458C618F5BF4F8ADA43177D5C2D72B3521EDE8580D46C5F9779
+        816C6E4293B6F55511CCA5974F7325E3376E342A6570E5E0DB8BC86779F8D151
+        696424C9B549A5B0F084A1227805D9148A5C8B3DBE05A0FD7F6751472D2CCC89
+        00A498E3B6DAC7C518A6BA717C79C7A5EC5A00108100920B40C72C99AFAA3EE6
+        AC347B9684A07D5EEBD824759D9A74E1156272E8D01241A72DF8A4B95173B5E9
+        0CB922984D01C73E3D3DD24107992043C07C878785121676F8E14905495B6DF3
+        52294C1E9EAD79F30ACA4BA9F85004A0B9FB759F65D4B12999A862E2AC239B58
+        B37ACA0334CB40D11D9B07D5CFEE050011082011D5E75EBAC3C8CCB72AF26455
+        08DAFB5A491A78FF5C0B165F028F2BD1C7C6A23A2DEF9F2C2781F6B1C94CB209
+        CE4A99F8FD8943C9C62D4248982BA1677FE3C6ED3B7769F838D72395C2920B36
+        45F20A2A9228144EBFC10FA916FCE4AB125833D78FCF3C400DDA44C62C2CF775
+        DCCCEE0500110820360F6D185E2FE95227228F6F21C8A238D4F35AA3B655212D
+        D04215886CBF1E52B5B0D0F302B91284E2B44F220A49EE3C7D4C937FF913817C
+        7910F9080B9BFDFB70755D53292C5B95C2D2983B95A06D5E2B8AD93F5EDBC1D2
+        BCD7C40FE94FBC6E55F2B5AE71215655CD7BC796B71FCC2E0600110820DE027E
+        F7C45DA66ADA9C893C3E85A0D893FCF4D74ABD52EFE559127DE4A82DDE3FFEF2
+        02A52508855E11CC5718D8F4F10F3BCCA85C4E2F1C2BC4F0305BC769758C030F
+        94E6CFF771ED86E61994A564D179F00A4A2AEA145D0032CEDAF45F535B975915
+        809A115E7C25828E1726D65EAAEAF3EC62001081005A66FC90F9AF977446D3C2
+        4B4184A0BE4BA4F24096449FACE40472BD79484B0CB2F17EAB6DB2981BC89630
+        B43F71C88E48D4D525AD5DEB5FB8F151FE3DEE67B0355EABFD6BA5E143C90514
+        7A3EA0349E8F59AA1456C452F15916806A9487A4DECB9A17739C55024B2311F4
+        FE877AF5F8811DAF623703800804D0340F9CBDAAA3247DB665E1C5B310643C97
+        86AF2C339A779E6B8127EF65E07D861164550CF2517928E9A6D887286453186A
+        45249AFB18CDE5A1C90EAEC527175E42CD7D0F3E2A85C9C33D4DA53037828EEF
+        79348BA2501A63B53676EF85B5F5D95C6BBDD42A81C511A32C1CD74C56EFFCBE
+        D4C6AE06001108A029DAB6FEEA3A63CC2A2B1368B36DE2546090EC09414D8843
+        03D74A51A5958A602156FF7229EEF8107642DFE0D8167B7C6C42E3B4B5250A85
+        1A06B67F91E8F0C3C3F1D06955CC71E95DE4332CAC5492366EB47D1DDB6AEBAB
+        0D95C2FC083D92DFFC3F4516805AEF17B5190DDC104300725109AC8935AFF1E2
+        256414455A3B7F49DB55EC6A00108100E6646CDDC291A86A3EB4BFC5B9154127
+        2B42D09ED7BA4E923A8F9F6BA192F5F030DFC2910B9128C424D121268AB69D1B
+        286E1F5BC2D05CC28D5DD6AD933A3AEC0830590B150B252C6CD52AA9BF3FCE75
+        9766A5B0103C83A81416B657501AA2502B3F6E852500EDFD77D7A952E7491605
+        A066AE0F1B89A06D083EFB19332AE9E65F8E6A01BB1B00442080FDDF1493939F
+        96D4B7BFC9A56842505491FAAFCE6A22E83C9481B7B5B168E6BDA2E40572D936
+        A9286453186A46206A7DFCF676E9D043F33907841C1636BD34BCCB8A76BE1341
+        B7F28CA05298FDD75D7905F9128592BEE65A60722B00ED65E083922A96042007
+        89A0AD083E4D3FBFFE83C1F6A87C07BB1B00442080597968FD82A364CC85D6AA
+        2B8420045938879EB7489503F328FA64A50CBCCF6A61A188413E2B822569EB4B
+        1492DC7BF99816FEB29317280D6F22576161FBB27FFB67A552980F6F412A85D9
+        157A28151F86003493B695463D6FB620D4384A04ED230F50236FA5288A2E1B5B
+        D27638BB1C00442080C673CBEEC9BB2595AD4D6821084109CFA13C28F5BEAB88
+        A24F5EBC7F421783B22E08D91485C20F03DBF798471C618208014B33442CADB0
+        B072593AECB0A4D7600895C264E11922CFCFB7BC540A0B694E4500B2D5AFFF2A
+        A934D8C21AD5850034CBF32DF1BA344ED5B23D8F4C45E62E76390088400033D8
+        BA76F0424927B63A49655A086A62FCBE2B8D4A3DA1893E72D4362DAFA0901344
+        37DBD7655EA056DBB81284B25426BE198128D9D8071F2C7577E77B5E70253025
+        1D6BED5AA379F35C5F97540A0B4F180ACD2B2849DB3C8B42E9F52BF549FDEFB5
+        B836B5B09E35698589EDD326924E1D5F5A7E23BB1D00442080FF60FBA6D16E19
+        F3C9B893646685A039C4A1B635D2BC73675BAC2579CDB790147A4E20172251C8
+        25E05D6F12E3B6F3250AD910866C79B8341FFE55CF4C6F947C083B36BD885C85
+        856DDA14E7FBB5DDBE2895C2E25611CB52A530DF736D9E45A1F4FBF59C6FD4BE
+        D6C1DAD246253057828F9A4A48FDB9B1E5EA64D7038008042049DAF5FC0B3749
+        3A20C964E95D086AC20DD6244C0E3D709DF606C705B0C8CA5B4EA0AC9687F7F1
+        7EAB6D8A1A0AE6330CACF171928684D9146CD20C0FF31D16367B3EA02C858565
+        A55258DC715DF7C99B5790EDFE592B296FF1786569F0431E04A03895C05CE405
+        6A52AC32462BA2974AD7B1EB01400402D0E67583CB5435D7DA1070BC0A41CD4C
+        840984A0AE57481D4766B522986B8188F2F076DF4FCBF3C785C0134A28981F81
+        286972E8104ABEA7799E71C66A6B93D6AFF7798D66B15258A8C9A26D3EEF7DBF
+        8E57903B01C8586FD3719CD47D4633024A13DFBFCF50B296FBB4988FA814DDF8
+        D0028DB2FB014420808253D95DFD5C644CB7AD492FB610644D1C4A2E04451DB5
+        98F2EC883EBEAB9EC47D3DABDE3FB63654B6BC836C6C325B1584E2B44F2A0AD9
+        16869A11885A3BCEAA55525F5FB6E780342B86C51963FD7AA38E0E5FA24F562B
+        85B978BF2895C2424D0A1D92D893B600D4DC3533708351D4917C0DE9642DECC9
+        4BC8CCFC77CF645BE953EC7E001108A0C06C5D337892A4F3679DFC7C0A417127
+        C95927F1186EB97B5EEB7DBB5419CD8BE813524E20172251969244DB128CE288
+        4621E406B225EAF80A039B5B282A958C366C48DF7B2794F0309BC7996D8CE6BC
+        AFA81416AEF823E5B35298E437D42BEBDE3E36C76FDCA67280D4FBCE8402908B
+        4A603185A539EDD06C42EA48178D0DEB58764180080450408C548A54BD5B52D4
+        CAA4921D21480D85A0B9CEABB448EA7DBBEDC5599ECAC0FB107642D9A4642114
+        CC75B523C2C0E6E2C823ED09322196817729F4CC25F834A27152E8507201B52A
+        EA5029CCFE3C92564EA0B4051C9BEB0ED7DE3EEE05A0BDF45D2E9517391480E2
+        5402B3E125142769F514515429DF6D66ACFF0110810072CF436BFA2F35C66C8A
+        97842EBB42D0ACE7B5E7B581ABA5A8AB95455508D5BF5C2C546D09472E44A256
+        8F13B218E4A28D4B4128CD8A6089E50BC941C9F8A479814222AD8A61CDD2D929
+        1D7CB05158B9805A699BE74A61A1848BB97ADD9557904FAF9E10C41E7F029024
+        95BA8D06DE9F9200D4CC7ADA5122E8B9D6DFA65A3D6E6CB12E64370488400005
+        E28155437D92B92DD184D8A4589419214852FB06A3EEB37C2F7E6C2D02432F03
+        9F7625199742512BEF879628BAD5B67145A124FDE61271ACCA202DFE49CB974B
+        4343D915757C8786251967C306A3B63697D71B95C2E23F3B5B7D0FAFA07C978A
+        4F5F00DACBBCD7491D1B92AD65630940212482DECF9891A24FDDB7503DEC8A00
+        1108A0207468F7CD321A6979A28929CC6442082AA956123ECA9BE8936619781B
+        8B78DB7D6C6D945CE6056AB54D562B82D91274FC8780ED7BEC284A5E2A3EAB61
+        62B68F3DD738F5A177FEAF5D2A85D97BCF661FDFAFFB0CFF42004ADC2F92066E
+        6AB29FCF4A601E1241CF31C6927995D28DEC8A001108A0003CBCB26FB591DEEB
+        34499E6B2128EE58FB1182BACF95DAD7174DF42982F74F5A9B231B9B37979B4E
+        575E424944219BC2503302913DA1284F2161CD083C3644A638E34DCF0764437C
+        B4D99E4A61F1DFB3D92734AFA0A4A20E02908D7E1D871BCD3BD78D00E4A41258
+        33D78D85703463AAD73FB850ABD81D01221040CEA946E62E491DCD8B27010A41
+        09CEA1D1E789BA8DFAAF0A4DF471B5C84CCB2B28E404D12EFBDADAD0B9D88C26
+        69EBD3E3C7B5974F6BE15F8DD8BF874AF6C41D9B5E44B6C69F37CF68CD1A1FA2
+        645A25E2252A85D9E8E3FBF5A2968ACF8E00B4F7DF03374851B76701A80921C6
+        5922E8E6C4A98E4A59948C074420803CB37575FF99927975E2C9276421A8A909
+        79FA6B7D9748E5056957FFF2B5B08C334651CAC3DBEAEBB3447C16730325EDDB
+        8C78E34C4269F8B76489D1F0709821613E42C47C84851D79A4542AB9BAB6A814
+        46A5B0B8AF230AED5F7C09430092A4F222A9EF32CF02908B44D0B33C33E31ED7
+        48E76D59A433D925012210400E315259D5C9BBE20B388E8520DFE2D09EC54965
+        A9D473611A024F088B4CD75E41592D0FDF6CDF2C8782B9DE48A7EDEDE33E04AC
+        9E2C7903D914797C8585CD6EDF22570A4B335974912B85B532B7BB6A1BBA28E4
+        C21B3AF939F45D625459D2AA08D384E8D2CC38B144224B65E9E718232AE9AE7B
+        A50ABB25400402C8190FADEA7B9FA475C9041C7BDE38C67522E8265F1BF88051
+        D496D682292F65E0B3ECFD9376DE0D9B6DE20A42A19689B735461C91A8F56365
+        5104F2E93D9474EC5A3EA024DF511E2B85C51D23493EB4B855C4F00A4A47C0C9
+        830064ACB5893AA4810F265B771A5B499E5D24828E2B4649EB962FD625EC9600
+        110820473CBCAE6FC84C4E7ECC8EE8622F674FDA4250C7D152D76959117DD212
+        777C083B21083E5949029DB6F7421251C8A530E4CAC3A7F97C419B36F9AFD095
+        A5D0B024630D0C18AD58E13AE4304F95C25CBEAF98CF575FC290EFD75D2590CE
+        82286433DCCBB6C0347B9BEEB3A48E633C0A40B1851963FF5CF6776E469F7C78
+        A986D835012210404E9878B1FA09451AB227BAA42004D916874AD2E00D79117D
+        5C867615CDFBC756C5B0904AC427699B5628980BD1C62D0B1648071C605FA849
+        B3047C1CE1C9E6B87BD9B4498A22D7D7ADCDF6540AF32B0CD99AA75C570A0BB1
+        54BC49F09A3CBF66AFDFE04D462A7B12801C54028B252CCD3DC6D0C46E7D945D
+        13200201E480870EEA595F92B9C4FA24E65B088A7D9E8D5FEB3DDFA86D751144
+        9FD05CE66D2FFE5DBD97542CB22D188592003AAE186343CC492C5FC87608583D
+        D34B98670F1FC2539C7167DA35EEF746A5B030C49FB42B85A5F1A349525127AF
+        A5E2FD0B409251FB2152CF792DAE255D0940312A8199E4824FE38F14E97D5B47
+        F6491D0180080490D1457DD5DC69AAA6AD65D1254B42508BE75EEA957ADF9D74
+        019676550F978B50DBAFDBF6FE51CCF7F2921728CD04D04508033331FE6A8494
+        17286DCF229BC7D8B4C9D675D76A1F176D938E47A5B078734B9EBC828A260AB9
+        E9D77F6D6D3DD8CCDA33B552F0B33C5B139FCB2C4452C544BA9BDD1320020164
+        98F1955D6F3032673635896459086A451C32467DEF91CA03AE059E34177D3617
+        B5697BFFF81474B29217C8952094B47D31C3C0F63DFEA64D465194DF52F0AD08
+        4DB6C65CB4C868E95239BE1EA914E62E5974E895C242F00A4214F22D00495279
+        48EABF2AF052F0712A8125F40A3246678C8FE855ECA20011082083DCB74EED91
+        A2CF24165DB22C043578AD6D85D4735E5A8B1B978BBAD0BC826C79FFA419EA95
+        B6D8E352100AB522980B21C76D08D8BEF4F74B2B57E6630E712D34353BE6FE43
+        EC7C790815A15298AB67A56D61280DC1C8B55750D2B582EDFE69893DFE04A0BD
+        AFF55C245556781080C2AA04D60CF73CB04A1DECA60011082063CC7BBEFB7A53
+        35ABAC882EAE85A038C9F762BE36F041ED29091F6245B03C790525D900D8DE34
+        B8FE653C0FA1602E36CE49FBB916875A158A9A3B66C87981D2F024B2531A5E09
+        BFFF50C2C28A900F288D67BC4BC108AFA06C95946FAD5FD4260DDE148200E4B9
+        12D8DC4F97556DCFE92A76538008049021C696CF1B91F4A1662785D485A0B813
+        5E8BAF759D26759EE052E0F159FDC3A540E463616DBB8FCB4D8BCDF7430D05F3
+        59112CEB6160FB17898E38228C70309F21622EC3C28E3CD28647998B3E45AC14
+        E6329790ADF1B2E015842814D2585DA71A75BECC8200D4F8419658008A3F6ED2
+        E7BA6E195BA811765580080490950B3B329F96317DAD4C16A10A41C65245B0A8
+        22F55F1BE2420AEF9FEC5404B3F17EAB6DB2921B28892824A51306E686238E90
+        4A395B5DA4151676C001D2C888CB6B2F0B25E25B79EE6451FC09B552984BAF20
+        5F6D431785C2C91D34F811496DFB590FC759D75A2A05EF3211F41CF4A9A4DBD8
+        550122104006786865F751A65ABD28CEE4645708B257CEDD58A808D67B91D476
+        602B8BA22C893E69E604CA7A79F8D0F302352B1AC5DD7866B522981569432EF2
+        05F5F448071F9C0F71C7A607519CB18F3ACAF67515428978C9BE67900D012924
+        F127B49C402EE75EDF5E4169AC7F6CE6FBB12F004952DB4AA9F7428BEB609F95
+        C05C7A0545BA74EB62051CE40C80080420234566B27A97A492D3C4CC4DBBC53A
+        1482663BAF06AF95078D7A2FF5B190B2BD60B331AECDC56B08E5E1F39E17C886
+        68E4B26D1251C89630E45A1C8A2B164DFD6DDAE4D76B26A4F0309BC79A0A05B3
+        75BD29C57B27A44A6169258B0EA55258C825E17DAE316C0B45AEC51E591E7F3A
+        FDD7189517A42800A59B087AD6BDF26455F7182962970588400081F2D0B2CE0B
+        8C7452D2C92AD3425083D7FADF2F957AB320FA64B90C7C96BC7F94F2FB3EC3C5
+        92B44DB322982BC1C60F471EE946C8090157E738731C1323C97648B980E2DCF3
+        21E7030AED999D25AF201763E4A52A585A02D0CCB14A3DD2C035010B400E1341
+        EF8F28D28963233A8F5D1620020104C8C34BD5558DCC276C4D5A791182DA0E96
+        E6BD360FA24F9A099F7D2CC0F32806859628BAD5B67137D549FACD25E6249630
+        E42204AC9E8D1BA5B6B66CCD21698786D5B372A53434D4EA77E94328F229FC48
+        CA45A5B056DF0BB952986FA127CF55C1C21180F6D2F316A97D7D92F56EF236C6
+        77C857334290F485EDA3EA66B705884000813159EEBC29325A165BAC4943088A
+        39562B42D0E087EBEFF43C8A3E45F1FE9183317D893DB6367945AF08E6CBC3C7
+        C4FCABD1D929AD5B17B698E3DACB28E9B1A6E7034AB33C3C95C2FCF6CD52A530
+        1BF3B794FD50B17C08407B7786831F6B22F8C95129F8A68E1557904AC6012F1A
+        7D80DD1620020104C4E6955DCB64CC07124F1ABE85A0D9C6B2745EDDAF923A8E
+        4C3B3962A839816CBF6EDBFBC7F7A6C375DE9FB44BC487260AD914869A116DBC
+        49306A262F5016CBC0BB107AF637E6A64D3EF30049A2525800E24FD62A8585EC
+        15945751C8FD589D4749F3CEB2BF9E0EBC12D89C44461FDE3CBAE7C766004420
+        80F4A94C4C7E5EC6745B116B4210829A1487F6775E51472D17905B8127CD455A
+        9C318A501EDE655F1BEFB7DA26945030D71BF0B9C41C7BE28C2FA16853C6EBA9
+        F8109C661BB354DA7F5E25FBA24F112A85251D834A61F6E7DE56C64ED2362FA2
+        90BFB1063E2A455D010A40E98685759727F509765D80080410005B97759D64CC
+        9E846D0E4B5B0621043578ADE166C418F55E6254194D63D1E27211169A57902D
+        EF9F34AB7EB91683D2F2FC4973033C97F86253C4B12A7B284EE8D76CAC5F5F0B
+        0BCB8AA0E3CAA328CE31D6AE957A7B6D5F4F59AB1466DB3328EE71A814E667BE
+        0DB1547C31052049AA2C96FA2E46009A710A912ED83CBA4F011A004420801416
+        F652499ABC5BFB462F872004C59914130841F5E7561E96FA2EF6B95009351174
+        51BC7F4210837C9488772508256D1F6A18988727F07EFEDADA8C366E4C2724CC
+        778898ED631F738C8DEB24EB95C2E4F8B943A5B0E4C28DCDB9175168F6E3A623
+        26F55FA5A91F1363E7E199BB4D5604A03D44A55AC978F6D08008049016E3CBDA
+        2E35C66C8A259CB814829A9EB0DC084103D7EF71E30D42F491A3B669790585EC
+        FD6363D392765EA06637817105A12C95894FBAC8F51F02D658CCC83EBEC3C28E
+        39C64628619C7EB6DBE72D1F908D6770ABEFE5B95298ABB5435645A1B0C68FBA
+        A4FEEB93AC4B6396820F5700DACB91E323BA885D18200201A4C02F16A8375274
+        5B2231250D2128C624D9CA6BED871B759F6D7391939732F045F2FE09E517725F
+        E1622EDBDADA5C879623A815A128FE318F3E3ABBC28ECFD0B069CFF07669C306
+        97D756564BC4BBCE4556D44A6152FEBC82920A4836D74BADBC169EC0D4F33AA3
+        CEA33D0A40E1093EB3F1990786D4C76E0C1081003CD3DE51B955C68C2416531C
+        246576315936F55A49B592F051967E2D4BA30CBC1C8E1F92E093B524D069883C
+        59AD089686774FEB25E357AF361A1C0C2324CC578858D2631E7184D4D161F39A
+        C96B89F8569E51540A733BEFF9AE14E6724D92C7D712F48BA4C19BF7D931A62D
+        0085230A0D573A7423BB31400402F0C8C34B3B5695225D654D4C499094D9AE10
+        D4647EA1595EEB7983D4BE7E7F0B9FBC883E4AF87A9A2EF4791683424B14DD6A
+        DB38ED938A423685A166C51A7F449174D451F99A7F5C8A4BC6181D7D741A2223
+        95C2B221FE642527906BA18752F1EE05A029DA0F937A5E8F00D4C064D76D5EA8
+        D5ECCA001108C01393B564D01D7127A07085A0F8E75F9A27F5BF2FC444D072D4
+        362FE5E1D3782FE9C6260F25E243AF08E652C07117FED588ACE405F2E941B4BF
+        B18F3D36C977E9B21F95C2A81496F47557420FA2907D0168FA6B031F362AF526
+        1780667920DA69E39FF652499F6157068840001ED8325A3953D2ABAD4C443912
+        82FAAE94CA0B43147DB25E06DEE6C23B2BDE3FBE7F6977210885941BC8963034
+        9780635D1649F8E757040A2D3C2CCEB1FAFBA5356B5C5C433E924653292C9CF7
+        7C0846495F7715FE9574CD8300D468ACF202A9EFDDC9859B8C55029B9B48AFDF
+        32AA57B03B0344200087DC2B554A25DD655CE6D9492004194B63B57AFE956552
+        EF4579137D6C2C24B3E8FDA398EF652114CCB6D0E36A539A66453057A24D1AD4
+        8E3D3262B47469F6CBC0DB127AF6C731C748A5928B6BCB55BFB4F2061929D395
+        C2E25611CB62A530BC82B22E00EDA5EF0AA96D45936BD62208407B75A0AAEEBA
+        57AAB04B03442000472C5F5C7AAF31665DC3C924002128F6249750081ABCD128
+        6ACF8AE8E362E1E7EB75DBDE3F3E059D109240A7953CB6D5B63E37D1CD0A3976
+        0499B4F205B516E2943EBE84A7C6A5E1D32A0F9F8712F1B69F55AE9EB571C7B5
+        752E6979FFB89CEF11855C8F15B5490337220035E0D01523BA9C5D1A20020138
+        E0E1A51A52A48FEE77520959088A9DF46EFFED3A8F97BA4E6B6501E36251E36A
+        5115678CA297876FB6AF8FBC40591084B25026DEA53814572C6AED1CD2CC0B14
+        7268583C3BA5591E9E4A61540A73F1BA0BB1C855A85748628F3F0168EF6BDD67
+        495DA7200035B0DE1D8F2CD17C766B8008046099896AE9E392E6C7CBC7138010
+        34DBF8CDBC365BE5B0B2D1C04D692D508A9213C896F74FD6AA7E653909B48F04
+        D0A184818550096C6EA1E8A8A38CA2285FA5E05B119A9A61E95269C912DBD78A
+        8F5C402EEE619BCF0E5BC9A0B3902C3A4B5E4136E67BDFA162CD8CE9631D96EE
+        F883376B4FF0530C01A8F103340FDB94A1DD55DDCC6E0D1081002CB27544EB8C
+        74D96C1386732128A638E43A6174EFDBA4F6D579157D5C2E24F3E6FD134A5254
+        1FD57D926C267D9689B7210CF90803F3436FAF74C821D99D837C84854D8582D9
+        0C2774D5CF7589F8ACE7034AE3599F35AF201B737C2B63F81285E20A45ADBC96
+        AEC0D4B646EA796B4C01288BA5E09B7E8EEB3D0F0E6B3DBB36400402B044B514
+        DD15D5275DF329042598B85C0941A57EA9FFAA50441F391AD7B557904D9128A4
+        6A61AEC5221F49A0D34E4E9B74539DB4AF6B71A85991C8DE7143CA0B94963791
+        BDD2F052BA616169B4CD423EA0349FFB2EE73F291B3981A80AE65A00DAFBDAE0
+        0D52690001685F22A9528A7437BB36400402B0C0F862BD414667DA2BD53E4B68
+        55C684A081F7EF3301A72EFA84F46B9F8F856DD6BD7F7CFE8AEE335C2C495B1F
+        15C16C0A2B6979F7C42F197FCC31E98483F90E118B73DC52493AEA2857D79DAD
+        6B3D4DE1A7A895C27C0B433604A3AC560A43006AA55F6940EABF0601A8811074
+        FA96619DCBEE0D1081001270DF3AB59B28FA742B9386899B70D9B80D17B32904
+        B51D24CD7B53DA31EB4548049D25EF9F241B93B4AB86D9DE14DAD8C4A65D11CC
+        B550E39F8D1BA5AEAEECCF4B2E04A6830F96060664E9FB8ADBBF8895C2D24C16
+        9DB48A98ADE315A55298CB354EB104A0BDF4BEC3A86D2D02D00C2128D25D0FAC
+        5207BB3840040288C9BC2774BD8C56B73A797817829A14876C0941831F91A28A
+        EFC54BA80291AFD743F7FEC9635E209709A05D8A3B2E72BBA41506668FB636E9
+        F0C3B329ECD8F622B2571A5EB22718B938561A95C2B2922CDA85A8E4BA4F51BC
+        828A240AC51F2BAA4883B7200035E0A0F2B3BA9A5D1C200201C460CB220D9B48
+        1F8A2BC2042104CD725E266E953063D4758651E789A1893EBE176D594B109D47
+        312834412849DB2C5504F3EDDD632CFED9CD0B9485F0B0668F77DC713EAE231B
+        1E4272741FDA68177A3E20DFCF7CBC82ECB4CDB328947CACAE93A5AE331080EA
+        89A48F8D2FD0627673800804D0EA03B4A4CF4AEA4B2AB8842804B5746EFBBC16
+        55A4811B5C2D0CF29013C8F6EB3EC3BD5C6D1AD2CC0BD46A9BB404A138ED938A
+        423685A166059BB4B19B1728046C9C637B7B2D54AEB9EF521EAE4FD7619445CB
+        07E45BFC91F00A4A43C0095DEC7157656CE816A3A83D86B8935301680FBD6AD3
+        EDECE6001108A005B62ED6264917DA105C120941C6AD38D4AA10D47BA9D4B63C
+        6BA24F96730225594CDB1C2FC9F1928A45B605A322E5060A2D0CCC7F08583D6B
+        D648F3E7873F07F914A28E38C2A8A3C3859798CB7E699793A752587A228F14BE
+        5710A290CFF12BCBA5DE77B6B806CEB700B4F723BE6BF3888E665707884000CD
+        2D1723637477C3EBD3B710D4ECC4E541082ACD37EABB3C6FA28F8F32F0B274DC
+        10F205B9EC6BE3FD56DBA42108256D9F8630349780E3E0291C33DC6B2EA268AE
+        2A58FE851C1F5E46FB3B56F3A160AEAE49177DF00CA25298EDD75B118B92B4CD
+        9328E46FFC810F48E5850840F54BF752A4BB8D14B1BB0344208039185BAC0B8D
+        74D27E56D361084116C5A166CE6DF07AA9D49395248836C6B5291CF94A10ED2B
+        7C2C1431C85789F8B81BC5502B82F90C03F3497362D1B1C766BF0C7CAB82D3FE
+        D87F9EA450C2C26CB7CF63A5B02421B8711349FBCE2314CAEB3E3D7D5C892971
+        ABB61AF90EF76A46602AF548033720003530DB09E3C37A33BB3B080D9449088A
+        EDA3EA7EA9AA9F4B5A36F7D51BC57A2D6AB69F226BC76CB6DF6CE7D676A8B4F8
+        7FAA4EB66DF29C13BDE6BBADEBB16D9E8FED3E49DE73D9D7E618B68EE5A36DD2
+        69D2D6F4EA639AF6BB14D8B1433AFBEC0CADE11D6E5AFAFBA57BEF954A25C98E
+        68673CF7350EDADA6C67A38DCBF75DF5351EFA84260AB918C3A72894A5D76669
+        53951E7DB5F4D28FFFE3E159FF302DEA66FB914EA3834776EA39767A100A7802
+        4150BC38A99BD48C0034DB6492A43A573313A1C572F1B395909FB9E1301ABCD9
+        34B85B29031F86F74F9C3E697906A59D17482A4E45B02C8581B909FD9A8D9111
+        69D932A5469A1E458D4AC3974A2194870F292C4C169F21B2F04C73F97E92E779
+        2BEF51292CDEDAC545FF9C0A407B769543B7D7540F04A069D659FA42A4EBD9E5
+        01221040031E1CD50151A46B5B5C51C77ECDBB1014F3DCE6BD46EADC9457D1C7
+        64E475DB7DD212836CBE9FF512F1BE4521391054D20C034B562EDE5748581A61
+        62AD1C3B5969F810451F57F72C95C294B08907000064D549444154A814E64AE8
+        4114B22200EDA1E36869DE3908400DF8D096C53A1033002210401D95AAEE94D4
+        1D63C51D3B3F4FF0425087D47F5D5AA28F1CB50DAD0CBCAF0575DEC420176D6C
+        E6FB71BD79DDDFE6DC86A0E243A4498FFDE7C10917DB2253631128ED6BCAA550
+        44A5B07C0A43BE5F0F2581B4EDFED91680F6BE3678B314752100D5D115499FC2
+        0C800804B00F9B47759291DE9870756E4F08324D4C7E1E84A0FE2B8D2AA37117
+        4494814FF6BAED3EAEDF732D1665DDF3276D8F1F5B228E5549433EC2BF1A71CC
+        317BF3E06443D871E145B474A9D19225218888A178FBD87E4E84E019E42A5974
+        C8E1627805655FEC499664BA322AF5BF1B01A88179DEBA65B14EC11080080450
+        9B324AA5AAEE968DECA4B684A086ED1A4C8C0E85A0CA62A9EF12DF8B8DBC9581
+        B7B9080E79016F733392C512F149DAFA28136F4B189A4BB871FCA4B6F8D7DB6B
+        74C821CD0B2B590D0F0BAB347C92FE5929116FEB3965AB5298EDBE7805B9138B
+        10856C8ED5FF3EA9B2943D4E3D91D1DD86FD3720020148E38B7599A44D1657DD
+        0E85203516828C6571C8180DDCB48F3B6D10A28FEF05599AE5E1B3E2FDA394DF
+        F7E9F913A2D74F686160618780D573FCF1CD0B3C2192F4BCE716815C7809B9EC
+        1782F0E3CBEBC7B7F8A398EFF91286F2E815945440CA9A286477FCA8D368F0C3
+        EC711A70C4D661BD1333002210149A0786D427A35B1DACCEFD0A41B31D33E66B
+        1D9BA479678726FAF85E84D97E3D04EF1F39183314B127B40D9FADCD6C08F981
+        D2A804E69E50F302F9F0202A95A4A38FB6FD9D1BA527FAA451292C0DCF2017EF
+        BBF41AB2355E1EBD827C878A85220A250FF76AF6B579AF973A339AFFCDE91C13
+        E9539B07D58F250011080A4BA54DB74A1A71B4926F4E80712904C579AD240DDD
+        A23DC17159117DF0FE49BEF8762514F9127BD2127A926C44B3921F682EF1C6C9
+        0334E1DFDC1C7EB8D4D5959E88E3D3EBA8FE18071F6C343060FB7A48D23F4E3F
+        DBED5D883A21570A4B2B64CC759FAC78052569EB4B144A721C7F62CFACAF45D2
+        D01DEC361BB0A8D4A19B3003200241217970A15629D2554E0F629AF4D8094808
+        EA7D93D4BE3E4FA24F9A39817C79FFF85AC037DBD765DE1F17A160696C24E3B6
+        77B101771D069606730B456D6D46871F9EBD12F07184A77A5ACB0794A5B03057
+        DE4159CA0714AAF893D79C4069AC69920A48AE85A270C2CEDA0F937ADEC49EA7
+        01EFDFBC446B3003200241E12897F55B92DA3DACCE332304957AA5FE6BB392B4
+        D0C6B83685A334BD7FB25CF5CBE566AAD5366927804EC3B3622ED1C48F209396
+        58142F397258024F1CE1696F3E2437D7409A616136C70F2D1F501EC59F3C540A
+        F3EDB1EC622D96D7D76A0CDE2495FAD8F7D4D15E9AD4E73003200241A1D8B248
+        674A3ADBE32ABE3921A8EE35DF4250FF355279E16C8B0A170B0D570B1DD7E24E
+        9A2251923E692513A5447CF2F669E4079A4BC0B1FEA0948BB0AF5044A0503C8B
+        DADB6B1E50EEAE8F24FD5DF4C9BB67505AC9A2F10AF2BF4E41146A5500926AEB
+        DAFEF7B1F769C06BC616EB9598011081A0107C5F6A8B4AFA6DEF078EE99DD370
+        23D028BF502B425083F1DA0E34EABDC8C7441D6A4E205FAF67B53CBC2F31280F
+        25E25D7AFDD80E034B223284E0D5932C77D0DAB546F3E71BA725E07D8789CD75
+        1E471E297574A421F8D8BAEE6DB7CF7AA53017EF17A95298A4E02B85210A357E
+        ADF96742DF1552DB4AF6400D4C7AD7F7A5360C018840907B162CD6FB24AD4DE7
+        611BDF63A739AFA006136243C16866DFC15BA4A83D8FA24F1EBC7FB254023EAB
+        79815C2680F6B5390EA5547CB3E24CFA449174CC31195AAF5B109B1A878235F3
+        DDF9BCAE42C90524894A612908392EE6D6568F9174FC501248E755146AED9914
+        B549831F630FD480438686F56ECC008840906B1E18D1425355BAD38073216896
+        C9713F7DBB4E92BA4E0B617161AB6D685E4159F5FE09E597EAD04AC427699B95
+        8A603EC41BBFA15FB39166A9F834BC89A642E06CDA39EDB03039BC677D084454
+        0A73D307AFA07C8A42F19E53DD67495DA7B217AA278A74DB2F47B5004B002210
+        E4968AD1C7156920F5130949082A1B0DDE9CE6E2A10839815C88444512836C09
+        46210842698842B684219F02910DD1A8B9BFE38FF7130E96468858FDF1FAFB6B
+        E5E1ED7FFF3EFA53292C3FE24FA8398142F00A4214722100ED65E8B69A57104C
+        63B0ADAA5B31032002412ED9B2481B15E992604E281021A8F79D52DB9A24A540
+        43107DD22C036F53D8095DF0296A12689F5E3F3E459DE28681EDCBE2C5D28107
+        666F4E8B23321D779C542A25FD2E935E132EFBB96A1F6A3E202A85B99F7F7DAE
+        3742AD14164ABE9FE4F347DB1A35C87F0991F4EECDC33A0C4B002210E4EF0157
+        D2DD92CA81ADE29B2A17EF4A082A0D4803EF0B79F160635C9B0BB9AC7AFFB85A
+        E8A79917A8D53659CD0D148230945618983FE6CE931396B813D78BC86D6978DB
+        D7AF8B3E699588B7F54CB355492C74F147F2E715E4FB07249F9E3EAEC49A34BC
+        7DECCD09031F944A83EC8BEA289722DD8D1900110872C596119D2FE9D4604FB0
+        99EA5FAD94906F3261F4C00D46A581D0160769883B692C26932C726D8E97E478
+        3EDFCF4328582815C15C88374E1E8C96FEE6C646A9F89043C4F68E7DDC71AEAF
+        0779B8AEA914E6F7FD3C560AF321E8E4D52BA899E3247DCD9D002449A57E69E0
+        3AF6460D78F9D8A85E8719C007112600D78C2D57A75ED4CF252D0FFF8E8862BF
+        1635DB77CF6DD7B6565AFC77525499ED568C5AB8657DF5B7D136CDD743E8D3CC
+        A3D7555F1BEFB73275D81CCB65DBA453A2ADA9D4E5941CF674FFCC33D289274A
+        9393D99CE79A118F0E3840FAFAD7638D6EEB2C3DF63329B63596C6321EC63029
+        F43581F649E3F5B42B8525ED9FD66B169894B69F29EDFA39FBA43AB6A853EB56
+        8CEB454C012EC11308DC2F8E5FD2F5CA8200545BC9C77EADD5F0B0C18FED1580
+        5A9D8CF39213A8D545525A216249FA64D933C8A6E78F2C8C95A46D16CAC4CF36
+        8E4D0120DC7C41BDBDD2BA75214E09F6BC874E38C1E7F79FA5B0305B6D6D7B06
+        25391695C2EC8DD58A7092B5A4D005158024A92C0DDDCE1EA9012BF5A2AEC10C
+        80080499E6E1A55A5232FA50A64EDA8310D4FD2AA3AE53B2B0C8B031AEADB1E3
+        8EEF3AD965DA62502879817C868B25DD7466A54CBC0F7128AE5864FF5C5CE605
+        0A21346CEAF3190FD74792FE3EFAD8167EA814569C9C40A1E4344CD236AB5E41
+        76E93CA956361E66F091F1055A8C1900110832CBE46E7DDA483D993B71874250
+        D4260DDCE852F449BAB0C86A19F82C7BFF849C8FC2D5462BB404D0696CB65DE6
+        08F2EDD5933C77D0B1C766B714FC5C825314191D7D740862A02D0F2117F7585E
+        2B85E52559748895C2D25ACBB858BB154B00DACBD0AD52D4CE7EA98E5E53D127
+        300320024126191BD67126D20599FD002E842063D47B85D4B6DCF5C45F9432F0
+        3617B0212FBE43127B42F0FCF121F0C8713F97E2502BC24C381C79A4D4D515FA
+        B4104F703AF450697030E97767E31A70DD974A617EDEC72B286CAFA0BC8942EE
+        A81C28F55DC69EA901EFD832A2633003200241B6F4132952A47B94F5E4E34D56
+        099BAD7258FD86A0B450EABF320FA28F8D055651CAC3BB2C01EF43ECB1B5914A
+        4B108AD3DEA628147A18583AA15F8D686B93366D0A4BD0B1E551D4381F906D1B
+        67212C8C4A61D9137FA8141646A9F8FC09407BE97FBF541E66EF54BF478FA4BB
+        0D459C001108B2C4F888DE2EE548C1B6E41534F811A9D49BF662C0565BBC7FDC
+        BF67AB6F514AC467A94C7C96C3C08CB3BFE38E731712964688989BD2F02E049F
+        ACE50292FC7A06A52D0EB928136F7B1EF42118A5918F308450B1B444214F9BD1
+        1E69305BD9437D71FCD661BD1533800B5017C13AF72D544F7759BF94349ABF3B
+        267E09F9F60D9146FF97EAA457CAC0FB7BDD769F34DE0BE1FD56A68EB4DA2599
+        E2924C8B5928151FF6D4FF8B5F48AF7F7D36A6836685A48E0EE95FFF55EAEC8C
+        75145B67EBB19F71D8DE586CE7AB4D96CAC4EFEF3D1FE5E06D8D157259F93493
+        42B7DAD62355E9D173A4977EC83EAAEEABD9D625AD1DD9A9E73006D8044F20B0
+        4E774537298F02506DD51FEFB5489AFF09D3E08ECB7B1978397E3D8FDE3F79C9
+        0BE4BA5D9E2B82B9F6F00923FCAB116BD74A0B16A4F988B7EF4974D451730940
+        218585A591345A1E9F2359F10CA25258BA6B0F9F9E3EBE04A046E719506EB8D2
+        9E92F1B827D4EF1F96BC10E983180210812068B60E6BA58CAECDF5878C2104F5
+        BC51EA38A2D549989C406E16A7B617C1CDBC17B218E4A3447C2B8BCD22540473
+        21DE387DE839F89B65BD1B49C71E6B5FB0493344AC561ADED57797461EA038FD
+        42A91426C7CF442A85A59713C8E63AC4D57AC8B68094CDF0AFD9E8384A9AF73A
+        F6520DB8616C44CB3103200241B054A5CF4BEACCFD076D41082A751B0DDE687B
+        E20E392790AD5FE6D22E0F6F5340B2B1080F3D2F906DD12849DBD02B82F91203
+        C2AD0466232F505853C2ECE779FCF12E2BBDF9128C8A5C298C64D176E6549773
+        BD6BAF201B6BA3D045A13018FC981475B39FAAA34BD2673003200241908C8FE8
+        34457A7D613E709355C2FADF2B9547D25E148410F2E5EBD7411FDE3F69277A4E
+        53ECC94289F838ED6D8A42590F034B97134FCC86B8D38C203530201D72485AD7
+        0095C2DC0A3B45147FB25229CCE51AC77752E8E208409254592CF5BF873D5503
+        DE3436A2976106400482B0F410A96CA4BB8BF9E167F70AAA2C93FAAEC8AAE8E3
+        7251155A88980BC1272D31C8C6FB2EDAD8CCF793D58A602EC41B474F7407A15E
+        CDB278B1B47CB95F11C795B7D1092748A5928FEF3384B030DBEDA914E666EE68
+        F5BD2C560A0BA1026A564AC58747FF555265297BAB065FDFDD462A6308400482
+        60D83AA22B246D28EE83B9B1103474B314758426FAF85C04F97ADD57CE82BC8A
+        4159F7FC492B0C2CED52F1CD0836E9AC5493FE1D7F7C76CAC0EF4F78AA8582F9
+        F8BE7D0946A1E402B229EAD81676422D139FB5D02FD7EB07DF625188A5E2C324
+        EA94063FC2DE6AA66174F8D862BD0B430022108421002DD3A0A4DB0A6F88BA0D
+        47E78952F7D93E7FC9C1FBC7DF0237AB62904FEFA022E4064ADAD7A538D4AA20
+        1316279C10E223BE75E129FEE7C84B58981CDEDFB6449DB473AA653159B4CD3E
+        3604A32C7A05A52D0A85CDBCD7499DC7B1C79AA103197D7C6CB906B004200241
+        EA5477EB56232DC012FB08416569E8D65026FAAC9781B7B140B4DD276D31280B
+        7981421084421085B21206E63FEC6B7F1C7BAC5476E8F4EEC3ABE8C003A5A54B
+        7D7EBF49C7321EEF97AC540A4BD2A628F982B25429CCB5D01362FE9FEC09407B
+        19BA43043FCD649179511FC50C800804A932BE5887C8E84A2C315D08EABDC0A8
+        7D5DD6451F1B0B1FBC7FC2CDFB93568978578250D6CAC4BB0C03F3F6B073F6D7
+        D767B46E9D715206DE579858CD0B28D4D2F092DF5C59A194880FC93328EBE28F
+        AF3938AB5E413E2BB9E6C3FBA79EF6F552EF5BD856D41349576F19D55A2C0188
+        4090A6DE71A7A4362CB1CF4DD5270D7CD0B7E823476D43F30A4AB33C7C5EC520
+        5B8291EB762EBC846C6E84432915DFAC38133E2186844D9FFF4C464AC327BD5E
+        7D248D0EB944BCEDE7685EC49FACE704B2B1FE7229EA145B00DACBC08DB57535
+        4CA3AD54D5E731032002412A6C19D6B992CEC2127513D6F55279288D093F8B65
+        E0D3AC2C12EA7B21E405CA432858962B82F9106EC209FD0A4504B2E94D542AD5
+        42DAD2F9CE43A8149666F2F7227906B94824ED3B5CCCC65879F70ACA6702E866
+        282F90FAAF616FD1E05B3E677C44676309884B8409200EF7AD537BF793FA89A4
+        3558638AB655D2E8B7A4A8ADD95B2D4AF09AEFB6698DED6BACD0DE0BE1FD56A6
+        099B63C5999E5CB7B7396DBA9A7AF335A5EFDE2D6DDA24BDF042F6CE7DC306E9
+        2FFEC2C7C6CCA4388671DCC7455BE3A94DD2314C807D8D873E3EC632018CE122
+        FCCBE5732665C163B7B4FD5469F716F61975FCE2C91DDA7094B41B5340ABE009
+        04B1E87A52570B01680643B7351280F64ECC79CD091467EC90BD7F5C2C9CF390
+        17C867E5B056DB266D5F9430B06CD1D6261D7D744636290D43C17C7CB736C691
+        C37B26A412F159AA1496647CDB7391AF79360B95C21080D2206A93066F618FD1
+        8083E72FD65598011081C00B0F0E6B512432D3D7D37DA6D4F5F26616AD2E841C
+        391A37EFE5E17D858F852206F94802ED22DF4F928D64962A82B9166FC20EFF6A
+        C4F1C78723ECB4121A16666978DFE5E1A91416C6FB212584CE7A4EA0107EB88B
+        737DE6608DFD0AA9EB34F61A33A8EA965F8E52A1191081C00395923E21A91F4B
+        4CD1DAAF1469C78BBB1CC3D7EBBE7E95CCAA18E47A0C9BA291EBB6B636B34529
+        151F473072777E279DE45EC0B15D41ACA3433AF248DFDF6728D5C25C1C874A61
+        61893F540AB33B86EDF5607E99DDDBBEC81B100DB457753B8600442070CAF8A8
+        8E3046176389E9F45E22B51D1467B1ED6B9190D532F0792D0FDF6CDFB8EFDB16
+        8C7C268A4ED2D67728982D61C5B5589326C944A4B56B8D162C08B304FC6C1C7D
+        B45167A7F1FC7DFB148D7C7AFB50292CFEFC90456128AF95C27C567BCD2F6DAB
+        A5DE77B0E768C0E55B1669236600442070B79CAFEA6E49652C3145798134706D
+        92057D9AA24F11BD7F8A56023E8D8D4F967203D91485B21E06161E51241D775C
+        20F35F9302949DAA66450B0BA35298DBB92494F7F00A72BB46CB3FD32BF0C2DE
+        AD4854D25D98011081C00963C37AB3A453B044DD8474A354EA4BBAD84FBAF8F0
+        BD50C1FB27FE7B59C80B948512F1792F133F9778E344E6501A215F7361B354BC
+        8FF0B0E643D8420C0B8BDB3F945C40719E3DAEDB24F5EC742D1CB5FA5E28E162
+        BE5F7715FED54ADB62E4FFD9EFC6B55F1AB881BD47034E1B5FAC37620668164A
+        C443533CBC545D1313FA99A4E558638AF675D2E8D765C9372AE432F02E4BC9CF
+        F5284ABB8FABF75CF6F53986AB762EDBDA9802432E159FAFE97DFB76E9E493B3
+        71AE0303D2F7BE27954ACD6CB29392E7F2F0ADB60FAD447C336D5CBE9F8532F1
+        71C6CB8A58E4B36D019994B6BF42DAF5334C51C7983A75E88A71BD8829602EF0
+        0482A69898D00785003483A13B6431382EE4902FBC7FC80B147A2858162B82B9
+        F4ACC966F857234647A5152BC23AA7D9BC854E3CD1A854F2F55DCAE3359B46D2
+        68797EE6E4A152585A2163B6C6C32B0801A809CAD210A9901BB1227A411FC00C
+        80080456786089964AC2F9B28E79AF913A9D942F0E3DE4CBD6A22AC4F2F0218A
+        413EDE6FB54DD6720365AD22982FE126BCD0AFD938C57120B2ADD0B0F8E769DB
+        E669E4018AD38F4A61D9167FF25E292CD45C41D079A2D47D36769841A40F3FB4
+        40A318021081203195AA3E2B691E96D8E719DB290D7ED4E996248005894DE128
+        E4F2F04514837C9588F7210865B122982BE1C6072695BFB3CE3256CABEBBAC26
+        56A948679C11D76EB6BF93A463B8ECE7AA7D889E41248B7637AFFB7EDD865864
+        A32DEC65E81629EAC00E75574DCF64459FC21280080489185FA4E365F4162C31
+        9DFEF74895037C6DB64216775C2EF47C7BFF28E67B2127890E295174DC4D9A0B
+        2F219B9BDE90C2C0F2130256CF5147D5C2C2825C74EF11924E39C56860208D10
+        3F1BE3F8127DD22A112FA5E319E46A0C2A85F97F5D095F27FCCB369503A5BE2B
+        B043032E1A1BD6B19801108120EE72B3644ABA5B24109F467944EABFCAF33791
+        BA401467EC90BD7F42597037DBD7655E20176D4228099DC58A603EC49B6C847F
+        CD58AC94A44B2FF52FECB4E245F4EE77BBFE7E6C8D270FF70595C2DC8843540A
+        0BE375DF5E41301BFD57D7D6E5308D48917EC7B0CF07442088C3D661BD53D231
+        58623A431F93A26EDF472D4A19F850924F862606F9D85CD86C138A2094962864
+        5318F22910D9108DDC894A6F798B343C9C5CB471111E76D249356FA574BFCB34
+        735A65B9447CD6F301A5356F851A2E96D59C400840B136B2F3A4C10F6387066C
+        1A5BAC0B3003CC061E1ED0905F2C506F4745BF94B4186B4CD17194B4F8AFD3BE
+        73F256063EAFE5E15DF6B5F1BECD362EDAC599A2B25826DED7549C8FE9FE5BDF
+        922EB924AC73EAEA92FEF66FA5E5CB7D6DE44C00E3E4B9447CB3ED2813DFFC7B
+        69F709A5247CAB6340B3B7EBA3AF965EFA21A6A863C7C42EAD5DFD947E8329A0
+        1E3C81A0B1D851D147850034E36E19BA3D84BD54DECAC0E7B53CBCCBBEADBC9F
+        9712F1792D133FDB3869858185CDCB5F2EBDE10D293C75F7E33574FDF546CB97
+        FBFCCE6C8D95A4BF8F3EF2FCCCA1521895C242F20A82A689A4A13B846BC34C46
+        CA6DFA206680596E1B80E96C1DD6CA6AA49F4922E7FE3EF4BC455A7057166EE1
+        2C7B0585D0C7D57B5978BF9569216DCF1F9F5E3F91A37B358F53B8FB73FACD6F
+        A4F3CE931E78A00509C3B8D9689D79A6F4BBBF5BCB59140F17E76552EC6F0269
+        1FA26790EB3142F2FC89FB1E5E41109F27DE2B3DFB17D8A18E972627B57ED5E3
+        7A105340E82B484899B1C5FA2B19BD164B4C519A272DF9B6541ECED26D9C8590
+        AFBC0A3E79117B0805733B7D46293D1BB2CF238F486F7EB3B46D5B7AE770CC31
+        D297BE540B074B67835784B0B034DBE621246CAEF743177FE2F4C94A6269B0CD
+        E40E69DB4952F5396C51B712F8F3E53B743E9680697B5B4C00FB323EAC972300
+        CDA4FF9A5005A0380B0FDF15C4E21E378464CF698489D97C3F2FA16072D0BEBE
+        8FAFAA49FB1B8310B06659BA54FAF33F9756AD4AE7F82F7B99D197BE64D4D595
+        66289FADB15CF7350AAF726033ED5CB70935642C6E15B1A2560A8BB3DE021794
+        47A4BEF762870657DC795B16E94C2C01FB822710ECFB90288F8FE887920EC31A
+        53540E9496FC93147564F596C6FB27FDF75CF6F53946DAED7CB5B73945461EEE
+        F1E22E1F9E7B4EBAE926E9AB5F8D39EFB51826562E4BEF7B9F74CD354942C05A
+        D95CA639A6F1D82F6DEFA0A27806F9F61A4A3B5C2C2BAF83B5A7DE4BD2B693A5
+        8987B1451DF78DEFD0E1A74913980224A98C09602FEF18D15591F44E2C319D05
+        774BED0767E98C5D8A323E041CC4A0649B6F9FA1602EC2BB08030B77ECF0686F
+        97CE3E5BDAB851FAD18FA45FFDCADDB18E3946FAE217A573CF95A296CDEC72F3
+        9776581895C2D2CF0734D7FB540A4BF775C41F6F2BE04ACD23E8F9BFC116752C
+        1AE8D5A3F73CABEF630A28DE6A116665EB320D9A5DBADF480BB0C6149D274923
+        7F96A7DB1BEF9FD61F8345CF0B647B2C976DE34E6B91837B2DE429399F53FFE4
+        A4F4F77F2FFDC11F48DFFB5EEDDF49E9E8904E3F5DBAF8E29A086447D0888B09
+        642C5F6251114AC437D3A608C9A28BE815042ED9F146E9C5EF60873A9EAA54B4
+        FA8047F414A600442090248D8FE8B78D4424EDBE94A5D16F48ED87E4F116CF73
+        8898CFF15CF7B5F1BEEF36AD4E2D79AD0896A730B0EC2D159E7A4ABAF7DE9A77
+        D0FDF74BE3E3D233CF48CF3E3B7B9FFEFEDADF8A1546071F2C6DDA249D72CAFE
+        123FBBA0C86161540AB3370695C2D27F1DF1274D76DD276D7FA5A4496C517759
+        DEB562A73E8021001108B475448756A57F97D48635A6E8BD589AFFC93CDFEA79
+        F7FEC95BDE9FBCE7058A332551263E3FD379B3E79F7C63F5F4D3D3FF5D2E4B3D
+        3D7E57E1E18E1B72A5B056DA5329ACF5F7F10A9AFD3DBC7FB2C8933748CFFC11
+        76A8BB3227CAD2E107EED07D58A3D8200281C646F43549AFC4125394FAA525DF
+        91CA4345B8DDF1FEB1FB5ED2F7B39617C845BB38D3531AE24E96C2C098EEBD2D
+        B133758CBC883E2EDA86E4195404F1677FEFE5215C0C7C33F9A4B4ED04A9FA1B
+        6C316D3510E91F963F4AB5B0C2EF753141B1191BD66B85003483811BF2260085
+        BA50B25DEA5D96C79BEB3D1725E28D28115FDFD645FBA4FD1AF5B55D2A3E8D72
+        F16C60C2B19DED6318CBD7BB8F3E69B4B5F52CB3F92C77F17EDC52F04944191F
+        737BDCB545B3AFC7191FD2A03C5F1A20F069E6956A74C6F8885E8D258A0D3F0D
+        1698FBD6A9BDFB49FD44D21AAC3145DB6A69F49B52D456C45B9FF2F0F11F9745
+        C90BE4A29DCBB636A6BB5043C1429FC24338BFD0376526D0317D7A085129CCFE
+        18540A0BE37548FD09BB5BDA7E9AB47B33B6A89B9D1FDCDDA3F5AB1FD44B58A3
+        98E0095460BA9FD4B542009AC1D0ED7917807C2D886CFE4267DB63C8F67B2EFB
+        B6F27E5E3C7F5A69EBD223C146DFD9C6B0B5510FD9ABC704F017FAE77731BEEF
+        6BD3B5B78FAB6789CD76BE3D387DCF43AEDE73DD272DAF200846EC6893863E81
+        1D1A5CB9ABDA9ED35558A2C0F7062628265B1669382AE99792FAB1C614DDAF94
+        16FD018F81745FB7DD278DF75CF6F53946DAEDE24E5359CE0F94D6F4CC72A035
+        D123CBC7CB5B79F856DA67D133887C41D9F20A8210D97981F4C2B7B0431DBFD1
+        A4D6AE785C3B3045F1C013A8A044257D4A0840D36DD2260DDECC8626D9EB45F2
+        FE7199F727A4BC40527ABFC0D7B775EDF5633B3F90EDFC2D2E7F75CEA2A74D9E
+        3EB3F1780DC9C33D11927750D63D83D2783F94F77C780521001581A18F17C1CB
+        BF65FA54D26D980111080AC2F8A88E90F40E2C51F724BC5C6A5B59D44F9F962B
+        B5ED455ED6C4209BEF2719C3E6C626C9862A7451288D509B38E245168494A285
+        8AB93E97B4AF551FF7A5915BA1D9E6F32CABE25068EFD9ECE37AED0321D3B642
+        EABD183BCC20D2A59B17EB280C51C4AF1E8AB6D58FC647F44F924EC61A539417
+        484BBE2D95FAB0C5FE1F0D8482257BCFC7FBBEDBB43A95E4AD4CBCEDA9344AF9
+        1E8758336BE68E6352EA9FA512F1CDB6F3D526C4B0AFB87DD30E17B37DCE9005
+        AACF48DB4E92261FC316D3AE6CA36FAFD8A993232EF242812750C1D83AACB70A
+        01680683372100F95D68F9F6FE89BBD80CAD7C7C33E3FB6ED34ABB246D432D13
+        DFA87F16C2C08A16FA9525BB84561ADEF7BD154A89789BA5E46D3C875DBC9FB4
+        4C7CDA737C9A5E4190B94D6FAF34703D76A8278A74E2D888CEC31205FBDE3141
+        717878A9BA2626F4734907628D29DAD74BA35F179268CB8F8950BD7F8A5802BE
+        6825E2E34E5F21247E8E3CDFA7101E26F0B17D278E2E5A89F866DA241D232FC9
+        A2434D220D99A52A6D3F5BDAF5634C51BF4DEC28E9E0D1ED7A1E531403B6BD05
+        626242370A01680643777027C45B0CA699E031499F2C97809FEBFDBC9488CF42
+        99789BA5E28B502EBE48CF4B1FDF435ECAC3E7A544BC64D73328EEB9E4255F50
+        C849A421EB3BDFA13BC4EF263339E0C5AAAEC30CC5815BA0203CB0444B2B93FA
+        85A47958638A79AF9716FE3FD821F923238FDE3F217B06F91AC3553B976D934E
+        6F21E5074A7B9A668990EE46D004381E25E25B6F97F532F2780541FE78FC32E9
+        B9FF851DEA78A15AD2C1076DD7439822FFE0FF50102A93FABC1080A66F6F3A6B
+        B980C0C6423B8FDE3F2178068556223E2BB981E2F649D26FB6FE2E7304190FF7
+        7B1E2B718574DEAE8E9DF56A6136C7A75298FD79AC4895C2208F0CDE26455DD8
+        A18EAE68529FC40C88409013C617E904496FC212D3E9BF4AAA2CC50EF137063E
+        44225B7DD21683E2BE6F6391EF6A6393962014A7BD4D51286B6160A13D37F256
+        FA3DE96776750C9F828F0DD127AD24D036451D5BCFF4AC8A3F52D8C210A15F30
+        456554EABF023BD413457ADBE6519D84250AF05D6382DC6FD74B5B47F4AF463A
+        0A6BECF3F05F2C2DF93F52D48D2DDC3D468A581E3E84F76DB649B39DAFF6B6A6
+        C33C8481B124684E30C8FA31B3521EBED53E2197886FA69DEBB0B110FB9A80FB
+        40EE9FE62F48DB4E9626B6618B3AFE6DF90E1D1D49554C915FF004CA3963C37A
+        1702D04C066F460072BFA1F0192296C67B692789F61D0AA626DBB5F24BB96B2F
+        219F1E3F3EC3C05CDECB79F0C071F939D33827DBE3261DC365BF10BC8342F30C
+        4AEA519A56687328A15F78FF4063A22E69E046ECD08023C747F476CC90F3EB1F
+        13E4975F2C506F4745BF94B4186B4CD171B4B4F8AB5CFD7E1F2945F6FEC95212
+        E8AC2580F65D26DEE6B419A5742F423A988C8C6F52E89BB712F1CDB4235974F3
+        EFF9EA03457D34EF789DF4E2FFC51475EC9CD8A535AB9FD26F30453EC11328C7
+        745674B31080665CF143B7B33F72BB11C9B3F78F12F4F5911728B444D12EDBD6
+        B78FDB276FA5E2E71A9FB2F16E9E79BEEC6C1C5F8349FABBEAE7CA3B288D76A1
+        E7030A71EEF5D1070A4BB4A7643C3BE27A862B1DFA3066C8F5A50F79E4A1453A
+        68B2A4FB2475608D297ADE262DF8027648FFF1E2CBFBC795070F7981924F2921
+        7BFD448EAFFFAC4FD9795D3A981C9F4796CAC3C7E9631C8C9BA77C4049DFCF6B
+        0979801A4F5C233DFBA7D8A18E5DD549AD3FE8713D80298AB54B830C333EA2BF
+        31D23958628A524F2D197479185B84F198F129F8E4550CF2DDC6453B5FED934E
+        79590803634ACF06260363FB0E0B0B2124AC95B6C6539BAC268BCE82300430C5
+        E4E3D2B613A5EA33D8A2EE16FA9F2B76EA0D182287FB624C903FB60EEB7404A0
+        99F45F8B0094DE86C776A977591C2FE9B9F848129DF512F1592F13DFA86F8861
+        60847F85F3BC33297DD7B6C69287FBCAE53D9F56F898ED36499EEB69268B8E23
+        D6D87C8FE71DB44679A1D47F15769841A4D76F19D52B30441EBF5AC815F74A95
+        1523FAA191D6638D292ACBA525FF2445EDD822DC474E2809A25DF6F5F1BECD36
+        2EDAC5997A7C9589B7312DE62D0CACE8CB0493B3639B14FB9B80DAA791303ACF
+        C9A093F4359EC60398E30ADE2D6D3F55DABD055BD4F1B3F11DDA789A348129F2
+        039E403963F9B0AE42009AC9D06D0840E16CA86C97940FC933C8E7FBA125810E
+        C9EB270DAF86D9FABB2AF3EDEB976EE3F0AF48E7E8FBBBB535A6EF7B2904EFA0
+        2C7A06A5950CDAE51C6DFB3C01F64FD4260D7E043B34E0D01523BA1C33E4EC7A
+        C704F9E1E1A51A9A98D0FD92E6638D293A4F964648F696B14750914AC0E7DDF3
+        2754AF9F10F203F99A8699EAD3C164EC1869780985E21D846790BFBEE4FD81B0
+        D9F916E9857FC20E753CD556D69AA5DBF424A6C8077802E58889097D5C0840D3
+        A9D4BC8020E44D5208DE3F59F00CF2EDF9D3EC7767D3432869FBACE5079A6DAC
+        B43D65C08E2D7D1CD7E6783EFA87E41D14C78B28E97859F00CCA43097980F80C
+        DD5EDB3FC074B3ECAEEA66CC901FF87930276C1DD1A193D28F221E5BD3E8BB54
+        1ABA033B64FF719425CFA010DE6FE5F16E732C976DE34E59697BFC4429DC2F2C
+        2DB2B76134818F9B87F2F0AEDA52292CACF70092F3E48DD2335FC20E7577DD84
+        313AF2A09DFA09D6C8F7AE0B32C4D8B0BEAE88ECEDFB521A90967E472A0D628B
+        FC3C961083D26DD3EAB4119A209474DACB521818D37B70CBE7CC8C6F52E88BF0
+        13BF4DD23142138E107F207DAABF961E3941AAFE0A5BD4DD81DF5CB943676089
+        1CEC933141F6195FAC372000CD64F0430840D9DD2C990CBCE7F37D5BA5847D26
+        8A4ED2D645FBA4FD1AF50DB554FCFEC627FCCBCDF32AED24D836C79387FBC975
+        58580809A35DB749FA4C0F35642CAEBD002C6E9007A4816BB1433D9174FA9661
+        9D8B2572F15D4296B96F9DDABB9FD24F65B41A6B4CD1B6461AFDA614111C97F3
+        C754DE9244FB1AA395C77F164BC4279DDE08032BD612C214E07C4CCA6364352C
+        2C8F9E41790A190370F8249E901E3D53DAF50B6C51C7E6891EAD5BFDA05EC214
+        D9054FA08CD3FD84AE43009AC9D0ED0840399A8665DF6DDCF52F9C71DF6FE5F8
+        219788B7D9364EFB467D92782984522A7E7FE3A6F14BB9C9C99F02B39B8BF16D
+        8CE3BA6F28DE4179F70C4A6B5EB47D4C00B744953D49A2A19E83CACFEA6ACC90
+        F1EB1B1364972D8B341C9574BFA43EAC3145F7D9D2A2DFC70EC57B64E5B5047C
+        D13C7F7C7AFD440EAFC7D0A763A67FFB980C1FCBA4D4DF04D43E8B5E3FCDB4C1
+        F30720098FBD5D7AFE1BD8A18E67A209AD5DFE841EC514D9044FA02C6F874BFA
+        8C1080A6DBA44D1AFC2876C8F7262BAF25E0E77A3F64CF1F396A1B7299F846FD
+        432F15DFECF1C81B148647918B63D918CF28DC5C40AE9E4DA17AFDE0F903E09A
+        A1DBA5A81D3BD4D15B6D13F597330C225046D9BA589B245D8425A6D3F76EA96D
+        257628CE062D9485ADCDF76D25814E63E3635B10B2B169CC43185808028D29D8
+        9F02B0AB8BB16D8CE3BAAFCB705193D2F3CF769BB863A4952CBA997101C2A4B2
+        5CEABB043BD413195DBC79444763898C7E7F982093DBDF68EB88FE3F239D8435
+        A6282F94967C5B2AF5620B1E6536DE4BFA3E49A0DD2780260C8CE93EE0993A93
+        C7CA4279F856FB142161741E9345038443F55969DB89D2E463D8A26E69F19DE5
+        8FEAA4889B3973E0099441C616EB0204A0990C7E0401A8D81BAED04AC0FB4E02
+        AD84E3343B569CF142F2126AD4CF67384C3363B9F04621FCCBAF0D7D1EDBE678
+        49C670D9CFE5B3A4089E412EE738177D0102DB30F748031FC40E0D6EE513C687
+        F5660C913DF86930636C1F55F74B55FD5CD232AC3145FB61D2E8D784AC094D3C
+        DAB29C24DA779B56A709CAC4FB9D66A31CDC8FEE57A8595949873D76163C8442
+        F7F869B69D09600C3C7F006650951E7D95F4D28F3045DD0CFF48A7D1C1233BF5
+        1CD6C80E6C9933C6AE497D580840339E3E431FE76A86FA8566DEF302859628DA
+        65DBFAF65929133FDB38C6F2751EBA374F91CABFA7F95DB9F414F2D1D7652EA0
+        B8CF271BED7C79FDB89EA3F0FC0176CD437708178A9977F7D21722DD802532B7
+        7D86ACF0E0A80E2857F50B49DD58638A796F9016FE0E7680B88FBA343D837C8D
+        D1CAE33E6D0FA1B853535AF9815C4CA55160F708CCBEB1CDFA31D3F412321EFA
+        900F28EC7C4100D9E3F1774BCF7D153BD4F1828974C8CA47B5155364037C2732
+        44A5AA3B8500347DDBD2290DDE841DA09945B4CB5F3743C90B9456897897B981
+        B25A11CCC6F5EAD3B3250FDE3679F9DCAE8E99F6B51E5AA530D7CF455F6D427C
+        1FCF1FC82F83B748511776A8A32B923E8519B203225046D83AAA138DF4462C31
+        9DFEABA5CA12EC00AD6E42425E5067B144BCCBB671DAC7DD70BADE2CBB2AFB9D
+        B628432978BBF67235BE3CDF0736C422397CF6F87E4EFA6A83F803E092CA62A9
+        FF4AECD0E0F67FEB96C53A05436403FCBFB3B16D2D8D8FE8FF4ADA8435F67908
+        8F4A4BFE0F6A3CB87A049204DACED4116A99781B5360D6C3C05802589DA9337D
+        CC2C8585111216AF0D615F00D69E982F4ADB4E96261EC11675FC70F90E1D1549
+        554C113678026580F1C5BA4C08403318BC1501086C6C5A92867A29E1FB59F4FC
+        09C9EB270D4F85D9FA672D0CAC68A15F59B38BAB63663D2CCC76FB2C7B06A51D
+        3686E70F1493A8531AFC307668C0115B87753166C8C0358C09C2E68121F555DA
+        F54B492358638A8EA3A5C55FE50A06DF8FC43C7907A5D9CE577B1B535D164AC5
+        339D67139391F14D0AFD5DF749CB3B2814AF9FA46320FC00C8483B5E2FBDF8AF
+        98A28EC7AA2F69CD41BFD2D398225CF0040A9C4A9B6E1502D08CAB96128DE06E
+        D39495BC406925816EB65D2865E293F46BD4D776A9785FE5E2D9B4A5F32CF1F1
+        7D18C7D7A98FFEBE9346DB6A9BD57C40AE3C60010A44240D7D9CDD740316953A
+        44D99EF02F5F089507176A55B9AC9F4AEAC01A53F45E28CDFF1C7680101E9159
+        2A116F7B2C976DE34E4F79CA0F14CA14CD32616AF39BB7E367AD3C7CABFD5CE5
+        0E221F10004CF1C4B5D2B3FF1D3BD4B1AB5AD661076DD3FD98224CD02E03A65C
+        D63D42009A7EC1F64A03376007F0B9F14A3BEF8F0BCF1F5918CB65DBFAF659CD
+        0FE4324790F17C0F64A922571ECFD9C5D836C6717D7FF9F2F6211F50FCF30428
+        36833749A53EEC50477B6952FC641FF29E1A1384C996453A53D2ABB0C47406AE
+        93CA8BB003F826A90BBDADC5B6AD4D484825E2F35C26DEE6063CAED811FAFD94
+        97B2EF217C4F218785B9EC97B590B0100A0620FE00D8A2BC50EA7F1F7668C06B
+        C616EB2CCC1026F87907C8BD5265F988FE5DD23AAC3145DB0A69F41FA5A81D5B
+        40161E9F94888FD73E6B61602EA6D228E0EB1AA636C979396ED6C2C2F25622BE
+        D9762690310060C69DB35BDA7EAAB47B0BB6A8E3E74FEED0C6A3A4DD98222CF0
+        040A90E58BF53E2100CD60E8760420086D13185289F8B4124587E62594D4F320
+        F452F1C6D3759D172F1C179F31CDEFC0C5B83EAFF7349246BB686BA39D2FCF20
+        5B730D00CC46D4260D7E0C3B34E090A161BD1B330478CD6282B07878A9862626
+        F480A421AC3145D729D2F0FFC00E90F5C769DE4BC4BB6C9B74DA0A25F17314C8
+        B508E96032760C93527F13507BDF89A06D8D85D70F806F76BE557AE11FB1431D
+        BFDA55D29AB5DBF504A608073C81026362B73E2904A0E9546A5E4000E16FEE8A
+        5E223E49DB90CBC437EA1F6AA9F8B98E41D978F7F7BF2F7BDB3E465AE5E16D3C
+        0BE4F0D964B39DAD39847C3F002132745BCD2B08A631D856D5AD98212C108102
+        62CB226D54A44BB1C474FA2E96DAD66207C8E286D0C686C0C7C6C245BB381BBB
+        3445A1D0C3C0D2162F8A221E85660F17C7741516E6BAAFF1F8FC49A39D8D3905
+        F107204DDAD648BD1761877A22E9DD5B1669039608EA3B8150181BD1BD924EC5
+        12539406A4A5DF914A83D802F2FEA825142C9C3E2EA649C2C0A0D1A63C2BC748
+        232CCC759FD01346FB6C0300B6A83E2D6D3B419A7C0A5BD4F1AD153B743A6608
+        648F8D09C260CB88CE1302D00C063F8C000479D9EC855422BED9B15A192F495B
+        9F65E2432B15EF3B0C0CFCDFF3697EEFB6C6F3D5DFA77790ADB659F50C020027
+        9BEB7EA9FF3AECD080978F8DEA7598210CF8D93000C696AB532FEA679256608D
+        29DAD64AA3FF2045156C01457DFC86EA1DE4B26D92A929ADA4D12EA7D42823D7
+        6A9E31393E87AC95878FD32F0BDE4178FD00E48A4969FB99D2AE9F638A3AB6A8
+        53EB568CEB454C912E780285B0B47B49D70B01680643B7210041DE3796592D11
+        9FA4AD2B2F219BFDD2F2A068764CDFBFF21B4F7F7939AF10BFE7AC9687F7F1FC
+        48CB3BC89667105E3F00C151A6A8CD2CACD40B7A3F66481F3C8152E6E1A55A32
+        39A15F18A9076B4CD1FD6A69D117B103F04876D7C645BB38D34A11CBC4FB9E82
+        99EAD3C564F43859290F1FA74F51F20101409A3C76B1F4FCD7B043DD8AE4D9D2
+        84D62E7B42DBB1467AE009943293BBF56904A0BA8743BB34F811EC0045DD2C86
+        5E22DE66DB38EDE3F669D4CF46AE1317559A7C9512276F5036EDE9E23869560B
+        A352D8CC7649DB0040080CDD5ADBD7C0B42758CF64459FC012E98208942263C3
+        3ACE44BA004B4CA7EF4AA98DE038609A549825E25DB6F5B521B4D5D7E606BA15
+        A1213491232B6252563E97CBE3E7252C4C0E9F5369093F847C01E48DCA8152DF
+        65D8A1016FDF32A26330437AE0239EDE52341A1FD177251D8B35A6282F9296FC
+        1FA9D48B2D00E23DB209057333DD459EBF47A6F7244C4E4A8F3E2A6DDB263DF9
+        A4F4D453B5FFBEF082F4FCF333DB7777D7FE86866A7FF3E74B4B9648A3A352C9
+        EACF65590C0DCB6B5858E821613EAF17007045F55969DB49D2E44E6C51C77797
+        EFD089110FBA607714E080B111BD43D21F6089E92CF86DA9E73CEC0060E7D19D
+        7741288D7E2EA7D028F0EB293C76EF967EF633E9A73F95EEBBAFF6DFB131E991
+        476AEF25A5BDBD2606AD5821AD5F3FF577E8A152A592F646DD0438A6F1DCB7A8
+        95C200204B3CFB15E9890F608719AB8F48172E7F547F8C2558F91582FB16AAA7
+        BBAC5F4A1AC51AFB2CB63748A37F278214019C3CC6D314847CB4B731AD855C2A
+        3ED429DBEF39BDF082F4ED6F4BDFF94EEDEFDFFEADB1674FCB5282696DE3DDDD
+        2D6DDA249D708274E289B5BFCE4E179F38E4D2F049C73101F641F801000754A5
+        47CF915EFA21A6A87BF46DEB92D68EECD4731823CFAB3790248D2DD62765F461
+        2C31FD4A1CF92BA993E850000F8FF4B43D7F0803634A6F9E6DDBA4BFFE6BE9EF
+        FF5EFAE77FAE0941A1D1DD2D9D7CB2F48A5748AF794D2D8C2C8C8D7F11C3C2F2
+        56290C00F2C04BDF971E7D0DB77D036E5FB143B7608630770C6089F161AD3091
+        7E26A9136B4CD173BEB4E0B7B00380DFC77B28224F96442117536714E8F5911E
+        8F3F2EFDF99F4B7FF997D2BFFC8B54AD66E8CE8B8C8E3F5E7AE31BA5F3CE9316
+        2C707D44C2C2107E00200B3CFE1EE9B9FF891DEA7841D2A12B76681C53B00ACC
+        2D6323FA0B496FC012FB5C845DB564D01582E300527CCC67DDEB27AF61605106
+        AFA57854ABD23FFD93F4C77F2CFDD55FA5EFF1D36A885823DADBA5D34F972EB8
+        407AED6BA57239F6D9B8FA94018C119AE8D34A7B841F00689E89476B49A2CDF3
+        D8A28E3F5DB1436FC60C7959D1C134C647749A91BE8525A63378A3D47F0D7600
+        08E7919F07AF1FC2C0B2C2F3CFD7849FDFFE6DE9C107F37BF7AD5A255D7DB5F4
+        B6B7D5C2C7FC8A04A1848551290C008ACDAFBF20FDFAF3D8A101A7AED8A17FC2
+        0C61ED0820F992A93C3EA27F93B4016B4C5159262DF9FFA4A8035B0084FBF827
+        14CCCD941905FA7DFBE1E9A76BC2CF7FF92FB512EEB99CFB1B7813CD9F2F5D79
+        A5F4DEF74AFDFD0E561B418D15AAE8D36A7B93D2770000B99B175E94B69D224D
+        3C8C2DEA1E9DFFBE7CA78E8AA4498C51C455614E191BD19592FE1F2C319D455F
+        94BA5F8D1D00B23315E4A94CBCAD6930AF61606ECEE1B9E76AC2CF17BE20FDFA
+        D7195BA31A7B1BFCDE5EE9F2CBA51B6E68550C0A310750D231424C1A8DF00300
+        6E78EEABD2E3EFC60E339EA4912E5FF9A8FE5F2C91D5151E4C63EB320D9A5DBA
+        DF480BB0C6149D274A237F8E1D00B23B2D50263EBD29367BD3F7E464A42F7D49
+        BAEDB65AE2672F0B4A13FEE67CD122E9D65BA577BC432A955C0B0A450B0B0B45
+        24020098CE8ED74B2FFE0B76A8E331756AED8A71FD1A53B8A58409DC53DDAD5B
+        1080EA284B43B7610680F030FBFCD96C9BB4BD89F9194C82CF1FA7FF5C631907
+        DF93CBE3D8E19FFF593AE104A3ABAE327AEC312363FCFC0577773538C79D3B8D
+        AEBCD2E884138CBEFD6DD7D7475A63F9BC975DB60FF3FE0280EC3174476D3F04
+        D358645ED44731837BF00472CCF8621D628C7E24A90D6B4CD1FB7669FE67B003
+        407EA78B907303D99AFEF2160666FFD84F3F2D7DE423D2EFFFBE6472B86FB62D
+        344591F4D6B74A9FFFBC343434E7D15D7CA294C7C872A5300080D678F27AE999
+        3FC60E75EC36251DB672BB7E8929B2B4E283698C8DE8EF249D8525A628F5494B
+        BE2395E7630B80624C1F45AB0856D430B0E9E7F6D77F5DAB86B57367B8671C6A
+        B8D8C8482D69F6B9E7865C1ADEC63826C03E883E00E087C927A46D274AD5DF60
+        8BBAA7F0FF5EB943E7600987FB714CE08ECDC33A4708403318B81E0108201753
+        74AC100A97A160B64356D20C9F6975EC1042546AE7F0C20B46D75D67F4A63719
+        EDD8E12FF42B6BE162FB3BAF471F353AEF3CA377BD4B7AF65917D78BADB17CF5
+        77FDFC20CC0B00FC535E20F5BF1F3BD41349AF1E1FD1D958C2A98DC105F7AD53
+        7BF793FAB1A4B558638AB655D2E8B7A488E03800A69544D3505A65E25D4D9D51
+        06BEABB9F9C10FA4B7BF5DDABCB99857BF0B6169CD1AE9CB5F960E3F7CBF47B6
+        FD49521E23C4B030000007F3C66E69FBA9D2EE2DD8A28E5F3CB9431B8E927663
+        0AFBE009E488AE2775B510806630741B021040CE973372EF2564B39FB1F0196D
+        7810A4E1DD6362FE35E64FFE443AE38C7C0840217916DD7FBF74CA2946BFFFFB
+        2EAE11E3F09E90E3FBD9D7B30600C01D519B34780B7668C0C1F317EB2ACCE0E8
+        BAC304F67970588BCA91EE97D48F35A6E83A431AFE32760060CAF1314D85921F
+        C8D7549BDE74BE6B9774EDB5D217BFC8151E976605A42BAE90EEBC536A6BF9C7
+        94504AC327E96F52385700003FEC7C9BF4C2BDD8A1EE11FEEB89486B56EFD0E3
+        18C32E780239A052D2278400347D7BD2260DDD8A1D008A3E9BA757263EAFA5E2
+        E73A865BCF875FFF5A3AE71C04A059BF15CB1E44BFFBBBD2B9E7D6ECEEE75A73
+        E12514E2F30200205D889668B481D44045BA1D43D80711C832634B74B831BA18
+        4B4CA7F712A9ED20EC0000696EF2420B03F32DDAD80BFD92A4EDDBA533CF94FE
+        E99F0A72B506121EF6CD6F1ABDEC65465BB7FA0849F43986AFA4D10000E1D1B6
+        5AEA7D277668C0655B16692366B00BE16096191BD13F4A7A199698A2BC405AF2
+        ED5A69780000F7535494C231D39862D39BC27FF94BE9ACB3A46DDB127E82C8EE
+        6708B5E4BB8BCFB078B1F4B5AF49871EDAF2116C9D694AFD117B00209F549F96
+        B69D204D3E852DEAB877C50EBD1C33D8034F208B8C0DEBCD42009AC1C08D0840
+        001077B3E7D3A3A051DF90C3C0D20901FBD9CFA457BC22B90024295725DF6D7D
+        D66679F4D19A27D68F7FDCEAB561EB5ACBC2FD0C0090A18D79BF3470037668C0
+        69E38BF546CC600F3C812CF1F052754D4CE8679296638D29DAD749A35F9754C6
+        160010D21446A9F838C7FFF77F975EF94AE957BFE2EA93D2F53CDA7BECA121E9
+        1BDF90365A7396CF62797800809C30296D7F85B4EB6798A28E3175EAD015E37A
+        115324074F204B4C4CE8062100CD60E80E21000180AB6DB0D2F5F8F15D2ADEA4
+        60D3A9BFFBEF373AE71CA3A79ECAB6478EA44C781E357BECA79EAA85E6FDEC67
+        695DBF6994870700C82965698854C88D5811BDA00F60063BE009648187976AC9
+        C4847E29691ED69862DE6BA485BF8B1D0020CB535CD64AC5BB39CEE6CDD269A7
+        D54290C00EB645A4254BA47BEF9556AE9C71249B679D727F008062F0D825D2F3
+        7F8B1DEA787EB2A483576DD7C39822197802596062529F1502D0F42D48A734F8
+        51EC0000A96EB395BE97C35C63A5552EBEF9E33EF964AD2C39025013964FC98B
+        C818A3471E313AEB2CA3C71FCF43797800806233748B147560873ABACB557D1C
+        332407112821E38B74BC8CDE8A25A6D37FA55439003B004070DB741106D6FC71
+        5F7CD1E875AFAB8582652DE42B9635020D0F6BF6B89B374BE79D27BDF8621AD7
+        731AE18B0000F9A4B24CEABB023B34E0A2CDA33A0933248370B0644BE7D2F888
+        BE2BE918AC314579445AFA6D29EAC61600C0F4E867AAB57F0C63A40B2E90FEF4
+        4FB91A9CAF272C0B486F7B9BF4E52F3758B5D85C0101008053AACF49DB4E9226
+        77608B3A7EB07C878E89A42AA688B95FC704F179E788DE29E93D58623A0B3E23
+        B56FC00E009037F2520DACB9637EE10BD23DF7F0ADC7250D6FA9BDC7FCC94FA4
+        8101E9B8E3AC8CCA97090090C66CDD2E9587A4E7BF862DEA18FD55AF36DFF3AC
+        7E8C29B2B3FACC05BF58A0DE8E8A7E296931D698A2E32869F15F736501005369
+        96A7E87FFCC75A29F889893D671215FBA11E52F85BB3E752A9D44AC7BFEC654D
+        8FCCAD0C0010DC04243D7A8EF4D2BF618A3A764CECD2DAD54FE93798224B2BCC
+        8C3336A24F4BFA1096987E352DFEDF52C71198020020AB61608F3D261D7EB8B4
+        7327DF602AEB7D8B82D3E8A8F4EFFF2E2D5850B7A3000080CCF0D20FA447CFE5
+        F13D73BED42756EE14A588624062E8186C1DD64A49EFC712D3E97913021000C0
+        F4CDB6EB44CF762A80EDCB65972100B959ACFA4D2E6D8CD1B66D46975E4AB266
+        00802CD3B149EA790376A8278A74FD830BB50A4BB40E22500CAA25DD2989A27D
+        FB5E48F3A4C11BB1030040935B74F9AB04D67CC9F8FFFC9F8DFEE66F100A9AB2
+        6ACA95C39A3DDE57BF2AFDDEEFF17D01006499C18FD6F65B308D8E52599FC60C
+        AD4338588B8C0FEBE526D237B144DD83E926A9FF7DD8010020AB53F7D6ADD261
+        8749CF3E6BF96C03C92794B5B2F636CF77DEBC5AB2E8152BB87B0000B2CAAFEF
+        967EFD19EC3063BEACEA152B1FD337B044F3E009D4CA0526954DA4BBB1C4742A
+        074A7D97630700006FB391E51030497AF7BBED0B4052EB1E33AEFE82FA063D9F
+        EF73CF49575DC59D03009065FAAF942A0760877AA292EEBA57AA6089E641046A
+        81B1115D29E9302C319DA15BA588E038008080302DFD7DF9CBD2D7BF8ED51259
+        3C7041EAEFFE4EFAEFFF9DEF090020AB441DD2E0C7B04303D62D5FAC4B31430B
+        D71226688EADCB346876E97E232DC01A53749E248DFC19760000C82ACF3C23AD
+        5D2B3DFA6882C5440E4AC8672D5C2C0E2323D2FDF74BBDBD5CF700005965C71B
+        A517BF831DEA78AAADAC354BB7E9494C3137780235BB38DCA5DB1180EA284B43
+        B7610600802CF3894F241380A47042BEF2122EE66CE3B043FAEC67B9E60100B2
+        CCD0EDB57D184C37CBEE09CAC5370B9E404D30BE588718A31F496AC31A53F45E
+        2CCDFF24760000C82A5BB648871E2ABDF412B6280A9D9DD2CF7F2E2D5F8E2D00
+        00B2CA931F949EF93276D817234D94A5C30FDCA1FBB0C6FEC113A8990BCAE82E
+        21004DBF70FAA581EBB103004096B9F55604A0A2F1E28BD2EDB7630700802C33
+        7893541AC00EFB1249158A3835B997C704FB676C58AF95F44A2C319D811BA4F2
+        10760000C82AF7DF2F7DE52BD8A188FCE11F4ABFFC25760000C8EC267E401A78
+        3F76A8C7189D313EA257638939AE1F4C303BF7AD53BB22113D5F47DB6AA9F7ED
+        D8010020CBDC7CB33431811D8AC8E424DE40000059A7F712A96D2D7668C0DD0F
+        AC12B5ABF70322D07EE87E52EF97B4064B4C67E8362922380E0020B33CF080F4
+        6754762C34FFE37F489B3763070080AC125528D2D30823AD6A7B56EFC512B383
+        08340B0F0E6B91A49BB0C474BA5F29759D861D0000B2CC5D7749D52A76283293
+        93D23DF7600700802CD3F532A9EB74EC508F916E195BA8112CD118AA83CDC2D8
+        88FEABA47761897D2E963669F41FA5B695D8020020AB3CF594B46C99F4DC73D8
+        A2E874774B0F3D24CD9F8F2D0000B2CAEE3169FBCB24B31B5B4CC3E8F756ECD4
+        15186226780235607C5447487A2796984EDF650840000059E7BFFE570420A8F1
+        FCF3D297BE841D0000B24CDB0AA9F762EC308348976E5EACA3304423D3C0348C
+        148D8FE89F249D8C35A6282F90967C5B2AF5610B00802C73E8A1D2CF7F8E1DA0
+        C6DAB5B5EB21624508009059AACF48DB4E92261FC316D3F6F646DF5EB1532747
+        92C11A53E00954C7F8B0DE2204A0190C7E1801080020EBFCE33F2200C1747EF9
+        4BE93BDFC10E000099DED4F74A03D763877AA248278E8DE87C2C5177BD608229
+        1E5EAA2E45FA1496984EFB7AA9E72DD8010020EBFCC11F600398C9EFFF3E3600
+        00C83ABD1748ED1BB0433D91F4F9EDA3EAC612532002EDC3C4843E24E9402C31
+        9DA13BB8520000B2CE4B2F497FF557D80166F2977F29EDDA851D0000B2BEB39F
+        FF7191F0652607BC58D5759861DAA50292F4C0122D9584135D1DF35E27751E87
+        1D0000B2CED7BE263DFD34768099FCFAD7D237BE811D0000B24EC7D1D2BC5763
+        877A22E9C39B47B50C4BD44004DA4365529F97340F4BEC73B3744A831FC10E00
+        0079E0CFFF1C1BC0ECFCD99F610300803C30789B147561873ABAA2497D1233D4
+        40049234BE4827487A1396984EFF55526529760000C83A9393D2DFFD1D7680D9
+        F9DBBF95AA55EC000090752AA352FF15D8A19E28D2DBB62CA600948408242395
+        4C49778BE8C9E90F8FC552FF7BB00300401EF8DEF7A4279FC40E303B8F3F2EFD
+        DBBF610700803CD07FB55459821DEA8822A3BB0D1A0806181BD6BB241DCD3D31
+        9DC19BA5881CEA0000B9E06B5FC3063037788B0100E483A84B1AF8307668C091
+        E3237A7BD18D506811E8170BD41B45BA9D7B613A1D4749F35E8B1D0000F2C2B7
+        BE850D606EEEBD171B0000E4859E37489DC76087067CFA8121F515D900851681
+        3A2BBA59D262EE83E957C4D01D22380E002027ECDE2DFDE007D801E6E65FFE85
+        52F10000B921DAB3AF230B703DC3950E15DA4FAAB097C4438B749091DEC73D30
+        9D9EB7481D8763070080BCF0831F48CF3F8F1D606E5E7841FAD18FB00300405E
+        68DF20F59C871D6660F481CD0BB5BAA81FBFB022D064497749EAE00ED8E762E8
+        91063F881D0000F2C4BFFC0B3680E6F9EE77B10100409E18FCA854EAC50E75B4
+        974AFA6C61F7FD45FCD05B8775BAA473B9F6A7D37FAD541EC60E000079E2DFFF
+        1D1B40F3E0090400902FCA0BA5FEF7628719447ADD9651BDA2881FBD7022D0BD
+        52C544BA9BAB7E3A95E552DFA5D80100206FFCF8C7D8009AE7273FC106000079
+        A3EF4AA96D2576A827AAEAAE7BA54AD13E77E144A0E5C37A8F91D673C94F67E8
+        56296AC70E000079626242FAF9CFB10334CF7DF7499393D80100204F446DD2E0
+        47B043030E5D31A22B8AF6A10B25023DBC54438A7433D7FA743A4F96BA5F891D
+        0000F2C6D6ADD28B2F6207689EE79F97B66DC30E000079A3FB5552D7CBB0433D
+        46BAE391259A5FA4CF5C281168F784EE908AF505CF49591ABA0D330000E491F1
+        716C00AD3336860D0000F2C8D0ED2A60F0D39C0C4E4CEA96227DE0C288405B47
+        74A8A4CBB9C6A7D3F74EA9FD10EC00009047108180EB060000F6D2B646EABD00
+        3BD45395AEDC3CACC38AF2790B2302558DEE8AD03DA77FF9FDD2C075D8010020
+        AF3CF4103680D641040200C82F83374AA541ECB02F91548922DD55181DA0108B
+        99C57ABDA262967FDBEF03E0433C000000F2CC638F6103689DC71FC7060000B9
+        150006A4816BB1433D9174FA9661BDA610D740DE3FE07DEBD46EA4CF70594FA7
+        6D8DD47311760000C8334F3E890D80EB060000A6D37BB1D47E3076A8278A74E7
+        03ABD491F7CF997B11A8FB095D27A3D55CD2D319BA5D8A088E0300C8354F3C81
+        0D80EB060000A61355F62489867A0E2A3FABABF3FE21732D026D59A46145BA91
+        6B793ADD67511E1000A0083CF30C3680D6F9CD6FB0010040DEE93C59EA3E133B
+        D413491F1B5FA0C579FE8CB91681A2923E23A98F4B791F9BB449831FC30E0000
+        45E0A597B00170DD00004063866E97A276EC50476FB54D77E4F903E656041A1F
+        D59192C87A5347DFBBA5B695D80100A008ECDA850D80EB0600001A53592EF55D
+        821DEA898C2EDE3CA2A3F3FAF972290219295255F7A820D5CF9AA5BC50EA7F1F
+        760000280ABB776303681D3C8100008A43FF07A4F23076A8A35492EE315294CB
+        0F97C70F35B6581718E924AEDDE90C7E442AF56207008022AD60005AA55CC606
+        000085592BF44803376087061C3F3EAC37E7F23BCFDB07DA3EAAEEC8E8135CB3
+        D3693F4CEA391F3B000014EAD94F9C3F70DD0000C01CF4BE55EAD8881DEA8922
+        7D6EC7B0E6E5ED73E54E04DA35A90F4B5AC625BBEFD52B0DDD2182E30000D8CC
+        03CC4947073600002814A53DFBC50853EC8B9196BE10E9861C7EDDF9E1C1511D
+        60227D80CB753AF35E2F751E8B1D00008A4667273600AE1B0000989B8EA3A579
+        AFC10E0DF8E096C53A304F1F28572250A5AA2F48EAE63A9D22EA94066FC20E00
+        00456468081B40EBCC9F8F0D00008AC8E02D52C46EBA9EAEC8E8D379FA40B911
+        81B68EEA44239DC7353A9DFEABA5CA12EC0000C0661E80EB06000066A7B258EA
+        BF123B34E02D5B16EB94BC7C985C8840462A556B25E18962DCF7261E95FADF8D
+        1D00008ACA8205D800B86E0000A079FADF2B559662877A22A3BB4D4EF4935C7C
+        88F1C5BA54D2262ECDE90CDE22455DD80100A0A88C8C6003E0BA010080E6893A
+        A5C10F6387061CB1755817E7E183645E047A60487D32BA8D6B723A1D474BF3CE
+        C50E00004566F9726C00ADB36205360000283214166A8C89F4C9CD83EACFFAE7
+        C8BC08546ED72D92F8CDAAEE5BA5C41F00002002411C108100000A4E240D7D5C
+        392B23658545E50E7D24EB1F22D35FEB830BB52A92AEE25A9C4EEF5BA58E8DD8
+        0100A0E8AC5C890DA075100F0100A07DBDD4F366EC508F91AED9BC446BB2FC19
+        322D0295CBBA47520797E23E5F688F34F041EC000000B504BF8B166107689E25
+        4BA4C141EC000000D2E04D52A90F3BD4D15E9AD4E7B2FC01322B026D1ED61992
+        5EC535389D81EBA4320B7E0000D8C3860DD8009AE7B0C3B0010000D4282F90FA
+        DF871D1AF09AB1C53A2BAB279F4911E85EA9528A7437D7DE74DA5648BDEFC20E
+        000030052210B40222100000EC4BDF15521BE1E53331BAF3FB525B164F3D9322
+        D0F2C57A9FA4755C79D319BA5D8ADAB10300004C71E491D8009AE78823B00100
+        004C11B549831FC30E0D38646858EFCEE4779AB5137E78A9862626F480A421AE
+        BB29BA4E9186FF0776000080E98C8F53ED099AE7A187A4030EC00E0000309D9D
+        6F955EF847EC50C7AF7695B466ED763D91A593CE9C27D0C46E7D520840D3A948
+        83B76106000098C9F2E5D2D2A5D801E666D9320420000068CCD0ED35AF2098C6
+        605B55B766EDA43325026D1DD13A13E912AEB5E9F45D2CB51F8C1D0000A03127
+        9C800D606E4E3C111B00004063DA564BBD1761877A22E9DD5B16295319183325
+        025523DD1549152EB57DBEC00169E05AEC000000B373E699D800E6E615AFC006
+        0000303B031F94CAC4E4D4538E4ABA2B4B279C191168CB88CE9311CBD83A063F
+        2C9506B1030000CCCE59674951841D6076A20811080000F64FA95FEABF0E3B34
+        E0E563A37A5D66BEC72C9CE403ABD451923EC5B5359DB6B552CFDBB0030000EC
+        9FA54BA5F5EBB103CCCEE1874BA3A3D8010000F64FDF3BA4F643B0C30CAAFAC2
+        D8727566E154332102959FD30D465AC595359DA1DBA488E03800006882D7BD0E
+        1BC0ECBCF6B5D80000009AD99CD79244C30C56EA05BD3F0B271ABC73F8C34BB5
+        647242BF30520FD7D514DDAF96167D113B00004073FCF4A7D26187610768CC7D
+        F749871E8A1D0000A0391EBB587AFE6BD8615F22E9D9D284D62E7B42DB433ECF
+        E03D812627F42904A0BA8BAB5D1AFC0876000080E659BF9E4D3E3466C306AE0D
+        0000688DA15B6BFB5298C2483D93157D22F4F30C5A041A1BD67146BA90CB693A
+        7D574A6D2BB0030000B4C65BDF8A0D80EB02000092533950EABB1C3B34E01D5B
+        46744CC827186C389891A2F1117D57D2B15C475394174A4BBE2D957AB1050000
+        B4C6B66DD281074A9393D802F62CE22BD2D6AD2485060080D6A93E2B6D3B499A
+        DC892DEAF8EEF21D3A31924C882717AC27D0D8882E1202D00C063F8600040000
+        F158B2443AFB6CEC00539C730E02100000C4A3D4230D7E083B34E0F8AD8B156C
+        1DEF2045A0FB16AA27A224FC0CDA37483D6FC40E0000109FCB71DD867DB8EC32
+        6C000000F1E979B3D4710476A8C754F5991DC39A17E2B90529027555F46149FC
+        2EB52F913474873290CA1B000042E69C73A4430EC10E20AD5D2B9D7516760000
+        800494F6948C8F3045DDFE7DC98B913E14E8571616E3C35A11197D80AB663A3D
+        6F943A8FC10E000090704D1249575F8D1D40BAFE7AA9C48F4B000090908EA3A4
+        79AFC70EF518E986B1112D0F6E2D18DA098D8DE82F24BD814B669F2FA94B5AF2
+        CF526509B6000080E4BCF0422D41F4E38F638BA23232228D8D499D9DD8020000
+        9233B9437AE444C93C8F2DEAF8D3153BF4E6904E28A8DF7FC647749A10806630
+        700D02100000D8A3AB4BBAE106EC50643EF42104200000B0477944EA7F0F7668
+        C09BC646F4B2904E28184F202395C717EB0732DAC87532456549CD0B28EAC216
+        0000608F175E9056AD92B66FC7164563F16269F3E69A18080000606D4FFFA2B4
+        ED1469E2616C31DD30FAF7E53B7554244D86703AC178028D8FE87204A0990CDD
+        8600040000F6E9EAAA798340F1F8C84710800000C03E51A734F811EC30D3303A
+        7C7CB12E09E7740260EB320D9A5DBADF480BB842A6E83C461AF92B91691D0000
+        9CB06B9774D861D2FDF7638BA270F0C1D28F7F2CB5B5610B000070C38E37482F
+        7E173BD4F1B83AB566C5B87E9DF68904E10954DDAD5B1080667E334377080108
+        00009CD1DE2E7DFEF3D8A148DC792702100000B865E80E4965EC50C742F3A23E
+        1AC289A42E028D8DEA60199142AA8EDE0BA5F60DD8010000DC72EEB9D2996762
+        8722F0AA5749679F8D1D0000C02DEDEBA4DEB760877A22E9EA2DA35A9BF679A4
+        EF0954D59D92F84D6ADF2FA54F1AF820760000003FFCCEEF902326EF74774BBF
+        F55BD8010000FC3070636D5F0BD36853555F48FB24521581360FEB1C49FC2655
+        7FC35C2F95E763070000F0C3EAD5D2CD3763873C73FBEDD2410761070000F043
+        7981D4FF7EEC504F24BD7A7C245D0D24B58C33F7AD537BF793FAB194BE3B5448
+        B4AD9246BF2545F846010080472626A4638E917EF8436C91378E3A4AFAEE77A5
+        4A055B0000803FCC6E69FB69D2EECDD8A28E5F3CB9431B8E9276A771F0D43C81
+        E63DA9F70901680643B721000100807F2A15E98FFE88B0B0BCD1DD2D7DF9CB08
+        400000E09FA84D1ABC053B34E0E0F98B75555A074F45047A70588B8C09233376
+        48749D2175BD1C3B0000403A1C7AA8F4D9CF62873C71E79DB5B2F000000069D0
+        7DA6D4751A76984155B73C30A285691C3A1511A8227D5C9106F8E6A788DAA4A1
+        5BB1030000A4CB5557D52A8641F679C31BA42BAEC00E0000902E44BB34120034
+        50916E4FE3D0DE45A0B1253ADC447A17DFFA747ADF25B591B0110000D25E9344
+        D21FFEA1B46A15B6C832AB574BBFFFFBD8010000D2A76DB5D4FB4EECD080CBB6
+        2CD246DF07F5EF0934A9BB2595F9BEA728CF97063E801D0000200C0606A4BFFC
+        4B69DE3C6C91457A7AA4FFF93FA5FE7E6C01000081AC2DAE93CA43D8A15E0A28
+        95F49F8CE7825D5E45A02D237A93A497F15DD7DD10374AA53EEC000000E170D8
+        61D27FFB6F52A9842DB244A954F3E45AB70E5B00004040F353BF34F041EC508F
+        914EDABA586FF0FA5DF83AD0C34BD515499FE16B9E4EFB3AA9F7ADD8010000C2
+        E3FCF3A54F7E123B6489CF7D4E7AFDEBB10300008447EF8552FBA1D8A11E6374
+        E7F65175FB3A9E371168624237485ACE573C9DA13B44701C000004CB873E24BD
+        FBDDD8210BBCF7BDD207082F07008050294B43B76386062CDB6574ADAF837989
+        3D7B78A9964C4CE89792C82EB00FF3CE9516FE1E76000080B0A956A50B2F94BE
+        F2156C112AE79D27FDF7FF2E95F96109000002E7B14BA4E7FF163BD4F17CB5A4
+        430EDAAE875C1FC88B27D0C4A43E2B04A069441DD2E0C7B0030000844FA9247D
+        F9CB35A101C2E335AF91FEE44F10800000201B0CDD52DB0FC334BACB557DDCCB
+        BACEF501C617E9781991F5A68EFE2BA5CA01D8010000B241B95C13825EFD6A6C
+        1112E79C23FDE99F4A6D6DD8020000B2416599D4770576A8C748178E0DEB58D7
+        C72939FE102553D2DDF25CF22CF885F488D4FF3EEC000000D9A2B3B3567AFCFC
+        F3B14508BCF9CDD25FFEA5D4C1AFA900009031FAAFAEED8B611A9122FD8E71AC
+        D3381D7C6CB12E91740CDFE574063F2A45DDD8010000B2475B5B2D37D0C51763
+        8B34B9F452E98FFF180F200000C826A579D2E04DD8A1019BC647F40E970770E6
+        A1B3659186A3927E29A99FEF718A8E4DD2E2BF11BE5100009079EEB947BAF65A
+        C9186CE18B28926EBE59BAF5566C01000019C7488FBE5A7AE98798A28E5FED2A
+        69CDDAED7AC2C5E0EE3C81CAFA841080EA566E7B4AC223000100400EB8E61AE9
+        0FFE406A6FC7163EE8E8A8E5654200020000F6C7B966B0BDAA3B1C9ADD3EE3A3
+        3AC254F57D79AA3E96157ADE2C2DB81B3B000040BEF8FEF76B95C3B66EC516AE
+        58B244FAF33F978E3B0E5B000040BE78E2BDD2B37F811DEA9834556D5AF9987E
+        647B60EB228D912253D5DD42009A6EE879D2E08DD8010000F2C7514749DFFB9E
+        74FAE9D8C205A79C5213DA10800000208F0C7EB4B65F8669944B25FD27E3C071
+        C7BA50B375586F95740ADFD974FAAF21FB390000E497850BA5AF7D4DFAF4A749
+        566C8B4A45FAD087A47FF807698435040000E494F288D4F75EEC508F914E1A1B
+        D11B6D8F6B55557A60953A2ACFEA7E49CBF8CAF659C41D282DF92729A2842B00
+        0014807FFD57E9C20BA5071FC4167139F040E98FFE483AE9246C010000F9C7BC
+        246D3B599A78185BD431F6FC7C1DBCEE3EEDB235A0554FA0CA737AA710806630
+        740B021000001487638F957EF4A39A174BB98C3D5A5A9895A4CB2F977EF21304
+        200000280E51873478337668C08A794FE842ABB6B6359091CA5B47F40B23ADE2
+        7B9AA2F32469E4CFB00300001493EF7EB7266AFCF4A7D8622E366C907EEFF76A
+        221A00004011D9F146E9C5EF60873A368FEFD0C1A749133606B3E6093436A20B
+        1080EA284B43B761060000282EC71F2FFDF087D2EFFE6E2D6F10CC647050BAFB
+        6EE9073F40000200806233FF93922AD8A18E83960FEB3C5B835911818C548AA4
+        0FF2DD4CA7F722A9FD50EC000000C5A652A97903FDFCE7D2D5574B1D84484BAA
+        D9E19A6B6AB993AEB9A6662700008022D3B656EA7D2B769841A48F194BFA8D95
+        70B02D233A3F92FE946F668A52BFB4E43B5279085B000000ECCBC30F4B9FFF7C
+        CD3BE8A5970AB8C06D93DEF216E9B6DBA4152BB81E000000F6A5FA6BE991E36B
+        FF85298CD16B57EED45F271DC79692F421BE92E90C5C8F00040000D088030E90
+        EEB947FAC52F6A9E413D3DC5F8DC3D3D358F9F071E90FEF00F11800000001A51
+        1A9006AEC50EF544913E62659CA4038C8FE8D546FA5F7C2553B4AD9646BF2945
+        6DD8020000602E7EF52BE9BFFC975A52E4F1F1FC7DBEE5CBA52BAEA8FD0D0EF2
+        7D030000CC859990B69F21EDFE25B6D89792D11907EED437938C9158041A1BD1
+        BD924EE5EB9862F82B52171601000068896A55FAC637A42F7E51FA9BBFC976A8
+        584787F49AD748975E2A9D7146ADF43B00000034CF0BDF92765E801DA661F4F7
+        2B76EA9549864824026D19D5DAA8AA9FCB62A9F9ACD3FD0A69D197B003000040
+        129E7E5AFAEA57A53FFB33E9EFFF5EDAB52BFC732E97A5E38E93DEFE76E9CD6F
+        96FAFBF91E01000092B0F342E9856F62877D30E5AA562F7B4C9BE30E904C041A
+        D1E723E93ABE873DC66C9346FF516A5B892D0000006CF19BDF48FFF00FD2DFFD
+        9DF4F5AFD7124B87C2B265D22B5F299D7DB674FAE9525F1FDF170000802D766F
+        96B69F2699DDD8622F26D227573E1A3F3F506C11E8BE756AEF7E528F485AC8D7
+        50A3FF3DD2E0C7B0030000804BC6C6A46F7FBBF6F77FFFAFF4B39F492FBEE8FE
+        B89D9DD2BA75D231C748279C209D74522DDF0F000000B8E3A95BA5DFFC2E76D8
+        871D4FEED0B2A3A458D2586C11686C586F51A4AF60FF1AE505D2926F4B257E01
+        040000F0CAC444ADE2D64F7E226DD9521389C6C76B1E434F3E59FB9B9C6C622E
+        2F4BF3E7D7FE0E38A056BD6BF972E9A083A4C30E9356AFAEB5010000007F549F
+        91B69D244D3E862DFE83925EBF62BBFE2A4ED74AEC8346BA08CB4F3170230210
+        0000401A542AD22187D4FE66E3D7BFAE55213346DABD5B7AF6D95AC9F6B63629
+        8A6A55BB0606B02500004068947AA5811BA4276FC016FFC1A4DE2EC513816279
+        028D2DD7805ED44E49ED585F6A5F2F8D7E4D12BF0E02000000000000D8A52A6D
+        3F5BDAF5634CB1871727766978F553FA4DAB1D63152C8D5ED01B8400F41F0CDD
+        210420000000000000001794A4F91F1775C9A7E86CEBD0B9314DD93A26D2F9D8
+        BCC6BCD7499DC761070000000000000057741C2DCD3B073BECC5289E2ED3B28E
+        B6759906ABBBB443780229EA9496FCB35459CA0508000000000000E09289EDB5
+        24D1E6056C21E9A5EA4B1A3EE8577ABA954E2D7B024DEED6AB850024A956121E
+        0108000000000000C03D9551A9FF0AECB0878E52BBCE6EB553CB2250647426B6
+        962A8BA5FEABB003000000000000802FFAAF962A4BB083249992CE68B54FEB22
+        90F4724C2D0D7E4C8ABAB103000000000000802FA22E69E0C3D8418AE7A4D392
+        08B47544EB8C54F800A88EA36A09A101000000000000C02F3D6F903A8FC10E92
+        966D5EA8D5AD74684904AA9AD65D8D7247694F49784AD301000000000000F827
+        92863EAE98F5CEF345A9DC9A4ED392C9A20811A8E7CD52C7E15C680000000000
+        000069D17E98D4731E7630D2E9ADB42FB5307064A4138B6CDC528F3478231719
+        00000000000040DA0CDE2495E615DB0691744A2BED9B1681B60E6BB9A4C1221B
+        77E083527911371A00000000000040DA9487A581EB0B6F86850F2C693E7773F3
+        E160251D5164AB761C2EF5BD8B9B0C0000000000002014FA2E93DA3714DB06E5
+        89E6F59AE64520A3C30B6BD19234FFB392CADC6000000000000000C15096E67F
+        46C52EDE1435AFD7342D0255A5238B6ACF9EB7D4924E01000000000000405874
+        1C5EEC24D19171E00914A998E160519B34F0016E2A000000000000805019B8B1
+        B67F2F24B63D811E59A2F992468B68CB9E374B9525DC5000000000000000A152
+        1995E6BDA1B01F7FF9E641F537D3B0291168B2AAE585346359EABB929B090000
+        000000002074FAAF515173F9466AD7B2661A362B0215D217A6FB2CA96D253712
+        00000000000040E8B4AD90BA5F5ECCCF5E8E9A2B13DF94081445C514817A2FE4
+        2602000000000000C80A3D1714F373574D73BA4D532290695251CA13E5F952E7
+        49DC400000000000000059A1EBE55269B0789FBB59E79DE63C814CF1924277BF
+        4A8A2ADC400000000000000059216AABA57629DCE7B6E9091415D013A8EB746E
+        1E00000000000080CCEDE70B9817C8D8F40492D148A1AC57913A4FE0C6010000
+        00000000C81A5D27A959B5233F3419C1D5AC593A8B64BBF65552A9971B070000
+        00000000206B9406A4B6E505FBD091BA9AB24D338D8C542E92EDDA0EE5A60100
+        0000000000C82AEDEB8BF579A326759B663D810A9522B97200370C0000000000
+        004066F7F505CB6C6C2C8B4085F2042ACFE78601000000000000C82AA50585FB
+        C84D39EF20023580D2F000000000000000ECEB3304E16071A93EC70D03000000
+        0000009055CCF385FBC8164520532C4FA0C947B96100000000000000B2CAC4F6
+        C27D648BE160915E2C92E55EFC3E370C000000000000405679E987C5FBC8CD34
+        6A5604DA5924CBEDFA893431CE4D03000000000000903526B64ABB7E5AB88FDD
+        946ED39C08542D960824233DFD3BDC380000000000000059E3E9FF52DBD7170C
+        7B225054304F20497AE62BD24B3FE0E601000000000000C80A2FFD487AE68F0A
+        F9D12D7A02A978229026A5C72F972648120D00000000000010FE367E676D1FAF
+        89427EFC1DCD346A4A04AA165104522D9BF88ED749BB7EC1CD04000000000000
+        102ABBB7483BDE204D3C54500344363D81A2628A4052ED027AF42CE9E9FF2499
+        5DDC5800000000000000A16026A467FE9BF4E82B6A42505189AA8840F62EAA97
+        A45F7D42DA7692F49B2F4AD567B9D100000000000000D2DCA73FFB27D2F6D3A4
+        276F92AACF15DB1E5193115C51338D1E5AA483264B7A90CB6C8FD1BAA4EE574A
+        DD674B5D274BA5416C02000000000000E092EA73D24BDF959EFB5BE9F9BF95AA
+        4F6393BD9848CB573EAAAD73B56B4A04325269EB889E36520FA6ADA324B5AF95
+        DA3748ED87486D0749E551A93C249586A4A8BDEEA27D465215B3010000782392
+        4A7D98010000202B549F96269F9426B74BBBC7A45D3F9776FDB8F66776639F06
+        3CB66287869B69586972ED541D93EE93742CB6ADBF3AF75C903F6FFC76A94752
+        B9D6AEFA0CE60200000000000098B6676ED37F384B549F9534895D5AC148DF6B
+        B66DA5E94123FD34328840AD42FE2000000000000000F6CCAE885A10814A4D0F
+        6AF4034C0B00000000000000100E4E44A049A37FC6B40000000000000000E130
+        61F4FD66DB46CD363452343EA2C725CDC7C40000000000000000A933BE628756
+        34DBB8F97030C948FA36F605000000000000000882FFDB4AE3524B4347BA17FB
+        02000000000000000440A4EFB6D2BC2511A83CA9BFC1C20000000000000000E9
+        D3AA4ED39208B4EC316D96741F66060000000000000048959FECD1699AA6D4EA
+        114CA4AF62670000000000000080F4884CEBFA4CEB2290D15F616A0000000000
+        000080F4982CB52E0245710E3436A29F493A0493030000000000000078E7FEE5
+        3B74F09E4AEE4D538A79B02F616F00000000000000801430FA6FAD0A40524C11
+        A83CA12F4B9AC4EA00000000000000005EA94E96F5C7713AC61281963DA1ED92
+        BE8EDD0100000000000000BCF2F555DBF5709C8EA5D8878CF45BD81D00000000
+        000000C02391EE89DF350163C3FAA1221DCE370000000000000000E09648FAE9
+        813BB4214E3E2029892750EDE877F3150000000000000000B8C7485F882B0049
+        0945A0E7E7EB2B32DAC6D70000000000000000E09447277AF4952403241281D6
+        DDA75D8AF409BE0700000000000000007718A34FAD7E502F2519A394F4249EDC
+        A12F46D2837C1D00000000000000004E189FECD5EF251D24B1087494B4DB187D
+        8CEF0300000000000000C03E26D2C7927A014909AB83FDC7C948D1F888BE2FE9
+        48BE1A00000000000000006BFC64F90E1D1E49D5A403956C9C4D241913E95A25
+        C8500D0000000000000000D33025A36B6D08409225114892563EAAFF4FD27FE3
+        FB0100000000000000B0C2970FDCA96FDA1AAC64F3CC2A15DD20E931BE230000
+        000000000080443C35697483CD01AD8A40073CA2A7247D90EF09000000000000
+        002011D7AFDA69D7D126B27D867B92447F55D2B97C5F00000000000000002DF3
+        F5E53B74766439F772C9F6594692D955D2BB243DCA770600000000000000D012
+        8F4713BA3872507CABE4E26CD76ED713A6AA77C852F66A000000000000008002
+        608CD125CB9F70E358537275D62B1FD33722E94EBE3F00000000000000802688
+        F4DB2B77EA6F5C0D5F7279EE07EED08D92FE8E6F1100000000000000607622E9
+        FF3C3F64B71A588363B8E5E1A51A9A9CD0BF1A69155F2900000000000000C00C
+        B64E1A1D63BB1A583D25D79FE28047F49429E95C494FF39D0200000000000000
+        4C1149CF9AAA5EE35A00923C884092B462BB7E614A7A93A45D7CBD0000000000
+        000000929126AA466F5BF9987EECE378255F1F6CE576FDBD4A7AB39126F89A01
+        000000000000A0E09892D1152E1341D753F2F9E9566CD75F45D2A57250EB1E00
+        000000000000202B4491AE5FBE53BFEFF39825DF1F72C50E7D49913E20842000
+        000000000000281E46D28DCB1FD59DBE0F1CA5F589C716EB7219FD67A5204401
+        00000000000000A4C0A48974E5CA47F5FFA671F028CD4F3E36ACB728D21F4A6A
+        E33A00000000000000801CF35C24BD79F90EFDEFB44E204ADB029B87754E39D2
+        578CD4C3F5000000000000000039E4B1AA74CE413BF4BD344F220AC1129B8775
+        5829D2DF483A90EB020000000000000072C458B5ACB30EDAA6FBD33E9120F2F1
+        1CB4533FD955D25191F47FB83600000000000000200F44D2F7278D8E0B410092
+        024ACABC76BB9E309D3A53467789CA610000000000000090658C7EAFD3E8D455
+        3BF55828A7148568A7ADC33ABD2A7D49919670D5000000000000004086785C46
+        97ADD8A9AF8676624196673F70A7BEA92EAD57A4AF70ED000000000000004026
+        88F48DF2840E0F5100AA9D5EE06C19D1DB23E93F49EAE56A0200000000000080
+        007951D2ADCB77E87391540DF524A32C58F2A1453A68B2A4FF2AE9655C570000
+        00000000001010DF2B49EF3C70877E16FA894659B2EAE6619D518A74B7A4755C
+        6300000000000000901A46DB54D2EDCB1FD57F8DA4C92C9C7294351B7F5F6A9B
+        BF5817CBE8E3921672D50100000000000080479E93F49F9E9FD4C7D73DAE67B3
+        74E251562DBE759906ABBBF42149EF97D4C13508000000000000000EA946D21F
+        9B497D70C5E3DA91C50F1065FD1B7870A156954BBA41912E92D4C53509000000
+        0000000016D9AD487F3659D5A756EDD44FB3FC41A2BC7C239B07D55F6AD73BA3
+        48D71B6929D7280000000000000024E0378AF407D5485F3868BB1ECAC3078AF2
+        F60DDDB74EED5D4FEAB59174BDA463B86601000000000000A00536CBE8B7BBA4
+        2F8EECD47379FA6051AEBFB5519D1455F5D6483A5F24910600000000000080C6
+        FC46D25F29D29F2C7F54DF88A46A1E3F6454846FD248E52DA33ABE34A98B14E9
+        2D92FAB8BE010000000000000ACD4B91F48DAAF467DD467F9137AF9F464445FB
+        861F5EAAAEC9499D6DAA7AA5229D296905D73D0000000000004021D8698CFE41
+        257DCDBCA8BF39E8577ABA481F3E2AFAB7FFD0221D3459D699C6E88C483A4DD2
+        10F704000000000000402E785ED23F47D237AA557D63C563FA492499A21A23E2
+        7A98CE430B343A51D6A628D2A648DA64A4E325CDC7320000000000000041B35B
+        D20391F40363F4836A593FA876EB7BAB1FD44B98A60622D01C1829DA3CAAA595
+        49AD3625AD3646AB23698D6A65E8E7EFF99B87A5000000000000009C3229E949
+        494F4691B619A307A3480F54AB7A4065DDFFD4766D39AA2604C12C200259606C
+        B93A27766B4179B7E69722CD37D24295D43F6B87AA9E319126B01C00000024A5
+        64D4674A2A63090000C81C55752952E78CD723ED32464F96A4278DD193D5AA9E
+        AC74E989031FD2AF301A00000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        000000000000000078E2FF0700FF1387310C40CB000000257445587464617465
+        3A63726561746500323032302D30362D31365432313A32373A31372B30303A30
+        30CA324EC60000002574455874646174653A6D6F6469667900323032302D3036
+        2D31365432313A32373A31372B30303A3030BB6FF67A0000000049454E44AE42
+        6082}
+      Proportional = True
+      Stretch = True
+    end
+    object Label5: TLabel
+      Left = 55
+      Top = 45
+      Width = 289
+      Height = 45
+      Caption = 
+        'Al realizar esta operaci'#243'n esta factura ser'#225' retornada a HOLD, y' +
+        ' saldr'#225' de Facturas emitidas, afectando el efectivo de venta'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = 'Segoe UI Light'
+      Font.Style = []
+      ParentFont = False
+      WordWrap = True
+    end
+    object Label6: TLabel
+      Left = 55
+      Top = 96
+      Width = 87
+      Height = 15
+      Caption = 'Favor autorizar '
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = 'Segoe UI'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object EClaveAnular: TEdit
+      Left = 56
+      Top = 117
+      Width = 217
+      Height = 21
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentFont = False
+      PasswordChar = '*'
+      TabOrder = 0
+    end
+    object Panel1: TPanel
+      Left = 1
+      Top = 152
+      Width = 372
+      Height = 53
+      Align = alBottom
+      BevelKind = bkTile
+      BevelOuter = bvNone
+      TabOrder = 1
+      object cxButton2: TcxButton
+        Left = 96
+        Top = 8
+        Width = 83
+        Height = 33
+        Caption = 'Aceptar'
+        LookAndFeel.NativeStyle = True
+        LookAndFeel.SkinName = 'Caramel'
+        OptionsImage.Glyph.SourceDPI = 96
+        OptionsImage.Glyph.Data = {
+          89504E470D0A1A0A0000000D4948445200000018000000180806000000E0773D
+          F80000000467414D410000B18F0BFC6105000000206348524D00007A26000080
+          840000FA00000080E8000075300000EA6000003A98000017709CBA513C000000
+          06624B4744000000000000F943BB7F000000097048597300000EC400000EC401
+          952B0E1B000000824944415448C7ED90BB0D802014458F9F6D5CC221FC14BA87
+          95513B37710E0B67B2C0441B48689428D0184EF95E38EF7221107849E6535E00
+          0298F561EC50BE0029B0FB4A7E0243903B91F740F5B0AF35F9F8569ECB87E2E6
+          88955CD149C10134DABCB4A9E5E948EB5AAE18B5BAAC6B31FDE473F2C4B0DF80
+          085881C975FAC04FB800FEF72D5E65200BF90000002574455874646174653A63
+          726561746500323032302D30382D32385431313A32313A30362B30303A303036
+          F5ABC90000002574455874646174653A6D6F6469667900323032302D30382D32
+          385431313A32313A30362B30303A303047A813750000001974455874536F6674
+          77617265007777772E696E6B73636170652E6F72679BEE3C1A0000000049454E
+          44AE426082}
+        OptionsImage.ImageIndex = 1014
+        OptionsImage.Images = FrmHome.RibbonImages16
+        TabOrder = 0
+        OnClick = cxButton2Click
+      end
+      object cxButton3: TcxButton
+        Left = 201
+        Top = 8
+        Width = 88
+        Height = 33
+        Caption = 'Cancelar'
+        LookAndFeel.NativeStyle = True
+        LookAndFeel.SkinName = 'Caramel'
+        OptionsImage.Glyph.SourceDPI = 96
+        OptionsImage.Glyph.Data = {
+          89504E470D0A1A0A0000000D4948445200000018000000180806000000E0773D
+          F80000000467414D410000B18F0BFC6105000000017352474200AECE1CE90000
+          00206348524D00007A26000080840000FA00000080E8000075300000EA600000
+          3A98000017709CBA513C00000006624B4744000000000000F943BB7F00000009
+          7048597300000048000000480046C96B3E000001574944415448C7DD954F4EC2
+          5010C67FFEEB465C36F10CD25308171031DC81402A5E038F41E014BD84855003
+          9CA26E74A12E3A2F4C5E5EFBECDB189D6412F2CDCC37E59BE914FEBB45C00858
+          0105F0265E004B8945A1E443E0007C79FC000CDA109F01CF8A200752A00B5C8A
+          7705CB55DE5C6ABD66C8DF813170EA799889E49A268D76AFC86F5BFCEB9E6A52
+          2B57A4341FB7D1546C2AB57B6A063F529A6B2D1320036285C58225965C6BE178
+          7035584A30B5F04C358EC5CD70332B7726F8C2D5E055823716AE0973EB776CE5
+          26122B5C0D4A09761CB11878E1B8925BE0DA917725F1D200AE153C21DC4CEDE7
+          AF486486FC68E16D86FC44C390CD9AAE095FD30D0D6BAA5FB44980FEA9D4EE68
+          B8B0038EA7A2D782BC0F7C48ED9D2F79AE9A4C69BE90E7F2E486DC7BEC8C96A6
+          8999C98C4AEF8E784235D00D01E75ACBB5C7FFC1D9FD44963A8BA8366241F5F6
+          96E25BC186C04528F9DFB06F3E088A7E1E5CEEF6000000257445587464617465
+          3A63726561746500323032302D30322D30325431333A35373A31302B30303A30
+          30806C7F7D0000002574455874646174653A6D6F6469667900323032302D3032
+          2D30325431333A35373A31302B30303A3030F131C7C100000028744558747376
+          673A626173652D7572690066696C653A2F2F2F746D702F6D616769636B2D3271
+          796544635169107423DE0000000049454E44AE426082}
+        OptionsImage.ImageIndex = 995
+        OptionsImage.Images = FrmHome.RibbonImages16
+        TabOrder = 1
+        OnClick = cxButton3Click
+      end
+    end
+  end
+  object FacturasImpresas: TZReadOnlyQuery
+    Connection = datos.Data
+    AutoCalcFields = False
+    SQL.Strings = (
+      
+        'select a.*,b.nombres ClienteNombre, d.nombres_emp, b.direccion a' +
+        's dir  from master_fact a'
+      'left join cliente b On a.clienteid = b.codigo'
+      'left join musuario c On a.codven = c.usuarioid'
+      'left join mtempleado d On c.empleadoid = d.cod_emp')
+    Params = <>
+    Left = 96
+    Top = 144
+    object FacturasImpresasNO_FACT: TIntegerField
+      FieldName = 'NO_FACT'
+      Required = True
+    end
+    object FacturasImpresasFECHA_FAC: TDateField
+      FieldName = 'FECHA_FAC'
+    end
+    object FacturasImpresasTIPO: TWideStringField
+      FieldName = 'TIPO'
+      Size = 10
+    end
+    object FacturasImpresasCOD_CLIENT: TWideStringField
+      FieldName = 'COD_CLIENT'
+      Size = 10
+    end
+    object FacturasImpresasCOD_EMP: TWideStringField
+      FieldName = 'COD_EMP'
+      Size = 10
+    end
+    object FacturasImpresasNO_FACT1: TWideStringField
+      FieldName = 'NO_FACT1'
+      Size = 12
+    end
+    object FacturasImpresasMONTO: TFloatField
+      FieldName = 'MONTO'
+      currency = True
+    end
+    object FacturasImpresasHORA: TTimeField
+      FieldName = 'HORA'
+    end
+    object FacturasImpresasPOGXITBS: TFloatField
+      FieldName = 'POGXITBS'
+      currency = True
+    end
+    object FacturasImpresasTIPOPAGO: TWideStringField
+      FieldName = 'TIPOPAGO'
+      Size = 10
+    end
+    object FacturasImpresasMONTOPAGO: TFloatField
+      FieldName = 'MONTOPAGO'
+      currency = True
+    end
+    object FacturasImpresasCONDICION: TWideStringField
+      FieldName = 'CONDICION'
+      Size = 10
+    end
+    object FacturasImpresasRENTA: TWideStringField
+      FieldName = 'RENTA'
+      Size = 10
+    end
+    object FacturasImpresasCODIGO: TIntegerField
+      FieldName = 'CODIGO'
+    end
+    object FacturasImpresasTIPOITBS: TWideStringField
+      FieldName = 'TIPOITBS'
+      Size = 10
+    end
+    object FacturasImpresasVENDEDOR: TWideStringField
+      FieldName = 'VENDEDOR'
+      Size = 15
+    end
+    object FacturasImpresasSITUACION: TWideStringField
+      FieldName = 'SITUACION'
+      Size = 10
+    end
+    object FacturasImpresasCAJERO: TWideStringField
+      FieldName = 'CAJERO'
+      Size = 40
+    end
+    object FacturasImpresasNCF: TWideStringField
+      FieldName = 'NCF'
+      Size = 25
+    end
+    object FacturasImpresasRNC_CLIENTE: TWideStringField
+      FieldName = 'RNC_CLIENTE'
+      Size = 15
+    end
+    object FacturasImpresasNCF1: TFloatField
+      FieldName = 'NCF1'
+    end
+    object FacturasImpresasNOM_CLIENTE: TWideStringField
+      FieldName = 'NOM_CLIENTE'
+      Size = 35
+    end
+    object FacturasImpresasDESCUENTO: TFloatField
+      FieldName = 'DESCUENTO'
+      currency = True
+    end
+    object FacturasImpresasROTULO: TWideStringField
+      FieldName = 'ROTULO'
+      Size = 60
+    end
+    object FacturasImpresasNO_AUTORIZA_NCF: TFloatField
+      FieldName = 'NO_AUTORIZA_NCF'
+    end
+    object FacturasImpresasMONTOFINANCIADO: TFloatField
+      FieldName = 'MONTOFINANCIADO'
+    end
+    object FacturasImpresasCUOTAS: TIntegerField
+      FieldName = 'CUOTAS'
+    end
+    object FacturasImpresasINTERES: TFloatField
+      FieldName = 'INTERES'
+    end
+    object FacturasImpresasDIRECCION: TWideStringField
+      FieldName = 'DIRECCION'
+      Size = 40
+    end
+    object FacturasImpresasPAGADO: TFloatField
+      FieldName = 'PAGADO'
+    end
+    object FacturasImpresasLEYPROPINA: TFloatField
+      FieldName = 'LEYPROPINA'
+    end
+    object FacturasImpresasCOMPROBANTE: TWideStringField
+      FieldName = 'COMPROBANTE'
+      Size = 10
+    end
+    object FacturasImpresasTERMINAL: TWideStringField
+      FieldName = 'TERMINAL'
+      Size = 15
+    end
+    object FacturasImpresasEFECTIVO: TFloatField
+      FieldName = 'EFECTIVO'
+    end
+    object FacturasImpresasDEVOLUCION1: TFloatField
+      FieldName = 'DEVOLUCION1'
+    end
+    object FacturasImpresasRESTANTE: TFloatField
+      FieldName = 'RESTANTE'
+    end
+    object FacturasImpresasABONO: TFloatField
+      FieldName = 'ABONO'
+    end
+    object FacturasImpresasCHEK: TWideStringField
+      FieldName = 'CHEK'
+      Size = 1
+    end
+    object FacturasImpresasNO_RECIBO: TIntegerField
+      FieldName = 'NO_RECIBO'
+    end
+    object FacturasImpresasPAGADOCXC: TFloatField
+      FieldName = 'PAGADOCXC'
+    end
+    object FacturasImpresasMESES: TIntegerField
+      FieldName = 'MESES'
+    end
+    object FacturasImpresasDIAS: TIntegerField
+      FieldName = 'DIAS'
+    end
+    object FacturasImpresasPENDIENTE: TFloatField
+      FieldName = 'PENDIENTE'
+    end
+    object FacturasImpresasESTADOPAGO: TWideStringField
+      FieldName = 'ESTADOPAGO'
+      Size = 10
+    end
+    object FacturasImpresasDEVOLUCION: TFloatField
+      FieldName = 'DEVOLUCION'
+    end
+    object FacturasImpresasCONDICION_PAGO: TIntegerField
+      FieldName = 'CONDICION_PAGO'
+    end
+    object FacturasImpresasFECHAVENCIMIENTO: TDateField
+      FieldName = 'FECHAVENCIMIENTO'
+    end
+    object FacturasImpresasCOMBO: TWideStringField
+      FieldName = 'COMBO'
+      Size = 2
+    end
+    object FacturasImpresasCOBRADO: TIntegerField
+      FieldName = 'COBRADO'
+    end
+    object FacturasImpresasQUEES: TWideStringField
+      FieldName = 'QUEES'
+      Size = 10
+    end
+    object FacturasImpresasUSUARIOID: TIntegerField
+      FieldName = 'USUARIOID'
+    end
+    object FacturasImpresasCLIENTEID: TIntegerField
+      FieldName = 'CLIENTEID'
+    end
+    object FacturasImpresasCONDICIONVENTA: TWideStringField
+      FieldName = 'CONDICIONVENTA'
+      Size = 15
+    end
+    object FacturasImpresasTIENDAID: TIntegerField
+      FieldName = 'TIENDAID'
+    end
+    object FacturasImpresasPINREFERIDO: TWideStringField
+      FieldName = 'PINREFERIDO'
+    end
+    object FacturasImpresasNC: TIntegerField
+      FieldName = 'NC'
+    end
+    object FacturasImpresasCODVEN: TIntegerField
+      FieldName = 'CODVEN'
+    end
+    object FacturasImpresasCAJEROID: TIntegerField
+      FieldName = 'CAJEROID'
+    end
+    object FacturasImpresasNOMBRECLIENTE_PRN: TWideStringField
+      FieldName = 'NOMBRECLIENTE_PRN'
+      Size = 100
+    end
+    object FacturasImpresasFECHA_FINAL: TDateField
+      FieldName = 'FECHA_FINAL'
+    end
+    object FacturasImpresasINTERES_DIARIO: TFloatField
+      FieldName = 'INTERES_DIARIO'
+    end
+    object FacturasImpresasINTERES_ACUM: TFloatField
+      FieldName = 'INTERES_ACUM'
+    end
+    object FacturasImpresasDIAS_TRANS: TIntegerField
+      FieldName = 'DIAS_TRANS'
+    end
+    object FacturasImpresasFECHA_ULTIMO_PAGO: TDateField
+      FieldName = 'FECHA_ULTIMO_PAGO'
+    end
+    object FacturasImpresasDIAS_ATRASO: TIntegerField
+      FieldName = 'DIAS_ATRASO'
+    end
+    object FacturasImpresasINTERES_PAGADO: TFloatField
+      FieldName = 'INTERES_PAGADO'
+    end
+    object FacturasImpresasCAPITAL_PAGADO: TFloatField
+      FieldName = 'CAPITAL_PAGADO'
+    end
+    object FacturasImpresasDESC_CAPITAL: TFloatField
+      FieldName = 'DESC_CAPITAL'
+    end
+    object FacturasImpresasIDDR: TIntegerField
+      FieldName = 'IDDR'
+    end
+    object FacturasImpresasNOMBREDELDR: TWideStringField
+      FieldName = 'NOMBREDELDR'
+      Size = 40
+    end
+    object FacturasImpresasCAJA: TWideStringField
+      FieldName = 'CAJA'
+      Size = 10
+    end
+    object FacturasImpresasNCF_NOMBRE: TWideStringField
+      FieldName = 'NCF_NOMBRE'
+      Size = 50
+    end
+    object FacturasImpresasMORA: TFloatField
+      FieldName = 'MORA'
+    end
+    object FacturasImpresasNUMERO_FACTURA: TFloatField
+      FieldName = 'NUMERO_FACTURA'
+    end
+    object FacturasImpresasBONOS: TFloatField
+      FieldName = 'BONOS'
+    end
+    object FacturasImpresasOBSERVACIONES: TWideMemoField
+      FieldName = 'OBSERVACIONES'
+      BlobType = ftWideMemo
+    end
+    object FacturasImpresasIDRUTA: TIntegerField
+      FieldName = 'IDRUTA'
+    end
+    object FacturasImpresasCAJAID: TIntegerField
+      FieldName = 'CAJAID'
+    end
+    object FacturasImpresasTCREDITO: TFloatField
+      FieldName = 'TCREDITO'
+    end
+    object FacturasImpresasVEFECTIVA: TFloatField
+      FieldName = 'VEFECTIVA'
+    end
+    object FacturasImpresasIDTECNICO: TIntegerField
+      FieldName = 'IDTECNICO'
+    end
+    object FacturasImpresasUBICACION: TWideStringField
+      FieldName = 'UBICACION'
+      Size = 15
+    end
+    object FacturasImpresasPAGOXEFECTIVO: TFloatField
+      FieldName = 'PAGOXEFECTIVO'
+    end
+    object FacturasImpresasPAGOXCHEQUE: TFloatField
+      FieldName = 'PAGOXCHEQUE'
+    end
+    object FacturasImpresasPAGOXTARJETA: TFloatField
+      FieldName = 'PAGOXTARJETA'
+    end
+    object FacturasImpresasPAGOXBONO: TFloatField
+      FieldName = 'PAGOXBONO'
+    end
+    object FacturasImpresasCLIENTENOMBRE: TWideStringField
+      FieldName = 'CLIENTENOMBRE'
+      Size = 100
+    end
+    object FacturasImpresasNOMBRES_EMP: TWideStringField
+      FieldName = 'NOMBRES_EMP'
+      Size = 35
+    end
+    object FacturasImpresasDIR: TWideStringField
+      FieldName = 'DIR'
+      Size = 40
+    end
+  end
+  object DsFacturasImpresas: TDataSource
+    DataSet = FacturasImpresas
+    Left = 641
+    Top = 160
+  end
+  object prncopia: TfrxReport
+    Version = '6.4.13'
+    DataSet = detalle
+    DataSetName = 'detalle'
+    DotMatrixReport = False
+    IniFile = '\Software\Fast Reports'
+    PreviewOptions.Buttons = [pbPrint, pbLoad, pbSave, pbExport, pbZoom, pbFind, pbOutline, pbPageSetup, pbTools, pbEdit, pbNavigator, pbExportQuick]
+    PreviewOptions.OutlineExpand = False
+    PreviewOptions.Zoom = 1.000000000000000000
+    PrintOptions.Printer = 'Default'
+    PrintOptions.PrintOnSheet = 0
+    PrintOptions.ShowDialog = False
+    ReportOptions.CreateDate = 40668.585858831000000000
+    ReportOptions.LastChange = 43277.227819768520000000
+    ScriptLanguage = 'PascalScript'
+    ScriptText.Strings = (
+      'begin'
+      ''
+      'end.')
+    Left = 545
+    Top = 248
+    Datasets = <
+      item
+        DataSet = Config
+        DataSetName = 'Config'
+      end
+      item
+        DataSet = master
+        DataSetName = 'master'
+      end
+      item
+        DataSet = detalle
+        DataSetName = 'detalle'
+      end>
+    Variables = <
+      item
+        Name = ' New Category1'
+        Value = Null
+      end
+      item
+        Name = 'titulos'
+        Value = Null
+      end
+      item
+        Name = 'cajero'
+        Value = Null
+      end
+      item
+        Name = 'mensaje1'
+        Value = Null
+      end>
+    Style = <>
+    object Data: TfrxDataPage
+      Height = 1000.000000000000000000
+      Width = 1000.000000000000000000
+    end
+    object Page1: TfrxReportPage
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Height = -13
+      Font.Name = 'Arial Narrow'
+      Font.Style = []
+      PaperWidth = 88.900000000000000000
+      PaperHeight = 210.058000000000000000
+      PaperSize = 256
+      Frame.Typ = []
+      MirrorMode = []
+      object DetailData1: TfrxDetailData
+        FillType = ftBrush
+        Frame.Typ = []
+        Height = 41.574830000000000000
+        Top = 343.937230000000000000
+        Width = 336.000217000000000000
+        DataSet = detalle
+        DataSetName = 'detalle'
+        RowCount = 0
+        object frxDBDataset1IMPORTE: TfrxMemoView
+          AllowVectorExport = True
+          Left = 210.628510000000000000
+          Top = 18.897650000000000000
+          Width = 68.031540000000010000
+          Height = 18.897650000000000000
+          DataField = 'TOTAL'
+          DataSet = detalle
+          DataSetName = 'detalle'
+          DisplayFormat.FormatStr = '%2.2n'
+          DisplayFormat.Kind = fkNumeric
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial Narrow'
+          Font.Style = []
+          Frame.Typ = []
+          HAlign = haRight
+          Memo.UTF8W = (
+            '[detalle."TOTAL"]')
+          ParentFont = False
+        end
+        object frxDBDataset1ARTICULO: TfrxMemoView
+          AllowVectorExport = True
+          Left = 72.395299999999990000
+          Width = 232.289920000000000000
+          Height = 15.118120000000000000
+          DataField = 'TITULOPRN'
+          DataSet = detalle
+          DataSetName = 'detalle'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -11
+          Font.Name = 'Arial Narrow'
+          Font.Style = []
+          Frame.Typ = []
+          Memo.UTF8W = (
+            '[detalle."TITULOPRN"]')
+          ParentFont = False
+        end
+        object frxDBDataset2CANTIDAD: TfrxMemoView
+          AllowVectorExport = True
+          Left = 45.779530000000000000
+          Width = 22.677180000000000000
+          Height = 18.897650000000000000
+          DataField = 'CANTIDAD'
+          DataSet = detalle
+          DataSetName = 'detalle'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -11
+          Font.Name = 'Arial Narrow'
+          Font.Style = []
+          Frame.Typ = []
+          HAlign = haRight
+          Memo.UTF8W = (
+            '[detalle."CANTIDAD"]')
+          ParentFont = False
+        end
+        object Memo15: TfrxMemoView
+          AllowVectorExport = True
+          Left = 138.504020000000000000
+          Top = 18.897650000000000000
+          Width = 68.031540000000010000
+          Height = 18.897650000000000000
+          DataField = 'ITBS'
+          DataSet = detalle
+          DataSetName = 'detalle'
+          DisplayFormat.FormatStr = '%2.2n'
+          DisplayFormat.Kind = fkNumeric
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial Narrow'
+          Font.Style = []
+          Frame.Typ = []
+          HAlign = haRight
+          Memo.UTF8W = (
+            '[detalle."ITBS"]')
+          ParentFont = False
+        end
+        object Memo18: TfrxMemoView
+          AllowVectorExport = True
+          Left = 66.133890000000010000
+          Top = 18.897650000000000000
+          Width = 68.031540000000010000
+          Height = 18.897650000000000000
+          DataField = 'PRECIO'
+          DataSet = detalle
+          DataSetName = 'detalle'
+          DisplayFormat.FormatStr = '%2.2n'
+          DisplayFormat.Kind = fkNumeric
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial Narrow'
+          Font.Style = []
+          Frame.Typ = []
+          HAlign = haRight
+          Memo.UTF8W = (
+            '[detalle."PRECIO"]')
+          ParentFont = False
+        end
+      end
+      object MasterData1: TfrxMasterData
+        FillType = ftBrush
+        Frame.Typ = []
+        Top = 321.260050000000000000
+        Width = 336.000217000000000000
+        DataSet = master
+        DataSetName = 'master'
+        RowCount = 0
+      end
+      object ReportSummary1: TfrxReportSummary
+        FillType = ftBrush
+        Frame.Typ = []
+        Height = 291.744960000000000000
+        Top = 445.984540000000000000
+        Width = 336.000217000000000000
+        object Line3: TfrxLineView
+          AllowVectorExport = True
+          Left = 3.779530000000000000
+          Top = 3.779530000000022000
+          Width = 279.685220000000000000
+          Color = clBlack
+          Frame.Typ = [ftTop]
+          Frame.Width = 0.500000000000000000
+        end
+        object frxDBDataset2MONTO: TfrxMemoView
+          AllowVectorExport = True
+          Left = 173.196970000000000000
+          Top = 3.779530000000022000
+          Width = 75.590600000000000000
+          Height = 18.897650000000000000
+          DataField = 'MONTO'
+          DataSet = master
+          DataSetName = 'master'
+          DisplayFormat.FormatStr = '%2.2n'
+          DisplayFormat.Kind = fkNumeric
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial Narrow'
+          Font.Style = []
+          Frame.Typ = []
+          HAlign = haRight
+          Memo.UTF8W = (
+            '[master."MONTO"]')
+          ParentFont = False
+        end
+        object frxDBDataset2DESCUENTO: TfrxMemoView
+          AllowVectorExport = True
+          Left = 173.196970000000000000
+          Top = 22.574830000000020000
+          Width = 75.590600000000000000
+          Height = 18.897650000000000000
+          DataField = 'DESCUENTO'
+          DataSet = master
+          DataSetName = 'master'
+          DisplayFormat.FormatStr = '%2.2n'
+          DisplayFormat.Kind = fkNumeric
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial Narrow'
+          Font.Style = []
+          Frame.Typ = []
+          HAlign = haRight
+          Memo.UTF8W = (
+            '[master."DESCUENTO"]')
+          ParentFont = False
+        end
+        object frxDBDataset2MONTOPAGO: TfrxMemoView
+          AllowVectorExport = True
+          Left = 173.196970000000000000
+          Top = 58.052010000000000000
+          Width = 75.590600000000000000
+          Height = 18.897650000000000000
+          DataField = 'MONTOPAGO'
+          DataSet = master
+          DataSetName = 'master'
+          DisplayFormat.FormatStr = '%2.2n'
+          DisplayFormat.Kind = fkNumeric
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -16
+          Font.Name = 'Arial Narrow'
+          Font.Style = [fsBold]
+          Frame.Typ = []
+          HAlign = haRight
+          Memo.UTF8W = (
+            '[master."MONTOPAGO"]')
+          ParentFont = False
+        end
+        object Memo17: TfrxMemoView
+          AllowVectorExport = True
+          Left = 48.031540000000000000
+          Top = 5.779530000000023000
+          Width = 120.944960000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial Narrow'
+          Font.Style = []
+          Frame.Typ = []
+          HAlign = haRight
+          Memo.UTF8W = (
+            'Sub-Total')
+          ParentFont = False
+        end
+        object Memo19: TfrxMemoView
+          AllowVectorExport = True
+          Left = 49.631540000000000000
+          Top = 22.415770000000010000
+          Width = 120.944960000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial Narrow'
+          Font.Style = []
+          Frame.Typ = []
+          HAlign = haRight
+          Memo.UTF8W = (
+            'Descuento')
+          ParentFont = False
+        end
+        object Memo20: TfrxMemoView
+          AllowVectorExport = True
+          Left = 47.031540000000000000
+          Top = 59.713419999999990000
+          Width = 120.944960000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial Narrow'
+          Font.Style = [fsBold]
+          Frame.Typ = []
+          HAlign = haRight
+          Memo.UTF8W = (
+            'Neto a Pagar')
+          ParentFont = False
+        end
+        object Memo23: TfrxMemoView
+          AllowVectorExport = True
+          Left = 62.579530000000000000
+          Top = 132.385900000000000000
+          Width = 109.606370000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -12
+          Font.Name = 'Arial Narrow'
+          Font.Style = []
+          Frame.Typ = []
+          Memo.UTF8W = (
+            'Cantidad de ITEM')
+          ParentFont = False
+        end
+        object SysMemo1: TfrxSysMemoView
+          AllowVectorExport = True
+          Left = 147.467780000000000000
+          Top = 132.385900000000000000
+          Width = 94.488250000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -12
+          Font.Name = 'Arial Narrow'
+          Font.Style = []
+          Frame.Typ = []
+          Memo.UTF8W = (
+            '[COUNT(DetailData1)]')
+          ParentFont = False
+        end
+        object Line4: TfrxLineView
+          AllowVectorExport = True
+          Left = 1.000000000000000000
+          Top = 247.976500000000000000
+          Width = 283.464750000000000000
+          Color = clBlack
+          Frame.Typ = [ftTop]
+        end
+        object frxDBDataset2HORA: TfrxMemoView
+          AllowVectorExport = True
+          Left = 18.740260000000000000
+          Top = 273.647310000000000000
+          Width = 113.385900000000000000
+          Height = 18.897650000000000000
+          DataField = 'HORA'
+          DataSet = master
+          DataSetName = 'master'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = []
+          HAlign = haRight
+          Memo.UTF8W = (
+            '[master."HORA"]')
+          ParentFont = False
+        end
+        object frxDBDataset1TIPO: TfrxMemoView
+          AllowVectorExport = True
+          Left = 33.806370000000000000
+          Top = 154.081880000000000000
+          Width = 105.600000000000000000
+          Height = 19.200000000000000000
+          DataField = 'TIPO'
+          DataSet = master
+          DataSetName = 'master'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -15
+          Font.Name = 'Arial Narrow'
+          Font.Style = [fsBold]
+          Frame.Typ = []
+          Memo.UTF8W = (
+            '[master."TIPO"]')
+          ParentFont = False
+        end
+        object Memo11: TfrxMemoView
+          AllowVectorExport = True
+          Left = 34.959060000000000000
+          Top = 226.144960000000000000
+          Width = 79.370130000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial Narrow'
+          Font.Style = []
+          Frame.Typ = []
+          Memo.UTF8W = (
+            'Cajero /a       ')
+          ParentFont = False
+        end
+        object cajero: TfrxMemoView
+          AllowVectorExport = True
+          Left = 90.568460000000000000
+          Top = 224.286580000000000000
+          Width = 185.877180000000000000
+          Height = 19.200000000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial Narrow'
+          Font.Style = []
+          Frame.Typ = []
+          Memo.UTF8W = (
+            '[cajero]')
+          ParentFont = False
+        end
+        object Memo7: TfrxMemoView
+          AllowVectorExport = True
+          Left = 48.400000000000000000
+          Top = 39.399999999999970000
+          Width = 120.944960000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial Narrow'
+          Font.Style = []
+          Frame.Typ = []
+          HAlign = haRight
+          Memo.UTF8W = (
+            'ITBIS')
+          ParentFont = False
+        end
+        object Memo8: TfrxMemoView
+          AllowVectorExport = True
+          Left = 180.800000000000000000
+          Top = 38.399999999999970000
+          Width = 65.990600000000000000
+          Height = 18.897650000000000000
+          DataField = 'POGXITBS'
+          DataSet = master
+          DataSetName = 'master'
+          DisplayFormat.FormatStr = '%2.2n'
+          DisplayFormat.Kind = fkNumeric
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial Narrow'
+          Font.Style = []
+          Frame.Typ = []
+          HAlign = haRight
+          Memo.UTF8W = (
+            '[master."POGXITBS"]')
+          ParentFont = False
+        end
+        object Memo21: TfrxMemoView
+          AllowVectorExport = True
+          Left = 52.379530000000000000
+          Top = 249.078850000000000000
+          Width = 234.330860000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial Narrow'
+          Font.Style = []
+          Frame.Typ = []
+          Memo.UTF8W = (
+            'GRACIAS POR PREFERIRNOS !!!')
+          ParentFont = False
+        end
+        object Memo27: TfrxMemoView
+          AllowVectorExport = True
+          Left = 35.400000000000000000
+          Top = 204.600000000000000000
+          Width = 79.370130000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial Narrow'
+          Font.Style = []
+          Frame.Typ = []
+          Memo.UTF8W = (
+            'Vendedor  ')
+          ParentFont = False
+        end
+        object Memo28: TfrxMemoView
+          AllowVectorExport = True
+          Left = 90.000000000000000000
+          Top = 204.600000000000000000
+          Width = 185.877180000000000000
+          Height = 19.200000000000000000
+          DataField = 'VENDEDOR'
+          DataSet = master
+          DataSetName = 'master'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial Narrow'
+          Font.Style = []
+          Frame.Typ = []
+          Memo.UTF8W = (
+            '[master."VENDEDOR"]')
+          ParentFont = False
+        end
+        object Memo29: TfrxMemoView
+          AllowVectorExport = True
+          Left = 153.800000000000000000
+          Top = 172.800000000000000000
+          Width = 120.944960000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -19
+          Font.Name = 'Arial Narrow'
+          Font.Style = [fsBold]
+          Frame.Typ = []
+          HAlign = haRight
+          Memo.UTF8W = (
+            'COPIA')
+          ParentFont = False
+        end
+      end
+      object ReportTitle1: TfrxReportTitle
+        FillType = ftBrush
+        Frame.Typ = []
+        Height = 241.481880000000000000
+        Top = 18.897650000000000000
+        Width = 336.000217000000000000
+        object frxDBDataset2NO_FACT: TfrxMemoView
+          AllowVectorExport = True
+          Left = 56.436240000000000000
+          Top = 129.349660000000000000
+          Width = 70.147989999999990000
+          Height = 16.856710000000000000
+          DataField = 'NO_FACT'
+          DataSet = master
+          DataSetName = 'master'
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clBlack
+          Font.Height = -16
+          Font.Name = 'Arial Narrow'
+          Font.Style = [fsBold]
+          Frame.Typ = []
+          Memo.UTF8W = (
+            '[master."NO_FACT"]')
+          ParentFont = False
+        end
+        object Memo6: TfrxMemoView
+          AllowVectorExport = True
+          Left = 36.677180000000000000
+          Top = 131.349660000000000000
+          Width = 26.456710000000000000
+          Height = 18.897650000000000000
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial Narrow'
+          Font.Style = []
+          Frame.Typ = []
+          Memo.UTF8W = (
+            'No. :')
+          ParentFont = False
+        end
+        object frxDBDataset2FECHA_FAC: TfrxMemoView
+          AllowVectorExport = True
+          Left = 124.467780000000000000
+          Top = 130.688250000000000000
+          Width = 79.370130000000000000
+          Height = 18.897650000000000000
+          DataField = 'FECHA_FAC'
+          DataSet = master
+          DataSetName = 'master'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial Narrow'
+          Font.Style = []
+          Frame.Typ = []
+          Memo.UTF8W = (
+            '[master."FECHA_FAC"]')
+          ParentFont = False
+        end
+        object Memo9: TfrxMemoView
+          AllowVectorExport = True
+          Left = 38.456710000000000000
+          Top = 149.704020000000000000
+          Width = 52.913420000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial Narrow'
+          Font.Style = []
+          Frame.Typ = []
+          Memo.UTF8W = (
+            'Cliente   :')
+          ParentFont = False
+        end
+        object frxDBDataset2NOM_CLIENTE: TfrxMemoView
+          AllowVectorExport = True
+          Left = 86.113420000000000000
+          Top = 151.483550000000000000
+          Width = 181.417440000000000000
+          Height = 18.897650000000000000
+          DataField = 'NOMBRECLIENTE_PRN'
+          DataSet = master
+          DataSetName = 'master'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial Narrow'
+          Font.Style = []
+          Frame.Typ = []
+          Memo.UTF8W = (
+            '[master."NOMBRECLIENTE_PRN"]')
+          ParentFont = False
+        end
+        object Line1: TfrxLineView
+          AllowVectorExport = True
+          Left = -0.220470000000000000
+          Top = 222.874150000000000000
+          Width = 328.819110000000000000
+          Color = clBlack
+          Frame.Typ = []
+          Frame.Width = 0.500000000000000000
+          Diagonal = True
+        end
+        object Memo13: TfrxMemoView
+          AllowVectorExport = True
+          Left = 40.000000000000000000
+          Top = 224.094620000000000000
+          Width = 37.795300000000000000
+          Height = 15.118120000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -12
+          Font.Name = 'Arial Narrow'
+          Font.Style = []
+          Frame.Typ = []
+          Memo.UTF8W = (
+            'CANT.')
+          ParentFont = False
+        end
+        object Memo14: TfrxMemoView
+          AllowVectorExport = True
+          Left = 73.267780000000000000
+          Top = 224.094620000000000000
+          Width = 105.826840000000000000
+          Height = 15.118120000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -12
+          Font.Name = 'Arial Narrow'
+          Font.Style = []
+          Frame.Typ = []
+          Memo.UTF8W = (
+            'DESCRIPCION')
+          ParentFont = False
+        end
+        object Memo16: TfrxMemoView
+          AllowVectorExport = True
+          Left = 205.069450000000000000
+          Top = 223.094620000000000000
+          Width = 64.252010000000000000
+          Height = 15.118120000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -12
+          Font.Name = 'Arial Narrow'
+          Font.Style = []
+          Frame.Typ = []
+          Memo.UTF8W = (
+            'IMPORTE')
+          ParentFont = False
+        end
+        object titulos: TfrxMemoView
+          AllowVectorExport = True
+          Left = 32.077180000000000000
+          Top = 104.820470000000000000
+          Width = 234.784230000000000000
+          Height = 25.020470000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -16
+          Font.Name = 'Arial Narrow'
+          Font.Style = [fsBold]
+          Frame.Typ = []
+          HAlign = haCenter
+          Memo.UTF8W = (
+            'CONDUCE')
+          ParentFont = False
+        end
+        object Line2: TfrxLineView
+          AllowVectorExport = True
+          Left = 1.600000000000000000
+          Top = 241.481880000000000000
+          Width = 321.260050000000000000
+          Color = clBlack
+          Frame.Typ = []
+          Frame.Width = 0.500000000000000000
+          Diagonal = True
+        end
+        object SysMemo3: TfrxSysMemoView
+          AllowVectorExport = True
+          Left = 222.094620000000000000
+          Top = 128.960730000000000000
+          Width = 64.252010000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial Narrow'
+          Font.Style = []
+          Frame.Typ = []
+          Memo.UTF8W = (
+            '[TIME]')
+          ParentFont = False
+        end
+        object configuracionEMPRESA: TfrxMemoView
+          AllowVectorExport = True
+          Left = 29.000000000000000000
+          Top = 13.600000000000000000
+          Width = 249.600000000000000000
+          Height = 28.800000000000000000
+          DataField = 'EMPRESA'
+          DataSet = Config
+          DataSetName = 'Config'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -17
+          Font.Name = 'Arial Narrow'
+          Font.Style = []
+          Frame.Typ = []
+          HAlign = haCenter
+          Memo.UTF8W = (
+            '[Config."EMPRESA"]')
+          ParentFont = False
+        end
+        object configuracionRNC: TfrxMemoView
+          AllowVectorExport = True
+          Left = 55.481879999999990000
+          Top = 86.738590000000000000
+          Width = 115.200000000000000000
+          Height = 19.200000000000000000
+          DataField = 'RNC'
+          DataSet = Config
+          DataSetName = 'Config'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial Narrow'
+          Font.Style = []
+          Frame.Typ = []
+          Memo.UTF8W = (
+            '[Config."RNC"]')
+          ParentFont = False
+        end
+        object configuracionDIRECCION: TfrxMemoView
+          AllowVectorExport = True
+          Left = 29.000000000000000000
+          Top = 39.000000000000000000
+          Width = 253.379530000000000000
+          Height = 49.738590000000000000
+          DataField = 'DIRECCION'
+          DataSet = Config
+          DataSetName = 'Config'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -12
+          Font.Name = 'Arial Narrow'
+          Font.Style = []
+          Frame.Typ = []
+          HAlign = haCenter
+          Memo.UTF8W = (
+            '[Config."DIRECCION"]')
+          ParentFont = False
+        end
+        object Memo1: TfrxMemoView
+          AllowVectorExport = True
+          Left = 32.861410000000000000
+          Top = 86.738590000000000000
+          Width = 90.708720000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial Narrow'
+          Font.Style = []
+          Frame.Typ = []
+          Memo.UTF8W = (
+            'RNC    :')
+          ParentFont = False
+        end
+        object configuracionTELEFONO: TfrxMemoView
+          AllowVectorExport = True
+          Left = 60.143290000000000000
+          Top = 69.538590000000000000
+          Width = 94.261410000000000000
+          Height = 19.200000000000000000
+          DataField = 'TELEFONO'
+          DataSet = Config
+          DataSetName = 'Config'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial Narrow'
+          Font.Style = []
+          Frame.Typ = []
+          Memo.UTF8W = (
+            '[Config."TELEFONO"]')
+          ParentFont = False
+        end
+        object Memo2: TfrxMemoView
+          AllowVectorExport = True
+          Left = 33.081880000000000000
+          Top = 69.538590000000000000
+          Width = 30.236240000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial Narrow'
+          Font.Style = []
+          Frame.Typ = []
+          Memo.UTF8W = (
+            'TEL :')
+          ParentFont = False
+        end
+        object Memo3: TfrxMemoView
+          AllowVectorExport = True
+          Left = 38.600000000000000000
+          Top = 200.200000000000000000
+          Width = 90.708720000000000000
+          Height = 18.897650000000000000
+          Visible = False
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial Narrow'
+          Font.Style = []
+          Frame.Typ = []
+          Memo.UTF8W = (
+            'NCF              :')
+          ParentFont = False
+        end
+        object Memo4: TfrxMemoView
+          AllowVectorExport = True
+          Left = 86.000000000000000000
+          Top = 200.200000000000000000
+          Width = 181.417440000000000000
+          Height = 18.897650000000000000
+          Visible = False
+          DataField = 'NCF'
+          DataSet = master
+          DataSetName = 'master'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial Narrow'
+          Font.Style = []
+          Frame.Typ = []
+          Memo.UTF8W = (
+            '[master."NCF"]')
+          ParentFont = False
+        end
+        object Memo10: TfrxMemoView
+          AllowVectorExport = True
+          Left = 164.299320000000000000
+          Top = 223.330860000000000000
+          Width = 37.795300000000000000
+          Height = 15.118120000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -12
+          Font.Name = 'Arial Narrow'
+          Font.Style = []
+          Frame.Typ = []
+          Memo.UTF8W = (
+            'ITBIS')
+          ParentFont = False
+        end
+        object Memo5: TfrxMemoView
+          AllowVectorExport = True
+          Left = 139.504020000000000000
+          Top = 69.149660000000000000
+          Width = 124.724490000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial Narrow'
+          Font.Style = []
+          Frame.Typ = []
+          Memo.UTF8W = (
+            'CEL:829-467-9929')
+          ParentFont = False
+        end
+        object Memo12: TfrxMemoView
+          AllowVectorExport = True
+          Left = 41.000000000000000000
+          Top = 180.315090000000000000
+          Width = 260.787570000000000000
+          Height = 18.897650000000000000
+          Visible = False
+          DataField = 'NCF_NOMBRE'
+          DataSet = master
+          DataSetName = 'master'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial Narrow'
+          Font.Style = []
+          Frame.Typ = []
+          Memo.UTF8W = (
+            '[master."NCF_NOMBRE"]')
+          ParentFont = False
+        end
+      end
+    end
+  end
+  object combo: TfrxDBDataset
+    UserName = 'combo'
+    CloseDataSource = True
+    FieldAliases.Strings = (
+      'COD_MANCOMBO=COD_MANCOMBO'
+      'MACOMBOID=MACOMBOID'
+      'COD_ART=COD_ART'
+      'PRECIO=PRECIO'
+      'PRECIO2=PRECIO2'
+      'PRECIO3=PRECIO3'
+      'ARTICULO=ARTICULO'
+      'COSTO=COSTO'
+      'COSTO_PR=COSTO_PR')
+    BCDToCurrency = False
+    Left = 513
+    Top = 168
+  end
+  object series: TfrxDBDataset
+    UserName = 'series'
+    CloseDataSource = True
+    FieldAliases.Strings = (
+      'COD_SERIES=COD_SERIES'
+      'COD_ARTI=COD_ARTI'
+      'SERIES=SERIES'
+      'ESTADO=ESTADO'
+      'NO_FACT=NO_FACT')
+    DataSet = datos.Series
+    BCDToCurrency = False
+    Left = 441
+    Top = 288
+  end
+  object detalle: TfrxDBDataset
+    UserName = 'detalle'
+    CloseDataSource = True
+    FieldAliases.Strings = (
+      'NO_FACT=NO_FACT'
+      'ARTICULO=ARTICULO'
+      'CANTIDAD=CANTIDAD'
+      'PRECIO=PRECIO'
+      'NO_FACT1=NO_FACT1'
+      'MASTERID=MASTERID'
+      'IMPUESTO=IMPUESTO'
+      'ITBS=ITBS'
+      'ITBIS2=ITBIS2'
+      'COD_ART=COD_ART'
+      'UNID=UNID'
+      'COMBO=COMBO'
+      'LINEA=LINEA'
+      'ARTICULOID=ARTICULOID'
+      'TOTAL=TOTAL'
+      'ANCHO=ANCHO'
+      'ALTO=ALTO'
+      'TITULOPRN=TITULOPRN'
+      'UNIDADID=UNIDADID'
+      'ITBS_ART=ITBS_ART'
+      'UNIDAD=UNIDAD'
+      'EX=EX'
+      'IDALMACEN=IDALMACEN'
+      'BARRA=BARRA')
+    DataSet = datos.Zdetalle
+    BCDToCurrency = False
+    Left = 312
+    Top = 320
+  end
+  object master: TfrxDBDataset
+    RangeBegin = rbCurrent
+    RangeEnd = reCurrent
+    UserName = 'master'
+    CloseDataSource = True
+    FieldAliases.Strings = (
+      'NO_FACT=NO_FACT'
+      'FECHA_FAC=FECHA_FAC'
+      'TIPO=TIPO'
+      'COD_CLIENT=COD_CLIENT'
+      'COD_EMP=COD_EMP'
+      'NO_FACT1=NO_FACT1'
+      'MONTO=MONTO'
+      'POGXITBS=POGXITBS'
+      'HORA=HORA'
+      'TIPOPAGO=TIPOPAGO'
+      'MONTOPAGO=MONTOPAGO'
+      'CONDICION=CONDICION'
+      'RENTA=RENTA'
+      'CODIGO=CODIGO'
+      'TIPOITBS=TIPOITBS'
+      'VENDEDOR=VENDEDOR'
+      'SITUACION=SITUACION'
+      'NCF=NCF'
+      'RNC_CLIENTE=RNC_CLIENTE'
+      'NCF1=NCF1'
+      'NOM_CLIENTE=NOM_CLIENTE'
+      'DESCUENTO=DESCUENTO'
+      'ROTULO=ROTULO'
+      'NO_AUTORIZA_NCF=NO_AUTORIZA_NCF'
+      'MONTOFINANCIADO=MONTOFINANCIADO'
+      'CUOTAS=CUOTAS'
+      'INTERES=INTERES'
+      'PAGADO=PAGADO'
+      'LEYPROPINA=LEYPROPINA'
+      'COMPROBANTE=COMPROBANTE'
+      'TERMINAL=TERMINAL'
+      'EFECTIVO=EFECTIVO'
+      'DEVOLUCION1=DEVOLUCION1'
+      'RESTANTE=RESTANTE'
+      'ABONO=ABONO'
+      'CHEK=CHEK'
+      'NO_RECIBO=NO_RECIBO'
+      'PAGADOCXC=PAGADOCXC'
+      'MESES=MESES'
+      'DIAS=DIAS'
+      'PENDIENTE=PENDIENTE'
+      'ESTADOPAGO=ESTADOPAGO'
+      'DEVOLUCION=DEVOLUCION'
+      'CONDICION_PAGO=CONDICION_PAGO'
+      'COMBO=COMBO'
+      'COBRADO=COBRADO'
+      'QUEES=QUEES'
+      'USUARIOID=USUARIOID'
+      'CLIENTEID=CLIENTEID'
+      'CLIENTENOMBRE=CLIENTENOMBRE'
+      'NOMBRES_EMP=NOMBRES_EMP'
+      'TIENDAID=TIENDAID'
+      'TCREDITO=TCREDITO'
+      'CONDICIONVENTA=CONDICIONVENTA'
+      'PINREFERIDO=PINREFERIDO'
+      'NC=NC'
+      'CODVEN=CODVEN'
+      'CAJEROID=CAJEROID'
+      'IDDR=IDDR'
+      'NOMBREDELDR=NOMBREDELDR'
+      'CAJA=CAJA'
+      'NCF_NOMBRE=NCF_NOMBRE'
+      'BONOS=BONOS'
+      'NUMERO_FACTURA=NUMERO_FACTURA'
+      'OBSERVACIONES=OBSERVACIONES'
+      'IDRUTA=IDRUTA'
+      'DIRECCION=DIRECCION'
+      'CAJAID=CAJAID'
+      'VEFECTIVA=VEFECTIVA'
+      'PAGOXEFECTIVO=PAGOXEFECTIVO'
+      'PAGOXCHEQUE=PAGOXCHEQUE'
+      'PAGOXTARJETA=PAGOXTARJETA'
+      'PAGOXBONO=PAGOXBONO'
+      'DIR=DIR'
+      'FECHAVENCIMIENTO=FECHAVENCIMIENTO'
+      'CAJERO=CAJERO'
+      'NOMBRECLIENTE_PRN=NOMBRECLIENTE_PRN'
+      'FECHA_FINAL=FECHA_FINAL'
+      'IDTECNICO=IDTECNICO'
+      'CAJ=CAJ')
+    DataSet = datos.FbqMaster_Fact
+    BCDToCurrency = False
+    Left = 344
+    Top = 296
+  end
+  object Config: TfrxDBDataset
+    UserName = 'Config'
+    CloseDataSource = False
+    FieldAliases.Strings = (
+      'CODIGO_COM=CODIGO_COM'
+      'EMPRESA=EMPRESA'
+      'RNC=RNC'
+      'TELEFONO=TELEFONO'
+      'FAX=FAX'
+      'CELULAR=CELULAR'
+      'EMAIL=EMAIL'
+      'CONTACTO=CONTACTO'
+      'FACTIMPRIME=FACTIMPRIME'
+      'GENERART=GENERART'
+      'ITBIS=ITBIS'
+      'AVG_GANANCIA=AVG_GANANCIA'
+      'COBRAR_ITBS=COBRAR_ITBS'
+      'THEMS=THEMS'
+      'ANCHO=ANCHO'
+      'ALTO=ALTO'
+      'RUTABACKUP=RUTABACKUP'
+      'ABRIRCAJON=ABRIRCAJON'
+      'PTINTERTPV=PTINTERTPV'
+      'CARGO_CARD=CARGO_CARD'
+      'CARGO_CHEQUE=CARGO_CHEQUE'
+      'MSN_PIE_FACT=MSN_PIE_FACT'
+      'IMP_CANT=IMP_CANT'
+      'IMPRIMIRCREDITO=IMPRIMIRCREDITO'
+      'IMPRIMIRCONTADO=IMPRIMIRCONTADO'
+      'DESCUENTO=DESCUENTO'
+      'TIPOITBS=TIPOITBS'
+      'TERMINAL=TERMINAL'
+      'STOPVENTAS=STOPVENTAS'
+      'STOPCOMPRAS=STOPCOMPRAS'
+      'CONTROLSTOPVENTAS=CONTROLSTOPVENTAS'
+      'CONTROLSTOPCOMPRAS=CONTROLSTOPCOMPRAS'
+      'NCF_CF_INICIO_NUMERO=NCF_CF_INICIO_NUMERO'
+      'NCF_CF_INICIO_LETRA=NCF_CF_INICIO_LETRA'
+      'NCF_CF_CONTADOR=NCF_CF_CONTADOR'
+      'NCF_CF_FINAL_NUMERO=NCF_CF_FINAL_NUMERO'
+      'NCF_VF_INICIO_NUMERO=NCF_VF_INICIO_NUMERO'
+      'NCF_VF_INICIO_LETRA=NCF_VF_INICIO_LETRA'
+      'NCF_VF_CONTADOR=NCF_VF_CONTADOR'
+      'NCF_VF_FINAL_NUMERO=NCF_VF_FINAL_NUMERO'
+      'NCF_ESP_INICIO_NUMERO=NCF_ESP_INICIO_NUMERO'
+      'NCF_ESP_INICIO_LETRA=NCF_ESP_INICIO_LETRA'
+      'NCF_ESP_CONTADOR=NCF_ESP_CONTADOR'
+      'NCF_ESP_FINAL=NCF_ESP_FINAL'
+      'NO_AUTORIZACION2=NO_AUTORIZACION2'
+      'NO_AUTORIZACION3=NO_AUTORIZACION3'
+      'NO_AUTORIZACION=NO_AUTORIZACION'
+      'USAR_CF=USAR_CF'
+      'USAR_VF=USAR_VF'
+      'USAR_ESP=USAR_ESP'
+      'ROTULO_FC=ROTULO_FC'
+      'ROTULO_FVF=ROTULO_FVF'
+      'ROTULO_ESP=ROTULO_ESP'
+      'VARIABLE_DEDUCIBLE=VARIABLE_DEDUCIBLE'
+      'LOGO=LOGO'
+      'CLAVEANULAR=CLAVEANULAR'
+      'TERMINAL_TPV=TERMINAL_TPV'
+      'MONTOCF=MONTOCF'
+      'REDONDEAR=REDONDEAR'
+      'COMISIONVENTA=COMISIONVENTA'
+      'CONFID=CONFID'
+      'LOGO_FRONTAR=LOGO_FRONTAR'
+      'LOGOF_TXT=LOGOF_TXT'
+      'LOGOP_TXT=LOGOP_TXT'
+      'INSERTARSERIAL=INSERTARSERIAL'
+      'DIRECCION=DIRECCION'
+      'ITBIS_D=ITBIS_D'
+      'ENLACEAWEB=ENLACEAWEB'
+      'PISTOLAOPTICA=PISTOLAOPTICA'
+      'TIPO_FACTURACION=TIPO_FACTURACION'
+      'EXISTENCIAFACT=EXISTENCIAFACT'
+      'RUTADB=RUTADB'
+      'CANT_CAJA=CANT_CAJA'
+      'TAZA=TAZA'
+      'MONEDA=MONEDA'
+      'APLICAR_AUMENTO_TAZA=APLICAR_AUMENTO_TAZA'
+      'ANCHO_IMG_FRONTAL=ANCHO_IMG_FRONTAL'
+      'ALTO_IMG_FRONTAL=ALTO_IMG_FRONTAL'
+      'LEFT_IMAGEN=LEFT_IMAGEN'
+      'RIGHT_IMAGEN=RIGHT_IMAGEN'
+      'REDONDEOCOMPLETO=REDONDEOCOMPLETO'
+      'CLAVEAUTORIZACION=CLAVEAUTORIZACION'
+      'COMPROBANTEDEFAULT=COMPROBANTEDEFAULT'
+      'USOAPLICACION=USOAPLICACION'
+      'ARTICULOSVARIOS=ARTICULOSVARIOS'
+      'MENSAJE_PIE1=MENSAJE_PIE1'
+      'MENSAJE_PIE2=MENSAJE_PIE2'
+      'IMPRESION_RAPIDA=IMPRESION_RAPIDA'
+      'IMPRESIONDEFECTO=IMPRESIONDEFECTO'
+      'TEXINICIAR=TEXINICIAR'
+      'LONGTICKET=LONGTICKET'
+      'IMPRIMEOPCIONAL=IMPRIMEOPCIONAL'
+      'ENTRAREFECTIVOINICIAL=ENTRAREFECTIVOINICIAL'
+      'CAJAID=CAJAID'
+      'USARCASHDRAWER=USARCASHDRAWER'
+      'ITBS_DEDUCIBLE=ITBS_DEDUCIBLE'
+      'IMPRIMECOTIZA=IMPRIMECOTIZA'
+      'USARRMA=USARRMA'
+      'ALMACENRMA=ALMACENRMA'
+      'ALMACENNOMBRE=ALMACENNOMBRE')
+    DataSet = datos.ZUconfiguracion
+    BCDToCurrency = False
+    Left = 401
+    Top = 176
+  end
+  object CUANTOS: TZReadOnlyQuery
+    Connection = datos.Data
+    SQL.Strings = (
+      'select COUNT(NO_FACT) from detailfact')
+    Params = <>
+    Left = 685
+    Top = 280
+    object CUANTOSCOUNT: TIntegerField
+      FieldName = 'COUNT'
+      ReadOnly = True
+    end
+  end
+  object ImprimEMC: TfrxReport
+    Version = '6.4.13'
+    DataSet = detalle
+    DataSetName = 'detalle'
+    DotMatrixReport = False
+    IniFile = '\Software\Fast Reports'
+    PreviewOptions.Buttons = [pbPrint, pbLoad, pbSave, pbExport, pbZoom, pbFind, pbOutline, pbPageSetup, pbTools, pbEdit, pbNavigator, pbExportQuick]
+    PreviewOptions.OutlineExpand = False
+    PreviewOptions.Zoom = 1.000000000000000000
+    PrintOptions.Collate = False
+    PrintOptions.Printer = 'Default'
+    PrintOptions.PrintOnSheet = 0
+    ReportOptions.CreateDate = 40668.585858831000000000
+    ReportOptions.LastChange = 43276.987673067100000000
+    ScriptLanguage = 'PascalScript'
+    ScriptText.Strings = (
+      'begin'
+      ''
+      'end.')
+    Left = 173
+    Top = 152
+    Datasets = <
+      item
+        DataSet = Config
+        DataSetName = 'Config'
+      end
+      item
+        DataSet = detalle
+        DataSetName = 'detalle'
+      end
+      item
+        DataSet = master
+        DataSetName = 'master'
+      end>
+    Variables = <
+      item
+        Name = ' New Category1'
+        Value = Null
+      end
+      item
+        Name = 'cajero'
+        Value = Null
+      end
+      item
+        Name = 'mensaje1'
+        Value = Null
+      end
+      item
+        Name = 'condicion'
+        Value = ''
+      end>
+    Style = <>
+    object Data: TfrxDataPage
+      Height = 1000.000000000000000000
+      Width = 1000.000000000000000000
+    end
+    object Page1: TfrxReportPage
+      PaperWidth = 210.058000000000000000
+      PaperHeight = 279.400000000000000000
+      PaperSize = 256
+      Frame.Typ = []
+      MirrorMode = []
+      object DetailData1: TfrxDetailData
+        FillType = ftBrush
+        Frame.Typ = []
+        Height = 22.236240000000000000
+        Top = 309.921460000000000000
+        Width = 793.920512740000000000
+        DataSet = detalle
+        DataSetName = 'detalle'
+        RowCount = 0
+        Stretched = True
+        object frxDBDataset1MARCA: TfrxMemoView
+          AllowVectorExport = True
+          Left = 26.456710000000000000
+          Width = 124.724490000000000000
+          Height = 18.897650000000000000
+          DataField = 'COD_ART'
+          DataSet = detalle
+          DataSetName = 'detalle'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -12
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = []
+          Memo.UTF8W = (
+            '[detalle."COD_ART"]')
+          ParentFont = False
+        end
+        object frxDBDataset1ARTICULO: TfrxMemoView
+          AllowVectorExport = True
+          Left = 154.740260000000000000
+          Top = 0.779530000000023000
+          Width = 282.255350000000000000
+          Height = 15.118120000000000000
+          StretchMode = smActualHeight
+          DataField = 'TITULOPRN'
+          DataSet = detalle
+          DataSetName = 'detalle'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -12
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = []
+          Memo.UTF8W = (
+            '[detalle."TITULOPRN"]')
+          ParentFont = False
+        end
+        object frxDBDataset1CANTIDAD: TfrxMemoView
+          AllowVectorExport = True
+          Left = 429.204724410000000000
+          Top = 0.338590000000011000
+          Width = 45.354360000000000000
+          Height = 18.897650000000000000
+          DataField = 'CANTIDAD'
+          DataSet = detalle
+          DataSetName = 'detalle'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -12
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = []
+          HAlign = haRight
+          Memo.UTF8W = (
+            '[detalle."CANTIDAD"]')
+          ParentFont = False
+        end
+        object frxDBDataset1IMPORTE: TfrxMemoView
+          AllowVectorExport = True
+          Left = 670.314960630000000000
+          Top = 0.645669290000001000
+          Width = 102.047244090000000000
+          Height = 18.897650000000000000
+          DataField = 'TOTAL'
+          DataSet = detalle
+          DataSetName = 'detalle'
+          DisplayFormat.FormatStr = '%2.2n'
+          DisplayFormat.Kind = fkNumeric
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -12
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = []
+          HAlign = haRight
+          Memo.UTF8W = (
+            '[detalle."TOTAL"]')
+          ParentFont = False
+        end
+        object Memo8: TfrxMemoView
+          AllowVectorExport = True
+          Left = 570.000000000000000000
+          Top = 0.078539999999975400
+          Width = 90.708720000000000000
+          Height = 18.897650000000000000
+          DataField = 'ITBS'
+          DataSet = detalle
+          DataSetName = 'detalle'
+          DisplayFormat.FormatStr = '%2.2n'
+          DisplayFormat.Kind = fkNumeric
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -12
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = []
+          HAlign = haRight
+          Memo.UTF8W = (
+            '[detalle."ITBS"]')
+          ParentFont = False
+        end
+        object frxDBDataset1PRECIO: TfrxMemoView
+          AllowVectorExport = True
+          Left = 474.031496060000000000
+          Top = 0.179530000000000000
+          Width = 98.267780000000000000
+          Height = 18.897650000000000000
+          DataField = 'PRECIO'
+          DataSet = detalle
+          DataSetName = 'detalle'
+          DisplayFormat.FormatStr = '%2.2n'
+          DisplayFormat.Kind = fkNumeric
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -12
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = []
+          HAlign = haRight
+          Memo.UTF8W = (
+            '[detalle."PRECIO"]')
+          ParentFont = False
+        end
+      end
+      object MasterData1: TfrxMasterData
+        FillType = ftBrush
+        Frame.Typ = []
+        Top = 287.244280000000000000
+        Width = 793.920512740000000000
+        DataSet = master
+        DataSetName = 'master'
+        RowCount = 0
+      end
+      object ReportSummary1: TfrxReportSummary
+        FillType = ftBrush
+        Frame.Typ = []
+        Height = 307.048980000000000000
+        Top = 393.071120000000000000
+        Width = 793.920512740000000000
+        object Memo23: TfrxMemoView
+          AllowVectorExport = True
+          Left = 11.533890000000000000
+          Top = 144.011070000000000000
+          Width = 136.063080000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Tahoma'
+          Font.Style = []
+          Frame.Typ = []
+          Memo.UTF8W = (
+            'Cantidad de Articulos')
+          ParentFont = False
+        end
+        object SysMemo1: TfrxSysMemoView
+          AllowVectorExport = True
+          Left = 164.156030000000000000
+          Top = 144.011070000000000000
+          Width = 94.488250000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Tahoma'
+          Font.Style = []
+          Frame.Typ = []
+          Memo.UTF8W = (
+            '[COUNT(DetailData1)]')
+          ParentFont = False
+        end
+        object Line3: TfrxLineView
+          AllowVectorExport = True
+          Top = 19.861410000000000000
+          Width = 797.480830000000000000
+          Color = clBlack
+          Frame.Typ = [ftTop]
+        end
+        object mensaje1: TfrxMemoView
+          AllowVectorExport = True
+          Left = 14.800000000000000000
+          Top = 43.728880000000000000
+          Width = 451.970130000000000000
+          Height = 28.497650000000000000
+          Frame.Typ = []
+          Memo.UTF8W = (
+            '[mensaje1]')
+        end
+        object Memo21: TfrxMemoView
+          AllowVectorExport = True
+          Left = 155.000000000000000000
+          Top = 30.000000000000000000
+          Width = 470.400000000000000000
+          Height = 19.200000000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -11
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = []
+          HAlign = haCenter
+          Memo.UTF8W = (
+            '**************  ULTIMA LINEA ***************')
+          ParentFont = False
+        end
+        object Memo32: TfrxMemoView
+          AllowVectorExport = True
+          Left = 9.600000000000000000
+          Top = 168.600000000000000000
+          Width = 318.463080000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -12
+          Font.Name = 'Tahoma'
+          Font.Style = [fsBold]
+          Frame.Typ = []
+          Memo.UTF8W = (
+            'ESTADO PO ANTGUEDAD DE SALDO')
+          ParentFont = False
+        end
+        object FRAntiguedadV0_30: TfrxMemoView
+          AllowVectorExport = True
+          Left = 38.400000000000000000
+          Top = 208.800000000000000000
+          Width = 105.600000000000000000
+          Height = 19.200000000000000000
+          DataField = 'V0_30'
+          DataSet = FrmCobro.FAntiguedad
+          DataSetName = 'FRAntiguedad'
+          DisplayFormat.DecimalSeparator = '.'
+          DisplayFormat.FormatStr = '%2.2m'
+          DisplayFormat.Kind = fkNumeric
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = []
+          Memo.UTF8W = (
+            '[FRAntiguedad."V0_30"]')
+          ParentFont = False
+        end
+        object FRAntiguedadV31_60: TfrxMemoView
+          AllowVectorExport = True
+          Left = 172.800000000000000000
+          Top = 208.800000000000000000
+          Width = 86.400000000000000000
+          Height = 19.200000000000000000
+          DataField = 'V31_60'
+          DataSet = FrmCobro.FAntiguedad
+          DataSetName = 'FRAntiguedad'
+          DisplayFormat.DecimalSeparator = '.'
+          DisplayFormat.FormatStr = '%2.2m'
+          DisplayFormat.Kind = fkNumeric
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = []
+          Memo.UTF8W = (
+            '[FRAntiguedad."V31_60"]')
+          ParentFont = False
+        end
+        object FRAntiguedadV61_90: TfrxMemoView
+          AllowVectorExport = True
+          Left = 278.400000000000000000
+          Top = 208.800000000000000000
+          Width = 96.000000000000000000
+          Height = 19.200000000000000000
+          DataField = 'V61_90'
+          DataSet = FrmCobro.FAntiguedad
+          DataSetName = 'FRAntiguedad'
+          DisplayFormat.DecimalSeparator = '.'
+          DisplayFormat.FormatStr = '%2.2m'
+          DisplayFormat.Kind = fkNumeric
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = []
+          Memo.UTF8W = (
+            '[FRAntiguedad."V61_90"]')
+          ParentFont = False
+        end
+        object FRAntiguedadV91_120: TfrxMemoView
+          AllowVectorExport = True
+          Left = 393.600000000000000000
+          Top = 208.800000000000000000
+          Width = 115.200000000000000000
+          Height = 19.200000000000000000
+          DataField = 'V91_120'
+          DataSet = FrmCobro.FAntiguedad
+          DataSetName = 'FRAntiguedad'
+          DisplayFormat.DecimalSeparator = '.'
+          DisplayFormat.FormatStr = '%2.2m'
+          DisplayFormat.Kind = fkNumeric
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = []
+          Memo.UTF8W = (
+            '[FRAntiguedad."V91_120"]')
+          ParentFont = False
+        end
+        object FRAntiguedadV120: TfrxMemoView
+          AllowVectorExport = True
+          Left = 527.000000000000000000
+          Top = 208.800000000000000000
+          Width = 115.200000000000000000
+          Height = 19.200000000000000000
+          DataField = 'V120'
+          DataSet = FrmCobro.FAntiguedad
+          DataSetName = 'FRAntiguedad'
+          DisplayFormat.DecimalSeparator = '.'
+          DisplayFormat.FormatStr = '%2.2m'
+          DisplayFormat.Kind = fkNumeric
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = []
+          Memo.UTF8W = (
+            '[FRAntiguedad."V120"]')
+          ParentFont = False
+        end
+        object Memo33: TfrxMemoView
+          AllowVectorExport = True
+          Left = 40.400000000000000000
+          Top = 191.600000000000000000
+          Width = 97.663080000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -12
+          Font.Name = 'Tahoma'
+          Font.Style = [fsBold]
+          Frame.Typ = []
+          Memo.UTF8W = (
+            'De 0 a 30')
+          ParentFont = False
+        end
+        object Memo34: TfrxMemoView
+          AllowVectorExport = True
+          Left = 172.800000000000000000
+          Top = 192.200000000000000000
+          Width = 97.663080000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -12
+          Font.Name = 'Tahoma'
+          Font.Style = [fsBold]
+          Frame.Typ = []
+          Memo.UTF8W = (
+            'De 31 a 60')
+          ParentFont = False
+        end
+        object Memo35: TfrxMemoView
+          AllowVectorExport = True
+          Left = 279.400000000000000000
+          Top = 192.600000000000000000
+          Width = 97.663080000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -12
+          Font.Name = 'Tahoma'
+          Font.Style = [fsBold]
+          Frame.Typ = []
+          Memo.UTF8W = (
+            'De 61 a 90')
+          ParentFont = False
+        end
+        object Memo36: TfrxMemoView
+          AllowVectorExport = True
+          Left = 393.600000000000000000
+          Top = 191.600000000000000000
+          Width = 97.663080000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -12
+          Font.Name = 'Tahoma'
+          Font.Style = [fsBold]
+          Frame.Typ = []
+          Memo.UTF8W = (
+            'De 91 a 120')
+          ParentFont = False
+        end
+        object Memo37: TfrxMemoView
+          AllowVectorExport = True
+          Left = 528.000000000000000000
+          Top = 191.600000000000000000
+          Width = 97.663080000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -12
+          Font.Name = 'Tahoma'
+          Font.Style = [fsBold]
+          Frame.Typ = []
+          Memo.UTF8W = (
+            'De 120 a M'#225's')
+          ParentFont = False
+        end
+        object Memo38: TfrxMemoView
+          AllowVectorExport = True
+          Left = 9.600000000000000000
+          Top = 284.400000000000000000
+          Width = 769.663080000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -12
+          Font.Name = 'Tahoma'
+          Font.Style = [fsBold]
+          Frame.Typ = []
+          HAlign = haCenter
+          Memo.UTF8W = (
+            '!! Gracias por su compra, vuelva pronto !!')
+          ParentFont = False
+        end
+        object Memo39: TfrxMemoView
+          AllowVectorExport = True
+          Left = 652.800000000000000000
+          Top = 189.600000000000000000
+          Width = 116.863080000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -12
+          Font.Name = 'Tahoma'
+          Font.Style = [fsBold]
+          Frame.Typ = []
+          Memo.UTF8W = (
+            'Balance Actual')
+          ParentFont = False
+        end
+        object Memo40: TfrxMemoView
+          AllowVectorExport = True
+          Left = 652.800000000000000000
+          Top = 208.800000000000000000
+          Width = 115.200000000000000000
+          Height = 19.200000000000000000
+          DataField = 'ACTUAL'
+          DataSet = FrmCobro.FAntiguedad
+          DataSetName = 'FRAntiguedad'
+          DisplayFormat.DecimalSeparator = '.'
+          DisplayFormat.FormatStr = '%2.2m'
+          DisplayFormat.Kind = fkNumeric
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Frame.Typ = []
+          Memo.UTF8W = (
+            '[FRAntiguedad."ACTUAL"]')
+          ParentFont = False
+        end
+        object frxDBDataset1OBSERVACIONES: TfrxMemoView
+          AllowVectorExport = True
+          Left = 13.600000000000000000
+          Top = 67.200000000000000000
+          Width = 395.370130000000000000
+          Height = 42.297650000000000000
+          DataField = 'OBSERVACIONES'
+          DataSet = master
+          DataSetName = 'master'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -12
+          Font.Name = 'Arial'
+          Font.Style = [fsBold, fsItalic]
+          Frame.Typ = []
+          Memo.UTF8W = (
+            '[master."OBSERVACIONES"]')
+          ParentFont = False
+        end
+        object frxDBDataset2POGXITBS: TfrxMemoView
+          AllowVectorExport = True
+          Left = 675.879160000000000000
+          Top = 65.354360000000400000
+          Width = 102.047310000000000000
+          Height = 18.897650000000000000
+          DataField = 'POGXITBS'
+          DataSet = master
+          DataSetName = 'master'
+          DisplayFormat.FormatStr = '%2.2n'
+          DisplayFormat.Kind = fkNumeric
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Tahoma'
+          Font.Style = []
+          Frame.Typ = []
+          HAlign = haRight
+          Memo.UTF8W = (
+            '[master."POGXITBS"]')
+          ParentFont = False
+        end
+        object frxDBDataset2DESCUENTO: TfrxMemoView
+          AllowVectorExport = True
+          Left = 675.879160000000000000
+          Top = 83.472480000000500000
+          Width = 102.047310000000000000
+          Height = 18.897650000000000000
+          DataField = 'DESCUENTO'
+          DataSet = master
+          DataSetName = 'master'
+          DisplayFormat.FormatStr = '%2.2n'
+          DisplayFormat.Kind = fkNumeric
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Tahoma'
+          Font.Style = []
+          Frame.Typ = []
+          HAlign = haRight
+          Memo.UTF8W = (
+            '[master."DESCUENTO"]')
+          ParentFont = False
+        end
+        object frxDBDataset2MONTOPAGO: TfrxMemoView
+          AllowVectorExport = True
+          Left = 675.879160000000000000
+          Top = 101.149660000000000000
+          Width = 102.047310000000000000
+          Height = 18.897650000000000000
+          DataField = 'ABONO'
+          DataSet = master
+          DataSetName = 'master'
+          DisplayFormat.FormatStr = '%2.2n'
+          DisplayFormat.Kind = fkNumeric
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Tahoma'
+          Font.Style = [fsBold]
+          Frame.Typ = []
+          HAlign = haRight
+          Memo.UTF8W = (
+            '[master."ABONO"]')
+          ParentFont = False
+        end
+        object Memo18: TfrxMemoView
+          AllowVectorExport = True
+          Left = 538.713730000000000000
+          Top = 69.133890000000200000
+          Width = 120.944960000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = []
+          HAlign = haRight
+          Memo.UTF8W = (
+            'ITBS')
+          ParentFont = False
+        end
+        object Memo19: TfrxMemoView
+          AllowVectorExport = True
+          Left = 538.713730000000000000
+          Top = 82.913420000000000000
+          Width = 120.944960000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = []
+          HAlign = haRight
+          Memo.UTF8W = (
+            'Descuento')
+          ParentFont = False
+        end
+        object Memo20: TfrxMemoView
+          AllowVectorExport = True
+          Left = 538.713730000000000000
+          Top = 100.811070000000000000
+          Width = 120.944960000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Frame.Typ = []
+          HAlign = haRight
+          Memo.UTF8W = (
+            'Abono')
+          ParentFont = False
+        end
+        object frxDBDataset2MONTO: TfrxMemoView
+          AllowVectorExport = True
+          Left = 675.879160000000000000
+          Top = 48.000000000000000000
+          Width = 102.047310000000000000
+          Height = 18.897650000000000000
+          DataField = 'MONTO'
+          DataSet = master
+          DataSetName = 'master'
+          DisplayFormat.FormatStr = '%2.2n'
+          DisplayFormat.Kind = fkNumeric
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Tahoma'
+          Font.Style = []
+          Frame.Typ = []
+          HAlign = haRight
+          Memo.UTF8W = (
+            '[master."MONTO"]')
+          ParentFont = False
+        end
+        object Memo17: TfrxMemoView
+          AllowVectorExport = True
+          Left = 538.713730000000000000
+          Top = 50.000000000000000000
+          Width = 120.944960000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = []
+          HAlign = haRight
+          Memo.UTF8W = (
+            'Sub-Total')
+          ParentFont = False
+        end
+        object Memo26: TfrxMemoView
+          AllowVectorExport = True
+          Left = 674.765430000000000000
+          Top = 122.077180000000000000
+          Width = 102.047310000000000000
+          Height = 18.897650000000000000
+          DataField = 'PENDIENTE'
+          DataSet = master
+          DataSetName = 'master'
+          DisplayFormat.FormatStr = '%2.2n'
+          DisplayFormat.Kind = fkNumeric
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Tahoma'
+          Font.Style = [fsBold]
+          Frame.Typ = []
+          HAlign = haRight
+          Memo.UTF8W = (
+            '[master."PENDIENTE"]')
+          ParentFont = False
+        end
+        object Memo27: TfrxMemoView
+          AllowVectorExport = True
+          Left = 537.600000000000000000
+          Top = 121.738590000000000000
+          Width = 120.944960000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Frame.Typ = []
+          HAlign = haRight
+          Memo.UTF8W = (
+            'Pendiente')
+          ParentFont = False
+        end
+        object Memo41: TfrxMemoView
+          AllowVectorExport = True
+          Left = 480.000000000000000000
+          Top = 153.600000000000000000
+          Width = 174.463080000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Tahoma'
+          Font.Style = []
+          Frame.Typ = []
+          Memo.UTF8W = (
+            'Fecha de Vencimiento NCF')
+          ParentFont = False
+        end
+        object MASTERFECHA_FINAL: TfrxMemoView
+          AllowVectorExport = True
+          Left = 662.400000000000000000
+          Top = 153.600000000000000000
+          Width = 96.000000000000000000
+          Height = 19.200000000000000000
+          DataField = 'FECHA_FINAL'
+          DataSet = master
+          DataSetName = 'master'
+          Frame.Typ = []
+          Memo.UTF8W = (
+            '[master."FECHA_FINAL"]')
+        end
+      end
+      object ReportTitle1: TfrxReportTitle
+        FillType = ftBrush
+        Frame.Typ = []
+        Height = 209.110390000000000000
+        Top = 18.897650000000000000
+        Width = 793.920512740000000000
+        object configuracionEMPRESA: TfrxMemoView
+          AllowVectorExport = True
+          Left = 33.000000000000000000
+          Top = 13.102350000000000000
+          Width = 736.630180000000000000
+          Height = 26.456710000000000000
+          DataField = 'EMPRESA'
+          DataSet = Config
+          DataSetName = 'Config'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -16
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Frame.Typ = []
+          HAlign = haCenter
+          Memo.UTF8W = (
+            '[Config."EMPRESA"]')
+          ParentFont = False
+        end
+        object configuracionDIRECCION: TfrxMemoView
+          AllowVectorExport = True
+          Left = 35.000000000000000000
+          Top = 32.102350000000000000
+          Width = 736.630180000000000000
+          Height = 22.897650000000000000
+          DataField = 'DIRECCION'
+          DataSet = Config
+          DataSetName = 'Config'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -11
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = []
+          HAlign = haCenter
+          Memo.UTF8W = (
+            '[Config."DIRECCION"]')
+          ParentFont = False
+        end
+        object frxDBDataset2NO_FACT: TfrxMemoView
+          AllowVectorExport = True
+          Left = 124.699630000000000000
+          Top = 62.840940000000000000
+          Width = 86.929190000000000000
+          Height = 18.897650000000000000
+          DataField = 'NUMERO_FACTURA'
+          DataSet = master
+          DataSetName = 'master'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -15
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Frame.Typ = []
+          HAlign = haRight
+          Memo.UTF8W = (
+            '[master."NUMERO_FACTURA"]')
+          ParentFont = False
+        end
+        object frxDBDataset2FECHA_FAC: TfrxMemoView
+          AllowVectorExport = True
+          Left = 685.279160000000000000
+          Top = 36.333890000000000000
+          Width = 83.149660000000000000
+          Height = 18.897650000000000000
+          DataField = 'FECHA_FAC'
+          DataSet = master
+          DataSetName = 'master'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Tahoma'
+          Font.Style = []
+          Frame.Typ = []
+          HAlign = haRight
+          Memo.UTF8W = (
+            '[master."FECHA_FAC"]')
+          ParentFont = False
+        end
+        object Memo7: TfrxMemoView
+          AllowVectorExport = True
+          Left = 631.570440000000000000
+          Top = 36.333890000000000000
+          Width = 90.708720000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Tahoma'
+          Font.Style = []
+          Frame.Typ = []
+          Memo.UTF8W = (
+            'Fecha           ')
+          ParentFont = False
+        end
+        object Memo9: TfrxMemoView
+          AllowVectorExport = True
+          Left = 35.015770000000000000
+          Top = 83.852010000000000000
+          Width = 90.708720000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -12
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = []
+          Memo.UTF8W = (
+            'Cliente          :')
+          ParentFont = False
+        end
+        object Memo10: TfrxMemoView
+          AllowVectorExport = True
+          Left = 37.015770000000000000
+          Top = 154.949660000000000000
+          Width = 120.944960000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -12
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = []
+          Memo.UTF8W = (
+            'Vendedor      :')
+          ParentFont = False
+        end
+        object Memo11: TfrxMemoView
+          AllowVectorExport = True
+          Left = 38.795300000000000000
+          Top = 169.467780000000000000
+          Width = 120.944960000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -12
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = []
+          Memo.UTF8W = (
+            'Cajero /a       :')
+          ParentFont = False
+        end
+        object frxDBDataset2RNC_CLIENTE: TfrxMemoView
+          AllowVectorExport = True
+          Left = 123.826840000000000000
+          Top = 139.124490000000000000
+          Width = 336.378170000000000000
+          Height = 18.897650000000000000
+          DataField = 'RNC_CLIENTE'
+          DataSet = master
+          DataSetName = 'master'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -12
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = []
+          Memo.UTF8W = (
+            '[master."RNC_CLIENTE"]')
+          ParentFont = False
+        end
+        object Memo12: TfrxMemoView
+          AllowVectorExport = True
+          Left = 39.015770000000000000
+          Top = 137.124490000000000000
+          Width = 120.944960000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -12
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = []
+          Memo.UTF8W = (
+            'RNC Cliente  :')
+          ParentFont = False
+        end
+        object Line1: TfrxLineView
+          AllowVectorExport = True
+          Left = 1.779530000000000000
+          Top = 188.992270000000000000
+          Width = 797.480830000000000000
+          Color = clBlack
+          Frame.Typ = []
+          Diagonal = True
+        end
+        object Line2: TfrxLineView
+          AllowVectorExport = True
+          Top = 208.110390000000000000
+          Width = 797.480830000000000000
+          Color = clBlack
+          Frame.Typ = []
+          Diagonal = True
+        end
+        object Memo13: TfrxMemoView
+          AllowVectorExport = True
+          Left = 154.740260000000000000
+          Top = 190.212740000000000000
+          Width = 120.944960000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -12
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = []
+          Memo.UTF8W = (
+            'Descripcion')
+          ParentFont = False
+        end
+        object Memo14: TfrxMemoView
+          AllowVectorExport = True
+          Left = 426.205010000000000000
+          Top = 190.212740000000000000
+          Width = 34.015770000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -12
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = []
+          HAlign = haRight
+          Memo.UTF8W = (
+            'Cant.')
+          ParentFont = False
+        end
+        object Memo15: TfrxMemoView
+          AllowVectorExport = True
+          Left = 474.031850000000000000
+          Top = 190.212740000000000000
+          Width = 98.267780000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -12
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = []
+          HAlign = haRight
+          Memo.UTF8W = (
+            'Precio')
+          ParentFont = False
+        end
+        object Memo16: TfrxMemoView
+          AllowVectorExport = True
+          Left = 670.315400000000000000
+          Top = 190.212740000000000000
+          Width = 102.047310000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -12
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = []
+          HAlign = haRight
+          Memo.UTF8W = (
+            'Importe')
+          ParentFont = False
+        end
+        object Memo25: TfrxMemoView
+          AllowVectorExport = True
+          Left = 26.456710000000000000
+          Top = 189.551330000000000000
+          Width = 120.944960000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -12
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = []
+          Memo.UTF8W = (
+            'Referencia')
+          ParentFont = False
+        end
+        object Memo6: TfrxMemoView
+          AllowVectorExport = True
+          Left = 34.770440000000000000
+          Top = 60.840940000000000000
+          Width = 90.708720000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Tahoma'
+          Font.Style = []
+          Frame.Typ = []
+          Memo.UTF8W = (
+            'No. Factura  :')
+          ParentFont = False
+        end
+        object Memo2: TfrxMemoView
+          AllowVectorExport = True
+          Left = 632.688560000000000000
+          Top = 17.333890000000000000
+          Width = 90.708720000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Tahoma'
+          Font.Style = []
+          Frame.Typ = []
+          Memo.UTF8W = (
+            'Hora')
+          ParentFont = False
+        end
+        object frxDBDataset2ROTULO: TfrxMemoView
+          AllowVectorExport = True
+          Left = 588.688560000000000000
+          Top = 85.622140000000000000
+          Width = 125.858380000000000000
+          Height = 18.897650000000000000
+          DataField = 'TIPO'
+          DataSet = master
+          DataSetName = 'master'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -12
+          Font.Name = 'Tahoma'
+          Font.Style = [fsBold]
+          Frame.Typ = []
+          Memo.UTF8W = (
+            '[master."TIPO"]')
+          ParentFont = False
+        end
+        object configuracionTELEFONO: TfrxMemoView
+          AllowVectorExport = True
+          Left = 303.000000000000000000
+          Top = 50.502350000000000000
+          Width = 105.826840000000000000
+          Height = 18.897650000000000000
+          DataField = 'TELEFONO'
+          DataSet = Config
+          DataSetName = 'Config'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -11
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = []
+          Memo.UTF8W = (
+            '[Config."TELEFONO"]')
+          ParentFont = False
+        end
+        object configuracionRNC: TfrxMemoView
+          AllowVectorExport = True
+          Left = 451.000000000000000000
+          Top = 50.502350000000000000
+          Width = 120.944960000000000000
+          Height = 18.897650000000000000
+          DataField = 'RNC'
+          DataSet = Config
+          DataSetName = 'Config'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -11
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = []
+          Memo.UTF8W = (
+            '[Config."RNC"]')
+          ParentFont = False
+        end
+        object Memo1: TfrxMemoView
+          AllowVectorExport = True
+          Left = 278.000000000000000000
+          Top = 50.502350000000000000
+          Width = 26.456710000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -11
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = []
+          Memo.UTF8W = (
+            'Tel.')
+          ParentFont = False
+        end
+        object Memo3: TfrxMemoView
+          AllowVectorExport = True
+          Left = 416.000000000000000000
+          Top = 50.502350000000000000
+          Width = 37.795300000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -11
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = []
+          Memo.UTF8W = (
+            'RNC:')
+          ParentFont = False
+        end
+        object Memo4: TfrxMemoView
+          AllowVectorExport = True
+          Left = 565.000000000000000000
+          Top = 190.102350000000000000
+          Width = 98.267780000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -12
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = []
+          HAlign = haRight
+          Memo.UTF8W = (
+            'Itbs')
+          ParentFont = False
+        end
+        object frxDBDataset1NOMBRECLIENTE_PRN: TfrxMemoView
+          AllowVectorExport = True
+          Left = 120.000000000000000000
+          Top = 83.702350000000000000
+          Width = 279.685220000000000000
+          Height = 18.897650000000000000
+          DataField = 'NOMBRECLIENTE_PRN'
+          DataSet = master
+          DataSetName = 'master'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -12
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Frame.Typ = []
+          Memo.UTF8W = (
+            '[master."NOMBRECLIENTE_PRN"]')
+          ParentFont = False
+        end
+        object frxDBDataset1NCF_NOMBRE: TfrxMemoView
+          AllowVectorExport = True
+          Left = 486.600000000000000000
+          Top = 106.102350000000000000
+          Width = 285.430180000000000000
+          Height = 18.897650000000000000
+          DataField = 'NCF_NOMBRE'
+          DataSet = master
+          DataSetName = 'master'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -12
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = []
+          Memo.UTF8W = (
+            '[master."NCF_NOMBRE"]')
+          ParentFont = False
+        end
+        object frxDBDataset1NCF: TfrxMemoView
+          AllowVectorExport = True
+          Left = 488.800000000000000000
+          Top = 122.302350000000000000
+          Width = 200.315090000000000000
+          Height = 18.897650000000000000
+          DataField = 'NCF'
+          DataSet = master
+          DataSetName = 'master'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -12
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Frame.Typ = []
+          Memo.UTF8W = (
+            '[master."NCF"]')
+          ParentFont = False
+        end
+        object frxDBDataset1NOMBRES_EMP: TfrxMemoView
+          AllowVectorExport = True
+          Left = 124.000000000000000000
+          Top = 152.902350000000000000
+          Width = 279.685220000000000000
+          Height = 18.897650000000000000
+          DataField = 'NOMBRES_EMP'
+          DataSet = master
+          DataSetName = 'master'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -12
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = []
+          Memo.UTF8W = (
+            '[master."NOMBRES_EMP"]')
+          ParentFont = False
+        end
+        object SysMemo2: TfrxSysMemoView
+          AllowVectorExport = True
+          Left = 682.200000000000000000
+          Top = 16.302350000000000000
+          Width = 87.488250000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Frame.Typ = []
+          HAlign = haRight
+          Memo.UTF8W = (
+            '[TIME]')
+          ParentFont = False
+        end
+        object cajero: TfrxMemoView
+          AllowVectorExport = True
+          Left = 127.000000000000000000
+          Top = 169.302350000000000000
+          Width = 281.370130000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -12
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = []
+          Memo.UTF8W = (
+            '[cajero]')
+          ParentFont = False
+        end
+        object Memo22: TfrxMemoView
+          AllowVectorExport = True
+          Left = 36.400000000000000000
+          Top = 103.800000000000000000
+          Width = 90.708720000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -12
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = []
+          Memo.UTF8W = (
+            'Direcci'#243'n      :')
+          ParentFont = False
+        end
+        object frxDBDataset1DIRECCION: TfrxMemoView
+          AllowVectorExport = True
+          Left = 124.800000000000000000
+          Top = 102.800000000000000000
+          Width = 288.000000000000000000
+          Height = 28.800000000000000000
+          DataField = 'dir'
+          DataSet = master
+          DataSetName = 'master'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -12
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = []
+          Memo.UTF8W = (
+            '[master."dir"]')
+          ParentFont = False
+        end
+        object Memo24: TfrxMemoView
+          AllowVectorExport = True
+          Left = 489.600000000000000000
+          Top = 86.600000000000000000
+          Width = 82.544960000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -12
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = []
+          Memo.UTF8W = (
+            'CONDICION')
+          ParentFont = False
+        end
+        object Memo28: TfrxMemoView
+          AllowVectorExport = True
+          Left = 491.600000000000000000
+          Top = 139.000000000000000000
+          Width = 149.744960000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = []
+          Memo.UTF8W = (
+            'Fecha de Vencimiento :')
+          ParentFont = False
+        end
+        object Memo29: TfrxMemoView
+          AllowVectorExport = True
+          Left = 638.200000000000000000
+          Top = 140.000000000000000000
+          Width = 125.858380000000000000
+          Height = 18.897650000000000000
+          DataField = 'FECHAVENCIMIENTO'
+          DataSet = master
+          DataSetName = 'master'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Tahoma'
+          Font.Style = [fsBold]
+          Frame.Typ = []
+          Memo.UTF8W = (
+            '[master."FECHAVENCIMIENTO"]')
+          ParentFont = False
+        end
+        object Titulos: TfrxMemoView
+          AllowVectorExport = True
+          Left = 489.600000000000000000
+          Top = 153.600000000000000000
+          Width = 249.600000000000000000
+          Height = 28.800000000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -24
+          Font.Name = 'Century Gothic'
+          Font.Style = [fsBold]
+          Frame.Typ = []
+          Memo.UTF8W = (
+            '[Titulos]')
+          ParentFont = False
+        end
+      end
+    end
+  end
+  object imprimem: TfrxReport
+    Version = '6.4.13'
+    DataSet = detalle
+    DataSetName = 'detalle'
+    DotMatrixReport = False
+    IniFile = '\Software\Fast Reports'
+    PreviewOptions.Buttons = [pbPrint, pbLoad, pbSave, pbExport, pbZoom, pbFind, pbOutline, pbPageSetup, pbTools, pbEdit, pbNavigator, pbExportQuick]
+    PreviewOptions.OutlineExpand = False
+    PreviewOptions.Zoom = 1.000000000000000000
+    PrintOptions.Collate = False
+    PrintOptions.Printer = 'Default'
+    PrintOptions.PrintOnSheet = 0
+    ReportOptions.CreateDate = 40668.585858831000000000
+    ReportOptions.LastChange = 43245.077666446800000000
+    ScriptLanguage = 'PascalScript'
+    ScriptText.Strings = (
+      'begin'
+      ''
+      'end.')
+    Left = 144
+    Top = 208
+    Datasets = <
+      item
+        DataSet = Config
+        DataSetName = 'Config'
+      end
+      item
+        DataSet = detalle
+        DataSetName = 'detalle'
+      end
+      item
+        DataSet = master
+        DataSetName = 'master'
+      end
+      item
+        DataSet = series
+        DataSetName = 'series'
+      end>
+    Variables = <
+      item
+        Name = ' New Category1'
+        Value = Null
+      end
+      item
+        Name = 'cajero'
+        Value = Null
+      end
+      item
+        Name = 'mensaje1'
+        Value = Null
+      end
+      item
+        Name = 'Titulos'
+        Value = Null
+      end
+      item
+        Name = 'condicion'
+        Value = ''
+      end>
+    Style = <>
+    object Data: TfrxDataPage
+      Height = 1000.000000000000000000
+      Width = 1000.000000000000000000
+    end
+    object Page1: TfrxReportPage
+      PaperWidth = 210.058000000000000000
+      PaperHeight = 279.400000000000000000
+      PaperSize = 256
+      Frame.Typ = []
+      MirrorMode = []
+      object DetailData1: TfrxDetailData
+        FillType = ftBrush
+        Frame.Typ = []
+        Height = 22.236240000000000000
+        Top = 309.921460000000000000
+        Width = 793.920512740000000000
+        DataSet = detalle
+        DataSetName = 'detalle'
+        RowCount = 0
+        Stretched = True
+        object frxDBDataset1ARTICULO: TfrxMemoView
+          AllowVectorExport = True
+          Left = 154.740260000000000000
+          Top = 0.779530000000022500
+          Width = 282.255350000000000000
+          Height = 15.118120000000000000
+          StretchMode = smActualHeight
+          DataField = 'TITULOPRN'
+          DataSet = detalle
+          DataSetName = 'detalle'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -12
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = []
+          Memo.UTF8W = (
+            '[detalle."TITULOPRN"]')
+          ParentFont = False
+        end
+        object frxDBDataset1CANTIDAD: TfrxMemoView
+          AllowVectorExport = True
+          Left = 429.204724410000000000
+          Top = 0.338590000000010600
+          Width = 45.354360000000000000
+          Height = 18.897650000000000000
+          DataField = 'CANTIDAD'
+          DataSet = detalle
+          DataSetName = 'detalle'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -12
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = []
+          HAlign = haRight
+          Memo.UTF8W = (
+            '[detalle."CANTIDAD"]')
+          ParentFont = False
+        end
+        object frxDBDataset1PRECIO: TfrxMemoView
+          AllowVectorExport = True
+          Left = 474.031496060000000000
+          Top = 0.779530000000022500
+          Width = 98.267780000000000000
+          Height = 18.897650000000000000
+          DataField = 'PRECIO'
+          DataSet = detalle
+          DataSetName = 'detalle'
+          DisplayFormat.FormatStr = '%2.2n'
+          DisplayFormat.Kind = fkNumeric
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -12
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = []
+          HAlign = haRight
+          Memo.UTF8W = (
+            '[detalle."PRECIO"]')
+          ParentFont = False
+        end
+        object frxDBDataset1IMPORTE: TfrxMemoView
+          AllowVectorExport = True
+          Left = 670.314960630000000000
+          Top = 0.645669290000000800
+          Width = 102.047244090000000000
+          Height = 18.897650000000000000
+          DataField = 'TOTAL'
+          DataSet = detalle
+          DataSetName = 'detalle'
+          DisplayFormat.FormatStr = '%2.2n'
+          DisplayFormat.Kind = fkNumeric
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -12
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = []
+          HAlign = haRight
+          Memo.UTF8W = (
+            '[detalle."TOTAL"]')
+          ParentFont = False
+        end
+        object frxDBDataset1MARCA: TfrxMemoView
+          AllowVectorExport = True
+          Left = 26.456710000000000000
+          Width = 124.724490000000000000
+          Height = 18.897650000000000000
+          DataField = 'COD_ART'
+          DataSet = detalle
+          DataSetName = 'detalle'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -12
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = []
+          Memo.UTF8W = (
+            '[detalle."COD_ART"]')
+          ParentFont = False
+        end
+        object Memo8: TfrxMemoView
+          AllowVectorExport = True
+          Left = 570.000000000000000000
+          Top = 0.078539999999975410
+          Width = 90.708720000000000000
+          Height = 18.897650000000000000
+          DataField = 'ITBS'
+          DataSet = detalle
+          DataSetName = 'detalle'
+          DisplayFormat.FormatStr = '%2.2n'
+          DisplayFormat.Kind = fkNumeric
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -12
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = []
+          HAlign = haRight
+          Memo.UTF8W = (
+            '[detalle."ITBS"]')
+          ParentFont = False
+        end
+      end
+      object MasterData1: TfrxMasterData
+        FillType = ftBrush
+        Frame.Typ = []
+        Top = 287.244280000000000000
+        Width = 793.920512740000000000
+        DataSet = master
+        DataSetName = 'master'
+        RowCount = 0
+      end
+      object ReportSummary1: TfrxReportSummary
+        FillType = ftBrush
+        Frame.Typ = []
+        Height = 259.048980000000000000
+        Top = 393.071120000000000000
+        Width = 793.920512740000000000
+        object frxDBDataset2POGXITBS: TfrxMemoView
+          AllowVectorExport = True
+          Left = 650.079160000000000000
+          Top = 42.615770000000000000
+          Width = 102.047310000000000000
+          Height = 18.897650000000000000
+          DataField = 'POGXITBS'
+          DataSet = master
+          DataSetName = 'master'
+          DisplayFormat.FormatStr = '%2.2n'
+          DisplayFormat.Kind = fkNumeric
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Tahoma'
+          Font.Style = []
+          Frame.Typ = []
+          HAlign = haRight
+          Memo.UTF8W = (
+            '[master."POGXITBS"]')
+          ParentFont = False
+        end
+        object frxDBDataset2DESCUENTO: TfrxMemoView
+          AllowVectorExport = True
+          Left = 650.079160000000000000
+          Top = 57.733889999999970000
+          Width = 102.047310000000000000
+          Height = 18.897650000000000000
+          DataField = 'DESCUENTO'
+          DataSet = master
+          DataSetName = 'master'
+          DisplayFormat.FormatStr = '%2.2n'
+          DisplayFormat.Kind = fkNumeric
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Tahoma'
+          Font.Style = []
+          Frame.Typ = []
+          HAlign = haRight
+          Memo.UTF8W = (
+            '[master."DESCUENTO"]')
+          ParentFont = False
+        end
+        object Memo18: TfrxMemoView
+          AllowVectorExport = True
+          Left = 512.913730000000000000
+          Top = 43.395300000000020000
+          Width = 120.944960000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = []
+          HAlign = haRight
+          Memo.UTF8W = (
+            'ITBS')
+          ParentFont = False
+        end
+        object Memo19: TfrxMemoView
+          AllowVectorExport = True
+          Left = 512.913730000000000000
+          Top = 57.174829999999990000
+          Width = 120.944960000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = []
+          HAlign = haRight
+          Memo.UTF8W = (
+            'Descuento')
+          ParentFont = False
+        end
+        object Memo23: TfrxMemoView
+          AllowVectorExport = True
+          Left = 11.533890000000000000
+          Top = 167.611070000000000000
+          Width = 136.063080000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Tahoma'
+          Font.Style = []
+          Frame.Typ = []
+          Memo.UTF8W = (
+            'Cantidad de Articulos')
+          ParentFont = False
+        end
+        object SysMemo1: TfrxSysMemoView
+          AllowVectorExport = True
+          Left = 164.156030000000000000
+          Top = 167.611070000000000000
+          Width = 94.488250000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Tahoma'
+          Font.Style = []
+          Frame.Typ = []
+          Memo.UTF8W = (
+            '[COUNT(DetailData1)]')
+          ParentFont = False
+        end
+        object Line3: TfrxLineView
+          AllowVectorExport = True
+          Top = 6.861409999999978000
+          Width = 797.480830000000000000
+          Color = clBlack
+          Frame.Typ = [ftTop]
+        end
+        object frxDBDataset2MONTO: TfrxMemoView
+          AllowVectorExport = True
+          Left = 650.079160000000000000
+          Top = 22.261410000000010000
+          Width = 102.047310000000000000
+          Height = 18.897650000000000000
+          DataField = 'MONTO'
+          DataSet = master
+          DataSetName = 'master'
+          DisplayFormat.FormatStr = '%2.2n'
+          DisplayFormat.Kind = fkNumeric
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Tahoma'
+          Font.Style = []
+          Frame.Typ = []
+          HAlign = haRight
+          Memo.UTF8W = (
+            '[master."MONTO"]')
+          ParentFont = False
+        end
+        object Memo17: TfrxMemoView
+          AllowVectorExport = True
+          Left = 512.913730000000000000
+          Top = 24.261410000000010000
+          Width = 120.944960000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = []
+          HAlign = haRight
+          Memo.UTF8W = (
+            'Sub-Total')
+          ParentFont = False
+        end
+        object mensaje1: TfrxMemoView
+          AllowVectorExport = True
+          Left = 18.579530000000000000
+          Top = 72.646999999999990000
+          Width = 451.970130000000000000
+          Height = 47.697650000000000000
+          Frame.Typ = []
+          Memo.UTF8W = (
+            '[mensaje1]')
+        end
+        object Memo21: TfrxMemoView
+          AllowVectorExport = True
+          Left = 164.600000000000000000
+          Top = 11.000000000000000000
+          Width = 470.400000000000000000
+          Height = 19.200000000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -11
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = []
+          HAlign = haCenter
+          Memo.UTF8W = (
+            '**************  ULTIMA LINEA ***************')
+          ParentFont = False
+        end
+        object Memo38: TfrxMemoView
+          AllowVectorExport = True
+          Left = 9.600000000000000000
+          Top = 239.400000000000000000
+          Width = 769.663080000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -12
+          Font.Name = 'Tahoma'
+          Font.Style = [fsBold]
+          Frame.Typ = []
+          HAlign = haCenter
+          Memo.UTF8W = (
+            '!! Gracias por su compra, vuelva pronto !!')
+          ParentFont = False
+        end
+        object Memo39: TfrxMemoView
+          AllowVectorExport = True
+          Left = 650.704020000000000000
+          Top = 76.800000000000180000
+          Width = 104.390600000000000000
+          Height = 18.897650000000000000
+          DataField = 'MONTOPAGO'
+          DataSet = master
+          DataSetName = 'master'
+          DisplayFormat.FormatStr = '%2.2n'
+          DisplayFormat.Kind = fkNumeric
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -16
+          Font.Name = 'Arial Narrow'
+          Font.Style = [fsBold]
+          Frame.Typ = []
+          HAlign = haRight
+          Memo.UTF8W = (
+            '[master."MONTOPAGO"]')
+          ParentFont = False
+        end
+        object Memo40: TfrxMemoView
+          AllowVectorExport = True
+          Left = 533.138590000000000000
+          Top = 78.461410000000120000
+          Width = 101.744960000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Frame.Typ = []
+          HAlign = haRight
+          Memo.UTF8W = (
+            'Neto a Pagar')
+          ParentFont = False
+        end
+        object Memo41: TfrxMemoView
+          AllowVectorExport = True
+          Left = 531.779530000000000000
+          Top = 100.677180000000000000
+          Width = 101.744960000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Frame.Typ = []
+          HAlign = haRight
+          Memo.UTF8W = (
+            'Efectivo')
+          ParentFont = False
+        end
+        object Memo42: TfrxMemoView
+          AllowVectorExport = True
+          Left = 532.600000000000000000
+          Top = 119.574830000000000000
+          Width = 101.744960000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Frame.Typ = []
+          HAlign = haRight
+          Memo.UTF8W = (
+            'Cambio')
+          ParentFont = False
+        end
+        object Memo43: TfrxMemoView
+          AllowVectorExport = True
+          Left = 650.985900000000000000
+          Top = 96.677180000000470000
+          Width = 102.349660000000000000
+          Height = 18.897650000000000000
+          DataField = 'EFECTIVO'
+          DataSet = master
+          DataSetName = 'master'
+          DisplayFormat.FormatStr = '%2.2n'
+          DisplayFormat.Kind = fkNumeric
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = []
+          HAlign = haRight
+          Memo.UTF8W = (
+            '[master."EFECTIVO"]')
+          ParentFont = False
+        end
+        object Memo44: TfrxMemoView
+          AllowVectorExport = True
+          Left = 650.985900000000000000
+          Top = 119.574830000000000000
+          Width = 102.349660000000000000
+          Height = 18.897650000000000000
+          DataField = 'DEVOLUCION'
+          DataSet = master
+          DataSetName = 'master'
+          DisplayFormat.FormatStr = '%2.2n'
+          DisplayFormat.Kind = fkNumeric
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = []
+          HAlign = haRight
+          Memo.UTF8W = (
+            '[master."DEVOLUCION"]')
+          ParentFont = False
+        end
+        object frxDBDataset1OBSERVACIONES: TfrxMemoView
+          AllowVectorExport = True
+          Left = 13.600000000000000000
+          Top = 105.600000000000000000
+          Width = 395.370130000000000000
+          Height = 42.297650000000000000
+          DataField = 'OBSERVACIONES'
+          DataSet = master
+          DataSetName = 'master'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -12
+          Font.Name = 'Arial'
+          Font.Style = [fsBold, fsItalic]
+          Frame.Typ = []
+          Memo.UTF8W = (
+            '[master."OBSERVACIONES"]')
+          ParentFont = False
+        end
+        object Memo20: TfrxMemoView
+          AllowVectorExport = True
+          Left = 432.000000000000000000
+          Top = 153.600000000000000000
+          Width = 212.863080000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Tahoma'
+          Font.Style = []
+          Frame.Typ = []
+          Memo.UTF8W = (
+            'Fecha de Vencimiento NCF')
+          ParentFont = False
+        end
+        object MASTERFECHA_FINAL: TfrxMemoView
+          AllowVectorExport = True
+          Left = 614.400000000000000000
+          Top = 153.600000000000000000
+          Width = 96.000000000000000000
+          Height = 19.200000000000000000
+          DataField = 'FECHA_FINAL'
+          DataSet = master
+          DataSetName = 'master'
+          Frame.Typ = []
+          Memo.UTF8W = (
+            '[master."FECHA_FINAL"]')
+        end
+      end
+      object ReportTitle1: TfrxReportTitle
+        FillType = ftBrush
+        Frame.Typ = []
+        Height = 209.110390000000000000
+        Top = 18.897650000000000000
+        Width = 793.920512740000000000
+        object configuracionEMPRESA: TfrxMemoView
+          AllowVectorExport = True
+          Left = 33.000000000000000000
+          Top = 13.102350000000000000
+          Width = 736.630180000000000000
+          Height = 26.456710000000000000
+          DataField = 'EMPRESA'
+          DataSet = Config
+          DataSetName = 'Config'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -16
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Frame.Typ = []
+          HAlign = haCenter
+          Memo.UTF8W = (
+            '[Config."EMPRESA"]')
+          ParentFont = False
+        end
+        object configuracionDIRECCION: TfrxMemoView
+          AllowVectorExport = True
+          Left = 35.000000000000000000
+          Top = 32.102350000000000000
+          Width = 736.630180000000000000
+          Height = 22.897650000000000000
+          DataField = 'DIRECCION'
+          DataSet = Config
+          DataSetName = 'Config'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -11
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = []
+          HAlign = haCenter
+          Memo.UTF8W = (
+            '[Config."DIRECCION"]')
+          ParentFont = False
+        end
+        object frxDBDataset2NO_FACT: TfrxMemoView
+          AllowVectorExport = True
+          Left = 124.699630000000000000
+          Top = 62.840940000000000000
+          Width = 86.929190000000000000
+          Height = 18.897650000000000000
+          DataField = 'NUMERO_FACTURA'
+          DataSet = master
+          DataSetName = 'master'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -15
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Frame.Typ = []
+          HAlign = haRight
+          Memo.UTF8W = (
+            '[master."NUMERO_FACTURA"]')
+          ParentFont = False
+        end
+        object frxDBDataset2FECHA_FAC: TfrxMemoView
+          AllowVectorExport = True
+          Left = 685.279160000000000000
+          Top = 36.333889999999990000
+          Width = 83.149660000000000000
+          Height = 18.897650000000000000
+          DataField = 'FECHA_FAC'
+          DataSet = master
+          DataSetName = 'master'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Tahoma'
+          Font.Style = []
+          Frame.Typ = []
+          HAlign = haRight
+          Memo.UTF8W = (
+            '[master."FECHA_FAC"]')
+          ParentFont = False
+        end
+        object Memo7: TfrxMemoView
+          AllowVectorExport = True
+          Left = 631.570440000000000000
+          Top = 36.333889999999990000
+          Width = 90.708720000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Tahoma'
+          Font.Style = []
+          Frame.Typ = []
+          Memo.UTF8W = (
+            'Fecha           ')
+          ParentFont = False
+        end
+        object Memo9: TfrxMemoView
+          AllowVectorExport = True
+          Left = 35.015770000000000000
+          Top = 83.852010000000010000
+          Width = 90.708720000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -12
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = []
+          Memo.UTF8W = (
+            'Cliente          :')
+          ParentFont = False
+        end
+        object Memo10: TfrxMemoView
+          AllowVectorExport = True
+          Left = 37.015770000000000000
+          Top = 154.949660000000000000
+          Width = 120.944960000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -12
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = []
+          Memo.UTF8W = (
+            'Vendedor      :')
+          ParentFont = False
+        end
+        object Memo11: TfrxMemoView
+          AllowVectorExport = True
+          Left = 38.795300000000000000
+          Top = 169.467780000000000000
+          Width = 120.944960000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -12
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = []
+          Memo.UTF8W = (
+            'Cajero /a       :')
+          ParentFont = False
+        end
+        object frxDBDataset2RNC_CLIENTE: TfrxMemoView
+          AllowVectorExport = True
+          Left = 123.826840000000000000
+          Top = 139.124490000000000000
+          Width = 336.378170000000000000
+          Height = 18.897650000000000000
+          DataField = 'RNC_CLIENTE'
+          DataSet = master
+          DataSetName = 'master'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -12
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = []
+          Memo.UTF8W = (
+            '[master."RNC_CLIENTE"]')
+          ParentFont = False
+        end
+        object Memo12: TfrxMemoView
+          AllowVectorExport = True
+          Left = 39.015770000000000000
+          Top = 137.124490000000000000
+          Width = 120.944960000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -12
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = []
+          Memo.UTF8W = (
+            'RNC Cliente  :')
+          ParentFont = False
+        end
+        object Line1: TfrxLineView
+          AllowVectorExport = True
+          Left = 1.779530000000000000
+          Top = 188.992270000000000000
+          Width = 797.480830000000000000
+          Color = clBlack
+          Frame.Typ = []
+          Diagonal = True
+        end
+        object Line2: TfrxLineView
+          AllowVectorExport = True
+          Top = 208.110390000000000000
+          Width = 797.480830000000000000
+          Color = clBlack
+          Frame.Typ = []
+          Diagonal = True
+        end
+        object Memo13: TfrxMemoView
+          AllowVectorExport = True
+          Left = 154.740260000000000000
+          Top = 190.212740000000000000
+          Width = 120.944960000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -12
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = []
+          Memo.UTF8W = (
+            'Descripcion')
+          ParentFont = False
+        end
+        object Memo14: TfrxMemoView
+          AllowVectorExport = True
+          Left = 426.205010000000000000
+          Top = 190.212740000000000000
+          Width = 34.015770000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -12
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = []
+          HAlign = haRight
+          Memo.UTF8W = (
+            'Cant.')
+          ParentFont = False
+        end
+        object Memo15: TfrxMemoView
+          AllowVectorExport = True
+          Left = 474.031850000000000000
+          Top = 190.212740000000000000
+          Width = 98.267780000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -12
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = []
+          HAlign = haRight
+          Memo.UTF8W = (
+            'Precio')
+          ParentFont = False
+        end
+        object Memo16: TfrxMemoView
+          AllowVectorExport = True
+          Left = 670.315400000000000000
+          Top = 190.212740000000000000
+          Width = 102.047310000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -12
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = []
+          HAlign = haRight
+          Memo.UTF8W = (
+            'Importe')
+          ParentFont = False
+        end
+        object Memo25: TfrxMemoView
+          AllowVectorExport = True
+          Left = 26.456710000000000000
+          Top = 189.551330000000000000
+          Width = 120.944960000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -12
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = []
+          Memo.UTF8W = (
+            'Referencia')
+          ParentFont = False
+        end
+        object Memo6: TfrxMemoView
+          AllowVectorExport = True
+          Left = 34.770440000000000000
+          Top = 60.840940000000000000
+          Width = 90.708720000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Tahoma'
+          Font.Style = []
+          Frame.Typ = []
+          Memo.UTF8W = (
+            'No. Factura  :')
+          ParentFont = False
+        end
+        object Memo2: TfrxMemoView
+          AllowVectorExport = True
+          Left = 632.688560000000000000
+          Top = 17.333890000000000000
+          Width = 90.708720000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Tahoma'
+          Font.Style = []
+          Frame.Typ = []
+          Memo.UTF8W = (
+            'Hora')
+          ParentFont = False
+        end
+        object frxDBDataset2ROTULO: TfrxMemoView
+          AllowVectorExport = True
+          Left = 588.688560000000000000
+          Top = 85.622140000000000000
+          Width = 125.858380000000000000
+          Height = 18.897650000000000000
+          DataField = 'TIPO'
+          DataSet = master
+          DataSetName = 'master'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -12
+          Font.Name = 'Tahoma'
+          Font.Style = [fsBold]
+          Frame.Typ = []
+          Memo.UTF8W = (
+            '[master."TIPO"]')
+          ParentFont = False
+        end
+        object configuracionTELEFONO: TfrxMemoView
+          AllowVectorExport = True
+          Left = 303.000000000000000000
+          Top = 50.502350000000010000
+          Width = 105.826840000000000000
+          Height = 18.897650000000000000
+          DataField = 'TELEFONO'
+          DataSet = Config
+          DataSetName = 'Config'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -11
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = []
+          Memo.UTF8W = (
+            '[Config."TELEFONO"]')
+          ParentFont = False
+        end
+        object configuracionRNC: TfrxMemoView
+          AllowVectorExport = True
+          Left = 451.000000000000000000
+          Top = 50.502350000000010000
+          Width = 120.944960000000000000
+          Height = 18.897650000000000000
+          DataField = 'RNC'
+          DataSet = Config
+          DataSetName = 'Config'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -11
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = []
+          Memo.UTF8W = (
+            '[Config."RNC"]')
+          ParentFont = False
+        end
+        object Memo1: TfrxMemoView
+          AllowVectorExport = True
+          Left = 278.000000000000000000
+          Top = 50.502350000000010000
+          Width = 26.456710000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -11
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = []
+          Memo.UTF8W = (
+            'Tel.')
+          ParentFont = False
+        end
+        object Memo3: TfrxMemoView
+          AllowVectorExport = True
+          Left = 416.000000000000000000
+          Top = 50.502350000000010000
+          Width = 37.795300000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -11
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = []
+          Memo.UTF8W = (
+            'RNC:')
+          ParentFont = False
+        end
+        object Memo4: TfrxMemoView
+          AllowVectorExport = True
+          Left = 565.000000000000000000
+          Top = 190.102350000000000000
+          Width = 98.267780000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -12
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = []
+          HAlign = haRight
+          Memo.UTF8W = (
+            'Itbs')
+          ParentFont = False
+        end
+        object frxDBDataset1NOMBRECLIENTE_PRN: TfrxMemoView
+          AllowVectorExport = True
+          Left = 120.000000000000000000
+          Top = 83.702350000000000000
+          Width = 279.685220000000000000
+          Height = 18.897650000000000000
+          DataField = 'NOMBRECLIENTE_PRN'
+          DataSet = master
+          DataSetName = 'master'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -12
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Frame.Typ = []
+          Memo.UTF8W = (
+            '[master."NOMBRECLIENTE_PRN"]')
+          ParentFont = False
+        end
+        object frxDBDataset1NCF_NOMBRE: TfrxMemoView
+          AllowVectorExport = True
+          Left = 486.600000000000000000
+          Top = 106.102350000000000000
+          Width = 285.430180000000000000
+          Height = 18.897650000000000000
+          DataField = 'NCF_NOMBRE'
+          DataSet = master
+          DataSetName = 'master'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -12
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = []
+          Memo.UTF8W = (
+            '[master."NCF_NOMBRE"]')
+          ParentFont = False
+        end
+        object frxDBDataset1NCF: TfrxMemoView
+          AllowVectorExport = True
+          Left = 488.800000000000000000
+          Top = 122.302350000000000000
+          Width = 200.315090000000000000
+          Height = 18.897650000000000000
+          DataField = 'NCF'
+          DataSet = master
+          DataSetName = 'master'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -12
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Frame.Typ = []
+          Memo.UTF8W = (
+            '[master."NCF"]')
+          ParentFont = False
+        end
+        object frxDBDataset1NOMBRES_EMP: TfrxMemoView
+          AllowVectorExport = True
+          Left = 124.000000000000000000
+          Top = 152.902350000000000000
+          Width = 279.685220000000000000
+          Height = 18.897650000000000000
+          DataField = 'NOMBRES_EMP'
+          DataSet = master
+          DataSetName = 'master'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -12
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = []
+          Memo.UTF8W = (
+            '[master."NOMBRES_EMP"]')
+          ParentFont = False
+        end
+        object SysMemo2: TfrxSysMemoView
+          AllowVectorExport = True
+          Left = 682.200000000000000000
+          Top = 16.302350000000000000
+          Width = 87.488250000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Frame.Typ = []
+          HAlign = haRight
+          Memo.UTF8W = (
+            '[TIME]')
+          ParentFont = False
+        end
+        object cajero: TfrxMemoView
+          AllowVectorExport = True
+          Left = 127.000000000000000000
+          Top = 169.302350000000000000
+          Width = 281.370130000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -12
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = []
+          Memo.UTF8W = (
+            '[cajero]')
+          ParentFont = False
+        end
+        object Memo22: TfrxMemoView
+          AllowVectorExport = True
+          Left = 36.400000000000000000
+          Top = 103.800000000000000000
+          Width = 90.708720000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -12
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = []
+          Memo.UTF8W = (
+            'Direcci'#243'n      :')
+          ParentFont = False
+        end
+        object frxDBDataset1DIRECCION: TfrxMemoView
+          AllowVectorExport = True
+          Left = 124.800000000000000000
+          Top = 102.800000000000000000
+          Width = 288.000000000000000000
+          Height = 28.800000000000000000
+          DataField = 'dir'
+          DataSet = master
+          DataSetName = 'master'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -12
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = []
+          Memo.UTF8W = (
+            '[master."dir"]')
+          ParentFont = False
+        end
+        object Memo24: TfrxMemoView
+          AllowVectorExport = True
+          Left = 489.600000000000000000
+          Top = 86.599999999999900000
+          Width = 82.544960000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -12
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = []
+          Memo.UTF8W = (
+            'CONDICION')
+          ParentFont = False
+        end
+        object Memo28: TfrxMemoView
+          AllowVectorExport = True
+          Left = 491.600000000000000000
+          Top = 139.000000000000000000
+          Width = 149.744960000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = []
+          Memo.UTF8W = (
+            'Fecha de Vencimiento :')
+          ParentFont = False
+        end
+        object Memo29: TfrxMemoView
+          AllowVectorExport = True
+          Left = 638.200000000000000000
+          Top = 140.000000000000000000
+          Width = 125.858380000000000000
+          Height = 18.897650000000000000
+          DataField = 'FECHAVENCIMIENTO'
+          DataSet = master
+          DataSetName = 'master'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Tahoma'
+          Font.Style = [fsBold]
+          Frame.Typ = []
+          Memo.UTF8W = (
+            '[master."FECHAVENCIMIENTO"]')
+          ParentFont = False
+        end
+        object Titulos: TfrxMemoView
+          AllowVectorExport = True
+          Left = 489.600000000000000000
+          Top = 153.600000000000000000
+          Width = 249.600000000000000000
+          Height = 28.800000000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -24
+          Font.Name = 'Century Gothic'
+          Font.Style = [fsBold]
+          Frame.Typ = []
+          Memo.UTF8W = (
+            '[Titulos]')
+          ParentFont = False
+        end
+      end
+    end
+  end
+  object ConduceMC: TfrxReport
+    Version = '6.4.13'
+    DataSet = detalle
+    DataSetName = 'detalle'
+    DotMatrixReport = False
+    IniFile = '\Software\Fast Reports'
+    PreviewOptions.Buttons = [pbPrint, pbLoad, pbSave, pbExport, pbZoom, pbFind, pbOutline, pbPageSetup, pbTools, pbEdit, pbNavigator, pbExportQuick]
+    PreviewOptions.OutlineExpand = False
+    PreviewOptions.Zoom = 1.000000000000000000
+    PrintOptions.Collate = False
+    PrintOptions.Printer = 'Default'
+    PrintOptions.PrintOnSheet = 0
+    PrintOptions.ShowDialog = False
+    ReportOptions.CreateDate = 40668.585858831000000000
+    ReportOptions.LastChange = 42902.694440462960000000
+    ScriptLanguage = 'PascalScript'
+    ScriptText.Strings = (
+      'begin'
+      ''
+      'end.')
+    Left = 192
+    Top = 248
+    Datasets = <
+      item
+        DataSet = Config
+        DataSetName = 'Config'
+      end
+      item
+        DataSet = master
+        DataSetName = 'master'
+      end
+      item
+        DataSet = detalle
+        DataSetName = 'detalle'
+      end>
+    Variables = <
+      item
+        Name = ' New Category1'
+        Value = Null
+      end
+      item
+        Name = 'cajero'
+        Value = Null
+      end
+      item
+        Name = 'mensaje1'
+        Value = Null
+      end
+      item
+        Name = 'Condicion'
+        Value = ''
+      end>
+    Style = <>
+    object Data: TfrxDataPage
+      Height = 1000.000000000000000000
+      Width = 1000.000000000000000000
+    end
+    object Page1: TfrxReportPage
+      PaperWidth = 210.000000000000000000
+      PaperHeight = 148.500000000000000000
+      PaperSize = 256
+      Frame.Typ = []
+      MirrorMode = []
+      object DetailData1: TfrxDetailData
+        FillType = ftBrush
+        Frame.Typ = []
+        Height = 22.236240000000000000
+        Top = 309.921460000000000000
+        Width = 793.701300000000000000
+        DataSet = detalle
+        DataSetName = 'detalle'
+        RowCount = 0
+        object frxDBDataset1ARTICULO: TfrxMemoView
+          AllowVectorExport = True
+          Left = 154.740260000000000000
+          Top = 3.779530000000022000
+          Width = 359.055350000000000000
+          Height = 15.118120000000000000
+          DataField = 'ARTICULO'
+          DataSet = detalle
+          DataSetName = 'detalle'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = []
+          Memo.UTF8W = (
+            '[detalle."ARTICULO"]')
+          ParentFont = False
+        end
+        object frxDBDataset1CANTIDAD: TfrxMemoView
+          AllowVectorExport = True
+          Left = 429.204724410000000000
+          Top = 3.338590000000011000
+          Width = 45.354360000000000000
+          Height = 18.897650000000000000
+          DataField = 'CANTIDAD'
+          DataSet = detalle
+          DataSetName = 'detalle'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = []
+          HAlign = haRight
+          Memo.UTF8W = (
+            '[detalle."CANTIDAD"]')
+          ParentFont = False
+        end
+        object frxDBDataset1PRECIO: TfrxMemoView
+          AllowVectorExport = True
+          Left = 474.031496060000000000
+          Top = 2.779530000000022000
+          Width = 98.267780000000000000
+          Height = 18.897650000000000000
+          DataField = 'PRECIO'
+          DataSet = detalle
+          DataSetName = 'detalle'
+          DisplayFormat.FormatStr = '%2.2n'
+          DisplayFormat.Kind = fkNumeric
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = []
+          HAlign = haRight
+          Memo.UTF8W = (
+            '[detalle."PRECIO"]')
+          ParentFont = False
+        end
+        object frxDBDataset1IMPORTE: TfrxMemoView
+          AllowVectorExport = True
+          Left = 670.314960630000000000
+          Top = 2.645669290000001000
+          Width = 102.047244090000000000
+          Height = 18.897650000000000000
+          DataField = 'TOTAL'
+          DataSet = detalle
+          DataSetName = 'detalle'
+          DisplayFormat.FormatStr = '%2.2n'
+          DisplayFormat.Kind = fkNumeric
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = []
+          HAlign = haRight
+          Memo.UTF8W = (
+            '[detalle."TOTAL"]')
+          ParentFont = False
+        end
+        object frxDBDataset1MARCA: TfrxMemoView
+          AllowVectorExport = True
+          Left = 26.456710000000000000
+          Top = 3.000000000000000000
+          Width = 124.724490000000000000
+          Height = 18.897650000000000000
+          DataField = 'COD_ART'
+          DataSet = detalle
+          DataSetName = 'detalle'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = []
+          Memo.UTF8W = (
+            '[detalle."COD_ART"]')
+          ParentFont = False
+        end
+        object Memo8: TfrxMemoView
+          AllowVectorExport = True
+          Left = 570.000000000000000000
+          Top = 4.078539999999976000
+          Width = 90.708720000000000000
+          Height = 18.897650000000000000
+          DataField = 'ITBS'
+          DataSet = detalle
+          DataSetName = 'detalle'
+          DisplayFormat.FormatStr = '%2.2n'
+          DisplayFormat.Kind = fkNumeric
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = []
+          HAlign = haRight
+          Memo.UTF8W = (
+            '[detalle."ITBS"]')
+          ParentFont = False
+        end
+      end
+      object MasterData1: TfrxMasterData
+        FillType = ftBrush
+        Frame.Typ = []
+        Top = 287.244280000000000000
+        Width = 793.701300000000000000
+        DataSet = master
+        DataSetName = 'master'
+        RowCount = 0
+      end
+      object ReportSummary1: TfrxReportSummary
+        FillType = ftBrush
+        Frame.Typ = []
+        Height = 249.448980000000000000
+        Top = 393.071120000000000000
+        Width = 793.701300000000000000
+        object Condicion: TfrxMemoView
+          AllowVectorExport = True
+          Left = 158.740260000000000000
+          Top = 15.118119999999980000
+          Width = 457.323130000000000000
+          Height = 86.929190000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBtnFace
+          Font.Height = -96
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = []
+          Memo.UTF8W = (
+            '[Condicion]')
+          ParentFont = False
+        end
+        object frxDBDataset2POGXITBS: TfrxMemoView
+          AllowVectorExport = True
+          Left = 650.079160000000000000
+          Top = 28.015770000000090000
+          Width = 102.047310000000000000
+          Height = 18.897650000000000000
+          DataField = 'POGXITBS'
+          DataSet = master
+          DataSetName = 'master'
+          DisplayFormat.FormatStr = '%2.2n'
+          DisplayFormat.Kind = fkNumeric
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -15
+          Font.Name = 'Tahoma'
+          Font.Style = []
+          Frame.Typ = []
+          HAlign = haRight
+          Memo.UTF8W = (
+            '[master."POGXITBS"]')
+          ParentFont = False
+        end
+        object frxDBDataset2DESCUENTO: TfrxMemoView
+          AllowVectorExport = True
+          Left = 650.079160000000000000
+          Top = 43.133890000000120000
+          Width = 102.047310000000000000
+          Height = 18.897650000000000000
+          DataField = 'DESCUENTO'
+          DataSet = master
+          DataSetName = 'master'
+          DisplayFormat.FormatStr = '%2.2n'
+          DisplayFormat.Kind = fkNumeric
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -15
+          Font.Name = 'Tahoma'
+          Font.Style = []
+          Frame.Typ = []
+          HAlign = haRight
+          Memo.UTF8W = (
+            '[master."DESCUENTO"]')
+          ParentFont = False
+        end
+        object frxDBDataset2MONTOPAGO: TfrxMemoView
+          AllowVectorExport = True
+          Left = 650.079160000000000000
+          Top = 60.811070000000090000
+          Width = 102.047310000000000000
+          Height = 18.897650000000000000
+          DataField = 'MONTOPAGO'
+          DataSet = master
+          DataSetName = 'master'
+          DisplayFormat.FormatStr = '%2.2n'
+          DisplayFormat.Kind = fkNumeric
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -15
+          Font.Name = 'Tahoma'
+          Font.Style = []
+          Frame.Typ = []
+          HAlign = haRight
+          Memo.UTF8W = (
+            '[master."MONTOPAGO"]')
+          ParentFont = False
+        end
+        object Memo18: TfrxMemoView
+          AllowVectorExport = True
+          Left = 512.913730000000000000
+          Top = 28.795300000000000000
+          Width = 120.944960000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -15
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = []
+          HAlign = haRight
+          Memo.UTF8W = (
+            'ITBS')
+          ParentFont = False
+        end
+        object Memo19: TfrxMemoView
+          AllowVectorExport = True
+          Left = 512.913730000000000000
+          Top = 42.574830000000020000
+          Width = 120.944960000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -15
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = []
+          HAlign = haRight
+          Memo.UTF8W = (
+            'Descuento')
+          ParentFont = False
+        end
+        object Memo20: TfrxMemoView
+          AllowVectorExport = True
+          Left = 512.913730000000000000
+          Top = 60.472480000000010000
+          Width = 120.944960000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -15
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Frame.Typ = []
+          HAlign = haRight
+          Memo.UTF8W = (
+            'Neto a Pagar')
+          ParentFont = False
+        end
+        object Memo23: TfrxMemoView
+          AllowVectorExport = True
+          Left = 21.133890000000000000
+          Top = 84.811069999999970000
+          Width = 136.063080000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Tahoma'
+          Font.Style = []
+          Frame.Typ = []
+          Memo.UTF8W = (
+            'Cantidad de Articulos')
+          ParentFont = False
+        end
+        object SysMemo1: TfrxSysMemoView
+          AllowVectorExport = True
+          Left = 173.756030000000000000
+          Top = 84.811069999999970000
+          Width = 94.488250000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Tahoma'
+          Font.Style = []
+          Frame.Typ = []
+          Memo.UTF8W = (
+            '[COUNT(DetailData1)]')
+          ParentFont = False
+        end
+        object Line3: TfrxLineView
+          AllowVectorExport = True
+          Top = 6.661410000000046000
+          Width = 797.480830000000000000
+          Color = clBlack
+          Frame.Typ = [ftTop]
+        end
+        object frxDBDataset2MONTO: TfrxMemoView
+          AllowVectorExport = True
+          Left = 650.079160000000000000
+          Top = 7.661410000000046000
+          Width = 102.047310000000000000
+          Height = 18.897650000000000000
+          DataField = 'MONTO'
+          DataSet = master
+          DataSetName = 'master'
+          DisplayFormat.FormatStr = '%2.2n'
+          DisplayFormat.Kind = fkNumeric
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -15
+          Font.Name = 'Tahoma'
+          Font.Style = []
+          Frame.Typ = []
+          HAlign = haRight
+          Memo.UTF8W = (
+            '[master."MONTO"]')
+          ParentFont = False
+        end
+        object Memo17: TfrxMemoView
+          AllowVectorExport = True
+          Left = 512.913730000000000000
+          Top = 9.661409999999990000
+          Width = 120.944960000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -15
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = []
+          HAlign = haRight
+          Memo.UTF8W = (
+            'Sub-Total')
+          ParentFont = False
+        end
+        object frxDBDataset1OBSERVACIONES: TfrxMemoView
+          AllowVectorExport = True
+          Left = 42.000000000000000000
+          Top = 18.928879999999990000
+          Width = 395.370130000000000000
+          Height = 51.897650000000000000
+          DataField = 'OBSERVACIONES'
+          DataSet = master
+          DataSetName = 'master'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = [fsItalic]
+          Frame.Typ = []
+          Memo.UTF8W = (
+            '[master."OBSERVACIONES"]')
+          ParentFont = False
+        end
+        object mensaje1: TfrxMemoView
+          AllowVectorExport = True
+          Left = 514.000000000000000000
+          Top = 90.928879999999990000
+          Width = 250.370130000000000000
+          Height = 18.897650000000000000
+          Frame.Typ = []
+          Memo.UTF8W = (
+            '[mensaje1]')
+        end
+      end
+      object ReportTitle1: TfrxReportTitle
+        FillType = ftBrush
+        Frame.Typ = []
+        Height = 209.110390000000000000
+        Top = 18.897650000000000000
+        Width = 793.701300000000000000
+        object Memo5: TfrxMemoView
+          AllowVectorExport = True
+          Left = 600.764070000000000000
+          Top = 129.944960000000000000
+          Width = 340.157700000000000000
+          Height = 52.913420000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -32
+          Font.Name = 'Tahoma'
+          Font.Style = []
+          Frame.Typ = []
+          Memo.UTF8W = (
+            'CONDUCE')
+          ParentFont = False
+        end
+        object frxDBDataset2NO_FACT: TfrxMemoView
+          AllowVectorExport = True
+          Left = 662.299630000000000000
+          Top = 24.440940000000000000
+          Width = 86.929190000000000000
+          Height = 18.897650000000000000
+          DataField = 'NUMERO_FACTURA'
+          DataSet = master
+          DataSetName = 'master'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -16
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = []
+          HAlign = haRight
+          Memo.UTF8W = (
+            '[master."NUMERO_FACTURA"]')
+          ParentFont = False
+        end
+        object frxDBDataset2FECHA_FAC: TfrxMemoView
+          AllowVectorExport = True
+          Left = 666.079160000000000000
+          Top = 65.133889999999950000
+          Width = 83.149660000000000000
+          Height = 18.897650000000000000
+          DataField = 'FECHA_FAC'
+          DataSet = master
+          DataSetName = 'master'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Tahoma'
+          Font.Style = []
+          Frame.Typ = []
+          HAlign = haRight
+          Memo.UTF8W = (
+            '[master."FECHA_FAC"]')
+          ParentFont = False
+        end
+        object Memo7: TfrxMemoView
+          AllowVectorExport = True
+          Left = 573.370440000000000000
+          Top = 63.133889999999950000
+          Width = 90.708720000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Tahoma'
+          Font.Style = []
+          Frame.Typ = []
+          Memo.UTF8W = (
+            'Fecha           ')
+          ParentFont = False
+        end
+        object Memo9: TfrxMemoView
+          AllowVectorExport = True
+          Left = 46.015770000000000000
+          Top = 96.252010000000000000
+          Width = 90.708720000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = []
+          Memo.UTF8W = (
+            'Cliente          :')
+          ParentFont = False
+        end
+        object Memo10: TfrxMemoView
+          AllowVectorExport = True
+          Left = 46.015770000000000000
+          Top = 116.149660000000000000
+          Width = 120.944960000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = []
+          Memo.UTF8W = (
+            'Vendedor      :')
+          ParentFont = False
+        end
+        object Memo11: TfrxMemoView
+          AllowVectorExport = True
+          Left = 44.795300000000000000
+          Top = 132.267780000000000000
+          Width = 120.944960000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = []
+          Memo.UTF8W = (
+            'Cajero /a       :')
+          ParentFont = False
+        end
+        object frxDBDataset2RNC_CLIENTE: TfrxMemoView
+          AllowVectorExport = True
+          Left = 129.826840000000000000
+          Top = 147.724490000000000000
+          Width = 336.378170000000000000
+          Height = 18.897650000000000000
+          DataField = 'RNC_CLIENTE'
+          DataSet = master
+          DataSetName = 'master'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = []
+          Memo.UTF8W = (
+            '[master."RNC_CLIENTE"]')
+          ParentFont = False
+        end
+        object Memo12: TfrxMemoView
+          AllowVectorExport = True
+          Left = 45.015770000000000000
+          Top = 147.724490000000000000
+          Width = 120.944960000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = []
+          Memo.UTF8W = (
+            'RNC Cliente  :')
+          ParentFont = False
+        end
+        object Line1: TfrxLineView
+          AllowVectorExport = True
+          Left = 1.779530000000000000
+          Top = 188.992270000000000000
+          Width = 797.480830000000000000
+          Color = clBlack
+          Frame.Typ = []
+          Diagonal = True
+        end
+        object Line2: TfrxLineView
+          AllowVectorExport = True
+          Top = 208.110390000000000000
+          Width = 797.480830000000000000
+          Color = clBlack
+          Frame.Typ = []
+          Diagonal = True
+        end
+        object Memo13: TfrxMemoView
+          AllowVectorExport = True
+          Left = 154.740260000000000000
+          Top = 190.212740000000000000
+          Width = 120.944960000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = []
+          Memo.UTF8W = (
+            'Descripcion')
+          ParentFont = False
+        end
+        object Memo14: TfrxMemoView
+          AllowVectorExport = True
+          Left = 426.205010000000000000
+          Top = 190.212740000000000000
+          Width = 34.015770000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = []
+          HAlign = haRight
+          Memo.UTF8W = (
+            'Cant.')
+          ParentFont = False
+        end
+        object Memo15: TfrxMemoView
+          AllowVectorExport = True
+          Left = 474.031850000000000000
+          Top = 190.212740000000000000
+          Width = 98.267780000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = []
+          HAlign = haRight
+          Memo.UTF8W = (
+            'Precio')
+          ParentFont = False
+        end
+        object Memo16: TfrxMemoView
+          AllowVectorExport = True
+          Left = 670.315400000000000000
+          Top = 190.212740000000000000
+          Width = 102.047310000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = []
+          HAlign = haRight
+          Memo.UTF8W = (
+            'Importe')
+          ParentFont = False
+        end
+        object Memo25: TfrxMemoView
+          AllowVectorExport = True
+          Left = 26.456710000000000000
+          Top = 189.551330000000000000
+          Width = 120.944960000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = []
+          Memo.UTF8W = (
+            'Referencia')
+          ParentFont = False
+        end
+        object Memo6: TfrxMemoView
+          AllowVectorExport = True
+          Left = 572.370440000000000000
+          Top = 22.440940000000000000
+          Width = 90.708720000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Tahoma'
+          Font.Style = []
+          Frame.Typ = []
+          Memo.UTF8W = (
+            'No. Factura  :')
+          ParentFont = False
+        end
+        object Memo2: TfrxMemoView
+          AllowVectorExport = True
+          Left = 574.488560000000000000
+          Top = 44.133889999999980000
+          Width = 90.708720000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Tahoma'
+          Font.Style = []
+          Frame.Typ = []
+          Memo.UTF8W = (
+            'Hora')
+          ParentFont = False
+        end
+        object frxDBDataset2ROTULO: TfrxMemoView
+          AllowVectorExport = True
+          Left = 572.488560000000000000
+          Top = 100.622140000000000000
+          Width = 173.858380000000000000
+          Height = 18.897650000000000000
+          DataField = 'ROTULO'
+          DataSet = master
+          DataSetName = 'master'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Tahoma'
+          Font.Style = []
+          Frame.Typ = []
+          Memo.UTF8W = (
+            '[master."ROTULO"]')
+          ParentFont = False
+        end
+        object configuracionEMPRESA: TfrxMemoView
+          AllowVectorExport = True
+          Left = 33.000000000000000000
+          Top = 13.102350000000000000
+          Width = 400.630180000000000000
+          Height = 26.456710000000000000
+          DataField = 'EMPRESA'
+          DataSet = Config
+          DataSetName = 'Config'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -20
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Frame.Typ = []
+          Memo.UTF8W = (
+            '[Config."EMPRESA"]')
+          ParentFont = False
+        end
+        object configuracionDIRECCION: TfrxMemoView
+          AllowVectorExport = True
+          Left = 35.000000000000000000
+          Top = 36.102349999999990000
+          Width = 400.630180000000000000
+          Height = 22.897650000000000000
+          DataField = 'DIRECCION'
+          DataSet = Config
+          DataSetName = 'Config'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = []
+          Memo.UTF8W = (
+            '[Config."DIRECCION"]')
+          ParentFont = False
+        end
+        object configuracionTELEFONO: TfrxMemoView
+          AllowVectorExport = True
+          Left = 63.000000000000000000
+          Top = 60.102350000000000000
+          Width = 105.826840000000000000
+          Height = 18.897650000000000000
+          DataField = 'TELEFONO'
+          DataSet = Config
+          DataSetName = 'Config'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = []
+          Memo.UTF8W = (
+            '[Config."TELEFONO"]')
+          ParentFont = False
+        end
+        object configuracionRNC: TfrxMemoView
+          AllowVectorExport = True
+          Left = 211.000000000000000000
+          Top = 59.102350000000000000
+          Width = 120.944960000000000000
+          Height = 18.897650000000000000
+          DataField = 'RNC'
+          DataSet = Config
+          DataSetName = 'Config'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = []
+          Memo.UTF8W = (
+            '[Config."RNC"]')
+          ParentFont = False
+        end
+        object Memo1: TfrxMemoView
+          AllowVectorExport = True
+          Left = 38.000000000000000000
+          Top = 60.102350000000000000
+          Width = 26.456710000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = []
+          Memo.UTF8W = (
+            'Tel.')
+          ParentFont = False
+        end
+        object Memo3: TfrxMemoView
+          AllowVectorExport = True
+          Left = 176.000000000000000000
+          Top = 60.102350000000000000
+          Width = 37.795300000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = []
+          Memo.UTF8W = (
+            'RNC:')
+          ParentFont = False
+        end
+        object Memo4: TfrxMemoView
+          AllowVectorExport = True
+          Left = 565.000000000000000000
+          Top = 190.102350000000000000
+          Width = 98.267780000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = []
+          HAlign = haRight
+          Memo.UTF8W = (
+            'Itbs')
+          ParentFont = False
+        end
+        object frxDBDataset1NOMBRECLIENTE_PRN: TfrxMemoView
+          AllowVectorExport = True
+          Left = 131.000000000000000000
+          Top = 96.102350000000000000
+          Width = 279.685220000000000000
+          Height = 18.897650000000000000
+          DataField = 'NOMBRECLIENTE_PRN'
+          DataSet = master
+          DataSetName = 'master'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = []
+          Memo.UTF8W = (
+            '[master."NOMBRECLIENTE_PRN"]')
+          ParentFont = False
+        end
+        object frxDBDataset1NOMBRES_EMP: TfrxMemoView
+          AllowVectorExport = True
+          Left = 133.000000000000000000
+          Top = 114.102350000000000000
+          Width = 279.685220000000000000
+          Height = 18.897650000000000000
+          DataField = 'NOMBRES_EMP'
+          DataSet = master
+          DataSetName = 'master'
+          Frame.Typ = []
+          Memo.UTF8W = (
+            '[master."NOMBRES_EMP"]')
+        end
+        object SysMemo2: TfrxSysMemoView
+          AllowVectorExport = True
+          Left = 663.000000000000000000
+          Top = 45.102350000000000000
+          Width = 87.488250000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = []
+          HAlign = haRight
+          Memo.UTF8W = (
+            '[TIME]')
+          ParentFont = False
+        end
+        object cajero: TfrxMemoView
+          AllowVectorExport = True
+          Left = 133.000000000000000000
+          Top = 132.102350000000000000
+          Width = 281.370130000000000000
+          Height = 18.897650000000000000
+          Frame.Typ = []
+          Memo.UTF8W = (
+            '[cajero]')
+        end
+      end
+    end
+  end
+  object Antiguedad: TZReadOnlyQuery
+    Connection = datos.Data
+    SQL.Strings = (
+      'SELECT a.clienteid,'
+      
+        'sum(IIF( DATEDIFF(DAY, a.fechavencimiento, current_date  )< 0 AN' +
+        'D ( a.fecha_fac is not null), a.pendiente, 0 )) AS PORVENCER,'
+      
+        'sum(IIF( (DATEDIFF(DAY, a.fechavencimiento, current_date )>=0 AN' +
+        'D DATEDIFF( DAY, a.fechavencimiento, current_date )<=30) OR a.fe' +
+        'chavencimiento is null,(a.pendiente),0)) AS V0_30,'
+      
+        'sum(IIF( DATEDIFF(DAY, a.fechavencimiento,current_date )>=31 AND' +
+        ' DATEDIFF( DAY, a.fechavencimiento, current_date )<=60, (a.pendi' +
+        'ente),0)) AS V31_60,'
+      
+        'sum(IIF( DATEDIFF(DAY, a.fechavencimiento,current_date )>=61 AND' +
+        ' DATEDIFF( DAY, a.fechavencimiento, current_date )<=90, (a.pendi' +
+        'ente),0)) AS V61_90,'
+      
+        'sum(IIF( DATEDIFF(DAY, a.fechavencimiento,current_date )>=91 AND' +
+        ' DATEDIFF( DAY, a.fechavencimiento, current_date )<=120, (a.pend' +
+        'iente),0)) AS V91_120,'
+      
+        'sum(IIF(  DATEDIFF(DAY, a.fechavencimiento,current_date )>=121 ,' +
+        '(a.pendiente),0)) as v120,'
+      ''
+      '('
+      ''
+      
+        'sum(IIF( DATEDIFF(DAY, a.fechavencimiento, current_date  )< 0 AN' +
+        'D ( a.fecha_fac is not null), a.pendiente, 0 )) +'
+      
+        'sum(IIF( (DATEDIFF(DAY, a.fechavencimiento, current_date )>=0 AN' +
+        'D DATEDIFF( DAY, a.fechavencimiento, current_date )<=30) OR a.fe' +
+        'chavencimiento is null,(a.pendiente),0)) +'
+      
+        'sum(IIF( DATEDIFF(DAY, a.fechavencimiento,current_date )>=31 AND' +
+        ' DATEDIFF( DAY, a.fechavencimiento, current_date )<=60, (a.pendi' +
+        'ente),0)) +'
+      
+        'sum(IIF( DATEDIFF(DAY, a.fechavencimiento,current_date )>=61 AND' +
+        ' DATEDIFF( DAY, a.fechavencimiento, current_date )<=90, (a.pendi' +
+        'ente),0))  +'
+      
+        'sum(IIF( DATEDIFF(DAY, a.fechavencimiento,current_date )>=91 AND' +
+        ' DATEDIFF( DAY, a.fechavencimiento, current_date )<=120, (a.pend' +
+        'iente),0)) +'
+      
+        'sum(IIF(  DATEDIFF(DAY, a.fechavencimiento,current_date )>=121 ,' +
+        '(a.pendiente),0))'
+      ''
+      ''
+      ') as actual'
+      ''
+      'from master_fact a'
+      'where a.situacion  ='#39'IMPRESA'#39
+      'and a.condicion    ='#39'ACTIVA'#39
+      'AND A.ROTULO       ='#39'FACTURACION'#39
+      'and a.tipo         ='#39'CREDITO'#39
+      'and a.quees <>'#39'SALDADA'#39
+      ''
+      'group by a.clienteid')
+    Params = <>
+    Left = 200
+    Top = 136
+    object AntiguedadCLIENTEID: TIntegerField
+      FieldName = 'CLIENTEID'
+    end
+    object AntiguedadPORVENCER: TExtendedField
+      FieldName = 'PORVENCER'
+      ReadOnly = True
+      Precision = 19
+    end
+    object AntiguedadV0_30: TExtendedField
+      FieldName = 'V0_30'
+      ReadOnly = True
+      Precision = 19
+    end
+    object AntiguedadV31_60: TExtendedField
+      FieldName = 'V31_60'
+      ReadOnly = True
+      Precision = 19
+    end
+    object AntiguedadV61_90: TExtendedField
+      FieldName = 'V61_90'
+      ReadOnly = True
+      Precision = 19
+    end
+    object AntiguedadV91_120: TExtendedField
+      FieldName = 'V91_120'
+      ReadOnly = True
+      Precision = 19
+    end
+    object AntiguedadV120: TExtendedField
+      FieldName = 'V120'
+      ReadOnly = True
+      Precision = 19
+    end
+    object AntiguedadACTUAL: TExtendedField
+      FieldName = 'ACTUAL'
+      ReadOnly = True
+      Precision = 19
+    end
+  end
+  object DsDetalleFacturas: TDataSource
+    DataSet = DetalleFacturas
+    Left = 920
+    Top = 8
+  end
+  object DetalleFacturas: TZReadOnlyQuery
+    Connection = datos.Data
+    AutoCalcFields = False
+    SQL.Strings = (
+      'select a.*, b.articulo, c.unidad from detailfact a'
+      'left join mtartuculos b On a.cod_art = b.codigotxt'
+      'left join unidad_m c on a.unidadid = c.cod_unidad_m'
+      'where a.masterid =:master')
+    Params = <
+      item
+        DataType = ftUnknown
+        Name = 'master'
+        ParamType = ptUnknown
+      end>
+    Left = 1032
+    Top = 48
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'master'
+        ParamType = ptUnknown
+      end>
+    object DetalleFacturasNO_FACT: TIntegerField
+      FieldName = 'NO_FACT'
+      Required = True
+    end
+    object DetalleFacturasNO_FACT1: TWideStringField
+      FieldName = 'NO_FACT1'
+      Size = 12
+    end
+    object DetalleFacturasMASTERID: TIntegerField
+      FieldName = 'MASTERID'
+    end
+    object DetalleFacturasCANTIDAD: TFloatField
+      FieldName = 'CANTIDAD'
+    end
+    object DetalleFacturasPRECIO: TFloatField
+      FieldName = 'PRECIO'
+      currency = True
+    end
+    object DetalleFacturasIMPUESTO: TFloatField
+      FieldName = 'IMPUESTO'
+    end
+    object DetalleFacturasITBS: TFloatField
+      FieldName = 'ITBS'
+    end
+    object DetalleFacturasITBIS2: TFloatField
+      FieldName = 'ITBIS2'
+    end
+    object DetalleFacturasTOTAL: TFloatField
+      FieldName = 'TOTAL'
+      currency = True
+    end
+    object DetalleFacturasCOD_ART: TWideStringField
+      FieldName = 'COD_ART'
+      Size = 15
+    end
+    object DetalleFacturasUNID: TWideStringField
+      FieldName = 'UNID'
+      Size = 3
+    end
+    object DetalleFacturasCOMBO: TWideStringField
+      FieldName = 'COMBO'
+      Size = 10
+    end
+    object DetalleFacturasARTICULOID: TIntegerField
+      FieldName = 'ARTICULOID'
+    end
+    object DetalleFacturasARTICULO: TWideStringField
+      FieldName = 'ARTICULO'
+      Size = 45
+    end
+    object DetalleFacturasUNIDAD: TWideStringField
+      FieldName = 'UNIDAD'
+      Size = 10
+    end
+    object DetalleFacturasTITULOPRN: TWideStringField
+      FieldName = 'TITULOPRN'
+      Size = 100
+    end
+    object DetalleFacturasANCHO: TFloatField
+      FieldName = 'ANCHO'
+    end
+    object DetalleFacturasALTO: TFloatField
+      FieldName = 'ALTO'
+    end
+    object DetalleFacturasUNIDADID: TIntegerField
+      FieldName = 'UNIDADID'
+    end
+    object DetalleFacturasITBS_ART: TWideStringField
+      FieldName = 'ITBS_ART'
+      Size = 1
+    end
+    object DetalleFacturasEX: TWideStringField
+      FieldName = 'EX'
+      Size = 1
+    end
+    object DetalleFacturasIDALMACEN: TIntegerField
+      FieldName = 'IDALMACEN'
+    end
+    object DetalleFacturasBARRA: TWideStringField
+      FieldName = 'BARRA'
+    end
+    object DetalleFacturasIDTECNICO: TIntegerField
+      FieldName = 'IDTECNICO'
+    end
+    object DetalleFacturasOP: TWideStringField
+      FieldName = 'OP'
+      Size = 10
+    end
+    object DetalleFacturasLINEA: TIntegerField
+      FieldName = 'LINEA'
+    end
+    object DetalleFacturasEXIST1: TSingleField
+      FieldName = 'EXIST1'
+    end
+    object DetalleFacturasLEY: TFloatField
+      FieldName = 'LEY'
+    end
+    object DetalleFacturasDESC: TFloatField
+      FieldName = 'DESC'
+    end
+  end
+  object Anular: TZReadOnlyQuery
+    Connection = datos.Data
+    Params = <>
+    Left = 416
+    Top = 288
+  end
+  object UpCredito: TZReadOnlyQuery
+    Connection = datos.Data
+    Params = <>
+    Left = 632
+    Top = 216
+  end
+  object IbqClientes: TZReadOnlyQuery
+    Connection = datos.Data
+    SQL.Strings = (
+      'select a.* from cliente a')
+    Params = <>
+    Left = 216
+    Top = 400
+    object IbqClientesCODIGO: TIntegerField
+      FieldName = 'CODIGO'
+      Required = True
+    end
+    object IbqClientesNOMBRES: TWideStringField
+      FieldName = 'NOMBRES'
+      Size = 40
+    end
+    object IbqClientesDIRECCION: TWideStringField
+      FieldName = 'DIRECCION'
+      Size = 40
+    end
+    object IbqClientesCEDULA: TWideStringField
+      FieldName = 'CEDULA'
+      Size = 15
+    end
+    object IbqClientesTELEFONO: TWideStringField
+      FieldName = 'TELEFONO'
+      Size = 15
+    end
+    object IbqClientesCELULAR: TWideStringField
+      FieldName = 'CELULAR'
+      Size = 15
+    end
+    object IbqClientesCOLOR: TWideStringField
+      FieldName = 'COLOR'
+      Size = 15
+    end
+    object IbqClientesCONTACTO: TWideStringField
+      FieldName = 'CONTACTO'
+      Size = 40
+    end
+    object IbqClientesRENGLONCNF: TWideStringField
+      FieldName = 'RENGLONCNF'
+      Size = 15
+    end
+    object IbqClientesTXTCNF: TWideStringField
+      FieldName = 'TXTCNF'
+      Size = 40
+    end
+    object IbqClientesCREDITOLIMITE: TFloatField
+      FieldName = 'CREDITOLIMITE'
+    end
+    object IbqClientesTIPO: TWideStringField
+      FieldName = 'TIPO'
+      Size = 30
+    end
+    object IbqClientesRNC: TWideStringField
+      FieldName = 'RNC'
+      Size = 15
+    end
+    object IbqClientesCONDICION: TWideStringField
+      FieldName = 'CONDICION'
+      Size = 10
+    end
+    object IbqClientesINICIO: TDateField
+      FieldName = 'INICIO'
+    end
+    object IbqClientesSUELDO: TFloatField
+      FieldName = 'SUELDO'
+    end
+    object IbqClientesPAGOITB: TWideStringField
+      FieldName = 'PAGOITB'
+      Size = 2
+    end
+    object IbqClientesCREDITO: TWideStringField
+      FieldName = 'CREDITO'
+      Size = 2
+    end
+    object IbqClientesBALANCE: TFloatField
+      FieldName = 'BALANCE'
+    end
+    object IbqClientesESTADO: TWideStringField
+      FieldName = 'ESTADO'
+      Size = 10
+    end
+    object IbqClientesMOVIL: TWideStringField
+      FieldName = 'MOVIL'
+      Size = 17
+    end
+    object IbqClientesCODIGO_T: TWideStringField
+      FieldName = 'CODIGO_T'
+      Size = 10
+    end
+    object IbqClientesCOMISION: TFloatField
+      FieldName = 'COMISION'
+    end
+    object IbqClientesNUMEROPIN: TWideStringField
+      FieldName = 'NUMEROPIN'
+      Size = 10
+    end
+    object IbqClientesTELEFONO3: TWideStringField
+      FieldName = 'TELEFONO3'
+      Size = 15
+    end
+    object IbqClientesEMAIL: TWideStringField
+      FieldName = 'EMAIL'
+      Size = 60
+    end
+    object IbqClientesRUTA_ID: TIntegerField
+      FieldName = 'RUTA_ID'
+    end
+    object IbqClientesREGIONID: TIntegerField
+      FieldName = 'REGIONID'
+    end
+    object IbqClientesPROVINCIAID: TIntegerField
+      FieldName = 'PROVINCIAID'
+    end
+    object IbqClientesMUNICIPIOID: TIntegerField
+      FieldName = 'MUNICIPIOID'
+    end
+    object IbqClientesMUSADOS: TFloatField
+      FieldName = 'MUSADOS'
+      currency = True
+    end
+    object IbqClientesMPENDIENTES: TFloatField
+      FieldName = 'MPENDIENTES'
+      currency = True
+    end
+  end
+  object ZReadOnlyQuery1: TZReadOnlyQuery
+    Connection = datos.Data
+    SQL.Strings = (
+      'select a.* from cliente a')
+    Params = <>
+    Left = 224
+    Top = 408
+    object IntegerField1: TIntegerField
+      FieldName = 'CODIGO'
+      Required = True
+    end
+    object WideStringField1: TWideStringField
+      FieldName = 'NOMBRES'
+      Size = 40
+    end
+    object WideStringField2: TWideStringField
+      FieldName = 'DIRECCION'
+      Size = 40
+    end
+    object WideStringField3: TWideStringField
+      FieldName = 'CEDULA'
+      Size = 15
+    end
+    object WideStringField4: TWideStringField
+      FieldName = 'TELEFONO'
+      Size = 15
+    end
+    object WideStringField5: TWideStringField
+      FieldName = 'CELULAR'
+      Size = 15
+    end
+    object WideStringField6: TWideStringField
+      FieldName = 'COLOR'
+      Size = 15
+    end
+    object WideStringField7: TWideStringField
+      FieldName = 'CONTACTO'
+      Size = 40
+    end
+    object WideStringField8: TWideStringField
+      FieldName = 'RENGLONCNF'
+      Size = 15
+    end
+    object WideStringField9: TWideStringField
+      FieldName = 'TXTCNF'
+      Size = 40
+    end
+    object FloatField1: TFloatField
+      FieldName = 'CREDITOLIMITE'
+    end
+    object WideStringField10: TWideStringField
+      FieldName = 'TIPO'
+      Size = 30
+    end
+    object WideStringField11: TWideStringField
+      FieldName = 'RNC'
+      Size = 15
+    end
+    object WideStringField12: TWideStringField
+      FieldName = 'CONDICION'
+      Size = 10
+    end
+    object DateField1: TDateField
+      FieldName = 'INICIO'
+    end
+    object FloatField2: TFloatField
+      FieldName = 'SUELDO'
+    end
+    object WideStringField13: TWideStringField
+      FieldName = 'PAGOITB'
+      Size = 2
+    end
+    object WideStringField14: TWideStringField
+      FieldName = 'CREDITO'
+      Size = 2
+    end
+    object FloatField3: TFloatField
+      FieldName = 'BALANCE'
+    end
+    object WideStringField15: TWideStringField
+      FieldName = 'ESTADO'
+      Size = 10
+    end
+    object WideStringField16: TWideStringField
+      FieldName = 'MOVIL'
+      Size = 17
+    end
+    object WideStringField17: TWideStringField
+      FieldName = 'CODIGO_T'
+      Size = 10
+    end
+    object FloatField4: TFloatField
+      FieldName = 'COMISION'
+    end
+    object WideStringField18: TWideStringField
+      FieldName = 'NUMEROPIN'
+      Size = 10
+    end
+    object WideStringField19: TWideStringField
+      FieldName = 'TELEFONO3'
+      Size = 15
+    end
+    object WideStringField20: TWideStringField
+      FieldName = 'EMAIL'
+      Size = 60
+    end
+    object IntegerField2: TIntegerField
+      FieldName = 'RUTA_ID'
+    end
+    object IntegerField3: TIntegerField
+      FieldName = 'REGIONID'
+    end
+    object IntegerField4: TIntegerField
+      FieldName = 'PROVINCIAID'
+    end
+    object IntegerField5: TIntegerField
+      FieldName = 'MUNICIPIOID'
+    end
+    object FloatField5: TFloatField
+      FieldName = 'MUSADOS'
+      currency = True
+    end
+    object FloatField6: TFloatField
+      FieldName = 'MPENDIENTES'
+      currency = True
+    end
+  end
+  object UpdateNC: TZReadOnlyQuery
+    Connection = datos.Data
+    Params = <>
+    Left = 200
+    Top = 272
+  end
+  object comisionCancelar: TZReadOnlyQuery
+    Connection = datos.Data
+    SQL.Strings = (
+      '')
+    Params = <>
+    Left = 192
+    Top = 320
+    object comisionCancelarID: TIntegerField
+      FieldName = 'ID'
+      Required = True
+    end
+    object comisionCancelarID_EMP: TIntegerField
+      FieldName = 'ID_EMP'
+    end
+    object comisionCancelarID_FACT: TIntegerField
+      FieldName = 'ID_FACT'
+    end
+    object comisionCancelarMONTOSERVICIO: TFloatField
+      FieldName = 'MONTOSERVICIO'
+    end
+    object comisionCancelarMONTOCOMISION: TFloatField
+      FieldName = 'MONTOCOMISION'
+    end
+    object comisionCancelarESTADO: TIntegerField
+      FieldName = 'ESTADO'
+    end
+    object comisionCancelarFECHA: TDateField
+      FieldName = 'FECHA'
+    end
+  end
+  object UpRma: TZReadOnlyQuery
+    Connection = datos.Data
+    Params = <>
+    Left = 272
+    Top = 168
+  end
+  object numeroinventario: TZReadOnlyQuery
+    Connection = datos.Data
+    SQL.Strings = (
+      'select gen_id(GEN_MINVENTARIO_ID, 0) from RDB$DATABASE')
+    Params = <>
+    Left = 1008
+    Top = 336
+    object numeroinventarioGEN_ID: TLargeintField
+      FieldName = 'GEN_ID'
+      ReadOnly = True
+    end
+  end
+  object Qfraccionado: TZReadOnlyQuery
+    Connection = datos.Data
+    SQL.Strings = (
+      'select a.*, b.descripcion from particionado a'
+      'left join unidad_m b On a.id_unidad = b.cod_unidad_m'
+      '')
+    Params = <>
+    Left = 56
+    Top = 484
+    object QfraccionadoID: TIntegerField
+      FieldName = 'ID'
+      Required = True
+    end
+    object QfraccionadoCOD_ARTI: TIntegerField
+      FieldName = 'COD_ARTI'
+    end
+    object QfraccionadoCANTI: TFloatField
+      FieldName = 'CANTI'
+    end
+    object QfraccionadoUNIDAD: TWideStringField
+      FieldName = 'UNIDAD'
+      Size = 4
+    end
+    object QfraccionadoCOD_PART: TFloatField
+      FieldName = 'COD_PART'
+    end
+    object QfraccionadoID_UNIDAD: TIntegerField
+      FieldName = 'ID_UNIDAD'
+    end
+    object QfraccionadoPRECIO1: TFloatField
+      FieldName = 'PRECIO1'
+    end
+    object QfraccionadoPRECIO2: TFloatField
+      FieldName = 'PRECIO2'
+    end
+    object QfraccionadoDESCRIPCION: TWideStringField
+      FieldName = 'DESCRIPCION'
+      Size = 15
+    end
+  end
+  object QretornarHold: TZQuery
+    Connection = datos.Data
+    Params = <>
+    Left = 872
+    Top = 312
+  end
+end

@@ -1,0 +1,61 @@
+unit Unit2;
+
+interface
+
+uses
+  SysUtils, Classes, FIBDatabase, pFIBDatabase,Controls, Forms, FIBQuery,
+  pFIBQuery;
+
+type
+  Tdatos = class(TDataModule)
+    data: TpFIBDatabase;
+    Wt: TpFIBTransaction;
+    Rd: TpFIBTransaction;
+    IbqEmpleados: TpFIBQuery;
+    IbqConfiguracion: TpFIBQuery;
+    procedure DataModuleCreate(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  datos: Tdatos;
+
+implementation
+uses tools;
+{$R *.dfm}
+
+procedure Tdatos.DataModuleCreate(Sender: TObject);
+begin
+if FileExists(ChangeFileExt(Application.ExeName,'.ini')) then
+      begin
+         try
+             IniFile := ChangeFileExt(Application.ExeName,'.ini');
+             data.Connected := False;
+             data.DBName := ReadString_Ini(IniFile, 'DataBase', 'Ruta','');
+            // data.LibraryName := ReadString_Ini(IniFile, 'DataBase', 'RutaLibreria','');
+             data.Connected := True;
+           //  IDUsuario := ReadInteger_Ini(IniFile,'Usuario','IDUsuario',0);
+            // SQLLimpiaDetalle.Close;
+             //SQLLimpiaDetalle.ParamByName('NO').AsInteger := IDUsuario;
+             //SQLLimpiaDetalle.ExecQuery;
+
+         except
+         on E: Exception do
+      	    begin
+               MsgError('Se produjo el siguiente error al conectar con la Base de Datos'#13+
+      	               '**** '+E.Message+'****'#13+
+                        'Esto provoca que no se pueda iniciar,'+
+                        'Si el problema persiste, llamar al soporte');
+               Application.Terminate;
+             end;
+         end;
+       end
+    else
+      MsgError('El Archivo de configuracion de la aplicación no existe, llamar al soporte!!'#13+
+               #9'La aplicacion cargara la base de datos local');
+end;
+
+end.

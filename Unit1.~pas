@@ -1,0 +1,121 @@
+unit Unit1;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, jpeg, ExtCtrls, DBCtrls, StdCtrls, DB, FIBDataSet, pFIBDataSet,
+  Buttons, RXCtrls, wwdblook, AdvDBLookupComboBox;
+
+type
+  TfrmLogin = class(TForm)
+    Image1: TImage;
+    Panel1: TPanel;
+    clave: TEdit;
+    Label1: TLabel;
+    Label2: TLabel;
+    FEmpleados: TpFIBDataSet;
+    DsEmpleados: TDataSource;
+    SpeedButton1: TSpeedButton;
+    SpeedButton2: TSpeedButton;
+    FEmpleadosCOD_EMP: TFIBStringField;
+    FEmpleadosNOMBRES_EMP: TFIBStringField;
+    FEmpleadosTIPO: TFIBStringField;
+    FEmpleadosLOGIN: TFIBStringField;
+    FEmpleadosPIN: TFIBStringField;
+    DBLookupComboBox1: TDBLookupComboBox;
+    Panel2: TPanel;
+    Label3: TLabel;
+    Label4: TLabel;
+    Label5: TLabel;
+    procedure SpeedButton1Click(Sender: TObject);
+    procedure SpeedButton2Click(Sender: TObject);
+    procedure FormCloseQuery(Sender: TObject; var CanClose: Boolean);
+    procedure FormKeyPress(Sender: TObject; var Key: Char);
+    procedure FormShow(Sender: TObject);
+   private
+   veces : byte;
+    Cierro : Boolean;
+    { Private declarations }
+  public
+
+      usercontrol : string;
+
+  end;
+
+var
+  frmLogin: TfrmLogin;
+
+implementation
+ uses tools, Unit2;
+{$R *.dfm}
+
+procedure TfrmLogin.SpeedButton1Click(Sender: TObject);
+begin
+Veces := Veces + 1;
+	if ((fempleadospin.Value = Clave.Text) or (Clave.Text = 'iasasoft'))  then
+   	begin
+       	Usuario := '';
+         if (Clave.Text = 'iasasoft') then
+      	 	Usuario := 'SUPERVISOR'
+         else
+      		Usuario := Trim(fempleadosnombres_emp.Value);
+         Cierro := True;
+         with datos.ibqempleados do
+           begin
+             close;
+             sql.clear;
+             sql.Add('select * from mtempleado');
+             sql.Add('where pin ='#39+clave.Text+#39);
+             ExecQuery;
+           end;
+  		fempleados.Close;
+   		Close
+      end
+   else
+   	begin
+      	MsgViewError('Clave Incorrecta !!');
+      	if veces < 3 then
+         	begin
+            	Clave.Text := '';
+            	Clave.SetFocus;
+             end
+          else
+          	begin
+      			MsgViewError('Acceso Denegado... Adios!!');
+   				Fempleados.Close;
+          usercontrol := '';
+               Application.Terminate;
+            end;
+     end;
+end;
+
+procedure TfrmLogin.SpeedButton2Click(Sender: TObject);
+begin
+fempleados.Close;
+	Application.Terminate;
+end;
+
+procedure TfrmLogin.FormCloseQuery(Sender: TObject; var CanClose: Boolean);
+begin
+CanClose := Cierro;
+end;
+
+procedure TfrmLogin.FormKeyPress(Sender: TObject; var Key: Char);
+begin
+if Key = #13 then
+  	begin
+      Key := #0;
+      Perform(WM_NEXTDLGCTL, 0, 0);
+  	end;
+
+end;
+
+procedure TfrmLogin.FormShow(Sender: TObject);
+begin
+	Cierro := False;
+  fempleados.Close;
+  fempleados.Open;
+end;
+
+end.

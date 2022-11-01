@@ -1,0 +1,177 @@
+unit Unit3;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, StdCtrls, DB, FIBDataSet, pFIBDataSet, Mask, DBCtrls, FIBQuery,
+  pFIBQuery, fcButton, fcImgBtn, fcShapeBtn, ExtCtrls, Grids, BaseGrid,
+  AdvGrid, DBAdvGrid;
+
+type
+  TFrmCliente = class(TForm)
+    GroupBox1: TGroupBox;
+    IbClientes: TpFIBDataSet;
+    IbClientesCODIGO: TFIBIntegerField;
+    IbClientesNOMBRES: TFIBStringField;
+    IbClientesDIRECCION: TFIBStringField;
+    IbClientesCEDULA: TFIBStringField;
+    IbClientesTELEFONO: TFIBStringField;
+    IbClientesCELULAR: TFIBStringField;
+    IbClientesCOLOR: TFIBStringField;
+    IbClientesCONTACTO: TFIBStringField;
+    IbClientesRENGLONCNF: TFIBStringField;
+    IbClientesTXTCNF: TFIBStringField;
+    IbClientesCREDITOLIMITE: TFIBBCDField;
+    IbClientesTIPO: TFIBStringField;
+    IbClientesRNC: TFIBStringField;
+    IbClientesCONDICION: TFIBStringField;
+    IbClientesINICIO: TFIBDateField;
+    IbClientesSUELDO: TFIBBCDField;
+    IbClientesPAGOITB: TFIBStringField;
+    IbClientesCREDITO: TFIBStringField;
+    IbClientesBALANCE: TFIBBCDField;
+    IbClientesESTADO: TFIBStringField;
+    IbClientesMOVIL: TFIBStringField;
+    Label1: TLabel;
+    DBEdit1: TDBEdit;
+    DataSource1: TDataSource;
+    Label2: TLabel;
+    DBEdit2: TDBEdit;
+    Label3: TLabel;
+    DBEdit3: TDBEdit;
+    Label4: TLabel;
+    Label5: TLabel;
+    DBEdit5: TDBEdit;
+    Label6: TLabel;
+    DBEdit6: TDBEdit;
+    Label7: TLabel;
+    DBEdit7: TDBEdit;
+    DBComboBox1: TDBComboBox;
+    Label8: TLabel;
+    Label9: TLabel;
+    DBEdit8: TDBEdit;
+    DBComboBox2: TDBComboBox;
+    Label10: TLabel;
+    Label11: TLabel;
+    DBComboBox3: TDBComboBox;
+    Label12: TLabel;
+    DBEdit9: TDBEdit;
+    Numero_cliente: TpFIBQuery;
+    fcShapeBtn1: TfcShapeBtn;
+    IbClientesCODIGO_T: TFIBStringField;
+    fcShapeBtn2: TfcShapeBtn;
+    fcShapeBtn3: TfcShapeBtn;
+    fcShapeBtn4: TfcShapeBtn;
+    DBNavigator1: TDBNavigator;
+    DBAdvGrid1: TDBAdvGrid;
+    Edit1: TEdit;
+    DsFqClientes: TDataSource;
+    DBEdit4: TDBEdit;
+    FbqCliente: TpFIBQuery;
+    procedure FormKeyPress(Sender: TObject; var Key: Char);
+    function TraeNumeroOrden(codigo:Integer):Integer;
+    procedure fcShapeBtn1Click(Sender: TObject);
+    procedure fcShapeBtn2Click(Sender: TObject);
+    procedure fcShapeBtn3Click(Sender: TObject);
+    procedure IbClientesNewRecord(DataSet: TDataSet);
+    procedure FormShow(Sender: TObject);
+    procedure Edit1Change(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FrmCliente: TFrmCliente;
+
+implementation
+
+{$R *.dfm}
+
+uses tools, Unit2;
+
+function TFrmcliente.TraeNumeroOrden(codigo:Integer):Integer;
+begin
+
+   with numero_cliente do
+     begin
+     close;
+     ExecQuery;
+   end;
+   if numero_cliente.Fields[0].IsNull then
+      Result := 1
+   else
+      Result := numero_cliente.Fields[0].Value + 1;
+
+end;
+procedure TFrmCliente.FormKeyPress(Sender: TObject; var Key: Char);
+begin
+ if Key = #13 then
+      begin
+          Key := #0;
+          Perform(WM_NEXTDLGCTL, 0, 0);
+      end;
+end;
+
+procedure TFrmCliente.fcShapeBtn1Click(Sender: TObject);
+begin
+
+ibClientes.Open;
+ibclientes.Append;
+ibclientescodigo.Value := TraeNumeroOrden(ibclientescodigo.Value);
+ibclientescodigo_t.Value := '000'+INtToStr(ibclientescodigo.Value);
+end;
+
+procedure TFrmCliente.fcShapeBtn2Click(Sender: TObject);
+begin
+if ibclientes.State = dsinsert then
+  begin
+      if dbedit2.Text =''then
+        begin
+            MsgError('Cliente no puede ser guardado'#13+
+      	               'Favor introducir el nombre del cliente');
+            dbedit2.SetFocus;
+        end else begin
+        ibclientes.Post;
+        datos.Wt.Commit;
+        datos.Wt.StartTransaction;
+        end;
+  end;
+
+
+
+end;
+
+procedure TFrmCliente.fcShapeBtn3Click(Sender: TObject);
+begin
+ibclientes.Cancel;
+
+end;
+
+procedure TFrmCliente.IbClientesNewRecord(DataSet: TDataSet);
+begin
+ibclientesestado.Value :='Activo';
+ibclientesbalance.Value := 0.00;
+ibclientesRENGLONCNF.Value :='Ninguno';
+ibclientescreditolimite.Value :=0.00;
+end;
+
+procedure TFrmCliente.FormShow(Sender: TObject);
+begin
+ibclientes.Open;
+end;
+
+procedure TFrmCliente.Edit1Change(Sender: TObject);
+begin
+with FbqCliente do
+  begin
+    close;
+    FbqCliente.Params[0].Value := edit1.Text;
+    ExecQuery;
+  end;
+
+end;
+
+end.

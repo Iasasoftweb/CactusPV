@@ -1,0 +1,846 @@
+object FrmCliente: TFrmCliente
+  Left = 119
+  Top = 198
+  Width = 853
+  Height = 321
+  BorderIcons = [biSystemMenu]
+  Caption = 'Mantenimiento de Clientes'
+  Color = clBtnFace
+  Font.Charset = ANSI_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Trebuchet MS'
+  Font.Style = []
+  KeyPreview = True
+  OldCreateOrder = False
+  Position = poDesktopCenter
+  OnKeyPress = FormKeyPress
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 16
+  object GroupBox1: TGroupBox
+    Left = 248
+    Top = 8
+    Width = 593
+    Height = 233
+    TabOrder = 0
+    object Label1: TLabel
+      Left = 8
+      Top = 16
+      Width = 34
+      Height = 16
+      Caption = 'Codigo'
+      FocusControl = DBEdit1
+    end
+    object Label2: TLabel
+      Left = 120
+      Top = 16
+      Width = 148
+      Height = 16
+      Caption = 'Nombres Personal / Compa'#241#237'a'
+      FocusControl = DBEdit2
+    end
+    object Label3: TLabel
+      Left = 8
+      Top = 64
+      Width = 48
+      Height = 16
+      Caption = 'Direcci'#243'n'
+      FocusControl = DBEdit3
+    end
+    object Label4: TLabel
+      Left = 384
+      Top = 64
+      Width = 65
+      Height = 16
+      Caption = 'C'#233'dula / RNC'
+    end
+    object Label5: TLabel
+      Left = 8
+      Top = 112
+      Width = 122
+      Height = 16
+      Caption = 'Tel. Residencia / Oficina'
+      FocusControl = DBEdit5
+    end
+    object Label6: TLabel
+      Left = 152
+      Top = 112
+      Width = 25
+      Height = 16
+      Caption = 'Mobil'
+      FocusControl = DBEdit6
+    end
+    object Label7: TLabel
+      Left = 320
+      Top = 112
+      Width = 105
+      Height = 16
+      Caption = 'Nombre del Contacto'
+      FocusControl = DBEdit7
+    end
+    object Label8: TLabel
+      Left = 8
+      Top = 160
+      Width = 106
+      Height = 16
+      Caption = 'Tipo de Comprobante'
+      FocusControl = DBEdit5
+    end
+    object Label9: TLabel
+      Left = 152
+      Top = 160
+      Width = 87
+      Height = 16
+      Caption = 'Limite de Credito'
+      FocusControl = DBEdit8
+    end
+    object Label10: TLabel
+      Left = 280
+      Top = 160
+      Width = 21
+      Height = 16
+      Caption = 'ITBs'
+      FocusControl = DBEdit8
+    end
+    object Label11: TLabel
+      Left = 324
+      Top = 160
+      Width = 34
+      Height = 16
+      Caption = 'Estado'
+    end
+    object Label12: TLabel
+      Left = 448
+      Top = 160
+      Width = 72
+      Height = 16
+      Caption = 'Balance Actual'
+      FocusControl = DBEdit9
+    end
+    object DBEdit1: TDBEdit
+      Left = 8
+      Top = 32
+      Width = 105
+      Height = 24
+      TabStop = False
+      CharCase = ecUpperCase
+      Color = 11921661
+      DataField = 'CODIGO_T'
+      DataSource = DataSource1
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Trebuchet MS'
+      Font.Style = [fsBold]
+      ParentFont = False
+      ReadOnly = True
+      TabOrder = 0
+    end
+    object DBEdit2: TDBEdit
+      Left = 120
+      Top = 32
+      Width = 457
+      Height = 24
+      CharCase = ecUpperCase
+      DataField = 'NOMBRES'
+      DataSource = DataSource1
+      TabOrder = 1
+    end
+    object DBEdit3: TDBEdit
+      Left = 8
+      Top = 80
+      Width = 369
+      Height = 24
+      CharCase = ecUpperCase
+      DataField = 'DIRECCION'
+      DataSource = DataSource1
+      TabOrder = 2
+    end
+    object DBEdit5: TDBEdit
+      Left = 8
+      Top = 128
+      Width = 137
+      Height = 24
+      CharCase = ecUpperCase
+      DataField = 'TELEFONO'
+      DataSource = DataSource1
+      TabOrder = 3
+    end
+    object DBEdit6: TDBEdit
+      Left = 152
+      Top = 128
+      Width = 161
+      Height = 24
+      CharCase = ecUpperCase
+      DataField = 'CELULAR'
+      DataSource = DataSource1
+      TabOrder = 4
+    end
+    object DBEdit7: TDBEdit
+      Left = 320
+      Top = 128
+      Width = 259
+      Height = 24
+      CharCase = ecUpperCase
+      DataField = 'CONTACTO'
+      DataSource = DataSource1
+      TabOrder = 5
+    end
+    object DBComboBox1: TDBComboBox
+      Left = 8
+      Top = 176
+      Width = 145
+      Height = 24
+      DataField = 'RENGLONCNF'
+      DataSource = DataSource1
+      ItemHeight = 16
+      Items.Strings = (
+        'Ninguno'
+        'Gubernamental'
+        'Fiscal'
+        'Consumido F.')
+      TabOrder = 6
+    end
+    object DBEdit8: TDBEdit
+      Left = 152
+      Top = 176
+      Width = 121
+      Height = 24
+      DataField = 'CREDITOLIMITE'
+      DataSource = DataSource1
+      TabOrder = 7
+    end
+    object DBComboBox2: TDBComboBox
+      Left = 280
+      Top = 176
+      Width = 41
+      Height = 24
+      DataField = 'PAGOITB'
+      DataSource = DataSource1
+      ItemHeight = 16
+      Items.Strings = (
+        'Si'
+        'No')
+      TabOrder = 8
+    end
+    object DBComboBox3: TDBComboBox
+      Left = 324
+      Top = 175
+      Width = 125
+      Height = 24
+      DataField = 'ESTADO'
+      DataSource = DataSource1
+      ItemHeight = 16
+      Items.Strings = (
+        'Activo'
+        'Detenido'
+        'Cancelado')
+      TabOrder = 9
+    end
+    object DBEdit9: TDBEdit
+      Left = 448
+      Top = 176
+      Width = 135
+      Height = 26
+      TabStop = False
+      Color = 11921661
+      DataField = 'BALANCE'
+      DataSource = DataSource1
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = 'Trebuchet MS'
+      Font.Style = [fsBold]
+      ParentFont = False
+      ReadOnly = True
+      TabOrder = 10
+    end
+    object DBNavigator1: TDBNavigator
+      Left = 2
+      Top = 206
+      Width = 589
+      Height = 25
+      DataSource = DataSource1
+      VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast]
+      Align = alBottom
+      TabOrder = 11
+    end
+    object DBEdit4: TDBEdit
+      Left = 384
+      Top = 80
+      Width = 194
+      Height = 24
+      CharCase = ecUpperCase
+      DataField = 'CEDULA'
+      DataSource = DataSource1
+      TabOrder = 12
+    end
+  end
+  object fcShapeBtn1: TfcShapeBtn
+    Left = 280
+    Top = 248
+    Width = 105
+    Height = 33
+    Caption = 'Nuevo Cliente'
+    Color = clBtnFace
+    DitherColor = clWhite
+    NumGlyphs = 0
+    ParentClipping = True
+    RoundRectBias = 25
+    ShadeStyle = fbsHighlight
+    TabOrder = 1
+    TextOptions.Alignment = taCenter
+    TextOptions.VAlignment = vaVCenter
+    OnClick = fcShapeBtn1Click
+  end
+  object fcShapeBtn2: TfcShapeBtn
+    Left = 392
+    Top = 248
+    Width = 129
+    Height = 33
+    Caption = 'Guardar Cambios'
+    Color = clBtnFace
+    DitherColor = clWhite
+    NumGlyphs = 0
+    ParentClipping = True
+    RoundRectBias = 25
+    ShadeStyle = fbsHighlight
+    TabOrder = 2
+    TextOptions.Alignment = taCenter
+    TextOptions.VAlignment = vaVCenter
+    OnClick = fcShapeBtn2Click
+  end
+  object fcShapeBtn3: TfcShapeBtn
+    Left = 528
+    Top = 248
+    Width = 129
+    Height = 33
+    Caption = 'Cancelar Cambios'
+    Color = clBtnFace
+    DitherColor = clWhite
+    NumGlyphs = 0
+    ParentClipping = True
+    RoundRectBias = 25
+    ShadeStyle = fbsHighlight
+    TabOrder = 3
+    TextOptions.Alignment = taCenter
+    TextOptions.VAlignment = vaVCenter
+    OnClick = fcShapeBtn3Click
+  end
+  object fcShapeBtn4: TfcShapeBtn
+    Left = 664
+    Top = 248
+    Width = 129
+    Height = 33
+    Caption = 'Eliminar Clientes'
+    Color = clBtnFace
+    DitherColor = clWhite
+    NumGlyphs = 0
+    ParentClipping = True
+    RoundRectBias = 25
+    ShadeStyle = fbsHighlight
+    TabOrder = 4
+    TextOptions.Alignment = taCenter
+    TextOptions.VAlignment = vaVCenter
+  end
+  object DBAdvGrid1: TDBAdvGrid
+    Left = 8
+    Top = 16
+    Width = 233
+    Height = 225
+    Cursor = crDefault
+    ColCount = 3
+    RowCount = 2
+    FixedRows = 1
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goRowSelect]
+    ParentFont = False
+    ParentShowHint = False
+    ScrollBars = ssBoth
+    ShowHint = False
+    TabOrder = 5
+    ActiveCellFont.Charset = DEFAULT_CHARSET
+    ActiveCellFont.Color = clWindowText
+    ActiveCellFont.Height = -11
+    ActiveCellFont.Name = 'Tahoma'
+    ActiveCellFont.Style = [fsBold]
+    ActiveCellColor = 15387318
+    ActiveCellColorTo = 13101539
+    ControlLook.FixedGradientFrom = clWhite
+    ControlLook.FixedGradientTo = clSilver
+    ControlLook.FixedGradientHoverFrom = 13619409
+    ControlLook.FixedGradientHoverTo = 12502728
+    ControlLook.FixedGradientHoverMirrorFrom = 12502728
+    ControlLook.FixedGradientHoverMirrorTo = 11254975
+    ControlLook.FixedGradientDownFrom = 8816520
+    ControlLook.FixedGradientDownTo = 7568510
+    ControlLook.FixedGradientDownMirrorFrom = 7568510
+    ControlLook.FixedGradientDownMirrorTo = 6452086
+    ControlLook.DropDownHeader.Font.Charset = DEFAULT_CHARSET
+    ControlLook.DropDownHeader.Font.Color = clWindowText
+    ControlLook.DropDownHeader.Font.Height = -11
+    ControlLook.DropDownHeader.Font.Name = 'Tahoma'
+    ControlLook.DropDownHeader.Font.Style = []
+    ControlLook.DropDownHeader.Visible = True
+    ControlLook.DropDownHeader.Buttons = <>
+    ControlLook.DropDownFooter.Font.Charset = DEFAULT_CHARSET
+    ControlLook.DropDownFooter.Font.Color = clWindowText
+    ControlLook.DropDownFooter.Font.Height = -11
+    ControlLook.DropDownFooter.Font.Name = 'MS Sans Serif'
+    ControlLook.DropDownFooter.Font.Style = []
+    ControlLook.DropDownFooter.Visible = True
+    ControlLook.DropDownFooter.Buttons = <>
+    EnableBlink = True
+    Filter = <>
+    FilterActive = True
+    FilterDropDown.Font.Charset = DEFAULT_CHARSET
+    FilterDropDown.Font.Color = clWindowText
+    FilterDropDown.Font.Height = -11
+    FilterDropDown.Font.Name = 'MS Sans Serif'
+    FilterDropDown.Font.Style = []
+    FilterDropDownClear = '(All)'
+    FixedColWidth = 20
+    FixedRowHeight = 22
+    FixedFont.Charset = DEFAULT_CHARSET
+    FixedFont.Color = clWindowText
+    FixedFont.Height = -11
+    FixedFont.Name = 'Tahoma'
+    FixedFont.Style = [fsBold]
+    FloatFormat = '%.2f'
+    Look = glTMS
+    LookupCaseSensitive = True
+    Multilinecells = True
+    PrintSettings.DateFormat = 'dd/mm/yyyy'
+    PrintSettings.Font.Charset = DEFAULT_CHARSET
+    PrintSettings.Font.Color = clWindowText
+    PrintSettings.Font.Height = -11
+    PrintSettings.Font.Name = 'MS Sans Serif'
+    PrintSettings.Font.Style = []
+    PrintSettings.FixedFont.Charset = DEFAULT_CHARSET
+    PrintSettings.FixedFont.Color = clWindowText
+    PrintSettings.FixedFont.Height = -11
+    PrintSettings.FixedFont.Name = 'MS Sans Serif'
+    PrintSettings.FixedFont.Style = []
+    PrintSettings.HeaderFont.Charset = DEFAULT_CHARSET
+    PrintSettings.HeaderFont.Color = clWindowText
+    PrintSettings.HeaderFont.Height = -11
+    PrintSettings.HeaderFont.Name = 'MS Sans Serif'
+    PrintSettings.HeaderFont.Style = []
+    PrintSettings.FooterFont.Charset = DEFAULT_CHARSET
+    PrintSettings.FooterFont.Color = clWindowText
+    PrintSettings.FooterFont.Height = -11
+    PrintSettings.FooterFont.Name = 'MS Sans Serif'
+    PrintSettings.FooterFont.Style = []
+    PrintSettings.PageNumSep = '/'
+    SearchFooter.ColorTo = 14215660
+    SearchFooter.FindNextCaption = 'Find &next'
+    SearchFooter.FindPrevCaption = 'Find &previous'
+    SearchFooter.Font.Charset = DEFAULT_CHARSET
+    SearchFooter.Font.Color = clWindowText
+    SearchFooter.Font.Height = -11
+    SearchFooter.Font.Name = 'MS Sans Serif'
+    SearchFooter.Font.Style = []
+    SearchFooter.HighLightCaption = 'Highlight'
+    SearchFooter.HintClose = 'Close'
+    SearchFooter.HintFindNext = 'Find next occurence'
+    SearchFooter.HintFindPrev = 'Find previous occurence'
+    SearchFooter.HintHighlight = 'Highlight occurences'
+    SearchFooter.MatchCaseCaption = 'Match case'
+    SelectionColorTo = 13101539
+    SortSettings.AutoColumnMerge = True
+    SortSettings.Column = 1
+    SortSettings.Show = True
+    SortSettings.IgnoreBlanks = True
+    SortSettings.IgnoreCase = True
+    Version = '2.1.12.7'
+    AutoCreateColumns = True
+    AutoRemoveColumns = True
+    Columns = <
+      item
+        Borders = []
+        BorderPen.Color = clSilver
+        CheckFalse = 'N'
+        CheckTrue = 'Y'
+        Color = clWindow
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'MS Sans Serif'
+        Font.Style = []
+        HeaderFont.Charset = DEFAULT_CHARSET
+        HeaderFont.Color = clWindowText
+        HeaderFont.Height = -11
+        HeaderFont.Name = 'MS Sans Serif'
+        HeaderFont.Style = []
+        PrintBorders = [cbTop, cbLeft, cbRight, cbBottom]
+        PrintFont.Charset = DEFAULT_CHARSET
+        PrintFont.Color = clWindowText
+        PrintFont.Height = -11
+        PrintFont.Name = 'MS Sans Serif'
+        PrintFont.Style = []
+        Width = 20
+      end
+      item
+        Borders = []
+        BorderPen.Color = clSilver
+        CheckFalse = 'N'
+        CheckTrue = 'Y'
+        Color = clWindow
+        FieldName = 'CODIGO_T'
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'Tahoma'
+        Font.Style = []
+        HeaderFont.Charset = ANSI_CHARSET
+        HeaderFont.Color = clWindowText
+        HeaderFont.Height = -11
+        HeaderFont.Name = 'Tahoma'
+        HeaderFont.Style = []
+        PrintBorders = [cbTop, cbLeft, cbRight, cbBottom]
+        PrintFont.Charset = ANSI_CHARSET
+        PrintFont.Color = clWindowText
+        PrintFont.Height = -11
+        PrintFont.Name = 'Tahoma'
+        PrintFont.Style = []
+        Width = 64
+      end
+      item
+        Borders = []
+        BorderPen.Color = clSilver
+        CheckFalse = 'N'
+        CheckTrue = 'Y'
+        Color = clWindow
+        FieldName = 'Nombres'
+        FilterCaseSensitive = True
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'Tahoma'
+        Font.Style = []
+        HeaderFont.Charset = ANSI_CHARSET
+        HeaderFont.Color = clWindowText
+        HeaderFont.Height = -11
+        HeaderFont.Name = 'Tahoma'
+        HeaderFont.Style = []
+        HeaderAlignment = taCenter
+        Name = 'ss'
+        PrintBorders = [cbTop, cbLeft, cbRight, cbBottom]
+        PrintFont.Charset = ANSI_CHARSET
+        PrintFont.Color = clWindowText
+        PrintFont.Height = -11
+        PrintFont.Name = 'Tahoma'
+        PrintFont.Style = []
+        Width = 145
+      end>
+    DataSource = DsFqClientes
+    InvalidPicture.Data = {
+      055449636F6E0000010001002020040000000000E80200001600000028000000
+      2000000040000000010004000000000000020000000000000000000000000000
+      0000000000000000000080000080000000808000800000008000800080800000
+      80808000C0C0C0000000FF0000FF000000FFFF00FF000000FF00FF00FFFF0000
+      FFFFFF0000000000000000000000000000000000000000000001111111100000
+      0000000000000000011111111111100000000000000000011111111111111110
+      0000000000000111111111111111111110000000000011111111111111111111
+      1100000000011111111111111111111111100000001111117711111111117111
+      1110000000111111FF7111111117FF111111000001111118FFF91111117FFFF1
+      1111100001111178FFFF711117FFFFF711111000911111178FFFF9117FFFF871
+      111110001111199178FFFF97FFFF87111111110011119999178FFFFFFFFF7191
+      11111100111999999178FFFFFFF7199911111100119999999997FFFFFF899999
+      91111100199999999997FFFFFF9999999911110099999999999FFFFFFFF99999
+      999111009999999999FFFFFFFFFF999999911100999999999FFFFF778FFFF999
+      99911100999999998FFF879978FFFF999999910099999978FFF87999978FFFF7
+      9999910009999978FF8799999978FF8799999000099999978879999999978879
+      9999100000999999779999999999779999990000009999977799999999999999
+      9991000000099997888879999999999999100000000099978888888888779999
+      9900000000000999788888888887999990000000000000999788888888799991
+      0000000000000000999788888799991000000000000000000099999999999000
+      00000000FF8000FFFF00007FFE00001FF800000FF0000007F0000007E0000003
+      C0000001C0000001800000018000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000180000001
+      80000003C0000003C0000007E000000FF000001FF800003FFC0000FFFF0001FF
+      FFC007FF}
+    ShowUnicode = False
+    ColWidths = (
+      20
+      64
+      145)
+  end
+  object Edit1: TEdit
+    Left = 16
+    Top = 248
+    Width = 225
+    Height = 25
+    TabOrder = 6
+    OnChange = Edit1Change
+  end
+  object IbClientes: TpFIBDataSet
+    Database = datos.data
+    Transaction = datos.Rd
+    UpdateTransaction = datos.Wt
+    AutoCommit = True
+    UpdateSQL.Strings = (
+      'UPDATE CLIENTE SET'
+      '    CODIGO          = :CODIGO,     '
+      '    NOMBRES      = :NOMBRES,'
+      '    DIRECCION     = :DIRECCION,'
+      '    CEDULA          = :CEDULA ,'
+      '    TELEFONO     = :TELEFONO,'
+      '    CELULAR        = :CELULAR,'
+      '    COLOR             = :COLOR,'
+      '    CONTACTO      = :CONTACTO,'
+      '    RENGLONCNF  = :RENGLONCNF,'
+      '    TXTCNF             = :TXTCNF,'
+      '    CREDITOLIMITE = :CREDITOLIMITE,'
+      '    TIPO                    = :TIPO,'
+      '    RNC                    = :RNC,'
+      '    CONDICION        = :CONDICION,'
+      '    INICIO                 = :INICIO,'
+      '    PAGOITB             = :PAGOITB,'
+      '    CREDITO             = :CREDITO,'
+      '    BALANCE             = :BALANCE,'
+      '    ESTADO              = :ESTADO, '
+      '    MOVIL                 = :MOVIL,'
+      '   codigo_t               =:codigo_T'
+      '    '
+      'WHERE'
+      '  CODIGO =:OLD_CODIGO')
+    InsertSQL.Strings = (
+      'INSERT INTO CLIENTE('
+      ' CODIGO,     '
+      '    NOMBRES,'
+      '    DIRECCION,'
+      '    CEDULA,'
+      '    TELEFONO,'
+      '    CELULAR,'
+      '    COLOR,'
+      '    CONTACTO,'
+      '    RENGLONCNF,'
+      '    TXTCNF,'
+      '    CREDITOLIMITE,'
+      '    TIPO,'
+      '    RNC,'
+      '    CONDICION,'
+      '    INICIO,'
+      '    SUELDO,'
+      '    PAGOITB,'
+      '    CREDITO,'
+      '    BALANCE,'
+      '    ESTADO,'
+      '    MOVIL,'
+      '   codigo_t'
+      ')'
+      ' VALUES('
+      '    :CODIGO,     '
+      '    :NOMBRES,'
+      '    :DIRECCION,'
+      '    :CEDULA,'
+      '    :TELEFONO,'
+      '    :CELULAR,'
+      '    :COLOR,'
+      '    :CONTACTO,'
+      '    :RENGLONCNF,'
+      '    :TXTCNF,'
+      '    :CREDITOLIMITE,'
+      '    :TIPO,'
+      '    :RNC,'
+      '    :CONDICION,'
+      '    :INICIO,'
+      '    :SUELDO,'
+      '    :PAGOITB,'
+      '    :CREDITO,'
+      '    :BALANCE,'
+      '    :ESTADO,'
+      '    :MOVIL,'
+      '    :codigo_t'
+      ')')
+    SelectSQL.Strings = (
+      'select'
+      '    CODIGO,     '
+      '    NOMBRES,'
+      '    DIRECCION,'
+      '    CEDULA,'
+      '    TELEFONO,'
+      '    CELULAR,'
+      '    COLOR,'
+      '    CONTACTO,'
+      '    RENGLONCNF,'
+      '    TXTCNF,'
+      '    CREDITOLIMITE,'
+      '    TIPO,'
+      '    RNC,'
+      '    CONDICION,'
+      '    INICIO,'
+      '    SUELDO,'
+      '    PAGOITB,'
+      '    CREDITO,'
+      '    BALANCE,'
+      '    ESTADO,'
+      '    MOVIL,'
+      '   codigo_t'
+      'from'
+      '   cliente')
+    OnNewRecord = IbClientesNewRecord
+    Left = 264
+    Top = 240
+    poSQLINT64ToBCD = True
+    object IbClientesCODIGO: TFIBIntegerField
+      FieldName = 'CODIGO'
+    end
+    object IbClientesNOMBRES: TFIBStringField
+      FieldName = 'NOMBRES'
+      Size = 40
+      EmptyStrToNull = True
+    end
+    object IbClientesDIRECCION: TFIBStringField
+      FieldName = 'DIRECCION'
+      Size = 40
+      EmptyStrToNull = True
+    end
+    object IbClientesCEDULA: TFIBStringField
+      FieldName = 'CEDULA'
+      Size = 15
+      EmptyStrToNull = True
+    end
+    object IbClientesTELEFONO: TFIBStringField
+      FieldName = 'TELEFONO'
+      EditMask = '!\(999\)000-0000;1;_'
+      Size = 15
+      EmptyStrToNull = True
+    end
+    object IbClientesCELULAR: TFIBStringField
+      FieldName = 'CELULAR'
+      EditMask = '!\(999\)000-0000;1;_'
+      Size = 15
+      EmptyStrToNull = True
+    end
+    object IbClientesCOLOR: TFIBStringField
+      FieldName = 'COLOR'
+      Size = 15
+      EmptyStrToNull = True
+    end
+    object IbClientesCONTACTO: TFIBStringField
+      FieldName = 'CONTACTO'
+      Size = 40
+      EmptyStrToNull = True
+    end
+    object IbClientesRENGLONCNF: TFIBStringField
+      FieldName = 'RENGLONCNF'
+      Size = 10
+      EmptyStrToNull = True
+    end
+    object IbClientesCREDITOLIMITE: TFIBBCDField
+      FieldName = 'CREDITOLIMITE'
+      DisplayFormat = '#,##0.00'
+      EditFormat = '0.00'
+      currency = True
+      Size = 2
+      RoundByScale = True
+    end
+    object IbClientesTXTCNF: TFIBStringField
+      FieldName = 'TXTCNF'
+      Size = 40
+      EmptyStrToNull = True
+    end
+    object IbClientesTIPO: TFIBStringField
+      FieldName = 'TIPO'
+      Size = 10
+      EmptyStrToNull = True
+    end
+    object IbClientesRNC: TFIBStringField
+      FieldName = 'RNC'
+      Size = 15
+      EmptyStrToNull = True
+    end
+    object IbClientesCONDICION: TFIBStringField
+      FieldName = 'CONDICION'
+      Size = 10
+      EmptyStrToNull = True
+    end
+    object IbClientesINICIO: TFIBDateField
+      FieldName = 'INICIO'
+      DisplayFormat = 'dd.mm.yyyy'
+    end
+    object IbClientesSUELDO: TFIBBCDField
+      FieldName = 'SUELDO'
+      DisplayFormat = '#,##0.00'
+      EditFormat = '0.00'
+      Size = 2
+      RoundByScale = True
+    end
+    object IbClientesPAGOITB: TFIBStringField
+      FieldName = 'PAGOITB'
+      Size = 2
+      EmptyStrToNull = True
+    end
+    object IbClientesCREDITO: TFIBStringField
+      FieldName = 'CREDITO'
+      Size = 2
+      EmptyStrToNull = True
+    end
+    object IbClientesBALANCE: TFIBBCDField
+      FieldName = 'BALANCE'
+      DisplayFormat = '#,##0.00'
+      EditFormat = '0.00'
+      currency = True
+      Size = 2
+      RoundByScale = True
+    end
+    object IbClientesESTADO: TFIBStringField
+      FieldName = 'ESTADO'
+      Size = 10
+      EmptyStrToNull = True
+    end
+    object IbClientesMOVIL: TFIBStringField
+      FieldName = 'MOVIL'
+      Size = 17
+      EmptyStrToNull = True
+    end
+    object IbClientesCODIGO_T: TFIBStringField
+      FieldName = 'CODIGO_T'
+      Size = 10
+      EmptyStrToNull = True
+    end
+  end
+  object DataSource1: TDataSource
+    DataSet = IbClientes
+    Left = 216
+    Top = 168
+  end
+  object Numero_cliente: TpFIBQuery
+    Database = datos.data
+    SQL.Strings = (
+      'SELECT'
+      '    MAX(codigo) AS ULTIMO'
+      'FROM'
+      '    cliente ')
+    Transaction = datos.Rd
+    Left = 528
+    Top = 8
+  end
+  object DsFqClientes: TDataSource
+    Left = 680
+    Top = 56
+  end
+  object FbqCliente: TpFIBQuery
+    Database = datos.data
+    SQL.Strings = (
+      'select'
+      '   codigo_t,'
+      '   nombres'
+      'from '
+      '    cliente'
+      'where'
+      '     codigo_t=:cod'
+      '  '
+      '   ')
+    Transaction = datos.Rd
+    Left = 160
+    Top = 128
+  end
+end

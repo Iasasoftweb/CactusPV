@@ -1,0 +1,996 @@
+unit uInventario_Master;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
+  System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, acPNG, Vcl.ExtCtrls,
+  Vcl.Buttons, Data.DB, Vcl.Grids, Vcl.DBGrids, cxGraphics, cxControls,
+  cxLookAndFeels, cxLookAndFeelPainters, cxStyles, dxSkinsCore, dxSkinBlack,
+  dxSkinBlue, dxSkinBlueprint, dxSkinCaramel, dxSkinCoffee, dxSkinDarkRoom,
+  dxSkinDarkSide, dxSkinDevExpressDarkStyle, dxSkinDevExpressStyle, dxSkinFoggy,
+  dxSkinGlassOceans, dxSkinHighContrast, dxSkiniMaginary, dxSkinLilian,
+  dxSkinLiquidSky, dxSkinLondonLiquidSky, dxSkinMcSkin, dxSkinMetropolis,
+  dxSkinMetropolisDark, dxSkinMoneyTwins, dxSkinOffice2007Black,
+  dxSkinOffice2007Blue, dxSkinOffice2007Green, dxSkinOffice2007Pink,
+  dxSkinOffice2007Silver, dxSkinOffice2010Black, dxSkinOffice2010Blue,
+  dxSkinOffice2010Silver, dxSkinOffice2013DarkGray, dxSkinOffice2013LightGray,
+  dxSkinOffice2013White, dxSkinOffice2016Colorful, dxSkinOffice2016Dark,
+  dxSkinPumpkin, dxSkinSeven, dxSkinSevenClassic, dxSkinSharp, dxSkinSharpPlus,
+  dxSkinSilver, dxSkinSpringTime, dxSkinStardust, dxSkinSummer2008,
+  dxSkinTheAsphaltWorld, dxSkinTheBezier, dxSkinsDefaultPainters,
+  dxSkinValentine, dxSkinVisualStudio2013Blue, dxSkinVisualStudio2013Dark,
+  dxSkinVisualStudio2013Light, dxSkinVS2010, dxSkinWhiteprint,
+  dxSkinXmas2008Blue, cxCustomData, cxFilter, cxData, cxDataStorage, cxEdit,
+  cxNavigator, cxDataControllerConditionalFormattingRulesManagerDialog,
+  cxDBData, cxGridLevel, cxGridCustomTableView, cxGridTableView,
+  cxGridDBTableView, cxClasses, cxGridCustomView, cxGrid, ZAbstractRODataset,
+  ZDataset, cxVGrid, cxDBVGrid, cxInplaceContainer, cxCheckBox;
+
+type
+  TfInventario_Master = class(TForm)
+    pnlTop: TPanel;
+    btnsalir: TSpeedButton;
+    pnlBarTopDiv: TPanel;
+    Panel7: TPanel;
+    Panel8: TPanel;
+    Panel1: TPanel;
+    imgLogoTop: TImage;
+    Panel2: TPanel;
+    Panel3: TPanel;
+    Label2: TLabel;
+    Panel4: TPanel;
+    Label3: TLabel;
+    Label4: TLabel;
+    Panel5: TPanel;
+    Panel6: TPanel;
+    Panel9: TPanel;
+    pnlBtnAddProductos: TPanel;
+    SpeedButton1: TSpeedButton;
+    Panel10: TPanel;
+    SpeedButton2: TSpeedButton;
+    Panel11: TPanel;
+    SpeedButton3: TSpeedButton;
+    Panel12: TPanel;
+    SpeedButton4: TSpeedButton;
+    Panel13: TPanel;
+    Panel14: TPanel;
+    IbqRArticulos: TZReadOnlyQuery;
+    IbqRArticulosCOD_ART: TIntegerField;
+    IbqRArticulosARTICULO: TWideStringField;
+    IbqRArticulosMODELO: TWideStringField;
+    IbqRArticulosMARCA: TWideStringField;
+    IbqRArticulosPOLITICA: TWideStringField;
+    IbqRArticulosPRECIO_A: TFloatField;
+    IbqRArticulosPRECIO_B: TFloatField;
+    IbqRArticulosREFERENCIA: TWideStringField;
+    IbqRArticulosCOSTOPROMENO: TFloatField;
+    IbqRArticulosUPPER: TWideStringField;
+    IbqRArticulosCOSTO_PR: TFloatField;
+    IbqRArticulosCOSTO: TFloatField;
+    IbqRArticulosCODIGOBARRA: TWideStringField;
+    IbqRArticulosOPCIONES_BOLA: TWideStringField;
+    IbqRArticulosCODEQUIVALENCIA: TWideStringField;
+    IbqRArticulosDESC_EQUIVALENCIA: TWideStringField;
+    IbqRArticulosCANTEQUIVALENCA: TFloatField;
+    DsqArticulos: TDataSource;
+    cxGrid2: TcxGrid;
+    cxGrid2DBTableView1: TcxGridDBTableView;
+    cxGrid2DBTableView1COD_ART: TcxGridDBColumn;
+    cxGrid2DBTableView1Column4: TcxGridDBColumn;
+    cxGrid2DBTableView1ARTICULO: TcxGridDBColumn;
+    cxGrid2DBTableView1POLITICA: TcxGridDBColumn;
+    cxGrid2DBTableView1Column2: TcxGridDBColumn;
+    cxGrid2DBTableView1PRECIO1: TcxGridDBColumn;
+    cxGrid2DBTableView1Column3: TcxGridDBColumn;
+    cxGrid2DBTableView1Column5: TcxGridDBColumn;
+    cxGrid2DBTableView1Column6: TcxGridDBColumn;
+    cxGrid2Level1: TcxGridLevel;
+    Panel16: TPanel;
+    Panel17: TPanel;
+    Panel18: TPanel;
+    Panel19: TPanel;
+    Panel20: TPanel;
+    IbqRArticulosNOM_INDICACION: TWideStringField;
+    IbqRArticulosMARCAS: TWideStringField;
+    IbqRArticulosNOMBRE_PRO: TWideStringField;
+    IbqRArticulosCODIGOTXT: TWideStringField;
+    IbqRArticulosCOLOR: TWideStringField;
+    IbqRArticulosCOD_CAT: TIntegerField;
+    IbqRArticulosCOD_SERIE: TIntegerField;
+    IbqRArticulosCOD_ALM: TIntegerField;
+    IbqRArticulosCOD_PROV1: TIntegerField;
+    IbqRArticulosEXISTENCIA1: TFloatField;
+    IbqRArticulosITBIS: TWideStringField;
+    IbqRArticulosABREVIADO: TWideStringField;
+    IbqRArticulosCOD_BARRA: TWideStringField;
+    IbqRArticulosCOD_UV: TIntegerField;
+    IbqRArticulosUSUARIOMOD: TIntegerField;
+    IbqRArticulosFECHA_MOD: TDateField;
+    IbqRArticulosIMAGEN: TBlobField;
+    IbqRArticulosCLA_COSTO: TWideStringField;
+    IbqRArticulosCLA_PRECIO: TWideStringField;
+    IbqRArticulosPRECIO_D: TFloatField;
+    IbqRArticulosESTADO: TIntegerField;
+    IbqRArticulosEXTFOTO: TWideStringField;
+    IbqRArticulosDESCRIPCIONWEB: TWideMemoField;
+    IbqRArticulosPUBLICARWEB: TIntegerField;
+    IbqRArticulosEMPAQUE: TIntegerField;
+    IbqRArticulosCANT_EMPA: TFloatField;
+    IbqRArticulosCOD_PROV2: TIntegerField;
+    IbqRArticulosCOD_PROV3: TIntegerField;
+    IbqRArticulosOPCION_SABOR: TWideStringField;
+    IbqRArticulosSTOCK_MA: TFloatField;
+    IbqRArticulosSTOCK_M: TFloatField;
+    IbqRArticulosFACTOR: TFloatField;
+    IbqRArticulosTIPO_PRODUCTOS: TWideStringField;
+    IbqRArticulosFACTURABLE: TIntegerField;
+    IbqRArticulosSTOCK: TFloatField;
+    IbqRArticulosPARTICIONADO: TWideStringField;
+    IbqRArticulosCOMPUESTO: TWideStringField;
+    IbqRArticulosBENEFICIOS: TFloatField;
+    IbqRArticulosMONEDA: TWideStringField;
+    IbqRArticulosUNIDAD: TWideStringField;
+    IbqRArticulosTAZA_COMPRA: TFloatField;
+    IbqRArticulosFECHA_COMPRA: TDateField;
+    IbqRArticulosINTERES_ACUMULADO: TFloatField;
+    IbqRArticulosALMACEN: TIntegerField;
+    IbqRArticulosPERCIO_COPA: TFloatField;
+    IbqRArticulosCOMISION: TFloatField;
+    IbqRArticulosARTICULOS_OMO: TWideStringField;
+    IbqRArticulosCODIGOUNICO: TWideStringField;
+    IbqRArticulosEMPRESA: TWideStringField;
+    IbqRArticulosCONDICION: TWideStringField;
+    IbqRArticulosUTILIDAD2: TFloatField;
+    IbqRArticulosUTILIDAD3: TFloatField;
+    IbqRArticulosPRECIO_BRUTO1: TFloatField;
+    IbqRArticulosPRECIO_BRUTO2: TFloatField;
+    IbqRArticulosPRECIO_BRUTO3: TFloatField;
+    IbqRArticulosMAYOREO1: TFloatField;
+    IbqRArticulosMAYOREO2: TFloatField;
+    IbqRArticulosMAYOREO3: TFloatField;
+    IbqRArticulosDESCRIPCION: TWideMemoField;
+    IbqRArticulosTIENECOMPACTIBILIDAD: TWideStringField;
+    IbqRArticulosCOMPACTIBLECON: TIntegerField;
+    IbqRArticulosUBICACION: TWideStringField;
+    IbqRArticulosOBS: TIntegerField;
+    IbqRArticulosTIPOB: TWideStringField;
+    IbqRArticulosESTADOCONDICION: TWideStringField;
+    IbqRArticulosIDMONEDA: TIntegerField;
+    IbqRArticulosCOSTO_DOLLARS: TFloatField;
+    IbqRArticulosPRE1: TFloatField;
+    IbqRArticulosPRE2: TFloatField;
+    IbqRArticulosPRE3: TFloatField;
+    IbqRArticulosCOSP: TFloatField;
+    IbqRArticulosCOST: TFloatField;
+    IbqRArticulosPRECIO_C: TFloatField;
+    IbqRArticulosUTILIDAD4: TFloatField;
+    IbqRArticulosMAYOREO4: TFloatField;
+    IbqRArticulosPRECIO_BRUTO4: TFloatField;
+    IbqRArticulosUTILIDADSOBREITBS: TWideStringField;
+    IbqRArticulosAPLICARPORMAYOR: TWideStringField;
+    IbqRArticulosNOMBREABREVIADO: TWideStringField;
+    IbqRArticulosPRESENTACION: TWideStringField;
+    IbqRArticulosCAPACIDAD: TIntegerField;
+    IbqRArticulosMODIUSO: TWideStringField;
+    IbqRArticulosIDMARCA: TIntegerField;
+    IbqRArticulosDESCPERMITIDO: TIntegerField;
+    IbqRArticulosSUBCATEGORIA: TIntegerField;
+    IbqRArticulosCLASIFICACION: TIntegerField;
+    IbqRArticulosINDICACION: TIntegerField;
+    IbqRArticulosUNIDADVENTA: TWideStringField;
+    IbqRArticulosUNIDADCOMPRA: TWideStringField;
+    cxDBVerticalGrid1: TcxDBVerticalGrid;
+    cxDBVerticalGrid1DBEditorRow1: TcxDBEditorRow;
+    cxDBVerticalGrid1DBEditorRow2: TcxDBEditorRow;
+    cxDBVerticalGrid1DBEditorRow3: TcxDBEditorRow;
+    cxDBVerticalGrid1DBEditorRow4: TcxDBEditorRow;
+    cxDBVerticalGrid1DBEditorRow5: TcxDBEditorRow;
+    cxDBVerticalGrid1DBEditorRow6: TcxDBEditorRow;
+    IbqRArticulosCLASI: TWideStringField;
+    IbqRArticulosSUST: TWideStringField;
+    IbqRArticulosSUSTANCIA: TIntegerField;
+    cxDBVerticalGrid1DBEditorRow7: TcxDBEditorRow;
+    IbqRArticulosCAT: TWideStringField;
+    IbqRArticulosSUBCAT: TWideStringField;
+    cxDBVerticalGrid1DBEditorRow8: TcxDBEditorRow;
+    Panel15: TPanel;
+    SpeedButton5: TSpeedButton;
+    Panel21: TPanel;
+    SpeedButton6: TSpeedButton;
+    QEquivalentes: TZReadOnlyQuery;
+    QEquivalentesCOD_ART: TIntegerField;
+    QEquivalentesCODIGOTXT: TWideStringField;
+    QEquivalentesARTICULO: TWideStringField;
+    QEquivalentesMODELO: TWideStringField;
+    QEquivalentesMARCA: TWideStringField;
+    QEquivalentesCOLOR: TWideStringField;
+    QEquivalentesCOD_CAT: TIntegerField;
+    QEquivalentesCOD_SERIE: TIntegerField;
+    QEquivalentesCOD_ALM: TIntegerField;
+    QEquivalentesCOSTO: TFloatField;
+    QEquivalentesCOD_PROV1: TIntegerField;
+    QEquivalentesEXISTENCIA1: TFloatField;
+    QEquivalentesITBIS: TWideStringField;
+    QEquivalentesABREVIADO: TWideStringField;
+    QEquivalentesCOD_BARRA: TWideStringField;
+    QEquivalentesCOD_UV: TIntegerField;
+    QEquivalentesUSUARIOMOD: TIntegerField;
+    QEquivalentesFECHA_MOD: TDateField;
+    QEquivalentesPOLITICA: TWideStringField;
+    QEquivalentesCOSTO_PR: TFloatField;
+    QEquivalentesIMAGEN: TBlobField;
+    QEquivalentesCLA_COSTO: TWideStringField;
+    QEquivalentesCLA_PRECIO: TWideStringField;
+    QEquivalentesPRECIO_A: TFloatField;
+    QEquivalentesPRECIO_B: TFloatField;
+    QEquivalentesPRECIO_D: TFloatField;
+    QEquivalentesESTADO: TIntegerField;
+    QEquivalentesEXTFOTO: TWideStringField;
+    QEquivalentesDESCRIPCIONWEB: TWideMemoField;
+    QEquivalentesPUBLICARWEB: TIntegerField;
+    QEquivalentesCODIGOBARRA: TWideStringField;
+    QEquivalentesEMPAQUE: TIntegerField;
+    QEquivalentesCANT_EMPA: TFloatField;
+    QEquivalentesCOD_PROV2: TIntegerField;
+    QEquivalentesCOD_PROV3: TIntegerField;
+    QEquivalentesREFERENCIA: TWideStringField;
+    QEquivalentesOPCION_SABOR: TWideStringField;
+    QEquivalentesSTOCK_MA: TFloatField;
+    QEquivalentesSTOCK_M: TFloatField;
+    QEquivalentesFACTOR: TFloatField;
+    QEquivalentesTIPO_PRODUCTOS: TWideStringField;
+    QEquivalentesFACTURABLE: TIntegerField;
+    QEquivalentesSTOCK: TFloatField;
+    QEquivalentesOPCIONES_BOLA: TWideStringField;
+    QEquivalentesPARTICIONADO: TWideStringField;
+    QEquivalentesCOMPUESTO: TWideStringField;
+    QEquivalentesBENEFICIOS: TFloatField;
+    QEquivalentesMONEDA: TWideStringField;
+    QEquivalentesUNIDAD: TWideStringField;
+    QEquivalentesTAZA_COMPRA: TFloatField;
+    QEquivalentesFECHA_COMPRA: TDateField;
+    QEquivalentesINTERES_ACUMULADO: TFloatField;
+    QEquivalentesALMACEN: TIntegerField;
+    QEquivalentesPERCIO_COPA: TFloatField;
+    QEquivalentesCOMISION: TFloatField;
+    QEquivalentesARTICULOS_OMO: TWideStringField;
+    QEquivalentesCODIGOUNICO: TWideStringField;
+    QEquivalentesEMPRESA: TWideStringField;
+    QEquivalentesCONDICION: TWideStringField;
+    QEquivalentesUTILIDAD2: TFloatField;
+    QEquivalentesUTILIDAD3: TFloatField;
+    QEquivalentesPRECIO_BRUTO1: TFloatField;
+    QEquivalentesPRECIO_BRUTO2: TFloatField;
+    QEquivalentesPRECIO_BRUTO3: TFloatField;
+    QEquivalentesMAYOREO1: TFloatField;
+    QEquivalentesMAYOREO2: TFloatField;
+    QEquivalentesMAYOREO3: TFloatField;
+    QEquivalentesDESCRIPCION: TWideMemoField;
+    QEquivalentesCOSTOPROMENO: TFloatField;
+    QEquivalentesTIENECOMPACTIBILIDAD: TWideStringField;
+    QEquivalentesCOMPACTIBLECON: TIntegerField;
+    QEquivalentesUBICACION: TWideStringField;
+    QEquivalentesOBS: TIntegerField;
+    QEquivalentesTIPOB: TWideStringField;
+    QEquivalentesESTADOCONDICION: TWideStringField;
+    QEquivalentesIDMONEDA: TIntegerField;
+    QEquivalentesCOSTO_DOLLARS: TFloatField;
+    QEquivalentesCODEQUIVALENCIA: TWideStringField;
+    QEquivalentesDESC_EQUIVALENCIA: TWideStringField;
+    QEquivalentesCANTEQUIVALENCA: TFloatField;
+    QEquivalentesPRE1: TFloatField;
+    QEquivalentesPRE2: TFloatField;
+    QEquivalentesPRE3: TFloatField;
+    QEquivalentesCOSP: TFloatField;
+    QEquivalentesCOST: TFloatField;
+    QEquivalentesPRECIO_C: TFloatField;
+    QEquivalentesUTILIDAD4: TFloatField;
+    QEquivalentesMAYOREO4: TFloatField;
+    QEquivalentesPRECIO_BRUTO4: TFloatField;
+    QEquivalentesUTILIDADSOBREITBS: TWideStringField;
+    DsEquivalente: TDataSource;
+    Almacenes1: TZReadOnlyQuery;
+    Almacenes1COD_ART: TIntegerField;
+    Almacenes1ARTICULO: TWideStringField;
+    Almacenes1COD_ALM: TIntegerField;
+    Almacenes1DESCRIPCION: TWideStringField;
+    Almacenes1EXISTENCIA: TExtendedField;
+    DsQinventarioEQ: TDataSource;
+    cxGrid1: TcxGrid;
+    cxGrid1DBTableView1: TcxGridDBTableView;
+    cxGrid1DBTableView1DESCRIPCION: TcxGridDBColumn;
+    cxGrid1DBTableView1EXISTENCIA: TcxGridDBColumn;
+    cxGrid1Level1: TcxGridLevel;
+    cxGrid3: TcxGrid;
+    cxGrid3DBTableView1: TcxGridDBTableView;
+    cxGrid3DBTableView1EXISTENCIA: TcxGridDBColumn;
+    cxGrid3DBTableView1Column1: TcxGridDBColumn;
+    cxGrid3Level1: TcxGridLevel;
+    IbqRArticulosSIGNO: TWideStringField;
+    IbqRArticulosPRO2: TWideStringField;
+    cxGrid2DBTableView1Column7: TcxGridDBColumn;
+    IbqRArticulosSERIE: TWideStringField;
+    IbqRArticulosLOTE: TWideStringField;
+    IbqRArticulosPERMITIRDESC: TWideStringField;
+    cxGrid2DBTableView1Column8: TcxGridDBColumn;
+    Panel22: TPanel;
+    SpeedButton7: TSpeedButton;
+    DsAlmacenes01: TDataSource;
+    Panel23: TPanel;
+    SpeedButton8: TSpeedButton;
+    Panel25: TPanel;
+    BtGuardar: TSpeedButton;
+    IbqRArticulosIDIMPUESTO: TIntegerField;
+    cxGrid2DBTableView1Column1: TcxGridDBColumn;
+    Panel24: TPanel;
+    Panel26: TPanel;
+    cxGrid11: TcxGrid;
+    cxGrid11DBTableView1: TcxGridDBTableView;
+    cxGrid11DBTableView1COD_ART: TcxGridDBColumn;
+    cxGrid11DBTableView1ARTICULO: TcxGridDBColumn;
+    cxGrid11DBTableView1OPCIONES_BOLA: TcxGridDBColumn;
+    cxGrid11DBTableView1CODEQUIVALENCIA: TcxGridDBColumn;
+    cxGrid11DBTableView1CANTEQUIVALENCA: TcxGridDBColumn;
+    cxGrid11Level1: TcxGridLevel;
+    QExiste: TZReadOnlyQuery;
+    QExisteCOD_ART: TIntegerField;
+    numero: TZReadOnlyQuery;
+    numeroGEN_ID: TLargeintField;
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure btnsalirClick(Sender: TObject);
+    procedure FormShow(Sender: TObject);
+    procedure SpeedButton5Click(Sender: TObject);
+    procedure cxGrid2DBTableView1CustomDrawCell(Sender: TcxCustomGridTableView;
+      ACanvas: TcxCanvas; AViewInfo: TcxGridTableDataCellViewInfo;
+      var ADone: Boolean);
+    procedure cxGrid2DBTableView1CellClick(Sender: TcxCustomGridTableView;
+      ACellViewInfo: TcxGridTableDataCellViewInfo; AButton: TMouseButton;
+      AShift: TShiftState; var AHandled: Boolean);
+    procedure SpeedButton6Click(Sender: TObject);
+    procedure cxGrid2DBTableView1DblClick(Sender: TObject);
+    procedure SpeedButton2Click(Sender: TObject);
+    procedure SpeedButton4Click(Sender: TObject);
+    procedure SpeedButton7Click(Sender: TObject);
+    procedure cxGrid2DBTableView1KeyDown(Sender: TObject; var Key: Word;
+      Shift: TShiftState);
+    procedure cxGrid2DBTableView1KeyPress(Sender: TObject; var Key: Char);
+    procedure SpeedButton3Click(Sender: TObject);
+    procedure SpeedButton1Click(Sender: TObject);
+    procedure BtGuardarClick(Sender: TObject);
+    procedure FormKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  fInventario_Master: TfInventario_Master;
+
+implementation
+
+uses
+  UInicio, Unit2, UbuscarArticulos, Unit5, Unit34, uAjusteDirecto, Tools,
+  uConsultarLote,
+  Unit32, uBuscarFiltros;
+
+{$R *.dfm}
+
+function Token(Sub: string; var S: string): string;
+begin
+  Result := '';
+  while Length(S) > 0 do
+  begin
+    if AnsiSameText(Copy(S, 1, Length(Sub)), Sub) then
+    begin
+      Delete(S, 1, Length(Sub));
+      break;
+    end;
+    Result := Result + Copy(S, 1, 1);
+    Delete(S, 1, 1);
+  end;
+end;
+
+procedure TfInventario_Master.BtGuardarClick(Sender: TObject);
+begin
+
+  if FrmArticulos = nil then
+  begin
+    FrmArticulos := TFrmArticulos.Create(self);
+
+    with datos.MantArt do
+    begin
+      close;
+      sql.Clear;
+      sql.Add('select b.nom_indicacion, i.signo, c. sustancia as sust, d.marcas, e.nombre_pro, J.nombre_pro AS PRO2, f.clasificacion as Clasi, g.cat, h.subcategoria as Subcat,  A.* from mtartuculos  A');
+      sql.Add('left join producto_indicaciones b on a.indicacion = b.id');
+      sql.Add('left join productos_sustancia c On a.sustancia =c.id');
+      sql.Add('left join productos_marca d On a.idmarca = d.id');
+      sql.Add('left join man_provedores e On a.cod_prov1 = e.cod_prov');
+      sql.Add('Left Join productos_clasificacion f on a.clasificacion = f.id');
+      sql.Add('Left join mtcategoria g On a.cod_cat = g.codcat');
+      sql.Add('Left join producto_subcategoria h on a.subcategoria = h.id');
+      sql.Add('left join tb_moneda i On a.idmoneda = i.id');
+      sql.Add('left join man_provedores j On a.cod_prov2 = J.cod_prov');
+      sql.Add('where a.cod_art =:oo');
+      params[0].Value := IbqRArticulosCOD_ART.Value;
+      open;
+    end;
+
+    FrmArticulos := TFrmArticulos.Create(self);
+    FrmArticulos.nuevo;
+    FrmArticulos.Edit8.Text := 'ART';
+    datos.MantArt.Edit;
+
+    datos.MantArtCODIGOTXT.Value := datos.MantArtCOD_ART.Text;
+    datos.MantArtMODELO.Value := IbqRArticulosMODELO.Value;
+    datos.MantArtMARCA.Value := IbqRArticulosMARCA.Value;
+    datos.MantArtCOD_CAT.Value := IbqRArticulosCOD_CAT.Value;
+    datos.MantArtCOD_SERIE.Value := IbqRArticulosCOD_SERIE.Value;
+    datos.MantArtCOSTO.Value := IbqRArticulosCOSTO.Value;
+    datos.MantArtCOD_PROV1.Value := IbqRArticulosCOD_PROV1.Value;
+    datos.MantArtEXISTENCIA1.Value := IbqRArticulosEXISTENCIA1.Value;
+    datos.MantArtABREVIADO.Value := IbqRArticulosABREVIADO.Value;
+    datos.MantArtCOD_BARRA.Value := IbqRArticulosCOD_BARRA.Value;
+    datos.MantArtCOD_UV.Value := IbqRArticulosCOD_UV.Value;
+    datos.MantArtUSUARIOMOD.Value := IbqRArticulosUSUARIOMOD.Value;
+    datos.MantArtFECHA_MOD.Value := IbqRArticulosFECHA_MOD.Value;
+    datos.MantArtPOLITICA.Value := IbqRArticulosPOLITICA.Value;
+    datos.MantArtCOSTO_PR.Value := IbqRArticulosCOSTO_PR.Value;
+    datos.MantArtIMAGEN.Value := IbqRArticulosIMAGEN.Value;
+    datos.MantArtCLA_COSTO.Value := IbqRArticulosCLA_COSTO.Value;
+    datos.MantArtCLA_PRECIO.Value := IbqRArticulosCLA_PRECIO.Value;
+    datos.MantArtPRECIO_A.Value := IbqRArticulosPRECIO_A.Value;
+    datos.MantArtPRECIO_B.Value := IbqRArticulosPRECIO_B.Value;
+    datos.MantArtPRECIO_D.Value := IbqRArticulosPRECIO_D.Value;
+    datos.MantArtCODIGOTXT.Value := IbqRArticulosCODIGOTXT.Value;
+    datos.MantArtESTADO.Value := IbqRArticulosESTADO.Value;
+    datos.MantArtEXTFOTO.Value := IbqRArticulosEXTFOTO.Value;
+    datos.MantArtDESCRIPCIONWEB.Value := IbqRArticulosDESCRIPCIONWEB.Value;
+    datos.MantArtPUBLICARWEB.Value := IbqRArticulosPUBLICARWEB.Value;
+    datos.MantArtARTICULO.Value := IbqRArticulosARTICULO.Value;
+    datos.MantArtEMPAQUE.Value := IbqRArticulosEMPAQUE.Value;
+    datos.MantArtCANT_EMPA.Value := IbqRArticulosCANT_EMPA.Value;
+    datos.MantArtCOD_PROV2.Value := IbqRArticulosCOD_PROV2.Value;
+    datos.MantArtCOD_PROV3.Value := IbqRArticulosCOD_PROV3.Value;
+    datos.MantArtREFERENCIA.Value := IbqRArticulosREFERENCIA.Value;
+    datos.MantArtOPCION_SABOR.Value := IbqRArticulosOPCION_SABOR.Value;
+    datos.MantArtSTOCK_MA.Value := IbqRArticulosSTOCK_MA.Value;
+    datos.MantArtSTOCK_M.Value := IbqRArticulosSTOCK_M.Value;
+    datos.MantArtFACTOR.Value := IbqRArticulosFACTOR.Value;
+    datos.MantArtTIPO_PRODUCTOS.Value := IbqRArticulosTIPO_PRODUCTOS.Value;
+    datos.MantArtFACTURABLE.Value := IbqRArticulosFACTURABLE.Value;
+    datos.MantArtSTOCK.Value := IbqRArticulosSTOCK.Value;
+    datos.MantArtMODELO.Value := IbqRArticulosMODELO.Value;
+    datos.MantArtOPCIONES_BOLA.Value := IbqRArticulosOPCIONES_BOLA.Value;
+    datos.MantArtPARTICIONADO.Value := IbqRArticulosPARTICIONADO.Value;
+    datos.MantArtCOMPUESTO.Value := IbqRArticulosCOMPUESTO.Value;
+    datos.MantArtBENEFICIOS.Value := IbqRArticulosBENEFICIOS.Value;
+    datos.MantArtMONEDA.Value := IbqRArticulosMONEDA.Value;
+    datos.MantArtUNIDAD.Value := IbqRArticulosUNIDAD.Value;
+    datos.MantArtTAZA_COMPRA.Value := IbqRArticulosTAZA_COMPRA.Value;
+    datos.MantArtALMACEN.Value := IbqRArticulosALMACEN.Value;
+    datos.MantArtCOMISION.Value := IbqRArticulosCOMISION.Value;
+    datos.MantArtARTICULOS_OMO.Value := IbqRArticulosARTICULOS_OMO.Value;
+    datos.MantArtCODIGOUNICO.Value := IbqRArticulosCODIGOUNICO.Value;
+    datos.MantArtEMPRESA.Value := IbqRArticulosEMPRESA.Value;
+    datos.MantArtCONDICION.Value := IbqRArticulosCONDICION.Value;
+    datos.MantArtUTILIDAD2.Value := IbqRArticulosUTILIDAD2.Value;
+    datos.MantArtUTILIDAD3.Value := IbqRArticulosUTILIDAD3.Value;
+    datos.MantArtPRECIO_BRUTO1.Value := IbqRArticulosPRECIO_BRUTO1.Value;
+    datos.MantArtPRECIO_BRUTO2.Value := IbqRArticulosPRECIO_BRUTO2.Value;
+    datos.MantArtPRECIO_BRUTO3.Value := IbqRArticulosPRECIO_BRUTO3.Value;
+    datos.MantArtMAYOREO1.Value := IbqRArticulosMAYOREO1.Value;
+    datos.MantArtMAYOREO2.Value := IbqRArticulosMAYOREO2.Value;
+    datos.MantArtMAYOREO3.Value := IbqRArticulosMAYOREO3.Value;
+    datos.MantArtDESCRIPCION.Value := IbqRArticulosDESCRIPCION.Value;
+    datos.MantArtCOSTOPROMENO.Value := IbqRArticulosCOSTOPROMENO.Value;
+    datos.MantArtINTERES_ACUMULADO.Value :=
+      IbqRArticulosINTERES_ACUMULADO.Value;
+    datos.MantArtPERCIO_COPA.Value := IbqRArticulosPERCIO_COPA.Value;
+    datos.MantArtTIENECOMPACTIBILIDAD.Value :=
+      IbqRArticulosTIENECOMPACTIBILIDAD.Value;
+    datos.MantArtCOMPACTIBLECON.Value := IbqRArticulosCOMPACTIBLECON.Value;
+    datos.MantArtITBIS.Value := IbqRArticulosITBIS.Value;
+    datos.MantArtUBICACION.Value := IbqRArticulosUBICACION.Value;
+    datos.MantArtOBS.Value := IbqRArticulosOBS.Value;
+    datos.MantArtTIPOB.Value := IbqRArticulosTIPOB.Value;
+    datos.MantArtESTADOCONDICION.Value := IbqRArticulosESTADOCONDICION.Value;
+    datos.MantArtCODIGOBARRA.Value := IbqRArticulosCODIGOBARRA.Value;
+    datos.MantArtIDMONEDA.Value := IbqRArticulosIDMONEDA.Value;
+    datos.MantArtCOSTO_DOLLARS.Value := IbqRArticulosCOSTO_DOLLARS.Value;
+    datos.MantArtCODEQUIVALENCIA.Value := IbqRArticulosCODEQUIVALENCIA.Value;
+    datos.MantArtDESC_EQUIVALENCIA.Value :=
+      IbqRArticulosDESC_EQUIVALENCIA.Value;
+    datos.MantArtCANTEQUIVALENCA.Value := IbqRArticulosCANTEQUIVALENCA.Value;
+    datos.MantArtFECHA_COMPRA.Value := IbqRArticulosFECHA_COMPRA.Value;
+    datos.MantArtPRE1.Value := IbqRArticulosPRE1.Value;
+    datos.MantArtPRE2.Value := IbqRArticulosPRE2.Value;
+    datos.MantArtPRE3.Value := IbqRArticulosPRE3.Value;
+    datos.MantArtCOSP.Value := IbqRArticulosCOSP.Value;
+    datos.MantArtCOST.Value := IbqRArticulosCOST.Value;
+    datos.MantArtPRECIO_C.Value := IbqRArticulosPRECIO_C.Value;
+    datos.MantArtCAT.Value := IbqRArticulosCAT.Value;
+    datos.MantArtUTILIDAD4.Value := IbqRArticulosUTILIDAD4.Value;
+    datos.MantArtPRECIO_BRUTO4.Value := IbqRArticulosPRECIO_BRUTO4.Value;
+    datos.MantArtMAYOREO4.Value := IbqRArticulosMAYOREO4.Value;
+    datos.MantArtUTILIDADSOBREITBS.Value :=
+      IbqRArticulosUTILIDADSOBREITBS.Value;
+    datos.MantArtAPLICARPORMAYOR.Value := IbqRArticulosAPLICARPORMAYOR.Value;
+    datos.MantArtNOM_INDICACION.Value := IbqRArticulosNOM_INDICACION.Value;
+    datos.MantArtSUST.Value := IbqRArticulosSUST.Value;
+    datos.MantArtMARCAS.Value := IbqRArticulosMARCAS.Value;
+    datos.MantArtNOMBRE_PRO.Value := IbqRArticulosNOMBRE_PRO.Value;
+    datos.MantArtCLASI.Value := IbqRArticulosCLASI.Value;
+    datos.MantArtSUBCAT.Value := IbqRArticulosSUBCAT.Value;
+    datos.MantArtNOMBREABREVIADO.Value := IbqRArticulosNOMBREABREVIADO.Value;
+    datos.MantArtPRESENTACION.Value := IbqRArticulosPRESENTACION.Value;
+    datos.MantArtCAPACIDAD.Value := IbqRArticulosCAPACIDAD.Value;
+    datos.MantArtMODIUSO.Value := IbqRArticulosMODIUSO.Value;
+    datos.MantArtIDMARCA.Value := IbqRArticulosIDMARCA.Value;
+    datos.MantArtDESCPERMITIDO.Value := IbqRArticulosDESCPERMITIDO.Value;
+    datos.MantArtSUBCATEGORIA.Value := IbqRArticulosSUBCATEGORIA.Value;
+    datos.MantArtSUSTANCIA.Value := IbqRArticulosSUSTANCIA.Value;
+    datos.MantArtCLASIFICACION.Value := IbqRArticulosCLASIFICACION.Value;
+    datos.MantArtINDICACION.Value := IbqRArticulosINDICACION.Value;
+    datos.MantArtUNIDADVENTA.Value := IbqRArticulosUNIDADVENTA.Value;
+    datos.MantArtUNIDADCOMPRA.Value := IbqRArticulosUNIDADCOMPRA.Value;
+    datos.MantArtSIGNO.Value := IbqRArticulosSIGNO.Value;
+    datos.MantArtPRO2.Value := IbqRArticulosPRO2.Value;
+    datos.MantArtSERIE.Value := IbqRArticulosSERIE.Value;
+    datos.MantArtLOTE.Value := IbqRArticulosLOTE.Value;
+    datos.MantArtPERMITIRDESC.Value := IbqRArticulosPERMITIRDESC.Value;
+    datos.MantArtIDIMPUESTO.Value := IbqRArticulosIDIMPUESTO.Value;
+
+    FrmArticulos.ShowModal;
+
+  end;
+
+end;
+
+procedure TfInventario_Master.btnsalirClick(Sender: TObject);
+begin
+  close;
+end;
+
+procedure TfInventario_Master.cxGrid2DBTableView1CellClick
+  (Sender: TcxCustomGridTableView; ACellViewInfo: TcxGridTableDataCellViewInfo;
+  AButton: TMouseButton; AShift: TShiftState; var AHandled: Boolean);
+begin
+
+  with Almacenes1 do
+  begin
+    close;
+    sql.Clear;
+    sql.Add('select a.cod_art, b.articulo, a.cod_alm, c.descripcion, sum(a.entrada - a.salida) Existencia  from minventario a');
+    sql.Add('left join mtartuculos b  On a.cod_art = b.cod_art');
+    sql.Add('left join almacenes c On a.cod_alm = c.id');
+    sql.Add('and b.politica <> ''Servicio''');
+    sql.Add('where a.cod_art =:opp');
+    sql.Add('group by a.cod_art, b.articulo, b.costo_pr, a.cod_alm, c.descripcion');
+    params[0].Value := IbqRArticulosCOD_ART.Value;
+    open;
+  end;
+
+
+
+
+
+  if IbqRArticulosOPCIONES_BOLA.Value = 'Si' then
+  begin
+    With QEquivalentes do
+    begin
+      close;
+      sql.Clear;
+      sql.Add('select a.* from mtartuculos a where a.CODEQUIVALENCIA =:opp ');
+      params[0].Value := IbqRArticulosCOD_ART.Value;
+      open;
+    end;
+
+
+    with datos.QInventarioEQ do
+    begin
+      close;
+      sql.Clear;
+      sql.Add('select * from sp_inventario(:op, :op2, 0)');
+      params[0].Value := IbqRArticulosCOD_ART.Text;
+      params[1].Value := IbqRArticulosCOD_ART.Value;
+      open;
+    end;
+
+    // GBequivalencia.Visible := true;
+  end;
+end;
+
+procedure TfInventario_Master.cxGrid2DBTableView1CustomDrawCell
+  (Sender: TcxCustomGridTableView; ACanvas: TcxCanvas;
+  AViewInfo: TcxGridTableDataCellViewInfo; var ADone: Boolean);
+begin
+  if (AViewInfo.GridRecord.Values[6] = 'Si') then
+  BEGIN
+    ACanvas.Brush.Color := $00E1FFF9;
+    ACanvas.Font.Color := clBlack;
+  end;
+  if (AViewInfo.GridRecord.Values[6] <> 'Si') then
+  BEGIN
+    ACanvas.Brush.Color := clwhite;
+    ACanvas.Font.Color := clBlack;
+  END;
+end;
+
+procedure TfInventario_Master.cxGrid2DBTableView1DblClick(Sender: TObject);
+begin
+
+  if FrmArticulos = nil then
+  begin
+    FrmArticulos := TFrmArticulos.Create(self);
+    with datos.MantArt do
+    begin
+      close;
+      sql.Clear;
+      sql.Add('select b.nom_indicacion, i.signo, c. sustancia as sust, d.marcas, e.nombre_pro, J.nombre_pro AS PRO2, f.clasificacion as Clasi, g.cat, h.subcategoria as Subcat,  A.* from mtartuculos  A');
+      sql.Add('left join producto_indicaciones b on a.indicacion = b.id');
+      sql.Add('left join productos_sustancia c On a.sustancia =c.id');
+      sql.Add('left join productos_marca d On a.idmarca = d.id');
+      sql.Add('left join man_provedores e On a.cod_prov1 = e.cod_prov');
+      sql.Add('Left Join productos_clasificacion f on a.clasificacion = f.id');
+      sql.Add('Left join mtcategoria g On a.cod_cat = g.codcat');
+      sql.Add('Left join producto_subcategoria h on a.subcategoria = h.id');
+      sql.Add('left join tb_moneda i On a.idmoneda = i.id');
+      sql.Add('left join man_provedores j On a.cod_prov2 = J.cod_prov');
+      sql.Add('where a.cod_art =:oo');
+      params[0].Value := IbqRArticulosCOD_ART.Value;
+      open;
+    end;
+
+    with datos.QInventarioEQ do
+    begin
+      close;
+      sql.Clear;
+      sql.Add('select * from sp_inventario(:op, :op2, 0)');
+      params[0].Value := IbqRArticulosCOD_ART.Text;
+      params[1].Value := IbqRArticulosCOD_ART.Value;
+      open;
+    end;
+
+    FrmArticulos.Edit8.Text := 'ART';
+    FrmArticulos.LblEstado.Caption := 'Edición de ';
+
+    // datos.FbCategorias.Open;
+    FrmArticulos.Finventario;
+    FrmArticulos.Edit1.Text := 'MOD';
+    // FrmArticulos.cxbutton20.Enabled := true;
+    // datos.Zunidad.Open;
+    // FrmArticulos.Btcancelar.Enabled := true;
+    // FrmArticulos.BTguardar.Enabled := true;
+    // FrmArticulos.btmodi.Enabled := false;
+    //
+    // datos.Control_Precio.Open;
+    // DATOS.ZqProv_Arti.Open;
+
+    FrmArticulos.ShowModal;
+
+  end;
+end;
+
+procedure TfInventario_Master.cxGrid2DBTableView1KeyDown(Sender: TObject;
+  var Key: Word; Shift: TShiftState);
+begin
+
+  with Almacenes1 do
+  begin
+    close;
+    sql.Clear;
+    sql.Add('select a.cod_art, b.articulo, a.cod_alm, c.descripcion, sum(a.entrada - a.salida) Existencia  from minventario a');
+    sql.Add('left join mtartuculos b  On a.cod_art = b.cod_art');
+    sql.Add('left join almacenes c On a.cod_alm = c.id');
+    sql.Add('and b.politica <> ''Servicio''');
+    sql.Add('where a.cod_art =:opp');
+    sql.Add('group by a.cod_art, b.articulo, b.costo_pr, a.cod_alm, c.descripcion');
+    params[0].Value := IbqRArticulosCOD_ART.Value;
+    open;
+  end;
+
+   with datos.QInventarioEQ do
+    begin
+      close;
+      sql.Clear;
+      sql.Add('select * from sp_inventario(:op, :op2, 0)');
+      params[0].Value := IbqRArticulosCOD_ART.Text;
+      params[1].Value := IbqRArticulosCOD_ART.Value;
+      open;
+    end;
+end;
+
+procedure TfInventario_Master.cxGrid2DBTableView1KeyPress(Sender: TObject;
+  var Key: Char);
+begin
+
+  with Almacenes1 do
+  begin
+    close;
+    sql.Clear;
+    sql.Add('select a.cod_art, b.articulo, a.cod_alm, c.descripcion, sum(a.entrada - a.salida) Existencia  from minventario a');
+    sql.Add('left join mtartuculos b  On a.cod_art = b.cod_art');
+    sql.Add('left join almacenes c On a.cod_alm = c.id');
+    sql.Add('and b.politica <> ''Servicio''');
+    sql.Add('where a.cod_art =:opp');
+    sql.Add('group by a.cod_art, b.articulo, b.costo_pr, a.cod_alm, c.descripcion');
+    params[0].Value := IbqRArticulosCOD_ART.Value;
+    open;
+  end;
+
+  with datos.QInventarioEQ do
+    begin
+      close;
+      sql.Clear;
+      sql.Add('select * from sp_inventario(:op, :op2, 0)');
+      params[0].Value := IbqRArticulosCOD_ART.Text;
+      params[1].Value := IbqRArticulosCOD_ART.Value;
+      open;
+    end;
+end;
+
+procedure TfInventario_Master.FormClose(Sender: TObject;
+  var Action: TCloseAction);
+begin
+
+  fInventario_Master := nil;
+  Action := caFree;
+  FrmHome.pnl_Menu_Lateral.Visible := true;
+  FrmHome.pnlTop.Visible := true;
+  FrmHome.btnsalir.Enabled := true;
+
+end;
+
+procedure TfInventario_Master.FormKeyDown(Sender: TObject; var Key: Word;
+  Shift: TShiftState);
+begin
+  if Key = vk_f4 then
+  begin
+    if FbuscarFiltro = nil then
+    begin
+      FbuscarFiltro := TFbuscarFiltro.Create(self);
+      FbuscarFiltro.ShowModal;
+    end;
+  end;
+end;
+
+procedure TfInventario_Master.FormShow(Sender: TObject);
+begin
+  //
+  with IbqRArticulos do
+  begin
+    close;
+    sql.Clear;
+    sql.Add('select first 100 upper(A.ARTICULO), b.nom_indicacion, i.signo, c. sustancia as sust, d.marcas, e.nombre_pro, J.nombre_pro AS PRO2, f.clasificacion as Clasi, g.cat, h.subcategoria as Subcat,  A.* from mtartuculos  A');
+    sql.Add('left join producto_indicaciones b on a.indicacion = b.id');
+    sql.Add('left join productos_sustancia c On a.sustancia =c.id');
+    sql.Add('left join productos_marca d On a.idmarca = d.id');
+    sql.Add('left join man_provedores e On a.cod_prov1 = e.cod_prov');
+    sql.Add('Left Join productos_clasificacion f on a.clasificacion = f.id');
+    sql.Add('Left join mtcategoria g On a.cod_cat = g.codcat');
+    sql.Add('Left join producto_subcategoria h on a.subcategoria = h.id');
+    sql.Add('left join tb_moneda i On a.idmoneda = i.id');
+    sql.Add('left join man_provedores J On a.cod_prov1 = J.cod_prov');
+    sql.Add('order by cod_art asc');
+    open;
+  end;
+end;
+
+procedure TfInventario_Master.SpeedButton1Click(Sender: TObject);
+begin
+  if FrmAdmInventario = nil then
+  begin
+    FrmAdmInventario := tFrmAdmInventario.Create(self);
+    FrmAdmInventario.ShowModal;
+  end;
+end;
+
+procedure TfInventario_Master.SpeedButton2Click(Sender: TObject);
+begin
+
+  with numero do
+  begin
+    close;
+    sql.Clear;
+    sql.Add('SELECT NEXT VALUE FOR arti_gen FROM RDB$DATABASE');
+    open;
+  end;
+
+  with QExiste do
+  begin
+    close;
+    sql.Clear;
+    sql.Add('select cod_art from mtartuculos');
+    sql.Add('where cod_art =:op');
+    params[0].Value := numeroGEN_ID.Value;
+    open;
+  end;
+
+  if QExiste.RecordCount = 0 then
+  begin
+
+    if FrmArticulos = nil then
+    begin
+      FrmArticulos := TFrmArticulos.Create(self);
+      FrmArticulos.nuevo;
+      FrmArticulos.Edit8.Text := 'ART';
+      FrmArticulos.ShowModal;
+    end;
+
+  end
+  else
+  begin
+
+    Crear_Mensages('Error', 'Error Número de registro',
+      'Suplicacion en número de articulos, favor llamar al Soporte Técnico',
+      ExtractFilePath(Application.ExeName) + '\imagenes\aviso\error.png', 'OK');
+  end;
+
+end;
+
+procedure TfInventario_Master.SpeedButton3Click(Sender: TObject);
+begin
+  if fConsultarLotes = nil then
+  begin
+
+    fConsultarLotes := TfConsultarLotes.Create(self);
+    fConsultarLotes.lblArticulos.Caption := IbqRArticulosARTICULO.Value;
+    // fConsultarLotes.edtExistencia.Text := edtExistencia.Text;
+    fConsultarLotes.cod_txt.Text := IbqRArticulosCOD_ART.Text;
+    fConsultarLotes.Edit1.Text := 'CONSULTAR';
+    fConsultarLotes.ShowModal;
+  end;
+end;
+
+procedure TfInventario_Master.SpeedButton4Click(Sender: TObject);
+begin
+
+  with datos.QInventarioLote do
+  begin
+    close;
+    sql.Clear;
+    sql.Add('select * from inventario_lote where estado = ''ABIERTO''');
+    open;
+  end;
+
+  if datos.QInventarioLote.RecordCount > 0 then
+  begin
+    if FrmDescarga = nil then
+    begin
+      FrmDescarga := tFrmDescarga.Create(self);
+      FrmDescarga.ShowModal;
+
+    end;
+  end
+  else
+  begin
+    Crear_Mensages('Error', 'Operación no permitida',
+      'No Existe inventario abierto', ExtractFilePath(Application.ExeName) +
+      '\imagenes\aviso\error.png', 'OK');
+  end;
+end;
+
+procedure TfInventario_Master.SpeedButton5Click(Sender: TObject);
+begin
+  if FbuscarFiltro = nil then
+  begin
+    FbuscarFiltro := TFbuscarFiltro.Create(self);
+    FbuscarFiltro.ShowModal;
+  end;
+
+end;
+
+procedure TfInventario_Master.SpeedButton6Click(Sender: TObject);
+begin
+
+  with IbqRArticulos do
+  begin
+    close;
+    sql.Clear;
+    sql.Add('select upper(A.ARTICULO), b.nom_indicacion, i.signo, c.sustancia as sust, d.marcas, e.nombre_pro, J.nombre_pro AS PRO2, f.clasificacion as Clasi, g.cat, h.subcategoria as Subcat,  A.* from mtartuculos  A');
+    sql.Add('left join producto_indicaciones b on a.indicacion = b.id');
+    sql.Add('left join productos_sustancia c On a.sustancia =c.id');
+    sql.Add('left join productos_marca d On a.idmarca = d.id');
+    sql.Add('left join man_provedores e On a.cod_prov1 = e.cod_prov');
+    sql.Add('Left Join productos_clasificacion f on a.clasificacion = f.id');
+    sql.Add('Left join mtcategoria g On a.cod_cat = g.codcat');
+    sql.Add('Left join producto_subcategoria h on a.subcategoria = h.id');
+    sql.Add('left join tb_moneda i On a.idmoneda = i.id');
+    sql.Add('left join man_provedores J On a.cod_prov1 = J.cod_prov');
+    sql.Add('order by cod_art asc');
+    open;
+  end;
+end;
+
+procedure TfInventario_Master.SpeedButton7Click(Sender: TObject);
+begin
+
+  with datos.QInventarioLote do
+  begin
+    close;
+    sql.Clear;
+    sql.Add('select * from inventario_lote where estado = ''ABIERTO''');
+    open;
+  end;
+
+  if datos.QInventarioLote.RecordCount > 0 then
+  begin
+
+    if fAjusteDirecto = nil then
+    begin
+      fAjusteDirecto := TfAjusteDirecto.Create(self);
+
+      if datos.MantArtOPCIONES_BOLA.Value = 'Si' then
+      begin
+
+        Crear_Mensages('Error', 'Este producto tiene equivalencia',
+          'No aplica para inventario', ExtractFilePath(Application.ExeName) +
+          '\imagenes\aviso\error.png', 'OK');
+
+      end
+      else
+      begin
+        with fAjusteDirecto.Qnumero do
+        begin
+          close;
+          sql.Clear;
+          sql.Add('select gen_id(GEN_MDESCARGAR_ID, 1) from RDB$DATABASE');
+          open;
+
+        end;
+
+        datos.ZMDescarga.open;
+        datos.ZMDescarga.Insert;
+        datos.ZMDescargaMDESCARGARID.Value :=
+          fAjusteDirecto.QnumeroGEN_ID.Value;
+        datos.ZMDescargaFECHA.Value := Now();
+        datos.ZMDescargaUSUARIOID.Value := asignausuario;
+
+        with fAjusteDirecto.zqusuario do
+        begin
+          close;
+          sql.Clear;
+          sql.Add('select a.*, b.NOMBRES_EMP from musuario a');
+          sql.Add('left Join MTEMPLEADO b On a.EMPLEADOid = b.COD_EMP1');
+          sql.Add('where a.usuarioID =:pp');
+          params[0].Value := asignausuario;
+          open;
+        end;
+
+        datos.ZMDescargaNOMBRES_EMP.Value :=
+          fAjusteDirecto.zqusuarionombres_emp.Value;
+        fAjusteDirecto.ZcoceptoDes.open;
+
+        /// Abre almacen ////
+        with fAjusteDirecto.almacenes do
+        begin
+          open;
+          first;
+        end;
+
+        datos.ZMDescarga.Edit;
+        datos.ZMDescargaCOD_ALM.Value := fAjusteDirecto.almacenesid.Value;
+        datos.ZMDescargaNOMBREALMACEN.Value :=
+          fAjusteDirecto.almacenesdescripcion.Value;
+
+      end;
+
+      fAjusteDirecto.lblArticulos.Caption := IbqRArticulosARTICULO.Value;
+      fAjusteDirecto.cod_txt.Text := IbqRArticulosCOD_ART.Text;
+      fAjusteDirecto.ShowModal;
+    end;
+  end
+  else
+  begin
+    Crear_Mensages('Error', 'Operación no permitida',
+      'No Existe inventario abierto', ExtractFilePath(Application.ExeName) +
+      '\imagenes\aviso\error.png', 'OK');
+  end;
+
+end;
+
+end.

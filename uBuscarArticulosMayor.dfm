@@ -1,0 +1,809 @@
+object FFindArticulosMayor: TFFindArticulosMayor
+  Left = 0
+  Top = 0
+  BorderIcons = [biSystemMenu]
+  Caption = ' Articulos al  por Mayor'
+  ClientHeight = 574
+  ClientWidth = 651
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  KeyPreview = True
+  OldCreateOrder = False
+  OnClose = FormClose
+  OnKeyDown = FormKeyDown
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    AlignWithMargins = True
+    Left = 3
+    Top = 555
+    Width = 645
+    Height = 14
+    Margins.Top = 5
+    Margins.Bottom = 5
+    Align = alBottom
+    Alignment = taCenter
+    Caption = 'Presiones [ESC] para cerrar pantalla'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -12
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+    ExplicitWidth = 218
+  end
+  object Panel1: TPanel
+    Left = 0
+    Top = 49
+    Width = 651
+    Height = 48
+    Align = alTop
+    TabOrder = 0
+    object Image1: TImage
+      AlignWithMargins = True
+      Left = 393
+      Top = 6
+      Width = 26
+      Height = 36
+      Margins.Left = 0
+      Margins.Top = 5
+      Margins.Right = 5
+      Margins.Bottom = 5
+      Align = alLeft
+      Center = True
+      Picture.Data = {
+        0B54504E474772617068696336090000424D3609000000000000360000002800
+        0000180000001800000001002000000000000009000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000200000002000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        000000000000000000000000001E000000DD000000E100000022000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000001E000000DD000000FF000000E100000022000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        00000000001E000000DD000000FF000000E10000002200000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        001E000000DD000000FF000000E1000000220000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        003B000000A6000000E3000000FA000000E5000000A80000003D000000000000
+        00DF000000FF000000DF00000020000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000004000000950000
+        00FF000000FF000000FF000000FF000000FF000000FF000000FF000000AA0000
+        00FF000000DF0000002000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000095000000FF0000
+        00F50000007D0000002300000006000000230000007D000000F5000000FF0000
+        00AA000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000003C000000FF000000F50000
+        0037000000000000000000000000000000000000000000000037000000F50000
+        00FF0000003D0000000000000000000000000000000000000000000000000000
+        000000000000000000000000000000000000000000A7000000FF0000007D0000
+        00000000000000000000000000000000000000000000000000000000007D0000
+        00FF000000A80000000000000000000000000000000000000000000000000000
+        000000000000000000000000000000000000000000E5000000FF000000220000
+        0000000000000000000000000000000000000000000000000000000000230000
+        00FF000000E50000000000000000000000000000000000000000000000000000
+        000000000000000000000000000000000000000000F9000000FF000000060000
+        0000000000000000000000000000000000000000000000000000000000070000
+        00FF000000F90000000000000000000000000000000000000000000000000000
+        000000000000000000000000000000000000000000E5000000FF000000220000
+        0000000000000000000000000000000000000000000000000000000000230000
+        00FF000000E40000000000000000000000000000000000000000000000000000
+        000000000000000000000000000000000000000000A8000000FF0000007D0000
+        00000000000000000000000000000000000000000000000000000000007D0000
+        00FF000000A60000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000003E000000FF000000F50000
+        0037000000000000000000000000000000000000000000000037000000F50000
+        00FF0000003B0000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000097000000FF0000
+        00F50000007D0000002200000006000000220000007D000000F5000000FF0000
+        0095000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000004000000970000
+        00FF000000FF000000FF000000FF000000FF000000FF000000FF000000950000
+        0004000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        003D000000A8000000E5000000F9000000E4000000A70000003C000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        000000000000}
+      ExplicitLeft = 399
+      ExplicitTop = 2
+      ExplicitHeight = 31
+    end
+    object Edit1: TEdit
+      AlignWithMargins = True
+      Left = 6
+      Top = 6
+      Width = 387
+      Height = 36
+      Margins.Left = 5
+      Margins.Top = 5
+      Margins.Right = 0
+      Margins.Bottom = 5
+      Align = alLeft
+      AutoSize = False
+      CharCase = ecUpperCase
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -15
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 0
+      OnChange = Edit1Change
+    end
+  end
+  object Panel7: TPanel
+    Left = 0
+    Top = 0
+    Width = 651
+    Height = 49
+    Align = alTop
+    Color = 9068819
+    ParentBackground = False
+    TabOrder = 1
+    object Label3: TLabel
+      AlignWithMargins = True
+      Left = 144
+      Top = 4
+      Width = 164
+      Height = 41
+      Margins.Left = 2
+      Align = alLeft
+      Caption = '| Buscar Articulos al Por Mayor'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWhite
+      Font.Height = -12
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      ParentFont = False
+      Layout = tlCenter
+      ExplicitHeight = 14
+    end
+    object Label60: TLabel
+      AlignWithMargins = True
+      Left = 62
+      Top = 4
+      Width = 77
+      Height = 41
+      Margins.Left = 5
+      Align = alLeft
+      Caption = 'PrintSoft PV'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWhite
+      Font.Height = -12
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentFont = False
+      Layout = tlCenter
+      ExplicitHeight = 14
+    end
+    object cxImage3: TcxImage
+      AlignWithMargins = True
+      Left = 21
+      Top = 4
+      Margins.Left = 20
+      TabStop = False
+      Align = alLeft
+      Picture.Data = {
+        0B546478504E47496D61676589504E470D0A1A0A0000000D4948445200000030
+        0000003008060000005702F9870000000467414D410000B18F0BFC6105000000
+        206348524D00007A26000080840000FA00000080E8000075300000EA6000003A
+        98000017709CBA513C00000006624B4744000000000000F943BB7F0000000970
+        48597300000EC400000EC401952B0E1B0000028E4944415468DEED993D681441
+        1CC5672F78012F5858881F24A6D2469B4002969A6B12B04C2B08626B3A5B4D65
+        6B61612D36B6292D1411ECB4492C4C6571B94248A19C9844EF67B1B3BAEECDCC
+        CED7EE72B80FA6999D79FFF766EEE6E33F42B468D1223A802EB009ECCBB20974
+        9BD6652BBE0FEC30894FC046D3FA4CC297805794E31D70AD69BD79E1E781A7C0
+        4F0BF119C6C00BE06293C27BC04360A411790C3C91E558D36624397A750AEF00
+        1BC067C308BF04AEE6FA5C9623AEC300B80BCC542DFE3AF0DE20E423B06EE87F
+        03F860E8BF0BAC5521FC52C9087E01EED98CA09CC15BA4CBAB6906AFC4107E1A
+        7804FCD004FA2EBF9FF2E0EE01F7816F1AEE23D2C5E18CAFF83E70A0211F03CF
+        80F90883342FB9C69A580740DF8778A8217C032C870A57C45B96DC2AECEBFA75
+        0C9C6735F55D21C489D806841063595438E7332226641BD162A86AE082FCADFF
+        32058C6DA08E3F717403DB06FE217007BB657446B61D1AF82662051B9075651B
+        51E846F6A77F250664BDED46E4729498D8082B3390FB3E076C117E98DB02E65C
+        E3071BC8B5CB56119FE3F46268FC6003B9F64BC06B0BF156179ADA0DE4FAF549
+        4F9545EC911EC39398F11313C13F0D93C42AB0ECDB15421C16AA679324397219
+        409BF81D3B3A37A884BA8877412506EA446BA069FC3F0680D9BA44B9C4729981
+        3DD23390F572EA29FEA61062370691EEB0F61658B1E8EFBA93AF486E15063E06
+        56315FEA9F030BA1068005C965BAD4AFFACE42595AE510788CE246566680F446
+        F680F456A742585AA510CC39B1A533C0DFFB84E9461627B1A530629D5A5419A0
+        A9D462C14407B84D9A90D561DBB22EC34072D6B72F012749B30A5FF1C708CFAC
+        464C23D3F9C0A130329D4F4C0A23D3F9C85730913DB30E64999E67D6162DA60C
+        BF01BB8931F93A2D0F250000002574455874646174653A637265617465003230
+        32302D30362D30315430313A32383A32362B30303A303088F0EE870000002574
+        455874646174653A6D6F6469667900323032302D30362D30315430313A32383A
+        32362B30303A3030F9AD563B0000001974455874536F66747761726500777777
+        2E696E6B73636170652E6F72679BEE3C1A0000000049454E44AE426082}
+      Properties.ShowFocusRect = False
+      Style.BorderStyle = ebsNone
+      StyleDisabled.BorderStyle = ebsNone
+      StyleFocused.BorderStyle = ebsNone
+      TabOrder = 0
+      Transparent = True
+      Height = 41
+      Width = 33
+    end
+  end
+  object cxGrid1: TcxGrid
+    AlignWithMargins = True
+    Left = 4
+    Top = 101
+    Width = 643
+    Height = 404
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
+    Align = alClient
+    TabOrder = 2
+    object cxGrid1DBTableView1: TcxGridDBTableView
+      OnDblClick = cxGrid1DBTableView1DblClick
+      Navigator.Buttons.CustomButtons = <>
+      DataController.DataSource = DsQArticulos
+      DataController.Summary.DefaultGroupSummaryItems = <>
+      DataController.Summary.FooterSummaryItems = <>
+      DataController.Summary.SummaryGroups = <>
+      OptionsView.GroupByBox = False
+      object cxGrid1DBTableView1CODIGOBARRA: TcxGridDBColumn
+        Caption = 'Codigo'
+        DataBinding.FieldName = 'CODIGOBARRA'
+        HeaderAlignmentHorz = taCenter
+        Options.Editing = False
+        Options.Filtering = False
+        Options.FilteringAddValueItems = False
+        Options.FilteringFilteredItemsList = False
+        Options.FilteringMRUItemsList = False
+        Options.FilteringPopup = False
+        Width = 75
+      end
+      object cxGrid1DBTableView1ARTICULO: TcxGridDBColumn
+        Caption = 'Nombre de Articulo'
+        DataBinding.FieldName = 'ARTICULO'
+        HeaderAlignmentHorz = taCenter
+        Options.Editing = False
+        Options.Filtering = False
+        Options.FilteringAddValueItems = False
+        Options.FilteringFilteredItemsList = False
+        Options.FilteringMRUItemsList = False
+        Options.FilteringPopup = False
+        Width = 267
+      end
+      object cxGrid1DBTableView1UNIDAD: TcxGridDBColumn
+        Caption = 'Unid'
+        DataBinding.FieldName = 'UNIDAD'
+        HeaderAlignmentHorz = taCenter
+        Options.Editing = False
+        Options.Filtering = False
+        Options.FilteringAddValueItems = False
+        Options.FilteringFilteredItemsList = False
+        Options.FilteringMRUItemsList = False
+        Options.FilteringPopup = False
+        Width = 86
+      end
+      object cxGrid1DBTableView1PRE1: TcxGridDBColumn
+        Caption = 'Precio'
+        DataBinding.FieldName = 'PRE1'
+        HeaderAlignmentHorz = taCenter
+        Options.Editing = False
+        Options.Filtering = False
+        Options.FilteringAddValueItems = False
+        Options.FilteringFilteredItemsList = False
+        Options.FilteringMRUItemsList = False
+        Options.FilteringPopup = False
+        Width = 112
+      end
+      object cxGrid1DBTableView1PRE3: TcxGridDBColumn
+        Caption = 'Aplica Cantidad'
+        DataBinding.FieldName = 'PRE3'
+        HeaderAlignmentHorz = taCenter
+        Options.Editing = False
+        Options.Filtering = False
+        Options.FilteringAddValueItems = False
+        Options.FilteringFilteredItemsList = False
+        Options.FilteringMRUItemsList = False
+        Options.FilteringPopup = False
+        Width = 92
+      end
+      object cxGrid1DBTableView1OPCIONES_BOLA: TcxGridDBColumn
+        DataBinding.FieldName = 'OPCIONES_BOLA'
+        Visible = False
+        HeaderAlignmentHorz = taCenter
+        Options.Editing = False
+        Options.Filtering = False
+        Options.FilteringAddValueItems = False
+        Options.FilteringFilteredItemsList = False
+        Options.FilteringMRUItemsList = False
+        Options.FilteringPopup = False
+        Width = 80
+      end
+    end
+    object cxGrid1Level1: TcxGridLevel
+      GridView = cxGrid1DBTableView1
+    end
+  end
+  object Panel2: TPanel
+    Left = 0
+    Top = 509
+    Width = 651
+    Height = 41
+    Align = alBottom
+    TabOrder = 3
+    object cxButton1: TcxButton
+      AlignWithMargins = True
+      Left = 101
+      Top = 4
+      Width = 449
+      Height = 33
+      Margins.Left = 100
+      Margins.Right = 100
+      Align = alClient
+      Caption = '&Ok'
+      LookAndFeel.SkinName = 'Office2016Colorful'
+      OptionsImage.Glyph.SourceDPI = 96
+      OptionsImage.Glyph.Data = {
+        424D360900000000000036000000280000001800000018000000010020000000
+        000000000000C40E0000C40E0000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000080000000800000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        00000000000000000000000000000000000000000077000000FF000000FF0000
+        007F000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        000000000000000000000000000000000080000000FF000000FB000000FB0000
+        00FF000000800000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000077000000FF000000FC0000005C000000550000
+        00FB000000FF0000007F00000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        00000000000000000077000000FF000000FC0000005B00000000000000000000
+        0055000000FB000000FF0000007F000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        000000000040000000FF000000FB000000560000000000000000000000000000
+        000000000057000000FB000000FF000000800000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000007D00000056000000000000000000000000000000000000
+        00000000000000000057000000FB000000FF0000008000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000054000000FB000000FF0000007F000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        000000000000000000000000000000000054000000FB000000FF0000007F0000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        00000000000000000000000000000000000000000054000000FB000000FF0000
+        007F000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000054000000FB0000
+        00FF0000007F0000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000540000
+        00FB000000FF0000007F00000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0054000000FB0000008800000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        00000000002B0000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        00000000000000000000000000000000000000000000}
+      TabOrder = 0
+      OnClick = cxButton1Click
+    end
+  end
+  object IbqRArticulos: TZReadOnlyQuery
+    Connection = datos.Data
+    SQL.Strings = (
+      'select a.*  from mtartuculos a'
+      'where a.aplicarpormayor = '#39'Si'#39)
+    Params = <>
+    Left = 195
+    Top = 192
+    object IbqRArticulosCOD_ART: TIntegerField
+      FieldName = 'COD_ART'
+      Required = True
+    end
+    object IbqRArticulosCODIGOTXT: TWideStringField
+      FieldName = 'CODIGOTXT'
+      Size = 40
+    end
+    object IbqRArticulosARTICULO: TWideStringField
+      FieldName = 'ARTICULO'
+      Size = 100
+    end
+    object IbqRArticulosMODELO: TWideStringField
+      FieldName = 'MODELO'
+      Size = 45
+    end
+    object IbqRArticulosMARCA: TWideStringField
+      FieldName = 'MARCA'
+      Size = 45
+    end
+    object IbqRArticulosCOLOR: TWideStringField
+      FieldName = 'COLOR'
+      Size = 45
+    end
+    object IbqRArticulosCOD_CAT: TIntegerField
+      FieldName = 'COD_CAT'
+    end
+    object IbqRArticulosCOD_SERIE: TIntegerField
+      FieldName = 'COD_SERIE'
+    end
+    object IbqRArticulosCOD_ALM: TIntegerField
+      FieldName = 'COD_ALM'
+    end
+    object IbqRArticulosCOSTO: TFloatField
+      FieldName = 'COSTO'
+    end
+    object IbqRArticulosCOD_PROV1: TIntegerField
+      FieldName = 'COD_PROV1'
+    end
+    object IbqRArticulosEXISTENCIA1: TFloatField
+      FieldName = 'EXISTENCIA1'
+    end
+    object IbqRArticulosITBIS: TWideStringField
+      FieldName = 'ITBIS'
+      Size = 2
+    end
+    object IbqRArticulosABREVIADO: TWideStringField
+      FieldName = 'ABREVIADO'
+      Size = 17
+    end
+    object IbqRArticulosCOD_BARRA: TWideStringField
+      FieldName = 'COD_BARRA'
+      Size = 22
+    end
+    object IbqRArticulosCOD_UV: TIntegerField
+      FieldName = 'COD_UV'
+    end
+    object IbqRArticulosUSUARIOMOD: TIntegerField
+      FieldName = 'USUARIOMOD'
+    end
+    object IbqRArticulosFECHA_MOD: TDateField
+      FieldName = 'FECHA_MOD'
+    end
+    object IbqRArticulosPOLITICA: TWideStringField
+      FieldName = 'POLITICA'
+      Size = 10
+    end
+    object IbqRArticulosCOSTO_PR: TFloatField
+      FieldName = 'COSTO_PR'
+    end
+    object IbqRArticulosIMAGEN: TBlobField
+      FieldName = 'IMAGEN'
+    end
+    object IbqRArticulosCLA_COSTO: TWideStringField
+      FieldName = 'CLA_COSTO'
+      Size = 10
+    end
+    object IbqRArticulosCLA_PRECIO: TWideStringField
+      FieldName = 'CLA_PRECIO'
+      Size = 10
+    end
+    object IbqRArticulosPRECIO_A: TFloatField
+      FieldName = 'PRECIO_A'
+    end
+    object IbqRArticulosPRECIO_B: TFloatField
+      FieldName = 'PRECIO_B'
+    end
+    object IbqRArticulosPRECIO_D: TFloatField
+      FieldName = 'PRECIO_D'
+    end
+    object IbqRArticulosESTADO: TIntegerField
+      FieldName = 'ESTADO'
+    end
+    object IbqRArticulosEXTFOTO: TWideStringField
+      FieldName = 'EXTFOTO'
+      Size = 4
+    end
+    object IbqRArticulosDESCRIPCIONWEB: TWideMemoField
+      FieldName = 'DESCRIPCIONWEB'
+      BlobType = ftWideMemo
+    end
+    object IbqRArticulosPUBLICARWEB: TIntegerField
+      FieldName = 'PUBLICARWEB'
+    end
+    object IbqRArticulosCODIGOBARRA: TWideStringField
+      FieldName = 'CODIGOBARRA'
+      Size = 50
+    end
+    object IbqRArticulosEMPAQUE: TIntegerField
+      FieldName = 'EMPAQUE'
+    end
+    object IbqRArticulosCANT_EMPA: TFloatField
+      FieldName = 'CANT_EMPA'
+    end
+    object IbqRArticulosCOD_PROV2: TIntegerField
+      FieldName = 'COD_PROV2'
+    end
+    object IbqRArticulosCOD_PROV3: TIntegerField
+      FieldName = 'COD_PROV3'
+    end
+    object IbqRArticulosREFERENCIA: TWideStringField
+      FieldName = 'REFERENCIA'
+      Size = 30
+    end
+    object IbqRArticulosOPCION_SABOR: TWideStringField
+      FieldName = 'OPCION_SABOR'
+      Size = 2
+    end
+    object IbqRArticulosSTOCK_MA: TFloatField
+      FieldName = 'STOCK_MA'
+    end
+    object IbqRArticulosSTOCK_M: TFloatField
+      FieldName = 'STOCK_M'
+    end
+    object IbqRArticulosFACTOR: TFloatField
+      FieldName = 'FACTOR'
+    end
+    object IbqRArticulosTIPO_PRODUCTOS: TWideStringField
+      FieldName = 'TIPO_PRODUCTOS'
+      Size = 10
+    end
+    object IbqRArticulosFACTURABLE: TIntegerField
+      FieldName = 'FACTURABLE'
+    end
+    object IbqRArticulosSTOCK: TFloatField
+      FieldName = 'STOCK'
+    end
+    object IbqRArticulosOPCIONES_BOLA: TWideStringField
+      FieldName = 'OPCIONES_BOLA'
+      Size = 2
+    end
+    object IbqRArticulosPARTICIONADO: TWideStringField
+      FieldName = 'PARTICIONADO'
+      Size = 2
+    end
+    object IbqRArticulosCOMPUESTO: TWideStringField
+      FieldName = 'COMPUESTO'
+      Size = 2
+    end
+    object IbqRArticulosBENEFICIOS: TFloatField
+      FieldName = 'BENEFICIOS'
+    end
+    object IbqRArticulosMONEDA: TWideStringField
+      FieldName = 'MONEDA'
+      Size = 2
+    end
+    object IbqRArticulosUNIDAD: TWideStringField
+      FieldName = 'UNIDAD'
+      Size = 4
+    end
+    object IbqRArticulosTAZA_COMPRA: TFloatField
+      FieldName = 'TAZA_COMPRA'
+    end
+    object IbqRArticulosFECHA_COMPRA: TDateField
+      FieldName = 'FECHA_COMPRA'
+    end
+    object IbqRArticulosINTERES_ACUMULADO: TFloatField
+      FieldName = 'INTERES_ACUMULADO'
+    end
+    object IbqRArticulosALMACEN: TIntegerField
+      FieldName = 'ALMACEN'
+    end
+    object IbqRArticulosPERCIO_COPA: TFloatField
+      FieldName = 'PERCIO_COPA'
+    end
+    object IbqRArticulosCOMISION: TFloatField
+      FieldName = 'COMISION'
+    end
+    object IbqRArticulosARTICULOS_OMO: TWideStringField
+      FieldName = 'ARTICULOS_OMO'
+      Size = 10
+    end
+    object IbqRArticulosCODIGOUNICO: TWideStringField
+      FieldName = 'CODIGOUNICO'
+      Size = 5
+    end
+    object IbqRArticulosEMPRESA: TWideStringField
+      FieldName = 'EMPRESA'
+      Size = 25
+    end
+    object IbqRArticulosCONDICION: TWideStringField
+      FieldName = 'CONDICION'
+      Size = 10
+    end
+    object IbqRArticulosUTILIDAD2: TFloatField
+      FieldName = 'UTILIDAD2'
+    end
+    object IbqRArticulosUTILIDAD3: TFloatField
+      FieldName = 'UTILIDAD3'
+    end
+    object IbqRArticulosPRECIO_BRUTO1: TFloatField
+      FieldName = 'PRECIO_BRUTO1'
+    end
+    object IbqRArticulosPRECIO_BRUTO2: TFloatField
+      FieldName = 'PRECIO_BRUTO2'
+    end
+    object IbqRArticulosPRECIO_BRUTO3: TFloatField
+      FieldName = 'PRECIO_BRUTO3'
+    end
+    object IbqRArticulosMAYOREO1: TFloatField
+      FieldName = 'MAYOREO1'
+    end
+    object IbqRArticulosMAYOREO2: TFloatField
+      FieldName = 'MAYOREO2'
+    end
+    object IbqRArticulosMAYOREO3: TFloatField
+      FieldName = 'MAYOREO3'
+    end
+    object IbqRArticulosDESCRIPCION: TWideMemoField
+      FieldName = 'DESCRIPCION'
+      BlobType = ftWideMemo
+    end
+    object IbqRArticulosCOSTOPROMENO: TFloatField
+      FieldName = 'COSTOPROMENO'
+    end
+    object IbqRArticulosTIENECOMPACTIBILIDAD: TWideStringField
+      FieldName = 'TIENECOMPACTIBILIDAD'
+      Size = 2
+    end
+    object IbqRArticulosCOMPACTIBLECON: TIntegerField
+      FieldName = 'COMPACTIBLECON'
+    end
+    object IbqRArticulosUBICACION: TWideStringField
+      FieldName = 'UBICACION'
+      Size = 15
+    end
+    object IbqRArticulosOBS: TIntegerField
+      FieldName = 'OBS'
+    end
+    object IbqRArticulosTIPOB: TWideStringField
+      FieldName = 'TIPOB'
+      Size = 15
+    end
+    object IbqRArticulosESTADOCONDICION: TWideStringField
+      FieldName = 'ESTADOCONDICION'
+      Size = 10
+    end
+    object IbqRArticulosIDMONEDA: TIntegerField
+      FieldName = 'IDMONEDA'
+    end
+    object IbqRArticulosCOSTO_DOLLARS: TFloatField
+      FieldName = 'COSTO_DOLLARS'
+    end
+    object IbqRArticulosCODEQUIVALENCIA: TWideStringField
+      FieldName = 'CODEQUIVALENCIA'
+      Size = 30
+    end
+    object IbqRArticulosDESC_EQUIVALENCIA: TWideStringField
+      FieldName = 'DESC_EQUIVALENCIA'
+      Size = 100
+    end
+    object IbqRArticulosCANTEQUIVALENCA: TFloatField
+      FieldName = 'CANTEQUIVALENCA'
+    end
+    object IbqRArticulosPRE1: TFloatField
+      FieldName = 'PRE1'
+      currency = True
+    end
+    object IbqRArticulosPRE2: TFloatField
+      FieldName = 'PRE2'
+    end
+    object IbqRArticulosPRE3: TFloatField
+      FieldName = 'PRE3'
+    end
+    object IbqRArticulosCOSP: TFloatField
+      FieldName = 'COSP'
+    end
+    object IbqRArticulosCOST: TFloatField
+      FieldName = 'COST'
+    end
+    object IbqRArticulosPRECIO_C: TFloatField
+      FieldName = 'PRECIO_C'
+    end
+    object IbqRArticulosUTILIDAD4: TFloatField
+      FieldName = 'UTILIDAD4'
+    end
+    object IbqRArticulosMAYOREO4: TFloatField
+      FieldName = 'MAYOREO4'
+    end
+    object IbqRArticulosPRECIO_BRUTO4: TFloatField
+      FieldName = 'PRECIO_BRUTO4'
+    end
+    object IbqRArticulosUTILIDADSOBREITBS: TWideStringField
+      FieldName = 'UTILIDADSOBREITBS'
+      Size = 2
+    end
+    object IbqRArticulosAPLICARPORMAYOR: TWideStringField
+      FieldName = 'APLICARPORMAYOR'
+      Size = 2
+    end
+  end
+  object DsQArticulos: TDataSource
+    DataSet = IbqRArticulos
+    Left = 262
+    Top = 272
+  end
+  object Almacenes1: TZReadOnlyQuery
+    Connection = datos.Data
+    SQL.Strings = (
+      
+        'select a.cod_art, b.articulo, a.cod_alm, c.descripcion, sum(a.en' +
+        'trada - a.salida) Existencia  from minventario a'
+      'left join mtartuculos b  On a.cod_art = b.cod_art'
+      'left join almacenes c On a.cod_alm = c.id'
+      'and b.politica <> '#39'Servicio'#39
+      
+        'group by a.cod_art, b.articulo, b.costo_pr, a.cod_alm, c.descrip' +
+        'cion')
+    Params = <>
+    Left = 32
+    Top = 304
+    object Almacenes1COD_ART: TIntegerField
+      FieldName = 'COD_ART'
+    end
+    object Almacenes1ARTICULO: TWideStringField
+      FieldName = 'ARTICULO'
+      Size = 100
+    end
+    object Almacenes1COD_ALM: TIntegerField
+      FieldName = 'COD_ALM'
+    end
+    object Almacenes1DESCRIPCION: TWideStringField
+      FieldName = 'DESCRIPCION'
+      Size = 30
+    end
+    object Almacenes1EXISTENCIA: TExtendedField
+      FieldName = 'EXISTENCIA'
+      ReadOnly = True
+      Precision = 19
+    end
+  end
+end

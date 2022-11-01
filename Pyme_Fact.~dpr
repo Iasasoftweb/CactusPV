@@ -1,0 +1,22 @@
+program Pyme_Fact;
+
+uses
+  Forms,
+  PymeFact in 'PymeFact.pas' {FrmInicio},
+  Unit2 in 'Unit2.pas' {datos: TDataModule},
+  Tools in 'Tools.pas',
+  Unit1 in 'Unit1.pas' {frmLogin},
+  Unit3 in 'Unit3.pas' {Form3},
+  Unit4 in 'Unit4.pas' {Form4};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.CreateForm(TFrmInicio, FrmInicio);
+  Application.CreateForm(Tdatos, datos);
+  Application.CreateForm(TfrmLogin, frmLogin);
+  Application.CreateForm(TForm3, Form3);
+  Application.CreateForm(TForm4, Form4);
+  Application.Run;
+end.

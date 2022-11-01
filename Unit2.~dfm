@@ -1,0 +1,50 @@
+object datos: Tdatos
+  OldCreateOrder = False
+  OnCreate = DataModuleCreate
+  Left = 396
+  Top = 436
+  Height = 177
+  Width = 215
+  object data: TpFIBDatabase
+    DBName = 'C:\PymeFact\data\pymedata.FDB'
+    DBParams.Strings = (
+      'user_name=SYSDBA'
+      'password=masterkey'
+      '')
+    DefaultTransaction = Rd
+    DefaultUpdateTransaction = Wt
+    SQLDialect = 3
+    Timeout = 0
+    WaitForRestoreConnect = 0
+    Left = 32
+    Top = 16
+  end
+  object Wt: TpFIBTransaction
+    DefaultDatabase = data
+    TimeoutAction = TARollback
+    Left = 64
+    Top = 16
+  end
+  object Rd: TpFIBTransaction
+    DefaultDatabase = data
+    TimeoutAction = TARollback
+    Left = 96
+    Top = 16
+  end
+  object IbqEmpleados: TpFIBQuery
+    Database = data
+    SQL.Strings = (
+      'select * from mtempleados')
+    Transaction = Rd
+    Left = 32
+    Top = 80
+  end
+  object IbqConfiguracion: TpFIBQuery
+    Database = data
+    SQL.Strings = (
+      'select * from configuracion')
+    Transaction = Rd
+    Left = 64
+    Top = 80
+  end
+end

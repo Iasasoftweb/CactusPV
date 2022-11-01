@@ -1,0 +1,347 @@
+
+IASA-0976FF27BD (Server)	Thu Apr 21 16:59:39 2011
+	INET/inet_error: connect errno = 10060
+
+
+IASA-0976FF27BD (Server)	Thu Apr 21 17:00:02 2011
+	INET/inet_error: connect errno = 10060
+
+
+IASA-0976FF27BD (Server)	Sat Apr 23 14:15:30 2011
+	INET/inet_error: connect errno = 10065
+
+
+IASA-0976FF27BD (Server)	Sat Apr 23 14:15:32 2011
+	INET/inet_error: connect errno = 10065
+
+
+IASA-0976FF27BD (Server)	Thu Apr 28 21:43:53 2011
+	INET/inet_error: connect errno = 10065
+
+
+IASA-0976FF27BD (Server)	Thu Apr 28 21:43:55 2011
+	INET/inet_error: connect errno = 10065
+
+
+WINXP_CR (Server)	Thu May 05 19:58:26 2011
+	INET/inet_error: connect errno = 10060
+
+
+WINXP_CR (Server)	Thu May 05 19:58:49 2011
+	INET/inet_error: connect errno = 10060
+
+
+WINXP_CR (Server)	Sun May 15 11:36:56 2011
+	INET/inet_error: connect errno = 10061
+
+
+WINXP_CR (Server)	Sun May 15 11:37:00 2011
+	INET/inet_error: connect errno = 10061
+
+
+WINXP_CR (Server)	Mon May 30 09:00:03 2011
+	INET/inet_error: connect errno = 10013
+
+
+WINXP_CR (Server)	Mon May 30 09:00:05 2011
+	INET/inet_error: connect errno = 10013
+
+
+WINXP_CR (Server)	Mon May 30 09:10:57 2011
+	INET/inet_error: connect errno = 10013
+
+
+WINXP_CR (Server)	Mon May 30 09:10:59 2011
+	INET/inet_error: connect errno = 10013
+
+
+WINXP_CR (Server)	Mon May 30 14:28:23 2011
+	INET/inet_error: connect errno = 10065
+
+
+WINXP_CR (Server)	Mon May 30 14:28:25 2011
+	INET/inet_error: connect errno = 10065
+
+
+WINXP_CR (Server)	Thu Jun 02 07:59:05 2011
+	INET/inet_error: connect errno = 10013
+
+
+WINXP_CR (Server)	Thu Jun 02 07:59:07 2011
+	INET/inet_error: connect errno = 10013
+
+
+WINXP_CR (Server)	Thu Jun 02 08:05:14 2011
+	INET/inet_error: connect errno = 10013
+
+
+WINXP_CR (Server)	Thu Jun 02 08:05:17 2011
+	INET/inet_error: connect errno = 10013
+
+
+WINXP_CR (Server)	Sat Jun 04 09:51:15 2011
+	INET/inet_error: connect errno = 10065
+
+
+WINXP_CR (Server)	Sat Jun 04 09:51:17 2011
+	INET/inet_error: connect errno = 10065
+
+
+WINXP_CR (Server)	Sat Jun 04 10:08:53 2011
+	INET/inet_error: send errno = 10054
+
+
+WINXP_CR (Server)	Sat Jun 04 10:09:01 2011
+	INET/inet_error: send errno = 10054
+
+
+WINXP_CR (Server)	Sat Jun 04 10:09:01 2011
+	INET/inet_error: send errno = 10054
+
+
+WINXP_CR (Server)	Sat Jun 04 10:09:01 2011
+	REMOTE INTERFACE/gds__detach: Unsuccesful detach from database. 
+	Uncommitted work may have been lost
+
+
+WINXP_CR (Server)	Sat Jun 04 10:09:01 2011
+	INET/inet_error: send errno = 10054
+
+
+WINXP_CR (Server)	Sat Jun 04 14:38:27 2011
+	INET/inet_error: connect errno = 10013
+
+
+WINXP_CR (Server)	Sat Jun 04 14:38:29 2011
+	INET/inet_error: connect errno = 10013
+
+
+WINXP_CR (Server)	Mon Jun 06 13:59:49 2011
+	INET/inet_error: connect errno = 10013
+
+
+WINXP_CR (Server)	Mon Jun 06 13:59:55 2011
+	INET/inet_error: connect errno = 10013
+
+
+WINXP_CR (Server)	Mon Jun 06 14:00:03 2011
+	INET/inet_error: connect errno = 10013
+
+
+WINXP_CR (Server)	Mon Jun 06 14:00:05 2011
+	INET/inet_error: connect errno = 10013
+
+
+WINXP_CR (Server)	Mon Jun 06 16:14:20 2011
+	INET/inet_error: connect errno = 10060
+
+
+WINXP_CR (Server)	Mon Jun 06 16:14:43 2011
+	INET/inet_error: connect errno = 10060
+
+
+WINXP_CR (Server)	Mon Jun 06 16:17:01 2011
+	INET/inet_error: connect errno = 10013
+
+
+WINXP_CR (Server)	Mon Jun 06 19:20:09 2011
+	INET/inet_error: connect errno = 10013
+
+
+WINXP_CR (Server)	Mon Jun 06 19:20:11 2011
+	INET/inet_error: connect errno = 10013
+
+
+WINXP_CR (Server)	Mon Jun 06 19:20:13 2011
+	INET/inet_error: connect errno = 10013
+
+
+WINXP_CR (Server)	Mon Jun 06 19:20:15 2011
+	INET/inet_error: connect errno = 10013
+
+
+WINXP_CR (Server)	Sat Jun 18 09:26:55 2011
+	INET/inet_error: connect errno = 10065
+
+
+WINXP_CR (Server)	Sat Jun 18 09:26:57 2011
+	INET/inet_error: connect errno = 10065
+
+
+WINXP_CR (Server)	Sat Jun 18 09:28:09 2011
+	INET/inet_error: connect errno = 10065
+
+
+WINXP_CR (Server)	Sat Jun 18 09:28:11 2011
+	INET/inet_error: connect errno = 10065
+
+
+WINXP_CR (Server)	Fri Jul 08 11:17:04 2011
+	INET/inet_error: connect errno = 10060
+
+
+WINXP_CR (Server)	Fri Jul 08 11:17:28 2011
+	INET/inet_error: connect errno = 10060
+
+
+IASASOFT-70DA24 (Server)	Tue Oct 25 05:09:36 2011
+	INET/inet_error: connect errno = 10060
+
+
+IASASOFT-70DA24 (Server)	Tue Oct 25 05:09:59 2011
+	INET/inet_error: connect errno = 10060
+
+
+IASASOFT-70DA24 (Server)	Wed Nov 02 17:52:20 2011
+	INET/inet_error: send errno = 10054
+
+
+IASASOFT-70DA24 (Server)	Wed Nov 02 17:52:55 2011
+	INET/inet_error: send errno = 10054
+
+
+IASASOFT-70DA24 (Server)	Wed Nov 02 17:53:03 2011
+	INET/inet_error: send errno = 10054
+
+
+ISMAELSANTOS-PC (Server)	Sun Mar 04 07:52:23 2012
+	INET/inet_error: connect errno = 10060
+
+
+ISMAELSANTOS-PC (Server)	Mon Mar 05 06:23:29 2012
+	INET/inet_error: connect errno = 10060
+
+
+ISMAEL-PC (Server)	Thu Aug 01 18:59:41 2013
+	INET/inet_error: send errno = 10054
+
+
+ISMAEL-PC (Server)	Thu Aug 01 18:59:42 2013
+	INET/inet_error: send errno = 10054
+
+
+ISMAEL-PC (Server)	Thu Aug 01 18:59:42 2013
+	REMOTE INTERFACE/gds__detach: Unsuccesful detach from database. 
+	Uncommitted work may have been lost
+
+
+ISMAEL-PC (Server)	Thu Aug 01 18:59:42 2013
+	INET/inet_error: send errno = 10054
+
+
+ISMAEL-PC (Server)	Fri Oct 25 04:43:07 2013
+	INET/INET_connect: gethostbyname (zzzz) failed, error code = 11004
+
+
+ISMAEL-PC (Server)	Fri Oct 25 04:43:11 2013
+	INET/INET_connect: gethostbyname (zzzz) failed, error code = 11004
+
+
+ISMAEL-PC (Server)	Fri Oct 25 04:43:21 2013
+	INET/INET_connect: gethostbyname (zzzz) failed, error code = 11004
+
+
+ISMAEL-PC (Server)	Fri Oct 25 04:43:26 2013
+	INET/INET_connect: gethostbyname (zzzz) failed, error code = 11004
+
+
+SERVIDOR2 (Server)	Fri Apr 18 06:25:59 2014
+	INET/inet_error: connect errno = 10061
+
+
+SERVIDOR2 (Server)	Fri Apr 18 06:26:02 2014
+	INET/inet_error: connect errno = 10061
+
+
+SERVIDOR2 (Server)	Fri Apr 18 06:26:56 2014
+	INET/inet_error: connect errno = 10061
+
+
+SERVIDOR2 (Server)	Fri Apr 18 06:26:59 2014
+	INET/inet_error: connect errno = 10061
+
+
+SERVIDOR2 (Server)	Fri Apr 18 06:34:12 2014
+	INET/inet_error: connect errno = 10061
+
+
+SERVIDOR2 (Server)	Fri Apr 18 06:34:15 2014
+	INET/inet_error: connect errno = 10061
+
+
+SERVIDOR2 (Server)	Fri Apr 18 06:34:45 2014
+	INET/inet_error: connect errno = 10061
+
+
+SERVIDOR2 (Server)	Fri Apr 18 06:34:48 2014
+	INET/inet_error: connect errno = 10061
+
+
+SERVIDOR2 (Server)	Mon Aug 04 06:54:58 2014
+	INET/inet_error: connect errno = 10061
+
+
+SERVIDOR2 (Server)	Mon Aug 04 06:55:01 2014
+	INET/inet_error: connect errno = 10061
+
+
+SERVIDOR2 (Server)	Mon Aug 04 06:55:10 2014
+	INET/inet_error: connect errno = 10061
+
+
+SERVIDOR2 (Server)	Mon Aug 04 06:55:13 2014
+	INET/inet_error: connect errno = 10061
+
+
+SERVIDOR2 (Server)	Mon Aug 04 06:58:10 2014
+	INET/inet_error: connect errno = 10061
+
+
+SERVIDOR2 (Server)	Mon Aug 04 06:58:13 2014
+	INET/inet_error: connect errno = 10061
+
+
+SERVIDOR2 (Server)	Mon Aug 04 06:58:32 2014
+	INET/inet_error: connect errno = 10061
+
+
+SERVIDOR2 (Server)	Mon Aug 04 07:03:34 2014
+	INET/inet_error: connect errno = 10061
+
+
+SERVIDOR2 (Server)	Mon Aug 04 07:03:37 2014
+	INET/inet_error: connect errno = 10061
+
+
+SERVIDOR2 (Server)	Mon Aug 04 07:03:45 2014
+	INET/inet_error: connect errno = 10061
+
+
+ISMAELSANTOS-PC (Server)	Sun Aug 10 14:04:28 2014
+	INET/inet_error: connect errno = 10060
+
+
+ISMAELSANTOS-PC (Server)	Sun Aug 10 14:04:51 2014
+	INET/inet_error: connect errno = 10060
+
+
+ISMAELSANTOS-PC (Server)	Sun Aug 10 14:23:58 2014
+	INET/inet_error: send errno = 10054
+
+
+ISMAELSANTOS-PC (Server)	Sun Aug 10 14:24:01 2014
+	INET/inet_error: send errno = 10054
+
+
+ISMAELSANTOS-PC (Server)	Sun Aug 10 14:24:02 2014
+	INET/inet_error: send errno = 10054
+
+
+ISMAELSANTOS-PC (Server)	Sun Aug 10 14:24:02 2014
+	REMOTE INTERFACE/gds__detach: Unsuccesful detach from database. 
+	Uncommitted work may have been lost
+
+
+ISMAELSANTOS-PC (Server)	Sun Aug 10 14:24:02 2014
+	INET/inet_error: send errno = 10054
+

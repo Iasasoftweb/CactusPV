@@ -1,0 +1,87 @@
+unit PymeFact;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, jpeg, ExtCtrls, DBCtrls, StdCtrls, fcImager, fcLabel, RXClock,
+  datelbl, AdvPanel, fcButton, fcImgBtn, AdvReflectionImage, AdvGlowButton,
+  fcShapeBtn;
+
+type
+  TFrmInicio = class(TForm)
+    Image1: TImage;
+    Label1: TLabel;
+    DBText1: TDBText;
+    Label2: TLabel;
+    DBText2: TDBText;
+    fcLabel1: TfcLabel;
+    fcLabel2: TfcLabel;
+    Panel1: TPanel;
+    Label3: TLabel;
+    Label4: TLabel;
+    DateLabel1: TDateLabel;
+    RxClock1: TRxClock;
+    fcImager1: TfcImager;
+    Panel2: TPanel;
+    fcShapeBtn1: TfcShapeBtn;
+    fcShapeBtn2: TfcShapeBtn;
+    fcShapeBtn3: TfcShapeBtn;
+    fcShapeBtn4: TfcShapeBtn;
+    fcShapeBtn6: TfcShapeBtn;
+    fcShapeBtn5: TfcShapeBtn;
+    fcShapeBtn7: TfcShapeBtn;
+    procedure FormCreate(Sender: TObject);
+    procedure FormShow(Sender: TObject);
+    procedure fcShapeBtn1Click(Sender: TObject);
+  private
+//   procedure DataError(Sender: TObject; E: Exception);
+//    procedure CargaConfigu;
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FrmInicio: TFrmInicio;
+
+implementation
+
+uses Unit1,tools, Unit3;
+
+{$R *.dfm}
+
+procedure TFrmInicio.FormCreate(Sender: TObject);
+begin
+Application.HintHidePause := 1500000;
+shortdateformat := 'dd/mm/yyyy';
+ //	Application.OnException:= DataError;
+end;
+
+
+
+
+procedure TFrmInicio.FormShow(Sender: TObject);
+begin
+ShowForm(TFrmlogin, Frmlogin);
+  // TopMenu := menu.Top;
+//   nombreapp.Caption := ReadString_Ini(IniFile, 'SISTEMA', 'Nombre','');
+     // version.Caption :=  readstring_ini(iniFile, 'SISTEMA', 'Version','');
+  // Version.Caption := 'Ver. '+GetAppInfo('FileVersion');
+  // BarraEstado.Panels[3].Text := Usuario;
+  // CargaConfigu;
+
+
+//edit1.SetFocus;
+//edit1.Enabled := true;
+//edit2.Enabled := true;
+
+//ibqempleado.Open;
+end;
+
+procedure TFrmInicio.fcShapeBtn1Click(Sender: TObject);
+begin
+showform(TfrmCliente, Frmcliente);
+end;
+
+end.

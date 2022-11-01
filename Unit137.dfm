@@ -1,0 +1,2026 @@
+object FrmCorteInventario: TFrmCorteInventario
+  Left = 0
+  Top = 0
+  BorderIcons = [biSystemMenu]
+  ClientHeight = 787
+  ClientWidth = 967
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  KeyPreview = True
+  OldCreateOrder = False
+  Position = poDesktopCenter
+  OnClose = FormClose
+  OnKeyDown = FormKeyDown
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Panel1: TPanel
+    Left = 0
+    Top = 85
+    Width = 967
+    Height = 36
+    Align = alTop
+    TabOrder = 0
+  end
+  object Panel7: TPanel
+    Left = 0
+    Top = 0
+    Width = 967
+    Height = 49
+    Align = alTop
+    Color = 9068819
+    ParentBackground = False
+    TabOrder = 1
+    object Label3: TLabel
+      AlignWithMargins = True
+      Left = 144
+      Top = 4
+      Width = 156
+      Height = 41
+      Margins.Left = 2
+      Align = alLeft
+      Caption = '| Sistema Gesti'#243'n de Ventas'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWhite
+      Font.Height = -12
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      ParentFont = False
+      Layout = tlCenter
+      ExplicitHeight = 14
+    end
+    object Label60: TLabel
+      AlignWithMargins = True
+      Left = 62
+      Top = 4
+      Width = 77
+      Height = 41
+      Margins.Left = 5
+      Align = alLeft
+      Caption = 'PrintSoft PV'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWhite
+      Font.Height = -12
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentFont = False
+      Layout = tlCenter
+      ExplicitHeight = 14
+    end
+    object cxImage3: TcxImage
+      AlignWithMargins = True
+      Left = 21
+      Top = 4
+      Margins.Left = 20
+      TabStop = False
+      Align = alLeft
+      Picture.Data = {
+        0B546478504E47496D61676589504E470D0A1A0A0000000D4948445200000030
+        0000003008060000005702F9870000000467414D410000B18F0BFC6105000000
+        206348524D00007A26000080840000FA00000080E8000075300000EA6000003A
+        98000017709CBA513C00000006624B4744000000000000F943BB7F0000000970
+        48597300000EC400000EC401952B0E1B0000028E4944415468DEED993D681441
+        1CC5672F78012F5858881F24A6D2469B4002969A6B12B04C2B08626B3A5B4D65
+        6B61612D36B6292D1411ECB4492C4C6571B94248A19C9844EF67B1B3BAEECDCC
+        CED7EE72B80FA6999D79FFF766EEE6E33F42B468D1223A802EB009ECCBB20974
+        9BD6652BBE0FEC30894FC046D3FA4CC297805794E31D70AD69BD79E1E781A7C0
+        4F0BF119C6C00BE06293C27BC04360A411790C3C91E558D36624397A750AEF00
+        1BC067C308BF04AEE6FA5C9623AEC300B80BCC542DFE3AF0DE20E423B06EE87F
+        03F860E8BF0BAC5521FC52C9087E01EED98CA09CC15BA4CBAB6906AFC4107E1A
+        7804FCD004FA2EBF9FF2E0EE01F7816F1AEE23D2C5E18CAFF83E70A0211F03CF
+        80F90883342FB9C69A580740DF8778A8217C032C870A57C45B96DC2AECEBFA75
+        0C9C6735F55D21C489D806841063595438E7332226641BD162A86AE082FCADFF
+        32058C6DA08E3F717403DB06FE217007BB657446B61D1AF82662051B9075651B
+        51E846F6A77F250664BDED46E4729498D8082B3390FB3E076C117E98DB02E65C
+        E3071BC8B5CB56119FE3F46268FC6003B9F64BC06B0BF156179ADA0DE4FAF549
+        4F9545EC911EC39398F11313C13F0D93C42AB0ECDB15421C16AA679324397219
+        409BF81D3B3A37A884BA8877412506EA446BA069FC3F0680D9BA44B9C4729981
+        3DD23390F572EA29FEA61062370691EEB0F61658B1E8EFBA93AF486E15063E06
+        56315FEA9F030BA1068005C965BAD4AFFACE42595AE510788CE246566680F446
+        F680F456A742585AA510CC39B1A533C0DFFB84E9461627B1A530629D5A5419A0
+        A9D462C14407B84D9A90D561DBB22EC34072D6B72F012749B30A5FF1C708CFAC
+        464C23D3F9C0A130329D4F4C0A23D3F9C85730913DB30E64999E67D6162DA60C
+        BF01BB8931F93A2D0F250000002574455874646174653A637265617465003230
+        32302D30362D30315430313A32383A32362B30303A303088F0EE870000002574
+        455874646174653A6D6F6469667900323032302D30362D30315430313A32383A
+        32362B30303A3030F9AD563B0000001974455874536F66747761726500777777
+        2E696E6B73636170652E6F72679BEE3C1A0000000049454E44AE426082}
+      Properties.ShowFocusRect = False
+      Style.BorderStyle = ebsNone
+      StyleDisabled.BorderStyle = ebsNone
+      StyleFocused.BorderStyle = ebsNone
+      TabOrder = 0
+      Transparent = True
+      Height = 41
+      Width = 33
+    end
+  end
+  object Panel8: TPanel
+    Left = 0
+    Top = 49
+    Width = 967
+    Height = 36
+    Align = alTop
+    TabOrder = 2
+    object Label61: TLabel
+      AlignWithMargins = True
+      Left = 26
+      Top = -3
+      Width = 158
+      Height = 33
+      Margins.Left = 5
+      Caption = 'Inventario |'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clBlack
+      Font.Height = -27
+      Font.Name = 'Century Gothic'
+      Font.Style = []
+      ParentFont = False
+      Layout = tlCenter
+    end
+    object LbModo: TLabel
+      AlignWithMargins = True
+      Left = 186
+      Top = 8
+      Width = 45
+      Height = 21
+      Margins.Left = 5
+      Caption = 'Corte'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clBlack
+      Font.Height = -16
+      Font.Name = 'Century Gothic'
+      Font.Style = []
+      ParentFont = False
+      Layout = tlCenter
+    end
+  end
+  object Panel2: TPanel
+    Left = 0
+    Top = 121
+    Width = 967
+    Height = 666
+    Align = alClient
+    TabOrder = 3
+    object pgCentral: TcxPageControl
+      Left = 8
+      Top = 6
+      Width = 953
+      Height = 651
+      TabOrder = 0
+      Properties.ActivePage = cxTabSheet1
+      Properties.CustomButtons.Buttons = <>
+      LookAndFeel.NativeStyle = True
+      ClientRectBottom = 647
+      ClientRectLeft = 4
+      ClientRectRight = 949
+      ClientRectTop = 24
+      object cxTabSheet1: TcxTabSheet
+        Caption = 'cxTabSheet1'
+        ImageIndex = 0
+        object cxGroupBox1: TcxGroupBox
+          Left = 3
+          Top = 157
+          Style.LookAndFeel.NativeStyle = True
+          StyleDisabled.LookAndFeel.NativeStyle = True
+          TabOrder = 0
+          Height = 457
+          Width = 941
+          object cxGrid2: TcxGrid
+            Left = 2
+            Top = 18
+            Width = 937
+            Height = 437
+            Align = alClient
+            TabOrder = 0
+            LookAndFeel.NativeStyle = True
+            object cxGrid2DBTableView1: TcxGridDBTableView
+              Navigator.Buttons.CustomButtons = <>
+              DataController.DataSource = DsCortes
+              DataController.Summary.DefaultGroupSummaryItems = <>
+              DataController.Summary.FooterSummaryItems = <>
+              DataController.Summary.SummaryGroups = <>
+              OptionsView.GroupByBox = False
+              OptionsView.HeaderAutoHeight = True
+              ConditionalFormatting = {
+                010000000A0000002E0000005400640078005300700072006500610064005300
+                680065006500740043006F006E0064006900740069006F006E0061006C004600
+                6F0072006D0061007400740069006E006700520075006C006500440061007400
+                610042006100720050000000020000000000000002000000FFFFFF7F00010000
+                000500000000000000000000010000000500000000000050C30F400100000000
+                0000000000000000010000000000002000000020FFFFFF1F008BEF00}
+              object cxGrid2DBTableView1COD_ART: TcxGridDBColumn
+                Caption = 'Codigo'
+                DataBinding.FieldName = 'COD_ART'
+                HeaderAlignmentHorz = taCenter
+                Options.Editing = False
+                Options.Filtering = False
+                Options.FilteringAddValueItems = False
+                Options.FilteringFilteredItemsList = False
+                Options.FilteringMRUItemsList = False
+                Options.FilteringPopup = False
+              end
+              object cxGrid2DBTableView1ARTICULOS: TcxGridDBColumn
+                Caption = 'Nombre del Articulo'
+                DataBinding.FieldName = 'ARTICULOS'
+                HeaderAlignmentHorz = taCenter
+                Options.Editing = False
+                Options.Filtering = False
+                Options.FilteringAddValueItems = False
+                Options.FilteringFilteredItemsList = False
+                Options.FilteringMRUItemsList = False
+                Options.FilteringPopup = False
+                Width = 424
+              end
+              object cxGrid2DBTableView1EXISTENCIA: TcxGridDBColumn
+                Caption = 'Existencia Corte'
+                DataBinding.FieldName = 'EXISTENCIA'
+                HeaderAlignmentHorz = taCenter
+                Options.Editing = False
+                Options.Filtering = False
+                Options.FilteringAddValueItems = False
+                Options.FilteringFilteredItemsList = False
+                Options.FilteringMRUItemsList = False
+                Options.FilteringPopup = False
+                Width = 70
+              end
+              object cxGrid2DBTableView1VENTAS: TcxGridDBColumn
+                Caption = 'Ventas despues del Corte'
+                DataBinding.FieldName = 'VENTAS'
+                HeaderAlignmentHorz = taCenter
+                Options.Editing = False
+                Options.Filtering = False
+                Options.FilteringAddValueItems = False
+                Options.FilteringFilteredItemsList = False
+                Options.FilteringMRUItemsList = False
+                Options.FilteringPopup = False
+                Width = 87
+              end
+              object cxGrid2DBTableView1ENTRADAS: TcxGridDBColumn
+                Caption = 'Entradas'
+                DataBinding.FieldName = 'ENTRADAS'
+                HeaderAlignmentHorz = taCenter
+                Options.Editing = False
+                Options.Filtering = False
+                Options.FilteringAddValueItems = False
+                Options.FilteringFilteredItemsList = False
+                Options.FilteringMRUItemsList = False
+                Options.FilteringPopup = False
+              end
+              object cxGrid2DBTableView1SALIDAS: TcxGridDBColumn
+                Caption = 'Salidas'
+                DataBinding.FieldName = 'SALIDAS'
+                HeaderAlignmentHorz = taCenter
+                Options.Editing = False
+                Options.Filtering = False
+                Options.FilteringAddValueItems = False
+                Options.FilteringFilteredItemsList = False
+                Options.FilteringMRUItemsList = False
+                Options.FilteringPopup = False
+                SortIndex = 0
+                SortOrder = soAscending
+              end
+              object cxGrid2DBTableView1EXACTUAL: TcxGridDBColumn
+                Caption = 'Existencia Actual'
+                DataBinding.FieldName = 'EXACTUAL'
+                HeaderAlignmentHorz = taCenter
+                Options.Editing = False
+                Options.Filtering = False
+                Options.FilteringAddValueItems = False
+                Options.FilteringFilteredItemsList = False
+                Options.FilteringMRUItemsList = False
+                Options.FilteringPopup = False
+                Width = 56
+              end
+            end
+            object cxGrid2Level1: TcxGridLevel
+              GridView = cxGrid2DBTableView1
+            end
+          end
+        end
+        object cxGroupBox2: TcxGroupBox
+          Left = 3
+          Top = 24
+          Caption = 'Cortes Abiertos'
+          Style.LookAndFeel.NativeStyle = True
+          StyleDisabled.LookAndFeel.NativeStyle = True
+          TabOrder = 1
+          Height = 129
+          Width = 366
+          object cxGrid3: TcxGrid
+            Left = 2
+            Top = 18
+            Width = 362
+            Height = 109
+            Align = alClient
+            TabOrder = 0
+            LookAndFeel.NativeStyle = True
+            object cxGrid3DBTableView1: TcxGridDBTableView
+              Navigator.Buttons.CustomButtons = <>
+              DataController.DataSource = DsCortesAbiertos
+              DataController.Summary.DefaultGroupSummaryItems = <>
+              DataController.Summary.FooterSummaryItems = <>
+              DataController.Summary.SummaryGroups = <>
+              OptionsView.GroupByBox = False
+              object cxGrid3DBTableView1FECHA_INICIAL: TcxGridDBColumn
+                Caption = 'Fecha Inicial'
+                DataBinding.FieldName = 'FECHA_INICIAL'
+                HeaderAlignmentHorz = taCenter
+                Options.Editing = False
+                Options.Filtering = False
+                Options.FilteringAddValueItems = False
+                Options.FilteringFilteredItemsList = False
+                Options.FilteringMRUItemsList = False
+                Options.FilteringPopup = False
+                Width = 145
+              end
+              object cxGrid3DBTableView1FECHA_FINAL: TcxGridDBColumn
+                Caption = 'Fecha Final'
+                DataBinding.FieldName = 'FECHA_FINAL'
+                HeaderAlignmentHorz = taCenter
+                Options.Editing = False
+                Options.Filtering = False
+                Options.FilteringAddValueItems = False
+                Options.FilteringFilteredItemsList = False
+                Options.FilteringMRUItemsList = False
+                Options.FilteringPopup = False
+                Width = 157
+              end
+            end
+            object cxGrid3Level1: TcxGridLevel
+              GridView = cxGrid3DBTableView1
+            end
+          end
+        end
+        object cxButton3: TcxButton
+          Left = 428
+          Top = 43
+          Width = 221
+          Height = 29
+          Caption = 'Actualizar Corte Actual'
+          OptionsImage.Glyph.SourceDPI = 96
+          OptionsImage.Glyph.Data = {
+            89504E470D0A1A0A0000000D4948445200000018000000180806000000E0773D
+            F80000000467414D410000B18F0BFC6105000000206348524D00007A26000080
+            840000FA00000080E8000075300000EA6000003A98000017709CBA513C000000
+            06624B4744000000000000F943BB7F000000097048597300000EC400000EC401
+            952B0E1B000001074944415448C7ED94C14AC34014450F8229683FA45825DD18
+            DB7FF163FC018DA1A2CB7E87B4F4274C77DDD5AD2B5D444D888BDCD020367913
+            ECA2900BC3403873EFCCE3BD40A743D005100131F0A115032130FCC5DEB818F7
+            80472003F21D2B55F8B1CC7317F3A50E2432B9024EB5260AFF12B3AE849AF424
+            F815F06BB84025ABBECA54F34C37F71BD8B22C4E01F702A316E6A68095C0A085
+            B929E05D60DF0237E9E88F6FE64E681BB0D17EB6AF80B9F66B079F995E7E6B81
+            CF2926340146063E109F0203EB8D1ED80E5A5DC825F0263674299D072C74F013
+            9802638ACE3AD1AD67C0B798679D719227E394DD3D9F510C64CFD5BCAA217007
+            BC50CC48F9BB8EF8A74EEBB45FFD0062B65DC4FC3B331D000000257445587464
+            6174653A63726561746500323032302D30392D31355432333A35353A32322B30
+            303A30303140344B0000002574455874646174653A6D6F646966790032303230
+            2D30392D31355432333A35353A32322B30303A3030401D8CF700000019744558
+            74536F667477617265007777772E696E6B73636170652E6F72679BEE3C1A0000
+            000049454E44AE426082}
+          TabOrder = 2
+          OnClick = cxButton3Click
+        end
+        object cxButton2: TcxButton
+          Left = 428
+          Top = 113
+          Width = 221
+          Height = 29
+          Caption = 'Finalizar Corte'
+          OptionsImage.Glyph.SourceDPI = 96
+          OptionsImage.Glyph.Data = {
+            89504E470D0A1A0A0000000D4948445200000018000000180806000000E0773D
+            F80000000467414D410000B18F0BFC6105000000206348524D00007A26000080
+            840000FA00000080E8000075300000EA6000003A98000017709CBA513C000000
+            06624B4744000000000000F943BB7F000000097048597300000EC400000EC401
+            952B0E1B000001364944415448C7CD94BF4A034110873F2C0C182C03A9244F60
+            1D10B40D6A93D82A28040C58A5F429F24A09BE411005897F4013C4FA9248C08B
+            C5CDC2B8ECDD5EF612F007037BCBF2CDCC6F770EFEB1B6819263BF065C14855F
+            0253600E5C59F05720069AA1F036F0032C2562E006D8039E65EF0ED80D815F0B
+            7069450C7CC97A009443E03BC08B03AEE331146EA46D7085B1AB906A24179995
+            E43C04DC54EDFB924CF27A6ED491CAFAC0568E244F3E780BF804EA0A1ECBDA67
+            57041CF8AC58C8E15906DCD549041C66C14F145C47CF3AD711BBF49DDC03473E
+            6BDE523CD59569CBCE1C1D65EA83F4971149276692BB7980B64E532CB2E33604
+            6ED4F2249902FB4512548091A783317FE76425F85020A3944E1604FEEB35FC01
+            A8923CDBEF75C387F26D744C3248EF9230480DA9CE86AF558D4DC237A65F7B38
+            A2F1ED102A080000002574455874646174653A63726561746500323032302D30
+            392D31355432333A34363A33302B30303A303040CC413F000000257445587464
+            6174653A6D6F6469667900323032302D30392D31355432333A34363A33302B30
+            303A30303191F9830000001974455874536F667477617265007777772E696E6B
+            73636170652E6F72679BEE3C1A0000000049454E44AE426082}
+          TabOrder = 3
+          OnClick = cxButton2Click
+        end
+        object cxButton1: TcxButton
+          Left = 428
+          Top = 78
+          Width = 221
+          Height = 29
+          Caption = 'Iniciar Corte'
+          OptionsImage.Glyph.SourceDPI = 96
+          OptionsImage.Glyph.Data = {
+            89504E470D0A1A0A0000000D4948445200000018000000180806000000E0773D
+            F80000000467414D410000B18F0BFC6105000000206348524D00007A26000080
+            840000FA00000080E8000075300000EA6000003A98000017709CBA513C000000
+            06624B4744000000000000F943BB7F000000097048597300000EC400000EC401
+            952B0E1B000000D14944415448C7EDD2314EC3401085E12F50A4CD2952E70E88
+            8E9E9E8243A4080D46D42EB9428E11E8525171046A48811409D3D8B2156D12AF
+            BD96128927BD66343BBF66DFF0AF5A4FD8201B0AF08D025FCDE24542405E6E90
+            0FB5C169EA0DAB403D1468A7908BD2BB0A059A34E450A09D42DEB7416BA53CD3
+            5E8039AE303AD0D32BE4CAEFB8C338D01B0C391650F9130F98347AB312F29802
+            50F93566D8144BDC36FEFA18E03706F0D278B8C6750B40D4095FE2B9E5D04E80
+            4AF7D80E09801BF5D91DF24F5700CCF07164F8A20FE03CF407014078BBD6F058
+            9F0000002574455874646174653A63726561746500323032302D30392D313554
+            32333A33383A33382B30303A303044D12A680000002574455874646174653A6D
+            6F6469667900323032302D30392D31355432333A33383A33382B30303A303035
+            8C92D40000001974455874536F667477617265007777772E696E6B7363617065
+            2E6F72679BEE3C1A0000000049454E44AE426082}
+          TabOrder = 4
+          OnClick = cxButton1Click
+        end
+        object cxButton4: TcxButton
+          Left = 655
+          Top = 43
+          Width = 210
+          Height = 29
+          Caption = 'Imprimir Corte Inicial'
+          OptionsImage.Glyph.SourceDPI = 96
+          OptionsImage.Glyph.Data = {
+            89504E470D0A1A0A0000000D4948445200000018000000180806000000E0773D
+            F80000000467414D410000B18F0BFC6105000000017352474200AECE1CE90000
+            00206348524D00007A26000080840000FA00000080E8000075300000EA600000
+            3A98000017709CBA513C00000006624B4744000000000000F943BB7F00000009
+            7048597300000048000000480046C96B3E000000804944415448C7ED94510A80
+            2010449F121DA2A34407B483DA35EAA328B3506B33307AB05FC2ACB3EB083F11
+            54E06C7C424BE776507E8357A9811E1898177CA72C6016AD034620EC97396B60
+            85A22DD0394E80FD921BE188355B16562D371C57831543F90EB250A5DE2440D0
+            79F9497647E48FA28CDF3465C9A2E7FBADDFB44C26FDEF3B6031133A13000000
+            2574455874646174653A63726561746500323032302D30322D30345430303A34
+            373A30372B30303A30303BBB7AF10000002574455874646174653A6D6F646966
+            7900323032302D30322D30345430303A34373A30372B30303A30304AE6C24D00
+            000028744558747376673A626173652D7572690066696C653A2F2F2F746D702F
+            6D616769636B2D44774A65307644517A72F32A0000000049454E44AE426082}
+          TabOrder = 5
+          OnClick = cxButton4Click
+        end
+        object cxButton6: TcxButton
+          Left = 655
+          Top = 78
+          Width = 210
+          Height = 29
+          Caption = 'Consultar Historico'
+          OptionsImage.Glyph.SourceDPI = 96
+          OptionsImage.Glyph.Data = {
+            89504E470D0A1A0A0000000D4948445200000018000000180806000000E0773D
+            F80000000467414D410000B18F0BFC6105000000206348524D00007A26000080
+            840000FA00000080E8000075300000EA6000003A98000017709CBA513C000000
+            06624B4744000000000000F943BB7F000000097048597300000EC400000EC401
+            952B0E1B0000012D4944415448C7ED94B14A03411086BF84405A214D621003D6
+            219DEF1012EB686D63A955DAB4215DC047F041C420D8A7482327490A2B5F40F4
+            2C9C95E1D8DB9DF3CECE1F86DBB9FDF7FF67F686837F14C408D803E92F63070C
+            4306BB12E22EB65AB09631482BBA891FDD868554A68046645F0B6AC3B9873BB5
+            549915CCCB63DD99AE2884A99518EB2054A549B71E20F946D08707E01CE8024D
+            E08882A279F10E5CA9B3334B6BB16AF57E563C056E80411183BCFC5E9D390012
+            B5F709DCE2FF86668389E467400BE8894907580AE7B28CC1A1E46BE04ED63D79
+            D68015B081F01439B20B8D37799E00AFB27E51453C01C73183D098BA51DC02A7
+            EABDEBA20D3CFB44ADBFEB0BE15F4BBE946B4BC4A4058C7D0643A3C9A3F0EBC0
+            02F8507B09DF935529FAAA9B59D5E21A7F2AEEC51752D0972B5A08D8DF000000
+            2574455874646174653A63726561746500323032302D30392D32305430323A31
+            383A33302B30303A30303A6946740000002574455874646174653A6D6F646966
+            7900323032302D30392D32305430323A31383A33302B30303A30304B34FEC800
+            00001974455874536F667477617265007777772E696E6B73636170652E6F7267
+            9BEE3C1A0000000049454E44AE426082}
+          TabOrder = 6
+          OnClick = cxButton6Click
+        end
+      end
+      object cxTabSheet2: TcxTabSheet
+        Caption = 'cxTabSheet2'
+        ImageIndex = 1
+        object Label2: TLabel
+          Left = 174
+          Top = 60
+          Width = 282
+          Height = 64
+          Caption = 
+            'El historico de cortes permite consultar el comportamiento de lo' +
+            's cortes de inventarios anteriores, permitiendo evaluar coherent' +
+            'emente los movimientos de cada producto/ articulo.'
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'Century Gothic'
+          Font.Style = []
+          ParentFont = False
+          WordWrap = True
+        end
+        object Image2: TImage
+          Left = 32
+          Top = 26
+          Width = 129
+          Height = 131
+          Center = True
+          Picture.Data = {
+            0B546478504E47496D61676589504E470D0A1A0A0000000D4948445200000089
+            00000089080600000018241BC90000000467414D410000B18F0BFC6105000000
+            206348524D00007A26000080840000FA00000080E8000075300000EA6000003A
+            98000017709CBA513C00000006624B4744000000000000F943BB7F0000000970
+            48597300000EC400000EC401952B0E1B0000115E4944415478DAED9D7D7454E5
+            9DC7BFBF7B872492F016662601EB165792990185BA72D42E6A93C90087ADE8BA
+            968A4782822F3D2D2A60D5DDADADC4B3AE7B3C6B2DAC584EAD7DC15645A9AEBB
+            D8B2E2CC2405ACD8A21631991982A25604E60E6F922049E6DEDFFE91C4E66080
+            79EEDC9799F07CCEE11FCE7D9EE7FBDC7CE7B9CF7DEEEFF93D80442291482412
+            8944229148241289442291482412894422914824128944229108406E0B2804DA
+            6757FB8C6E3D08E600136A01653C6094335041A0D16054805002E030031D0474
+            82D00183330CE57DC048B14AC9FD3DDAEEFA1664DDEE8FD59C7126D976118655
+            8CF45F0C95EBC1540FE20BC1186351F53D04DEC984CD3028AE96AA2D351BF669
+            6EF7395FCE0893B4CE1A59E9C996CD63F01C009701A870A86906F02E8136EA6C
+            3C33299E79CBED7B6186216B129E0BB5FD5055BD017D0198BE01E02CB7350148
+            30D1F3A4D09AE0C6FDBBDD16932B43CE24ADB346562A7AD99DC4BC1880D76D3D
+            27C100D1CB8A4E0FD536EF7FC36D31A763C898A47D76B52FDB632C26E6250046
+            BBAD276718AF31F8E1503CB3DE6D2927A3E84D929CEE1D81B3703F9816A3301E
+            2966D9C2062F0D3567DE745BC88914B5491261EF1C226515C07FE3B6168B3040
+            FC3473E9B2506CCF01B7C5F4539426699BE1AB5118ABC098E9B6163B20603F88
+            EE0D44D34FB9ADA54F4F71918AF81730F38F0194BBADC57EF87FBABB7A164ED9
+            72E4909B2A8AC6247FF9EA97CE3A36BC7B05836F735B8BB3D0470CCC0BC5D2AF
+            BBA6C0ED5B900BADF5D59355455F0720647F6BD40DE6F799F863021D26A0D300
+            3A00EA52800A261E03A09C18954C0858B85A7B6A4DE07B83316DA5FD6D0DD2BA
+            1B8D8A908878EB88E92500A36CA83E0BE08F2034B3C16F98F9FEF2F9771F600A
+            0375E8FD67CFFA0CF3EAC01599DBA909862DF59F848236492AECBF86899F0150
+            6661B51D0CBCA818782ECBD834B945EBB0523303946AF05F00E2ABC06804506B
+            F16DF98D5A326A7ECD865D5D16D77B520AD624A988F756665A0D40B5A23E0636
+            29443F3BAED00B5337EEEF74AA1F6D91AA4B15435F00A205B06CB24D71B5247B
+            4DCD86839F3AD187823449AAC1B79881C72CD0C7206C804E0F059BD3AFB9DAA7
+            BAF15EF6F42C0563312C581166E2378C2C45AC1E0907A3E04C926AF05DC7C033
+            00943CAB6A510977D544B5B7DDEED340DE8B8C19D56378EE06E11E00A57956F7
+            8A5EA95D35791DBAEDD45C50264986C78641CAEF90DFCD3BC0C4DF0B46333FA5
+            DE4FF505497BD87F9E4EFC1880D9F9D4C3C0DAE0E5DA0D764E660BC624C919DE
+            6930280E6084D93A1878AA4CEF59726ECBE1C36EF727571261EFF544B41AF9BC
+            BD115604A3DA32BB34168449DEB96CD49892D292B7004C3059C56700FED5AD75
+            847C690B8FFBB24AD9B50C5C6AB60E22BAD1AE65FC7C9FFB79C300959496AC81
+            598330922AF469C56A10009814DFFBA15232AA8E81C7CDD6C1CC8FA7668E0DDA
+            A1CFF59124D1E0FD2E811E3159FC4F6A89FAF5A11047DA4FB2C1B704C0A330F3
+            0366BCDB513EEC9269EB3F3966A5265747929DF5559710E83F4C167FA54B55EA
+            879241002018D35632B0083011754F387FC4B1EC8FACD6E4DA48D25C07CF38D5
+            F716800B4C887E395BA95D6BF7AB9F9B2422FE7F22E6E721BE98C84C1C0E4533
+            2D5669716D24A956FC4B61CE205B8FABCABCA16C10000845D32F12D12288BFC6
+            1358797CDB4518669516574CD236CB3B8E887F205C90F16ED6D3F5752797D5DD
+            24104D3F05C2FDA2E5083CA9628C7FA9553A5C3189A2D34A002305BB7ED080E7
+            CAC9AF7C7AD00DCD6E118C6A0F82E919E182CCCB77CDAC3CC70A0D8E9B24151E
+            7B31187345BB4CC0CD93E27B3F745A6F21A01BFC2D309282C5CAB3BABADC8AF6
+            1D9FB8261BBC2F0174B5481966FA51289EBECB097DADF5D59355D2279DEA9A8E
+            23DA4BD3DE448F137AFA49D5FBA7B2C25B211636D1A35376E2E4E8A18FF269DB
+            E364471391AA0BC0C655226518D4668C4DFF8B531A15D5980BC6297F8163478C
+            1E0338BBF41F684E6F4F84FD3F20E2FF1428364C61CFBD006ECFEB9E38D951B0
+            F13D088E5EC4FA1D43FD4D2657F619E91500B68B9421E0E6E40CEFF87CDA75CC
+            24C99955E71244E722F474307E20EE94C642A7BE0559857127C45E8BCB58A73B
+            F269D7319350565F00B185A14E5DE7BB9DD2572CD4C6B54D44B456A40C1116F0
+            5CF3117E8E98840162A246A1324C4F4C6ED1F639A1AFD820E8FF0608C58F8C4F
+            1EF037986DCF1193EC8CF8A603384FA0489702FD874E682B466AA3071200FE5B
+            A40C9121F4231D88338F1B161B4508B426103FB0C7116D458A4AF87708CD4DE8
+            9AD63A9FA9E43DB69B849BA030F85AA13279C4559C29F4C5EE8AECEA2B573DF8
+            07336DD96E925D5B7C53018C1528F2E7602CFD8EDDBA860444BF16BA9E296CA6
+            19DB4D9265161246E05FD9AD69A8D07DBC6B2D00814D5A627F8B7E6C378902AA
+            13B8DCC8EA263E669DA1F4661BE00D02456ACC7CF4B3D524CD75F0307045AED7
+            33B05DBEF60A42CA4691CB75C3532FDA84AD26A9F65485201212C0D462A79EA1
+            08B31113BADE308423F26D3509198658F4361972095E90502CB313C0C7391720
+            2520DA86BD7312052282B84CCF6EB155CF10858836E77E350B6FBBB0D7244C22
+            82F616D3CEBB4282D948085C3EBE7D76A55054A0CD6F372C3292A4ECD5328421
+            12BA77D9E34A8DC8F5368F24F872EE1D656912B330898536AACA0491CBED3509
+            896CFE56DEB755CB1046D759E8DE91C185F1B8E9DBF791733C26C1386C9796A1
+            4E5F229B9C77FCB122764A876D2639CB3B5228858461C0F68C3D439CDCEF1F8B
+            A5F7B0EF71A3AB629FA509476DD3726690FBFD1334C9A0D1F2BD89758F7F9B99
+            4C6F1524261F0B843B10E8EA64D837D9F42D52C818869E27CE8B1E3A62BA8E62
+            86D1996B883911868B543DA849CE79FDE3CF1211FF87045E0B93DB2E440CD2C7
+            2D79EC023260F02DE7C59D31C8D12CBB9EB2E30B100DCF390689F09948D5277D
+            DC84A2E917005C0F3329109C8519FC9D605CFB85530D0E2B2D8925EBFDD3DDEE
+            F809B721E737166608A5F63CE59C2418D37E03C20D285CA3180C2C0CC5323F71
+            B251022E84C29B9311EF533B1AFC556EDF843E729F030ACEFF4E3B710D46B5E7
+            19B80562D1D94E6030B02814D3D6B8D43E81A9711838956CF02D69AE737637E4
+            40FA6257736E9F04DF24737ABB09C5B43520DC8AC2318ADB0619C828002BC629
+            BEB713116F9D1B023C44223B11C00A59F7B8194830AAFD9C89BF0DF773A3EA44
+            B4D03E83D00B00FE245E0CE7135373A2C1F76C2A3CF66C276F08AB42DFC800DD
+            F840E472A175925034F30431DF06F78CA23370B39D274A85A2FB770462DA2544
+            742380B4687902E631293B13117F53FBEC89F9667CCE0D1632095337768A542F
+            BC981688679E04605B62D953A013DB3982FC150238104D3FD5DDD51DECDBDEA1
+            0B56319C9897EBDD47B627C27EDB8F80235244CE01FA24F85AC6DA89EB600463
+            DA4A303B69149D881605E2694723E9A76C39722814D36E27832E022010D8F339
+            01227E25D5E05B9F9C5975AE5D3A99F9F2DCAF160B2B00F258960FC6332BC070
+            226F880ED04D6E1E5A18684E6F0FC4B4AF01D40860AF687906AE846EB4A61ABC
+            F7EFAE9B60E5D93D48D67B0300BE94BB18C33993004030AE3DCC4CF758D9E913
+            D0896961309616DB84640304703096FE7597AAD430D10310DAEF0200388B410F
+            74A99D3B5311FF02CB74298AD046705294ADA26DE4FD812F144F3FD277D3AC46
+            07F846A71F31A763EAC6FD9DA168BA4921E34206474D54710E33AF49467CBF6D
+            9BE1138A101B0C862134E751B259E16073CBBE412423BE07C1B8CFA2EA74265E
+            108A660A7EA356B2C1F70D807E68F200EB2E101E0946B5EF9B69BB75D6C84A35
+            5BB617E0921C8BB407639AF0716F96850A04A3DAF70978C882AA74806E2A0683
+            00BD9F2ECA8F9504FB46D3E382C54B89617A4D45D5CBAE133008402CB447A71F
+            4BE3490231ED3E063D9A47153A333716C21C4484735EFFF8B35034DDA4329D4F
+            C0CB02458F7483CC4FFE9905738E50B399662C0F3A0AC5D2DF05F05F268AEACC
+            DC188A679EB55A9353D4C4D3EF0562DA1C85F84A22ECCAA1C8F20B62E9FD66DA
+            6A0B7BFF0E62E7E374EA59FCCE4C5BB644A60562DA52C11C23BD8F982236C840
+            6AA399DF1E3DA44D02B01427891823706BC761EDC766DB5041F741644E49FCA2
+            D9431D6D3149EFEBA276079857E770B90ED04DC5F688391DD3DE444F30A6AD24
+            3642A02FA6D360E00EB309837746C68698F08F22650C564CBF25DA16E34A0007
+            AEC8DC0EE0E7A7B82C4BC00D43CD200309C40FEC0946330B4851220C6A030022
+            7A3618CB989A1F0080C1CA7288FDED3E0955A64DEFB3B677C378138CC0E5DAAD
+            0C0CB65A9A25607E20A63D67A7864221F0EAFE58E7E1F45788F82E18BAE905C8
+            BE70846F8A9421600DAD13FEFE34B0BCFDF05CA8A983DE5F0234BFEFBF74806F
+            0CC6324F3BD1FE50A1EF20A937014C112876DCF0F0DF4E7A2523FC39A11F47B2
+            2FD23AE881CACC4D009E039005E37A691071C6A9FEBB20661010E1C97C0C0238
+            7C4A45731D3CE33DBE4B03514DA69810A43DE2BB5067FC0142A75450B747CD4E
+            9CB8F1E05FF269BBF0B60648BE406B9DAF4255B10D10CAF702004F0663DAADF9
+            B6EFFAB9C092D3A3AA7812E206E95075DD920FAFD224054E22E26F02709D6839
+            667AA0A6E560EE69B24E813449019388786F2366E123D208DCDA79246DD989EB
+            456992ED33ABCA93D3BD429B9E8B8D44C47F2D319959B66743C1622B8F7F2B3A
+            936C9F59555EAA1B2FA38CE2EDB3AB7D6EEBB18364D8B79098D742FCE06880F8
+            27A15733BFB7524F519964DB9CF1C34B75FE5F007500A6E9DDFAD6F6B05F6863
+            52A1936CF02D01E16730B7517F47796799E5075A16CD2BF0E72348AF4106B287
+            99BE198AA7FFE0B6C67CD85D37A1AC4B3DB602E06F99ACE22883A7F5E575B594
+            A218494E18414EE46C22FE7D22E26FE2A6E2E8CF8924EAAA271CF774B4E46110
+            10D3623B0C0214C148728A116430D6EB3A6E2BA6FCF4A9B0BF91895741F8C4F5
+            BFC2A047FB82BD6CA1A04DB26DCEF8E115C7B2EB058FE038026079A0525B95CF
+            974FBB699BE1AB510C3C0660565E15313D13B822DD484DF66DE62F5893088E20
+            83F196C258561BD736B9DD9781BC73D9A831256525FF0CA6654241CC83F37F1D
+            87B5ABEC3EEDBC204DC24D50529B7D5100C2C76E0CC266667A30144F0B1DF961
+            35BB6656F97BB2C632222C06C412DB0D7A8F88DF30B214311B922842419A0400
+            920DDE1B00FA0500D3C9FD4E601B839F2CD3B3CF3995C39E014AD5FBFF1E0A1A
+            016E04C412DA9D1C8AAB25D96B6A361C14CA3362BA35271A314B2AEC9BCD8475
+            00CA2DACF63808EB19B4B6E7785773EFE953D6C14D50129BBC5F2145B98A98E7
+            43ECA8DBD34358A70E1BD558B36197E836D33C9A2C70120DFEAFF6EE65E14A1B
+            AAD701BC0D709C58D94A8A9EEC1973E0BDC9EBD09D6B053B1AFC551EC5088269
+            0A18F504FA9A4D5AC1C0E3C1CBB53BED9CA40E46C19B04E8DB39AFD0F3108CCA
+            324916C06E307FC4449F02384A4007337501A8208547F726CBA54A806B018C76
+            40531713EE0945B5C71C68EB0B14854980FE15C9CE8701DCE9B61667E10F0D52
+            E74D8AEE17CE0660154563927E920DFEF900AF86484ACAA2855FEAEEEA5964F5
+            BC4994A2330900B4D6F926AA2A5621DF85A8C2651FC077174AB078519AA49F44
+            D83B8748596532ED43216280F869E6D265A1D89E036E8BE9A7A84D0200C9E9DE
+            1154A62C67F06208459217160C6CF21096D644B5B7DDD67222456F927EDA6757
+            FBB23DC662625E8ADE04BCC501E335063F1C8A67D6BB2DE5640C1993F4936838
+            7B2C71F752107DC7AEF50A0BD0017E99981F0AC40FFCD16D31A763C899A49FF6
+            D9134BB35D876792428D60BADA828F6979C3A03610D621ABFC32D4B2EF03B7F5
+            E4CA9035C9405275E3BD86D2338F14CC01633AAC5DE63F1506801D207E55217A
+            BAF655EDCF6EDF0B339C11261948EB5C94780EF92E06739899C2204C8565ABA6
+            D40DE69D206C02D04CFAB09640CB2719B7FB9C77AFDC165008EC9A59E537B246
+            90C1B5AC20004635800A062A08341A8C0A104A001C66A083081D003A99910678
+            B74A48F664299586F6417D4BC19E0D2491482412894422914824128944229148
+            241289442291482412894422914824CEF0FFC7814105B0933ED7000000257445
+            5874646174653A63726561746500323032302D30392D32375431313A34383A32
+            382B30303A30306947D1020000002574455874646174653A6D6F646966790032
+            3032302D30392D32375431313A34383A32382B30303A3030181A69BE00000019
+            74455874536F667477617265007777772E696E6B73636170652E6F72679BEE3C
+            1A0000000049454E44AE426082}
+          Stretch = True
+        end
+        object cxGroupBox3: TcxGroupBox
+          Left = 522
+          Top = 3
+          Caption = 'Corte Anteriores'
+          Style.LookAndFeel.NativeStyle = True
+          StyleDisabled.LookAndFeel.NativeStyle = True
+          TabOrder = 0
+          Height = 129
+          Width = 374
+          object cxGrid1: TcxGrid
+            Left = 2
+            Top = 18
+            Width = 370
+            Height = 109
+            Align = alClient
+            TabOrder = 0
+            LookAndFeel.NativeStyle = True
+            object cxGridDBTableView1: TcxGridDBTableView
+              OnDblClick = cxGridDBTableView1DblClick
+              Navigator.Buttons.CustomButtons = <>
+              DataController.DataSource = DsConsultaCortesAbiertos
+              DataController.Summary.DefaultGroupSummaryItems = <>
+              DataController.Summary.FooterSummaryItems = <>
+              DataController.Summary.SummaryGroups = <>
+              OptionsView.GroupByBox = False
+              object cxGridDBColumn1: TcxGridDBColumn
+                Caption = 'Fecha Inicial'
+                DataBinding.FieldName = 'FECHA_INICIAL'
+                HeaderAlignmentHorz = taCenter
+                Options.Editing = False
+                Options.Filtering = False
+                Options.FilteringAddValueItems = False
+                Options.FilteringFilteredItemsList = False
+                Options.FilteringMRUItemsList = False
+                Options.FilteringPopup = False
+                Width = 145
+              end
+              object cxGridDBColumn2: TcxGridDBColumn
+                Caption = 'Fecha Final'
+                DataBinding.FieldName = 'FECHA_FINAL'
+                HeaderAlignmentHorz = taCenter
+                Options.Editing = False
+                Options.Filtering = False
+                Options.FilteringAddValueItems = False
+                Options.FilteringFilteredItemsList = False
+                Options.FilteringMRUItemsList = False
+                Options.FilteringPopup = False
+                Width = 157
+              end
+            end
+            object cxGridLevel1: TcxGridLevel
+              GridView = cxGridDBTableView1
+            end
+          end
+        end
+        object cxGroupBox4: TcxGroupBox
+          Left = 4
+          Top = 165
+          Style.LookAndFeel.NativeStyle = True
+          StyleDisabled.LookAndFeel.NativeStyle = True
+          TabOrder = 1
+          Height = 457
+          Width = 941
+          object cxGrid5: TcxGrid
+            Left = 2
+            Top = 18
+            Width = 937
+            Height = 437
+            Align = alClient
+            TabOrder = 0
+            LookAndFeel.NativeStyle = True
+            object cxGridDBTableView2: TcxGridDBTableView
+              Navigator.Buttons.CustomButtons = <>
+              DataController.DataSource = DsCortes2
+              DataController.Summary.DefaultGroupSummaryItems = <>
+              DataController.Summary.FooterSummaryItems = <>
+              DataController.Summary.SummaryGroups = <>
+              OptionsView.GroupByBox = False
+              OptionsView.HeaderAutoHeight = True
+              ConditionalFormatting = {
+                010000000A0000002E0000005400640078005300700072006500610064005300
+                680065006500740043006F006E0064006900740069006F006E0061006C004600
+                6F0072006D0061007400740069006E006700520075006C006500440061007400
+                610042006100720050000000020000000000000002000000FFFFFF7F00010000
+                000500000000000000000000010000000500000000000050C30F400100000000
+                0000000000000000010000000000002000000020FFFFFF1F008BEF00}
+              object cxGridDBColumn3: TcxGridDBColumn
+                Caption = 'Codigo'
+                DataBinding.FieldName = 'COD_ART'
+                HeaderAlignmentHorz = taCenter
+                Options.Editing = False
+                Options.Filtering = False
+                Options.FilteringAddValueItems = False
+                Options.FilteringFilteredItemsList = False
+                Options.FilteringMRUItemsList = False
+                Options.FilteringPopup = False
+              end
+              object cxGridDBColumn4: TcxGridDBColumn
+                Caption = 'Nombre del Articulo'
+                DataBinding.FieldName = 'ARTICULOS'
+                HeaderAlignmentHorz = taCenter
+                Options.Editing = False
+                Options.Filtering = False
+                Options.FilteringAddValueItems = False
+                Options.FilteringFilteredItemsList = False
+                Options.FilteringMRUItemsList = False
+                Options.FilteringPopup = False
+                Width = 424
+              end
+              object cxGridDBColumn5: TcxGridDBColumn
+                Caption = 'Existencia Corte'
+                DataBinding.FieldName = 'EXISTENCIA'
+                HeaderAlignmentHorz = taCenter
+                Options.Editing = False
+                Options.Filtering = False
+                Options.FilteringAddValueItems = False
+                Options.FilteringFilteredItemsList = False
+                Options.FilteringMRUItemsList = False
+                Options.FilteringPopup = False
+                Width = 70
+              end
+              object cxGridDBColumn6: TcxGridDBColumn
+                Caption = 'Ventas despues del Corte'
+                DataBinding.FieldName = 'VENTAS'
+                HeaderAlignmentHorz = taCenter
+                Options.Editing = False
+                Options.Filtering = False
+                Options.FilteringAddValueItems = False
+                Options.FilteringFilteredItemsList = False
+                Options.FilteringMRUItemsList = False
+                Options.FilteringPopup = False
+                Width = 87
+              end
+              object cxGridDBColumn7: TcxGridDBColumn
+                Caption = 'Entradas'
+                DataBinding.FieldName = 'ENTRADAS'
+                HeaderAlignmentHorz = taCenter
+                Options.Editing = False
+                Options.Filtering = False
+                Options.FilteringAddValueItems = False
+                Options.FilteringFilteredItemsList = False
+                Options.FilteringMRUItemsList = False
+                Options.FilteringPopup = False
+              end
+              object cxGridDBColumn8: TcxGridDBColumn
+                Caption = 'Salidas'
+                DataBinding.FieldName = 'SALIDAS'
+                HeaderAlignmentHorz = taCenter
+                Options.Editing = False
+                Options.Filtering = False
+                Options.FilteringAddValueItems = False
+                Options.FilteringFilteredItemsList = False
+                Options.FilteringMRUItemsList = False
+                Options.FilteringPopup = False
+                SortIndex = 0
+                SortOrder = soAscending
+              end
+              object cxGridDBColumn9: TcxGridDBColumn
+                Caption = 'Existencia Actual'
+                DataBinding.FieldName = 'EXACTUAL'
+                HeaderAlignmentHorz = taCenter
+                Options.Editing = False
+                Options.Filtering = False
+                Options.FilteringAddValueItems = False
+                Options.FilteringFilteredItemsList = False
+                Options.FilteringMRUItemsList = False
+                Options.FilteringPopup = False
+                Width = 56
+              end
+            end
+            object cxGridLevel2: TcxGridLevel
+              GridView = cxGridDBTableView2
+            end
+          end
+        end
+        object cxButton7: TcxButton
+          Left = 200
+          Top = 131
+          Width = 158
+          Height = 26
+          Caption = 'Retornar'
+          LookAndFeel.NativeStyle = True
+          OptionsImage.Glyph.SourceDPI = 96
+          OptionsImage.Glyph.Data = {
+            89504E470D0A1A0A0000000D4948445200000018000000180806000000E0773D
+            F80000000467414D410000B18F0BFC6105000000206348524D00007A26000080
+            840000FA00000080E8000075300000EA6000003A98000017709CBA513C000000
+            06624B4744000000000000F943BB7F000000097048597300000EC400000EC401
+            952B0E1B000000E84944415448C7DD944B0E824010445F349A783A09221EC52D
+            4B516F21D12389DF4BE05A5D306C4C0FDD33EEA8A436334515FD01183AA6C00A
+            380235F072ACDD59EE345158000FE0A3F00EA421C663606F30FEE50E18590262
+            CC3B9696B6C49A774CFA067A3718AC95FB279EC1AF8C6F0850289AA514700A08
+            40A9A49202AE8AA1045F482D899B88005F48D35D9AF656C14C387B4BC24B4405
+            85E799B3243E1236E4A247739002F2808042D1645280F543D3CC6FC0C4D7D3D4
+            58451FE7CADCD8FD61BED1CCA15DDD6D847949E0DA27AE9F9AF1CDD2161F26B4
+            3FAE8A76B71BC7B33BCBFA063A0C7C011FB703D084C9BF840000002574455874
+            646174653A63726561746500323032302D30362D31395431313A35303A31392B
+            30303A3030A36179800000002574455874646174653A6D6F6469667900323032
+            302D30362D31395431313A35303A31392B30303A3030D23CC13C000000197445
+            5874536F667477617265007777772E696E6B73636170652E6F72679BEE3C1A00
+            00000049454E44AE426082}
+          TabOrder = 2
+          OnClick = cxButton7Click
+        end
+        object cxButton8: TcxButton
+          Left = 616
+          Top = 136
+          Width = 169
+          Height = 33
+          Caption = 'Imprimir'
+          LookAndFeel.NativeStyle = True
+          OptionsImage.Glyph.SourceDPI = 96
+          OptionsImage.Glyph.Data = {
+            424D360900000000000036000000280000001800000018000000010020000000
+            000000000000C40E0000C40E0000000000000000000000000000000000000000
+            0000000000000000000000000000000000000000000000000000000000000000
+            0000000000000000000000000000000000000000000000000000000000000000
+            0000000000000000000000000000000000000000000000000000000000000000
+            0000000000000000000000000000000000000000000000000000000000000000
+            0000000000000000000000000000000000000000000000000000000000000000
+            0000000000000000000000000000000000000000000000000000000000000000
+            0000000000000000000000000000000000000000000000000000000000000000
+            0000000000000000000000000000000000000000000000000000000000200000
+            00C0000000200000000000000000000000000000000000000000000000000000
+            0000000000000000000000000000000000FF000000FF000000FF000000FF0000
+            00FF000000FF000000FF0000003700000000000000000000001E000000DD0000
+            00FF000000E10000002200000000000000000000000000000000000000000000
+            0000000000000000000000000000000000FF000000FF000000FF000000FF0000
+            00FF000000FF000000FF0000000B000000000000001E000000DD000000FF0000
+            00FF000000FF000000E100000022000000000000000000000000000000000000
+            0000000000000000000000000000000000FF000000FF00000000000000000000
+            000000000000000000000000000000000000000000C0000000FF000000DF0000
+            003F000000DF000000FF000000DF000000200000000000000000000000000000
+            0000000000000000000000000000000000FF000000FF00000000000000000000
+            0000000000000000000000000000000000000000001E000000C0000000220000
+            00000000001E000000DD000000FF000000E10000002200000000000000000000
+            00FF000000FF000000FF000000FF000000FF000000FF00000000000000000000
+            0000000000000000000000000000000000000000000000000000000000000000
+            0000000000000000001E000000DD000000E10000002200000000000000000000
+            00FF000000FF000000FF000000FF000000FF000000FF00000000000000000000
+            0000000000000000000000000000000000000000000000000000000000000000
+            0000000000000000000000000020000000200000000000000000000000000000
+            00FF000000FF000000FF000000FF000000FF000000FF00000000000000000000
+            0000000000000000000000000000000000000000000000000000000000000000
+            0000000000000000000000000000000000000000000000000000000000000000
+            00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+            00FF000000FF000000FF000000FF000000FF000000F90000009D0000003B0000
+            0013000000110000003A00000099000000000000000000000000000000000000
+            00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+            00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+            00FF000000FF000000FF000000FF000000000000000000000000000000000000
+            00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+            00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+            003C0000003D000000FF000000FF000000000000000000000000000000000000
+            00E6000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+            00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+            003A0000003C000000FF000000E5000000000000000000000000000000000000
+            008A000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+            00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+            00FF000000FF000000FF00000088000000000000000000000000000000000000
+            00070000008A000000E6000000FF000000FF000000FF000000FF000000FF0000
+            00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+            00FF000000E60000008900000006000000000000000000000000000000000000
+            0000000000000000000000000000000000000000000000000000000000000000
+            0000000000000000000000000000000000000000000000000000000000000000
+            0000000000000000000000000000000000000000000000000000000000000000
+            0000000000000000000000000000000000FF000000FF000000FF000000FF0000
+            00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+            0000000000000000000000000000000000000000000000000000000000000000
+            0000000000000000000000000000000000FF000000FF000000FF000000FF0000
+            00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+            0000000000000000000000000000000000000000000000000000000000000000
+            0000000000000000000000000000000000FF000000FF000000FF000000FF0000
+            00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+            0000000000000000000000000000000000000000000000000000000000000000
+            0000000000000000000000000000000000FF000000FF000000FF000000FF0000
+            00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+            0000000000000000000000000000000000000000000000000000000000000000
+            0000000000000000000000000000000000000000000000000000000000000000
+            0000000000000000000000000000000000000000000000000000000000000000
+            0000000000000000000000000000000000000000000000000000000000000000
+            0000000000000000000000000000000000000000000000000000000000000000
+            0000000000000000000000000000000000000000000000000000000000000000
+            0000000000000000000000000000000000000000000000000000000000000000
+            0000000000000000000000000000000000000000000000000000000000000000
+            0000000000000000000000000000000000000000000000000000000000000000
+            00000000000000000000000000000000000000000000}
+          TabOrder = 3
+          OnClick = cxButton8Click
+        end
+      end
+      object cxTabSheet3: TcxTabSheet
+        Caption = 'cxTabSheet3'
+        ImageIndex = 2
+      end
+    end
+  end
+  object pnlUpdate: TPanel
+    Left = 106
+    Top = 45
+    Width = 744
+    Height = 710
+    BorderStyle = bsSingle
+    TabOrder = 4
+    Visible = False
+    object Image1: TImage
+      Left = 24
+      Top = 18
+      Width = 49
+      Height = 44
+      Center = True
+      Picture.Data = {
+        0B546478504E47496D61676589504E470D0A1A0A0000000D4948445200000200
+        000002000803000000C3A624C8000001BC504C54450000004444404444404444
+        404444404444404444404444404444404444404444404444400974B444444007
+        76B84444400974B34444400A74B30776B80875B70B72B00C72AF0875B60776B8
+        0776B80776B80D71AC116EA4136CA0265D7B0776B80776B80776B80776B80776
+        B80876B70E70AA0876B70776B80776B80B73B00D71AC0A73B10875B60776B80E
+        70AA0D71AD0B73B10776B80875B6245E7F0B73B01C65900875B70776B8126DA2
+        0B73B00875B60B72AF16699A0875B5106FA70C72AE0974B40D71AD0875B718B0
+        8517B28718B18617B28717B28719AD8417B2871CA57E17B28717B28717B28718
+        B18617B2871AAB830C72AE0B73B017B28717B28717B28717B28717B28717B287
+        1A6693156A9C1F9E7A209C791DA47E1CA67F1AAA820F6FA818B0861BA8802E7B
+        631EA27D1BA981268D6F18B0861CA57F1AAA8217B1861AAB821EA17C18B0861C
+        A7801AAB8217B28725907117B1861BA9812C7E651AAA8218AF851CA7800C72AF
+        17B1860E70AA219977106EA61AAC8318AE851BA9811AAB820975B51AAB822296
+        751BA8801F9F7B18B1861DA47E219B7819AC83209D791F9F7B0776B80876B70A
+        73B20B73B117B28717B18619AC831AAB8341C51C180000008C74524E53000102
+        030405060708090A0B310CEF0E320F32BFC0C2C390807040875A4B1EAF60DF50
+        20EF88DF9F30D296F0A01012A5E18F811DF02DB0CF4AE171D23C616AA44295CF
+        6180A09FBF32EF12CF8F50C020E1B4223010407060DF2C3B4A4B7988B36971A5
+        1E6AC32D9078C2CF22598196E1AF2CDFB41DD25187B3EF783B59F042A4D251F0
+        3C955AB0693AF03938997D8831000019F64944415478DAED9DFD7F1355BEC727
+        81D6962EC9AD1148436953B2D8B850B0506F411E162534C6B6566DD2766D1715
+        A82BBA2C755741AF0BEEAD7ABD0F01A6ED3F7C67F238993CCDC3F79CF39DF97E
+        E727FCF0B267C8FBBC9ACCE7BC738EA6F1C597F58A44A3D10867A432EB75C8BC
+        38239559A7C7E1818181C311CE08652D7F3F3038383810E18C50D6F2F7AF0C0D
+        0DBD12E18C50D6F2F743C3C3C34311CE08659AE53FA3474646468E445BFE3AFC
+        D9EF88FD7B5BB3C8A1E67F47478E1E3D3A62FB7F429FFD2E46EBDF6BE37FB839
+        01A223F178FCA8EDFF391AF6ECDF626552FF5E1BFF8181C604881C391A1F8DDB
+        FE9FF8E868B8B35763E532A57FAF8DFF2B83038722F5CF0723C60CA1C8BF4C96
+        7F7468C89800F5B9306CBC4390E45F26CBFFC8F0D0E0E1FA7BC1D0F0C8084DFE
+        65AAFC47468687EA9DD0E1C1A1E12344F99789F2379E0886EB9DD0A181C1A121
+        AAFCCB34F91B4F0423F54E28624C005B3F48887F9926FFD1F8D12375E6D14303
+        0374F99769F21F8D373FF3450F1D26CCBF4C93FFA8E5992F7A8832FF324DFED6
+        CCB63C448C7F993C7F8D36FFE7CC9F36FF17CC9F36FF97CC9F36FF97CC9F36FF
+        97CC9F36FF17C4F947A8F37F4E9A7F8B13789424FF3269FEAD4E2049FE65CAFC
+        4939815DF8B31358FD73E89DC06EFCD909ACCE85B03B815DF9B313A8517002BB
+        F367275023E004F6E0CF4E200127B0177F7602C3EF04F6E4CF4E60E89DC0DEFC
+        D9090CBB13D8873F3B81217702FBF1672730DC4E605FFEEC046AB4F9B313489C
+        3F3B81C4F9B313489C3F3B81C4F9B313489C3F3B81C4F9B313D85C1F22C99F9D
+        C0C6FA709C247F76026B7F0E9513E8823F3B81D53F87CA0974C39F9DC0EA5C08
+        9313E88A3F3B815AD89C4077FCD909D442E604BAE4CF4E60C89C40B7FCD9090C
+        9713E89A3F3B81A17202DDF36727304C4EA007FEEC0486C809F4C2BF9C78EDD8
+        F1E3C78F9D48269363A9548AE067C2D038819EF8B767B144E2C4C9F15313BC26
+        4C937F334B4C26D329E64F967FEDBFA62693A733CC9F2CFFEAF5FB6367C62798
+        3F59FED5ECF5E9B12CF3A7CBBF92C5266B9380F993E45F7D4C984E67D809A4CB
+        BF92BDF18753EC0412E66F6667CFA56782CE3F144EA022FE956CB23107D809A4
+        C8BFDC9803EC0452E55F9D03E7D90924CCDFCC2E8CB3134899BF91BD792213A8
+        D72F144E2022FE6696683E16B0134890BFD911CD6602F2FA85C109C4C7BF2298
+        A4D909A4CCDF5C40BE78899D40C2FC8D6CEEC25BEC0412E66F66FF9E0ACC6B1A
+        4827103B7FF39920C56BC294F91BD77C9AF953E66F7E1E4C337FCAFC2B5380F9
+        53E66F646F9E62FE94F91BD9F1CBCC9F327FF33B2619760229F337FE348D729D
+        28784E6050F91BEB4449760229F3371F084EB3134899BFB95298612790327F23
+        3B39C14E2065FE2F5E5E19672790327F739D10873B183827302CFC9F976363EC
+        0452E65FF930C84E2065FEE5FA2F01760289F2AFFD126027902E7FF397003B81
+        94F91BD9B109760229F37FF1726E9CD78429F337B21333CC9F32FFE7E5F92CF3
+        A7CCDFF82C9866FE94F99BAA08F327CDDFF8FA4086F953E66FBC0DA4D809A4CC
+        DFB8DE662790347F638FA109760229F37FF9F2EA25760229F37FF9E2F7597602
+        29F37F6E6904D809A4C8DFB8E47642A89D4092FCE57642A89D40A2FC6B33809D
+        40B2FC8D5670869D40CAFC8D19709EBC13489ABF7116C904712790387FE3BB43
+        D7483B81E4F91B67D1BC4AD80964FE4616CB925D133ECFFCCDCC3203A8390169
+        E65F3104B2649D9034F3B7CC008A4E509AF95766C08C46D5094B337F899D2046
+        2730CDFCA57582389DC034F397D409627502AF337F33BB40D709BCC1FCCDEC8F
+        749DC01BCCDFCCC6E83A81D799BF9989F40491EF13C89D6025CBD27402B9136C
+        EC319DA1E8047227D8CCE667E83981DC095AB3698DEE3E81DC099A5792F03E81
+        DC099AD74DC2FB047227686467DF22BC4F207782467695F23E81DC091AD93B94
+        F789E14ED0C84ED3E5CF9D60E5BBE319BAFCB91334B30461FEDC0956DB00BAFC
+        B9136C2E0B513D3B983BC1F23C1D27903BC18E5992F6D9C1DC0996B3B4CF0EE6
+        4EF05DE2670773277886F8D9C1DC09BE45FAEC60EE045F1EA37C763077824696
+        A6E4047227D8614D60869213C89D607B364BCA09E44EB03D033A773A60670773
+        27D8C812B49C40EE04DBB2142D27903B417B36A5513B3B983BC1D62C4D764D98
+        3BC1EAAF80F3E4F913EF044F068DFFAD1C778290D9DC44B0F8DFD673DC098266
+        6702C6DF3A01B81384D84FFC7CB0F85B26007782205932384EA0C9BF3901B813
+        C4B52624DE09ACF06F4C00EE04A1B2B180388155FEFA027782C0D954309CC05B
+        55FE7A9E3B41E82C1D0427B0CEBF3A01B81304DD3B2A004EE07B05EB04E04E10
+        364BA17702DF6FF03727007B82C0D9247A277051B74C00F604C1B30C72277049
+        B74C00F604E1B38BB89DC0650B7FFD03F60405EC1D86DA095C2958F8EF7DC89E
+        A0806C1CB313B868E5BF7FC09EA080EC23C44E60AE95FF017B8222B28FD13A81
+        AB36FE07EC09A23E4F049A4D71D1C67F9F3D4111D91456272067E7BFB7C29EA0
+        882C8B93FF6A1B7FBD24C51D25D709CEE2748216DBF85B2700B64ED0F6F33237
+        2F9F3A75EAE4C5E46C2291C03E27A650F25F6BE76F9900E83AC1DE636452A964
+        F2B563E1DD3B109E43B1D0CE5F5F93F5DD01F79DA0C3312E5F4F4ECEA37B4F98
+        45E8042E74E02FCC0903E8045D8D914ACF26C2F43D41014E60A913FFFA04C0F8
+        DD61F76364D3E7DEC0F29E9045E704E63BF1AF498128BF3BEC6DDC89F177DEC5
+        F0992089CD095CEFC85FA413E6B713F43EEE4C7A3AA6FA33C1BBD89CC08D8EFC
+        853A613E3B417FE36667E7D57E2698C0E504AE75E6AF17F07E77D8F7B899B179
+        859F096FA072026B8F806DFC751DEF7E8210E3FEE9CC15559F092FA0720273DD
+        F8EBEFA3DD4F1068DC4FCEC5D47C4F14931358FD05D089FFDE26DAFD04C1C69D
+        49CFAB7826C8227202735DF9EF6FA1DD4F1072DCECB4FC678231444E60A12BFF
+        833FA3DD4F1076DC99644CF233C1241E2770BD3BFF833B68F713841E7766EC75
+        A9CF04313C4EE04677FE079FA2DD4F50C4B85702B5772C9413B8DE83FFFE070A
+        F83BEB0485DCCB67AF07EA7BC230FFF67C0FFE7B0515FC1D758262EEA5F25940
+        CE33C12C12FEA55EFC8D2648057F279DA0A87B999995F44C388F83BFB6D093BF
+        BEAA84BF834E50DCBD6412729E0971F02FF6E6DF94C2B09D3122F25E4E4B7926
+        4CA170C23EEFCD5FA213E4B213147A2F33B3123A81340A27F0C3DEFCF52555FC
+        FB758282EFE5F215E19DC0090C4EE0661FFE02F789F2D9098ABE97893F88EE04
+        8E617002EFF6E1AF17D4F1EFDD098ABF979B53623B8139044EE0BD7EFC75BD88
+        F48C1109F7323329B6139850EF04DEEFCBDF780CC079C688947B1913DA095C56
+        EF046EF7E5AFAF213D6344CEBD64A70476026F2B7702BFE8CF5FFF0BD2334624
+        DDCB4CA28C6CEF704827F0CBFEFCF71E203D7758DABDCC0AEB8412CA9DC0AFFA
+        F397B04F90B74E109B9FE0214BA87602BF76C2FFE00B9CE70E4BBC976B73823A
+        21D54EE09A13FE077FC579EEB0CC7BB9F6A6984E48B5139877C27FFFA172FE1D
+        3B41A9F7727E5E48279452EB04161DF1DFCBABE7DFE97D58EEBDCC08D96320A5
+        D6095C77C45F2F20E0DFA113947C2FCD1900F84C9056EB042E38E2AFCE09E9DD
+        09CABE97FA0C807C264CAA75420ACEF8EBEB18F8B77582D2EF6506FEFBC449A5
+        FC571DF2AF1F1D85ECDC61F9F762CE00D84E6852A9139473C85F5FC4C1DFD609
+        2AB89719E8EF9327943A417987FC2B2BC238CE224F4B7202BB65E781F7187A4D
+        A913E698BFBEAC61398B3E2DC909EC96BD05DB09BEA192FFB263FEA6178883BF
+        B51354732FD7CE8276822A9DC09C63FEC687002CFC2D9DA0A27BB909DA09AB74
+        02F38EF9CBDF27C4492788CD4FF094A974025DF0DFFB2B1EFE8D4E50D9BD4C03
+        76C20A9DC0920BFEFB7F43C4BFDE09AABB9779B84E58A1139873C1FFE01126FE
+        B54E50DDBDCCC4C03A61854EE08E0BFE0707DF60E25F7D1F56782F29B04E38A3
+        CE09FCBB1BFEFB9FA3E25F791A54792F49A84E38A5CC097CDF15FFBD1D5CFCCD
+        19A0F45E12409D70CAF5BD4039819BAEF8D7DA603CFC8D19A0F45ECE9F85E984
+        53AEEF05CA09BCE38E7FA50DC6C45F7536AECA09837202FFE18E7F634998F9D7
+        B20B8A9C302827F0913BFE0D2F8CF9D7B24B20FB89A55C8F0BE504BAE45F7F0F
+        60FE8D2C05B12690D11439819B6EF957DF0398BF2583F8EEB8A6CA09BBE5967F
+        E53D80F9B778C200E7CE287302736EF99BEF01CCDFFF79A7906EBB9FFBCFBBE6
+        AF2F307F7BE67F3F41654EE0A26BFEFADEB7CCDF96657DAF092873023DF0DFBF
+        CFFCEDD9B4DF350155FC573CF03FF88EF9B779E2B1803A81250FFCD1AD0963C8
+        2EFAE37F559513B8E685FFFE5F987F5BE66F3FD1E3AA9CC09C17FEAACE0E409D
+        DDF0B526744C9513B8E385BFE55BA2CCBF91F9DA3BE4356FFCFD3B81794FFCF5
+        3CF36FCBAEFB59139AF4342E8013B8E1897F73A700E6DFCCA67CAC0925BD8C0B
+        E1047AE45FB70298BF254BFB58134A7A1817C409F4C85FD757987F5B36E57D4D
+        28E97E5C1027B0E4957FE5FC10E60FB626E4DE098571024B5EF9EB8522F36FCB
+        A6243AA1304EE063AFFC8D5F01CCBF2D1BF3BC2694753F2E8813F8C4337FFDEF
+        CCBF7DEF20CF678C791817C409BCE3993FAF0982EE27EE6F5CEF4EE01DEFFCB1
+        7D4F14459609DAD9A1DBDEF91F1C7CC9FCDBB2EFBDAD092614F11F7DE083FFFE
+        0F45E66FCF4E795B139C56E5847EE083FF5EE32C51E6DFCCAE785A134CAA7242
+        F37EF89B5D00F3B765FF11ACB3630B7EF8374E9365FECDEC634F6B82375539A1
+        FEF8D7560498BF359BF4B2267849D5D9C13EF92B3D4F1869765AAE13ECD309F4
+        C91FD3DEB168320FDF133BAEECEC60BFFCF50D5E13B267D3EED7043FF2CCDFAF
+        13E8973FAF09B56729F76BC267BCF2F7ED04FAE6AFEFFDC8FC6DD994EB35C17F
+        7A1CD7B71358F4CF7F7F9BF9DBB259D76BC2AF7A1BD7BF1358F2CFFFE0E0CFCC
+        BF35CBCAD92716C2092C01F03F78FA35F36FCDA65CF29FF7342E84135802E08F
+        E43C494CD939976BC2D39EC68570024B10FC75EBA210F337B27FBA5C131EF334
+        2E84135802E16F395052C96BBE806E4ECC09DF2718C8097C06C3DFAC8314BEE6
+        F8F6ACF948F8D9F1404EE0260CFFFA178514BDE6FADE4FC8DE133E73C57FDEF7
+        B89E9DC02D20FED5AF0BAB7ACD8D7BB91BE435E16980713DDEEB3D28FEE6C700
+        65AFB9792F3FE1FA4C38EF664D784C197F0FFBC476CD36D49D2756B9970554CF
+        04B36ED684B3EAF8C7C1F8EB7BFF52F69A57EF6501D333E16917FC630AF947E1
+        F82B7C1FC6B88FBD0B276052217F0D90BFBAEF0960DCB320E17C4D784C217F0D
+        92FFFEDEBA9AD71CE33EE649E74E40D6277FA54E606B565855F29A5B763146D3
+        093A3F4F2EE66F5C9F4E601E92BF6E9901325F7394FB583B760226FDF1F7E904
+        E641F9376780D4D7DC7A2F683AC179A74EC0982FFE7E9DC03C2C7F630628D83B
+        08C7B3882D9B75EA047CEC87BF6F27700798BFAE2F16A5BFE6ADF782A413FC4F
+        87FC5FF733AEFF7D0273D0FCCD1920FB35B7DD0B8E4EF04F0E9D80777C8C01B0
+        4F600E9CBFAEFF20DB13B6DF0B8E4ED0A11330EE7D0C887D02D7E0F9EFEDEFFE
+        2CF735C779B6E57147FCE7BC8FA1789FC05ED9EE8F525F739CFB989E14FB9D20
+        E5FB04F6DE3B446A2788F36CC39B8E9C801BDEC700D927F06B21FC25EF27DFE9
+        5ED4778219474EC825EF63C09C1D2C88BFD4F761A467DBC51CF0FFDEC7183067
+        07EF0AE26F6C1D5094E70476BA17E59D60C28113701D665C1F67076F8BE26F38
+        42ABF29C40547E422D4B3A700266A0C6F5FC733E15C6DFA885D7E539819DEEE5
+        27F47B874F2BE71F7F288EBF71DDFE569A13D8E95ED476820EF60938AD9C7F74
+        5D24FFBDFDEF7E96E60476BA17B59D605FFE31F5FC9B07470AE16F644FA43981
+        8A9F45DAB3A97E4EC0AC7AFEB52D22C4F137BE3BBC22CB09C476B651A29F1392
+        51CF5F6B6E15B927AA132AACC97202755C9D60BFBDE31330FCFD9D1D0CEE0475
+        CA16C57A42BDEF455D2798ECE384A421C6F57B76B0B6249EBFB9A76C518E1388
+        AA13BCD99B7F0C84BFDFB3836BA7470BE62FB613E8772FAA3AC14F7A3B214908
+        FEBECF0E86D927CA49F6D5A61427105327D8DB09CA00F0F77F7670E53140067F
+        23DBFE42861388A813EC7976C034C0180067079BA7074BE26F64B75724388178
+        3AC163BD9C9094FF3120CE0E36C46079FCCD6E6E45BC1388A6133CD7837FC2FF
+        182067076BDA4399FCCD0FE5E0CF84D8FC844696ECE184A47C8F01E20442EE13
+        E438CB03EF318FF6BCF3B1EEFCA7FC8F01E204F65E4B11966DACBD2FD609C4D1
+        09A6BA3B4169FF6380388166F69D74FE46F6F4EECF429D40149D60AA2BFF2980
+        31609C4023FB45017F33FBD7E740CF048EC75D40B34F481A600C1827D0C86EA9
+        E16F663BEB45614E20864EB01BFF29E0717D388146B6A28CBF79D5E680002710
+        412718EBE284A4C0C7F5F5733614F2AF3C15ACAD087102D5778289CEFC13B8F8
+        6B0B6AF99BD9877FFBF51EBC13A8BC134C74768252B8F86BEBCAF957B2AF9696
+        8B129E63657682D31DF94F23E3DFD0C2D4F2AF648B0BEBAB904EA0E24E30D989
+        7FEC6364FC356D110BFFDA678285B567DF0ADCEF565E27D8D109BA888EBF887D
+        427C67BBDBBF3C2CADFA77029576826F43EF0923C00934AF557CFCEB5921BF93
+        CB2D975661F7BB95D5095EEEE0045D861DC3B713A855D560A4FC5B7C92ED07FF
+        9533AF52ED7AB6B9B5B5B5F9ACE4E1E749EA044FB5F3FF1E98BF6F27B0722D04
+        803F6C26A7133CD5C6FFEC042C7FFF4E60E57A4C8DBFA44EF01AE49E50829CC0
+        6AB64B8DBFA44ED0CEFF23D831409CC04AF60F72FCE57482F63DC12640C78071
+        022BD97D7AFCA5748236276C1C740C2027B0927DFB033DFE323AC156FE1740C7
+        807202ABD90241FE123AC1292BFFAB13A063803981956C99227FF19D60C2C27F
+        EE1AEC18604E60352B50E42FBC134CC0EC0929D609AC664B24F98BEE042D6747
+        5D801E03CC098C36D60308F217DC09261AFCAF8AEC9DFC398138D784C3D10936
+        9CB02B97C4F64E003F679D287FA19D60DD099BFB043D7FAD5820CA5F642758DF
+        272A00FC4D3794287F819D60A2CAFFB320F0D756C8F217D709CE0688BF167D40
+        96BFB04EF06290F8C77FA5CB5F5427785202FF08DCCF7E4497BFA04EF08C70FE
+        304E602DFB8D307F319DE09939D1FC619CC07A5620CC5F48277843F0F31F9413
+        58CF7294F9E3397758811358DF3BBC40993F9A7387153881F52C479A3F967387
+        1538818DEF891648F3C772EEB07C27B091E568F34772EEB00227D0BA2444993F
+        8E73871538818D2B479C3F8A73875538818D5F011BC4F9633877588513D8B86E
+        51E78FE1DC61054E60337B449D3F8273875538818D6C8B3CFF007682A03FFB01
+        79FE81EB04617FF6D7CC3F609D20F4CFCE31FF407582E03FBBB8C1FC03D4090A
+        F8D9CBCC3F389DA0909FBDC3FC83D209423A81CD6CA5C0FC83D109823A81966C
+        8DF907A2130476022D499EF907A013847602ADDF13FA81F9A3EF04C19D406BF6
+        25F347DF09C23B81D66C9BF923EF04053881D6ECDE53E68FBA1314E2045AB3C7
+        CC1F732728C6096CC996983FE24E509013D8B226B0C8FCF17682829CC0966CB5
+        C0FCD17682A29CC0966C9DF9A3ED048539812DD912F30F402708EB04B6668BCC
+        3F089DA0B89F5D2C307FFC9DA0C89FFDDE53E68FBD13143BDE7DE68FBC13143D
+        DE1DE68FBA13143FDE6DE68FB8139431DE22F347DB098A7102B9130E4A2728CA
+        09B46545EE84717682E29C405B565B1560FEB83A41814EA03D5B2D307F749DA0
+        5027D09EAD16987F2DDBFD86841368CF96997F8DFF8F349CC0B6EC37E68F8ABF
+        7027B02DBBCFFC11F197E004B665BF317F34FC653881EDD97A81F9537202DBB3
+        D502F3A7E404B2278A96BF2427903B41ACFC653981EDD9CA22F327B926DCD404
+        17993F65FEC60CB8CDFC29F337B2BBCC9F34FFD1D1FBCC9F34FFD1F8B302F3A7
+        CC3FAAAD2E327F324E60C7ACB8C3FCC938819DB31CF327E30476CE4A05E64FC5
+        09ECD209E5993F1527B04BF690F9537102BB645BBBCC9F8813D86D3FC14F993F
+        1127B05BB65660FE349CC06ED94A9EF9D37002BB6639E64FC309EC9A559B61E6
+        1F7A27B07BB65660FE149CC0EED9CA07CC9F8213D823FB7597F9D35A136EEB04
+        7E61FE94F91BD96A9EF953E66FFC697D83F953E66F2C11E60ACC9F307FF37960
+        81F953E66F4E813CF30FBB13D827DBDC66FE617702FB645B0F987FC89DC07E59
+        29CFFCC3ED04F6CD9A5380F987D309EC9BD5A600F30FAB13D83F2B2D30FF303B
+        814ED6096F3F65FE2176021D64F7EE3C62FEE175021D658FF3CC3FBC4EA03377
+        74A9C0FCC3EA043ACCD6F3CC3FAC4EA0C36C656983F987D309749C3DFE6997F9
+        87D209749CDDBBFF29F30FFF9A70CFACB8BEC3FC09F3AFA843F539C0FC49F2AF
+        CC81E58502F3A7CBBF72BDF7E43BE64F987FE5FB04BFDDDE60FE74F9577BC2B5
+        9D02F30F8F13E8295B595FD860FE617102BDEE45FEF8C9F62EF30F8513E83DFB
+        E6712E5F60FE7DF9A37702FDF504A5B5A57C81F977E71F0427D07F567AFCE4EE
+        F623E61F582710285B292DE7723BF9EA3B03F30F941308FE39F1D9E6D6D6FD27
+        0F73958B2AFF4039812233A2FC03E7040ACB68F20FA2132828A3C93FA04EA088
+        8C26FFC03A81F0194DFE41760281339AFC83ED048266E4F96BB4F947993F6DFE
+        71E64F9BFF28F3A7CD7F94F9D3E63FCAFC69F38F13E71FA1CE3F4A9A7F089D40
+        D71969FE617502DD6494F987DB09749811E64FC309EC9791E54FCC09EC9A91E5
+        4FD7096CCDA8F2672750B34E0072FCD909D4AC13801C7F760235EB04A0C79F9D
+        40EB0420C89F9D40CB04A0C89F9DC0E60420C99F9DC0C6459E3FF53561E64F9B
+        7F9CF9D3E63FCAFC69F31F65FEB4F98F327FDAFCE3C4F9B313489A3F3B81ED4E
+        2029FEEC04B63981A4F8B313A8D99D4052FCD909D4349B1348893F3B81ED4E20
+        29FEEC046AD609408E3F3B819A750290E3CF4EA0669D00E4F8B313A85927003D
+        FEEC045A270041FEEC045A260045FEEC0436270049FEEC04362EF2FC35DAFCA3
+        CC9F36FF38F36FED07E2C613629452B6FFF4BFA3A45F83D67EF0A8D110454965
+        FFF3BF51D2AF41EBFAC0C8C888BD130E7BF67F51D2AF81F58A0C0D0F0F0F4538
+        2394599F0123AF0C0D0DD93A61CE429E599CC0C8C0E0E0A0AD13E62CE499C509
+        8C1C1E1818386CFF7BCE429E3527C021F3B27D28E02CFC597D4A44A2D168C4FE
+        A1903302D9FF03F95DFEF53AB1D66F0000000049454E44AE426082}
+      Stretch = True
+    end
+    object Label1: TLabel
+      Left = 91
+      Top = 27
+      Width = 512
+      Height = 32
+      Caption = 
+        'Esta opci'#243'n cierra permite la evaluaci'#243'n final del inventario a ' +
+        'partir del corte inicial, ajustando mediante reconteo manual del' +
+        ' invenario existente.'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Century Gothic'
+      Font.Style = []
+      ParentFont = False
+      WordWrap = True
+    end
+    object Label58: TLabel
+      Left = 73
+      Top = 655
+      Width = 34
+      Height = 16
+      Caption = 'Sobran'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Trebuchet MS'
+      Font.Style = []
+      ParentFont = False
+    end
+    object Label59: TLabel
+      Left = 151
+      Top = 655
+      Width = 31
+      Height = 16
+      Caption = 'Faltan'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Trebuchet MS'
+      Font.Style = []
+      ParentFont = False
+    end
+    object cxButton5: TcxButton
+      Left = 313
+      Top = 663
+      Width = 153
+      Height = 34
+      Caption = 'Procesar'
+      LookAndFeel.NativeStyle = True
+      OptionsImage.Glyph.SourceDPI = 96
+      OptionsImage.Glyph.Data = {
+        89504E470D0A1A0A0000000D4948445200000018000000180806000000E0773D
+        F80000000467414D410000B18F0BFC6105000000017352474200AECE1CE90000
+        00206348524D00007A26000080840000FA00000080E8000075300000EA600000
+        3A98000017709CBA513C00000006624B4744000000000000F943BB7F00000009
+        7048597300000048000000480046C96B3E000000D24944415448C7DD943D0AC2
+        4010853F3D4D8A80854730480A4F91D2CAC23A575810AFE37552995242AA58F8
+        1622B8F97127163E58261BDE7E33B32403FFAA33B0D173021C8DFDA4400BDC14
+        53633FC8DC299AFBCD3A58070E64C016D829662309E6FA07950335E080550C28
+        047F0025500157CB241E5E689F2889B38237AABCAF52D76502EF5471A2F7853A
+        CAADE07E55AA3C1ABEFF00F7AB050EBF84CF9A45F900BC095CCBE43FFF1BB8D7
+        E82C8A818F7610030738F5A0A9F66FAA23E093E49684C36B605D30FCCE43491C
+        70B7AC7C713D01A76677619ECB821D0000002574455874646174653A63726561
+        746500323032302D30322D30355430333A31323A31362B30303A3030D5BAEB82
+        0000002574455874646174653A6D6F6469667900323032302D30322D30355430
+        333A31323A31362B30303A3030A4E7533E00000028744558747376673A626173
+        652D7572690066696C653A2F2F2F746D702F6D616769636B2D7432594B45566D
+        5045D2A2EA0000000049454E44AE426082}
+      TabOrder = 0
+      OnClick = cxButton5Click
+    end
+    object cxGrid4: TcxGrid
+      Left = 24
+      Top = 76
+      Width = 713
+      Height = 573
+      TabOrder = 1
+      LookAndFeel.NativeStyle = True
+      object cxGrid4DBTableView1: TcxGridDBTableView
+        Navigator.Buttons.CustomButtons = <>
+        OnCustomDrawCell = cxGrid4DBTableView1CustomDrawCell
+        DataController.DataSource = datos.DsCorteInventario
+        DataController.Summary.DefaultGroupSummaryItems = <>
+        DataController.Summary.FooterSummaryItems = <>
+        DataController.Summary.SummaryGroups = <>
+        OptionsView.ShowEditButtons = gsebAlways
+        OptionsView.GroupByBox = False
+        OptionsView.HeaderAutoHeight = True
+        object cxGrid4DBTableView1COD_ART: TcxGridDBColumn
+          Caption = 'Codigo'
+          DataBinding.FieldName = 'COD_ART'
+          HeaderAlignmentHorz = taCenter
+          Options.Editing = False
+          Options.Filtering = False
+          Options.FilteringWithFindPanel = False
+          Options.Focusing = False
+          Options.FilteringAddValueItems = False
+          Options.FilteringFilteredItemsList = False
+          Options.FilteringMRUItemsList = False
+          Options.FilteringPopup = False
+          Options.FilteringPopupMultiSelect = False
+        end
+        object cxGrid4DBTableView1ARTICULO: TcxGridDBColumn
+          Caption = 'Nombre Articulo / Producto'
+          DataBinding.FieldName = 'ARTICULO'
+          HeaderAlignmentHorz = taCenter
+          Options.Editing = False
+          Options.Filtering = False
+          Options.FilteringWithFindPanel = False
+          Options.Focusing = False
+          Options.FilteringAddValueItems = False
+          Options.FilteringFilteredItemsList = False
+          Options.FilteringMRUItemsList = False
+          Options.FilteringPopup = False
+          Options.FilteringPopupMultiSelect = False
+          Width = 450
+        end
+        object cxGrid4DBTableView1Column1: TcxGridDBColumn
+          Caption = 'Existencia Actual'
+          DataBinding.FieldName = 'EXISTENCIA'
+          GroupSummaryAlignment = taCenter
+        end
+        object cxGrid4DBTableView1Column2: TcxGridDBColumn
+          Caption = 'Reconteo'
+          DataBinding.FieldName = 'RECONTEO'
+        end
+        object cxGrid4DBTableView1Column3: TcxGridDBColumn
+          PropertiesClassName = 'TcxButtonEditProperties'
+          Properties.Buttons = <
+            item
+              Default = True
+              Glyph.SourceDPI = 96
+              Glyph.Data = {
+                89504E470D0A1A0A0000000D4948445200000018000000180806000000E0773D
+                F80000000467414D410000B18F0BFC6105000000206348524D00007A26000080
+                840000FA00000080E8000075300000EA6000003A98000017709CBA513C000000
+                06624B4744000000000000F943BB7F000000097048597300000EC400000EC401
+                952B0E1B000000724944415448C7ED95D10A80200C454FD1C725FDFF0F38FFA3
+                5EF425315D6103713064A83BEC5E5018350E200067630AE0340051344FE93580
+                74E9F3F9B593C40301B6CABEC6079B096A8025666BFDFF0425FA5BEDB37ED383
+                6A4C0FEC3D2801425CEFEFFC532D1AB043F7AB7960EFAD864D5C39273545CD2F
+                F7A10000002574455874646174653A63726561746500323032302D30392D3135
+                5432333A33393A35302B30303A30305E9306B60000002574455874646174653A
+                6D6F6469667900323032302D30392D31355432333A33393A35302B30303A3030
+                2FCEBE0A0000001974455874536F667477617265007777772E696E6B73636170
+                652E6F72679BEE3C1A0000000049454E44AE426082}
+              Kind = bkGlyph
+            end>
+          Properties.ViewStyle = vsButtonsOnly
+          Properties.OnButtonClick = cxGrid4DBTableView1Column3PropertiesButtonClick
+        end
+      end
+      object cxGrid4Level1: TcxGridLevel
+        GridView = cxGrid4DBTableView1
+      end
+    end
+    object Panel5: TPanel
+      Left = 49
+      Top = 655
+      Width = 18
+      Height = 18
+      Color = 16772063
+      ParentBackground = False
+      TabOrder = 2
+    end
+    object Panel6: TPanel
+      Left = 127
+      Top = 655
+      Width = 18
+      Height = 18
+      Color = 14811129
+      ParentBackground = False
+      TabOrder = 3
+    end
+  end
+  object p_TipoImpresion: TPanel
+    Left = 357
+    Top = 281
+    Width = 276
+    Height = 152
+    TabOrder = 5
+    Visible = False
+    object Op1: TcxRadioGroup
+      Left = 14
+      Top = 24
+      Caption = 'Tipo de Impresion'
+      Properties.Items = <
+        item
+          Caption = '8.5" x  11"'
+        end
+        item
+          Caption = 'Ticket'
+        end>
+      Style.LookAndFeel.NativeStyle = True
+      StyleDisabled.LookAndFeel.NativeStyle = True
+      TabOrder = 0
+      Height = 73
+      Width = 249
+    end
+    object cxButton9: TcxButton
+      Left = 56
+      Top = 103
+      Width = 169
+      Height = 33
+      Caption = 'Imprimir'
+      LookAndFeel.NativeStyle = True
+      OptionsImage.Glyph.SourceDPI = 96
+      OptionsImage.Glyph.Data = {
+        424D360900000000000036000000280000001800000018000000010020000000
+        000000000000C40E0000C40E0000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000FF000000FF000000FF000000FF0000
+        00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000FF000000FF000000FF000000FF0000
+        00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000FF000000FF00000000000000000000
+        00000000000000000000000000000000000000000000000000FF000000FF0000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000FF000000FF00000000000000000000
+        00000000000000000000000000000000000000000000000000FF000000FF0000
+        0000000000000000000000000000000000000000000000000000000000000000
+        00FF000000FF000000FF000000FF000000FF000000FF00000000000000000000
+        00000000000000000000000000000000000000000000000000FF000000FF0000
+        00FF000000FF000000FF000000FF000000000000000000000000000000000000
+        00FF000000FF000000FF000000FF000000FF000000FF00000000000000000000
+        00000000000000000000000000000000000000000000000000FF000000FF0000
+        00FF000000FF000000FF000000FF000000000000000000000000000000000000
+        00FF000000FF000000FF000000FF000000FF000000FF00000000000000000000
+        00000000000000000000000000000000000000000000000000FF000000FF0000
+        00FF000000FF000000FF000000FF000000000000000000000000000000000000
+        00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+        00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+        00FF000000FF000000FF000000FF000000000000000000000000000000000000
+        00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+        00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+        00FF000000FF000000FF000000FF000000000000000000000000000000000000
+        00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+        00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+        003C0000003D000000FF000000FF000000000000000000000000000000000000
+        00E5000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+        00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+        003A0000003C000000FF000000E5000000000000000000000000000000000000
+        0088000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+        00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+        00FF000000FF000000FF00000088000000000000000000000000000000000000
+        000600000089000000E6000000FF000000FF000000FF000000FF000000FF0000
+        00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+        00FF000000E50000008800000006000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000FF000000FF000000FF000000FF0000
+        00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000FF000000FF000000FF000000FF0000
+        00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000FF000000FF000000FF000000FF0000
+        00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000FF000000FF000000FF000000FF0000
+        00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        00000000000000000000000000000000000000000000}
+      TabOrder = 1
+      OnClick = cxButton1Click
+    end
+  end
+  object QCorteInventario: TZQuery
+    Connection = datos.Data
+    UpdateObject = zCorteInventario
+    SQL.Strings = (
+      'select * from MCORTEINVENTARIO')
+    Params = <>
+    UpdateMode = umUpdateAll
+    WhereMode = wmWhereAll
+    Left = 304
+    Top = 585
+    object QCorteInventarioID: TIntegerField
+      FieldName = 'ID'
+      Required = True
+    end
+    object QCorteInventarioFECHA_INICIAL: TDateField
+      FieldName = 'FECHA_INICIAL'
+    end
+    object QCorteInventarioFECHA_FINAL: TDateField
+      FieldName = 'FECHA_FINAL'
+    end
+    object QCorteInventarioFECHA_HOY: TDateField
+      FieldName = 'FECHA_HOY'
+    end
+    object QCorteInventarioMONTOINVENTARIO: TFloatField
+      FieldName = 'MONTOINVENTARIO'
+    end
+    object QCorteInventarioESTADO: TIntegerField
+      FieldName = 'ESTADO'
+    end
+  end
+  object DsCorteInventario: TDataSource
+    DataSet = QCorteInventario
+    Left = 744
+    Top = 281
+  end
+  object Qnumero: TZReadOnlyQuery
+    Connection = datos.Data
+    SQL.Strings = (
+      'select gen_id(GEN_MCORTEINVENTARIO_ID, 0) from RDB$DATABASE')
+    Params = <>
+    Left = 728
+    Top = 345
+    object QnumeroGEN_ID: TLargeintField
+      FieldName = 'GEN_ID'
+      ReadOnly = True
+    end
+  end
+  object QHayCorte: TZReadOnlyQuery
+    Connection = datos.Data
+    SQL.Strings = (
+      'select * from MCORTEINVENTARIO')
+    Params = <>
+    Left = 408
+    Top = 305
+  end
+  object Qcortes: TZReadOnlyQuery
+    Connection = datos.Data
+    Active = True
+    SQL.Strings = (
+      
+        'SELECT * FROM consultar_corte_inventario(:FFINAL, :FCORTE,:F1, :' +
+        'F2)')
+    Params = <
+      item
+        DataType = ftUnknown
+        Name = 'FFINAL'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'FCORTE'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'F1'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'F2'
+        ParamType = ptUnknown
+      end>
+    Left = 257
+    Top = 346
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'FFINAL'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'FCORTE'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'F1'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'F2'
+        ParamType = ptUnknown
+      end>
+    object QcortesFECHA: TDateField
+      FieldName = 'FECHA'
+      ReadOnly = True
+    end
+    object QcortesCOD_ART: TIntegerField
+      FieldName = 'COD_ART'
+      ReadOnly = True
+    end
+    object QcortesARTICULOS: TWideStringField
+      FieldName = 'ARTICULOS'
+      ReadOnly = True
+      Size = 75
+    end
+    object QcortesEXISTENCIA: TExtendedField
+      FieldName = 'EXISTENCIA'
+      ReadOnly = True
+      Precision = 19
+    end
+    object QcortesVENTAS: TExtendedField
+      FieldName = 'VENTAS'
+      ReadOnly = True
+      Precision = 19
+    end
+    object QcortesENTRADAS: TExtendedField
+      FieldName = 'ENTRADAS'
+      ReadOnly = True
+      Precision = 19
+    end
+    object QcortesSALIDAS: TExtendedField
+      FieldName = 'SALIDAS'
+      ReadOnly = True
+      Precision = 19
+    end
+    object QcortesEXACTUAL: TExtendedField
+      FieldName = 'EXACTUAL'
+      ReadOnly = True
+      Precision = 19
+    end
+  end
+  object DsCortes: TDataSource
+    DataSet = Qcortes
+    Left = 297
+    Top = 434
+  end
+  object QCortesAbiertos: TZReadOnlyQuery
+    Connection = datos.Data
+    SQL.Strings = (
+      'select * from MCORTEINVENTARIO')
+    Params = <>
+    Left = 553
+    Top = 474
+    object QCortesAbiertosID: TIntegerField
+      FieldName = 'ID'
+      Required = True
+    end
+    object QCortesAbiertosFECHA_INICIAL: TDateField
+      FieldName = 'FECHA_INICIAL'
+    end
+    object QCortesAbiertosFECHA_FINAL: TDateField
+      FieldName = 'FECHA_FINAL'
+    end
+    object QCortesAbiertosFECHA_HOY: TDateField
+      FieldName = 'FECHA_HOY'
+    end
+    object QCortesAbiertosMONTOINVENTARIO: TFloatField
+      FieldName = 'MONTOINVENTARIO'
+    end
+    object QCortesAbiertosESTADO: TIntegerField
+      FieldName = 'ESTADO'
+    end
+  end
+  object DsCortesAbiertos: TDataSource
+    DataSet = QCortesAbiertos
+    Left = 577
+    Top = 474
+  end
+  object DsExistencia: TDataSource
+    DataSet = ZExistencia
+    Left = 40
+    Top = 664
+  end
+  object ZExistencia: TZReadOnlyQuery
+    Connection = datos.Data
+    SQL.Strings = (
+      
+        'select a.cod_art, upper(b.articulo) articulo,b.codigobarra, b.re' +
+        'ferencia, b.costo, b.costo_pr, a.cod_alm, sum(a.entrada - a.sali' +
+        'da) Existencia, b.costo_pr * sum(a.entrada - a.salida) Total  fr' +
+        'om minventario a'
+      'left join mtartuculos b  On a.cod_art = b.cod_art'
+      'and b.politica <> '#39'Servicio'#39
+      
+        'group by a.cod_art, b.articulo,b.costo,a.cod_alm,  b.costo_pr,b.' +
+        'codigobarra, b.referencia')
+    Params = <>
+    Left = 75
+    Top = 664
+    object ZExistenciaCOD_ART: TIntegerField
+      FieldName = 'COD_ART'
+    end
+    object ZExistenciaARTICULO: TWideStringField
+      FieldName = 'ARTICULO'
+      ReadOnly = True
+      Size = 100
+    end
+    object ZExistenciaCOSTO: TFloatField
+      FieldName = 'COSTO'
+      currency = True
+    end
+    object ZExistenciaCOSTO_PR: TFloatField
+      FieldName = 'COSTO_PR'
+      currency = True
+    end
+    object ZExistenciaCOD_ALM: TIntegerField
+      FieldName = 'COD_ALM'
+    end
+    object ZExistenciaEXISTENCIA: TExtendedField
+      FieldName = 'EXISTENCIA'
+      ReadOnly = True
+      Precision = 19
+    end
+    object ZExistenciaTOTAL: TExtendedField
+      FieldName = 'TOTAL'
+      ReadOnly = True
+      currency = True
+      Precision = 19
+    end
+    object ZExistenciaCODIGOBARRA: TWideStringField
+      FieldName = 'CODIGOBARRA'
+      Size = 50
+    end
+    object ZExistenciaREFERENCIA: TWideStringField
+      FieldName = 'REFERENCIA'
+      Size = 30
+    end
+  end
+  object ZQuery1: TZQuery
+    Connection = datos.Data
+    UpdateObject = zCorteInventario
+    SQL.Strings = (
+      'select * from MCORTEINVENTARIO')
+    Params = <>
+    UpdateMode = umUpdateAll
+    WhereMode = wmWhereAll
+    Left = 395
+    Top = 537
+    object IntegerField1: TIntegerField
+      FieldName = 'ID'
+      Required = True
+    end
+    object DateField1: TDateField
+      FieldName = 'FECHA_INICIAL'
+    end
+    object DateField2: TDateField
+      FieldName = 'FECHA_FINAL'
+    end
+    object DateField3: TDateField
+      FieldName = 'FECHA_HOY'
+    end
+    object FloatField1: TFloatField
+      FieldName = 'MONTOINVENTARIO'
+    end
+    object IntegerField2: TIntegerField
+      FieldName = 'ESTADO'
+    end
+  end
+  object zCorteInventario: TZUpdateSQL
+    DeleteSQL.Strings = (
+      'DELETE FROM MCORTEINVENTARIO'
+      'WHERE'
+      '  MCORTEINVENTARIO.ID = :OLD_ID')
+    InsertSQL.Strings = (
+      'INSERT INTO MCORTEINVENTARIO'
+      
+        '  (ID, FECHA_INICIAL, FECHA_FINAL, FECHA_HOY, MONTOINVENTARIO, E' +
+        'STADO)'
+      'VALUES'
+      
+        '  (:ID, :FECHA_INICIAL, :FECHA_FINAL, :FECHA_HOY, :MONTOINVENTAR' +
+        'IO, :ESTADO)')
+    ModifySQL.Strings = (
+      'UPDATE MCORTEINVENTARIO SET'
+      '  ID = :ID,'
+      '  FECHA_INICIAL = :FECHA_INICIAL,'
+      '  FECHA_FINAL = :FECHA_FINAL,'
+      '  FECHA_HOY = :FECHA_HOY,'
+      '  MONTOINVENTARIO = :MONTOINVENTARIO,'
+      '  ESTADO = :ESTADO'
+      'WHERE'
+      '  MCORTEINVENTARIO.ID = :OLD_ID')
+    UseSequenceFieldForRefreshSQL = False
+    Left = 472
+    Top = 552
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'ID'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'FECHA_INICIAL'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'FECHA_FINAL'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'FECHA_HOY'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'MONTOINVENTARIO'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'ESTADO'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'OLD_ID'
+        ParamType = ptUnknown
+      end>
+  end
+  object Qnum2: TZReadOnlyQuery
+    Connection = datos.Data
+    SQL.Strings = (
+      'select gen_id(GEN_TB_INVENTARIOCORTE_ID, 0) from RDB$DATABASE')
+    Params = <>
+    Left = 179
+    Top = 713
+    object Qnum2GEN_ID: TLargeintField
+      FieldName = 'GEN_ID'
+      ReadOnly = True
+    end
+  end
+  object QExiste: TZReadOnlyQuery
+    Connection = datos.Data
+    SQL.Strings = (
+      'select * from TB_INVENTARIOCORTE')
+    Params = <>
+    Left = 661
+    Top = 599
+    object QExisteID: TIntegerField
+      FieldName = 'ID'
+      Required = True
+    end
+    object QExisteFECHA_CORTE: TDateField
+      FieldName = 'FECHA_CORTE'
+    end
+    object QExisteIDUSAURIO: TIntegerField
+      FieldName = 'IDUSAURIO'
+    end
+    object QExisteMONTO: TFloatField
+      FieldName = 'MONTO'
+    end
+    object QExisteCOD_ART: TIntegerField
+      FieldName = 'COD_ART'
+    end
+    object QExisteEXISTENCIA: TFloatField
+      FieldName = 'EXISTENCIA'
+    end
+    object QExisteIDMASTER: TIntegerField
+      FieldName = 'IDMASTER'
+    end
+  end
+  object QCerrarCorte: TZReadOnlyQuery
+    Connection = datos.Data
+    Params = <>
+    Left = 791
+    Top = 524
+  end
+  object Zactuliza: TZReadOnlyQuery
+    Connection = datos.Data
+    Params = <>
+    Left = 193
+    Top = 549
+  end
+  object qConsultaCortesAbiertos: TZReadOnlyQuery
+    Connection = datos.Data
+    SQL.Strings = (
+      'select * from MCORTEINVENTARIO')
+    Params = <>
+    Left = 737
+    Top = 98
+    object qConsultaCortesAbiertosID: TIntegerField
+      FieldName = 'ID'
+      Required = True
+    end
+    object qConsultaCortesAbiertosFECHA_INICIAL: TDateField
+      FieldName = 'FECHA_INICIAL'
+    end
+    object qConsultaCortesAbiertosFECHA_FINAL: TDateField
+      FieldName = 'FECHA_FINAL'
+    end
+    object qConsultaCortesAbiertosFECHA_HOY: TDateField
+      FieldName = 'FECHA_HOY'
+    end
+    object qConsultaCortesAbiertosMONTOINVENTARIO: TFloatField
+      FieldName = 'MONTOINVENTARIO'
+    end
+    object qConsultaCortesAbiertosESTADO: TIntegerField
+      FieldName = 'ESTADO'
+    end
+  end
+  object DsConsultaCortesAbiertos: TDataSource
+    DataSet = qConsultaCortesAbiertos
+    Left = 721
+    Top = 450
+  end
+  object QCortes2: TZReadOnlyQuery
+    Connection = datos.Data
+    Active = True
+    SQL.Strings = (
+      
+        'SELECT * FROM consultar_corte_inventario(:FFINAL, :FCORTE,:F1, :' +
+        'F2)')
+    Params = <
+      item
+        DataType = ftUnknown
+        Name = 'FFINAL'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'FCORTE'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'F1'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'F2'
+        ParamType = ptUnknown
+      end>
+    Left = 481
+    Top = 442
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'FFINAL'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'FCORTE'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'F1'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'F2'
+        ParamType = ptUnknown
+      end>
+    object QCortes2FECHA: TDateField
+      FieldName = 'FECHA'
+      ReadOnly = True
+    end
+    object QCortes2COD_ART: TIntegerField
+      FieldName = 'COD_ART'
+      ReadOnly = True
+    end
+    object QCortes2ARTICULOS: TWideStringField
+      FieldName = 'ARTICULOS'
+      ReadOnly = True
+      Size = 75
+    end
+    object QCortes2EXISTENCIA: TExtendedField
+      FieldName = 'EXISTENCIA'
+      ReadOnly = True
+      Precision = 19
+    end
+    object QCortes2VENTAS: TExtendedField
+      FieldName = 'VENTAS'
+      ReadOnly = True
+      Precision = 19
+    end
+    object QCortes2ENTRADAS: TExtendedField
+      FieldName = 'ENTRADAS'
+      ReadOnly = True
+      Precision = 19
+    end
+    object QCortes2SALIDAS: TExtendedField
+      FieldName = 'SALIDAS'
+      ReadOnly = True
+      Precision = 19
+    end
+    object QCortes2EXACTUAL: TExtendedField
+      FieldName = 'EXACTUAL'
+      ReadOnly = True
+      Precision = 19
+    end
+  end
+  object DsCortes2: TDataSource
+    DataSet = QCortes2
+    Left = 512
+    Top = 426
+  end
+end
